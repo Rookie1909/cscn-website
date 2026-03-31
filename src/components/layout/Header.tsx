@@ -54,13 +54,13 @@ export function Header() {
                 className="w-full h-full object-contain"
               />
             </button>
-            <Link to="/" className="hidden sm:block group">
-              <h1 className="text-foreground font-headline font-black text-2xl leading-[0.9] tracking-tight group-hover:text-primary transition-colors duration-300">
+            <Link to="/" className="block group">
+              <h1 className="text-foreground font-headline font-black text-[13px] sm:text-xl lg:text-2xl leading-[1.1] sm:leading-[0.9] tracking-tight group-hover:text-primary transition-colors duration-300">
                 Cannabis Social Club
                 <br />
                 Nordheide E.V.
               </h1>
-              <p className="text-muted-foreground text-[11px] font-sans uppercase tracking-[0.2em] mt-1.5 font-bold">Vereinswebsite des CSC Nordheide e.V.</p>
+              <p className="text-muted-foreground text-[8px] sm:text-[11px] font-sans uppercase tracking-[0.1em] sm:tracking-[0.2em] mt-1 sm:mt-1.5 font-bold">Vereinswebsite des CSC Nordheide e.V.</p>
             </Link>
           </div>
 
@@ -151,7 +151,10 @@ export function Header() {
                 </button>
               </SheetTrigger>
               <SheetContent side="right" className="w-80 bg-background border-border">
-                  <div className="flex flex-col gap-8 mt-12">
+                  <div className="mt-8 mb-6 px-2">
+                    <h2 className="text-xl font-headline font-black text-foreground">Menü</h2>
+                  </div>
+                  <div className="flex flex-col gap-6">
                     {navItems.map((item) => (
                       <div key={item.label}>
                         {item.children ? (

@@ -80,9 +80,9 @@ export function MotivationSection() {
             <motion.div
               key={feature.title}
               variants={itemVariants}
-              className="group p-8 border border-border rounded-2xl hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300 bg-card/50 backdrop-blur-sm"
+              className="group p-8 border border-border rounded-2xl flex flex-col items-center text-center hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300 bg-card/50 backdrop-blur-sm"
             >
-              <div className="flex items-center gap-4 mb-6">
+              <div className="flex flex-col items-center gap-4 mb-6">
                 <div className="p-3 bg-primary/10 rounded-xl group-hover:bg-primary/20 transition-colors">
                   <feature.icon className="w-8 h-8 text-primary" />
                 </div>

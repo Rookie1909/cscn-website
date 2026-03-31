@@ -74,9 +74,9 @@ export function FeaturesGrid() {
             <motion.div
               key={feature.title}
               variants={itemVariants}
-              className="group p-8 border border-border rounded-2xl hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300 bg-card/50 backdrop-blur-sm"
+              className="group p-8 border border-border rounded-2xl flex flex-col items-center text-center hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300 bg-card/50 backdrop-blur-sm"
             >
-              <div className="p-3 bg-primary/10 rounded-xl w-fit mb-6 group-hover:bg-primary/20 transition-colors">
+              <div className="p-3 bg-primary/10 rounded-xl mb-6 group-hover:bg-primary/20 transition-colors">
                 <feature.icon className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-xl font-headline font-bold text-foreground mb-3 group-hover:text-primary transition-colors">

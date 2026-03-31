@@ -72,7 +72,7 @@ export function HeroSection() {
               className="grid grid-cols-2 sm:grid-cols-4 gap-4"
             >
               {stats.map((stat, i) => (
-                <div key={i} className="group relative p-4 rounded-3xl bg-secondary/5 border border-border/50 backdrop-blur-sm transition-all hover:bg-secondary/10 hover:border-primary/30">
+                <div key={i} className="group relative p-4 rounded-3xl bg-secondary/5 border border-border/50 backdrop-blur-sm transition-all hover:bg-secondary/10 hover:border-primary/30 flex flex-col items-center text-center">
                   <stat.icon className={`w-8 h-8 ${stat.color} mb-3`} />
                   <div className="text-2xl font-headline font-extrabold text-foreground">{stat.label}</div>
                   <div className="text-[10px] uppercase tracking-wider text-muted-foreground font-bold mt-1">{stat.sub}</div>
@@ -83,7 +83,7 @@ export function HeroSection() {
             {/* Product Card (Special 5th Item) */}
             <motion.div 
               variants={itemVariants}
-              className="relative p-6 rounded-[2rem] bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border-2 border-primary/20 overflow-hidden group hover:border-primary/40 transition-all duration-500"
+              className="relative p-6 rounded-[2rem] bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border-2 border-primary/20 overflow-hidden group hover:border-primary/40 transition-all duration-500 mx-auto max-w-lg w-full flex flex-col items-center text-center lg:items-start lg:text-left"
             >
               <div className="absolute top-4 right-6 text-primary/20 rotate-12 group-hover:rotate-45 transition-transform duration-700">
                 <Star className="w-20 h-20 fill-current" />
@@ -109,13 +109,13 @@ export function HeroSection() {
               className="grid sm:grid-cols-3 gap-6 pt-2"
             >
               {highlights.map((h, i) => (
-                <div key={i} className="flex gap-4">
+                <div key={i} className="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left">
                   <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-muted flex items-center justify-center">
                     <h.icon className="w-5 h-5 text-foreground/70" />
                   </div>
                   <div>
-                    <h4 className="text-xs font-headline font-black uppercase tracking-tight text-foreground">{h.title}</h4>
-                    <p className="text-[11px] text-muted-foreground font-sans mt-0.5 leading-tight">{h.text}</p>
+                    <h4 className="text-sm sm:text-xs font-headline font-black uppercase tracking-tight text-foreground">{h.title}</h4>
+                    <p className="text-xs sm:text-[11px] text-muted-foreground font-sans mt-0.5 leading-tight">{h.text}</p>
                   </div>
                 </div>
               ))}

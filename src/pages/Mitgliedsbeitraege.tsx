@@ -8,8 +8,8 @@ export function Mitgliedsbeitraege() {
   return (
     <div className="bg-background min-h-screen">
       <PageHero
-        title="Mitgliedsbeiträge"
-        description="Wir sind für einen fairen Preis ohne gestaffelten Mengenrabatt und Mindestabnahmemengen. Um uns zu finanzieren und mit euch gemeinschaftlich Cannabis anbauen zu können, müssen wir Mitgliedsbeiträge erheben."
+        title="Mitgliedsanträge"
+        description="Stell jetzt deinen Mitgliedsantrag und werde Teil des CSC Nordheide e.V. Wähle zwischen der kostenlosen Standard-Mitgliedschaft oder der Supporter-Mitgliedschaft mit exklusiven Vorteilen."
         backgroundImage="/images/cannabis-jars.jpg"
       />
       <MembershipCards />

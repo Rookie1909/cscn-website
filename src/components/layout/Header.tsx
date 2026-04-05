@@ -19,7 +19,7 @@ const navItems = [
   },
   { label: 'Sortiment', href: '/sortiment' },
   { label: 'Standorte', href: '/standorte' },
-  { label: 'Mitgliedsbeiträge', href: '/mitgliedsbeitraege' },
+  { label: 'Mitgliedsanträge', href: '/mitgliedsbeitraege' },
 ];
 
 export function Header() {

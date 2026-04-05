@@ -6,11 +6,11 @@ import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 const infographics = [
-  { title: "Cannabis-Blüten", src: "/images/infographics/blueten.jpg" },
-  { title: "Hash (Dry Sift)", src: "/images/infographics/dry-sift.jpg" },
-  { title: "Bubble Hash", src: "/images/infographics/bubble-hash.jpg" },
-  { title: "Hash Rosin", src: "/images/infographics/hash-rosin.jpg" },
-  { title: "WPFF Rosin", src: "/images/infographics/wpff-rosin.jpg" },
+  { title: "Cannabis-Blüten", src: "/images/infographics/1.png" },
+  { title: "Hash (Dry Sift)", src: "/images/infographics/2.png" },
+  { title: "Bubble Hash", src: "/images/infographics/3.png" },
+  { title: "Hash Rosin", src: "/images/infographics/4.png" },
+  { title: "WPFF Rosin", src: "/images/infographics/5.jpg" },
 ];
 
 const containerVariants = {

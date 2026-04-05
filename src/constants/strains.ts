@@ -91,7 +91,8 @@ export const STRAINS: Strain[] = [
     effects: ["Klar", "Kreativ", "Aktivierend", "Körperliche Entspannung"],
     terpenes: ["Süß", "Gummibärchen", "Gasig", "Tropisch", "Sahnig", "Gebratener Donut"],
     genetics: "Jelly Donutz (#160x#17) x Hella Jelly x White Runtz",
-    breeder: "Humboldt Seed Company (Twentyk Cut)"
+    breeder: "Humboldt Seed Company (Twentyk Cut)",
+    isSoldOut: true
   },
   {
     id: "platinum-kush",

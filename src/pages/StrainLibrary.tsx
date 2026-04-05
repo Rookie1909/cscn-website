@@ -23,8 +23,18 @@ const StrainCard: React.FC<StrainCardProps> = ({ strain }) => {
   return (
     <motion.div 
       layout
-      className="glass-card-premium flex flex-col gap-4 transition-all duration-500 hover:border-primary/50 group"
+      className={`glass-card-premium flex flex-col gap-4 transition-all duration-500 hover:border-primary/50 group relative overflow-hidden ${strain.isSoldOut ? 'opacity-80' : ''}`}
     >
+      {/* Sold Out Overlay - Option 2 (Stencil Stamp) */}
+      {strain.isSoldOut && (
+        <div className="absolute inset-0 z-20 pointer-events-none flex items-center justify-center">
+          <div className="absolute -rotate-12 bg-black/80 text-emerald-500/90 border-y border-emerald-500/30 uppercase font-black tracking-[0.2em] text-3xl py-2 w-[150%] text-center shadow-2xl mix-blend-hard-light flex justify-center items-center gap-4">
+            <span className="opacity-50">SOLD OUT</span>
+            <span className="opacity-100">SOLD OUT</span>
+            <span className="opacity-50">SOLD OUT</span>
+          </div>
+        </div>
+      )}
       <div className="flex justify-between items-start">
         <div>
           <h3 className="text-2xl font-black text-primary tracking-tighter group-hover:scale-[1.02] transition-transform duration-500">{strain.name}</h3>

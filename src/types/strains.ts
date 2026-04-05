@@ -11,4 +11,5 @@ export interface Strain {
   terpenes: string[];
   genetics: string;
   breeder: string;
+  isSoldOut?: boolean;
 }

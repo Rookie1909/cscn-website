@@ -2,6 +2,16 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Award, Users, Leaf, Scale, Star, ShieldCheck, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+
+const infographics = [
+  { title: "Cannabis-Blüten", src: "/images/infographics/blueten.jpg" },
+  { title: "Hash (Dry Sift)", src: "/images/infographics/dry-sift.jpg" },
+  { title: "Bubble Hash", src: "/images/infographics/bubble-hash.jpg" },
+  { title: "Hash Rosin", src: "/images/infographics/hash-rosin.jpg" },
+  { title: "WPFF Rosin", src: "/images/infographics/wpff-rosin.jpg" },
+];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -80,27 +90,69 @@ export function HeroSection() {
               ))}
             </motion.div>
 
-            {/* Product Card (Special 5th Item) */}
-            <motion.div 
-              variants={itemVariants}
-              className="relative p-6 rounded-[2rem] bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border-2 border-primary/20 overflow-hidden group hover:border-primary/40 transition-all duration-500 mx-auto max-w-lg w-full flex flex-col items-center text-center lg:items-start lg:text-left"
-            >
-              <div className="absolute top-4 right-6 text-primary/20 rotate-12 group-hover:rotate-45 transition-transform duration-700">
-                <Star className="w-20 h-20 fill-current" />
-              </div>
-              <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-primary rounded-2xl shadow-lg shadow-primary/20">
-                  <Star className="w-6 h-6 text-white fill-current" />
-                </div>
-                <h3 className="text-xl font-headline font-black text-foreground">Exklusive Auswahl</h3>
-              </div>
-              <p className="text-sm font-sans text-muted-foreground leading-relaxed font-medium">
-                Blüten, Hash (Dry Sift), Bubble Hash, Hash Rosin, Piattella, WPFF Rosin.
-              </p>
-              <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-primary text-[10px] font-headline font-black uppercase tracking-widest">
-                <Zap className="w-3 h-3 fill-current" />
-                Nur bei uns erhältlich
-              </div>
+            {/* Product Card (Special 5th Item) with Pop-up Infographics */}
+            <motion.div variants={itemVariants} className="mx-auto max-w-lg w-full">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button className="relative w-full p-6 rounded-[2rem] bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border-2 border-primary/20 overflow-hidden group hover:border-primary/40 hover:bg-primary/5 transition-all duration-500 flex flex-col items-center text-center lg:items-start lg:text-left cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background">
+                    <div className="absolute top-4 right-6 text-primary/20 rotate-12 group-hover:rotate-45 transition-transform duration-700">
+                      <Star className="w-20 h-20 fill-current" />
+                    </div>
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="p-3 bg-primary rounded-2xl shadow-lg shadow-primary/20">
+                        <Star className="w-6 h-6 text-white fill-current" />
+                      </div>
+                      <h3 className="text-xl font-headline font-black text-foreground">Exklusive Auswahl</h3>
+                    </div>
+                    <p className="text-sm font-sans text-muted-foreground leading-relaxed font-medium">
+                      Blüten, Hash (Dry Sift), Bubble Hash, Hash Rosin, Piattella, WPFF Rosin.
+                    </p>
+                    <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-primary text-[10px] font-headline font-black uppercase tracking-widest">
+                      <Zap className="w-3 h-3 fill-current" />
+                      Nur bei uns erhältlich
+                    </div>
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="max-w-[95vw] md:max-w-5xl max-h-[95vh] border-none bg-white/80 dark:bg-black/60 backdrop-blur-2xl p-0 overflow-hidden sm:rounded-[2rem] [&>button]:text-primary [&>button]:bg-secondary/40 [&>button:hover]:bg-primary [&>button:hover]:text-white dark:[&>button]:bg-black/40">
+                  <div className="p-4 sm:p-8 flex flex-col h-full w-full justify-center">
+                    <h2 className="text-2xl font-headline font-black text-zinc-900 dark:text-white text-center mb-6 drop-shadow-sm dark:drop-shadow-md">
+                      Botanische Extraktionskunst
+                    </h2>
+                    <Carousel className="w-full">
+                      <CarouselContent>
+                        {infographics.map((info, idx) => (
+                          <CarouselItem key={idx} className="flex justify-center items-center">
+                            <div className="relative flex justify-center items-center rounded-2xl overflow-hidden border border-primary/20 dark:border-white/10 shadow-[0_0_40px_-10px_rgba(20,184,166,0.2)] dark:shadow-[0_0_40px_-10px_rgba(20,184,166,0.3)] bg-secondary/10 dark:bg-black/40 w-full md:w-auto min-h-[40vh]">
+                              <img 
+                                src={info.src} 
+                                alt={info.title} 
+                                className="w-full md:max-w-3xl max-h-[65vh] object-contain dark:invert dark:hue-rotate-180 dark:brightness-110 transition-all duration-300"
+                                onError={(e) => {
+                                  const target = e.target as HTMLImageElement;
+                                  target.style.display = 'none';
+                                  target.nextElementSibling?.classList.remove('hidden');
+                                  target.nextElementSibling?.classList.add('flex');
+                                }}
+                              />
+                              <div className="hidden absolute inset-0 flex-col items-center justify-center p-8 text-center text-foreground/50 dark:text-white/50 space-y-4">
+                                <Leaf className="w-16 h-16 opacity-30" />
+                                <p className="font-headline font-bold text-lg">{info.title}</p>
+                                <p className="text-sm">Bilddatei fehlt:<br/><code className="text-primary/70">{info.src}</code></p>
+                                <p className="text-xs max-w-sm mt-4 leading-relaxed">Bitte stelle sicher, dass du die Chat-Anhänge in diesem öffentlichen Ordner deines Projektes gespeichert hast.</p>
+                              </div>
+                            </div>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious className="left-2 md:-left-12 h-12 w-12 border-primary/50 text-foreground dark:text-white hover:border-primary backdrop-blur-md" />
+                      <CarouselNext className="right-2 md:-right-12 h-12 w-12 border-primary/50 text-foreground dark:text-white hover:border-primary backdrop-blur-md" />
+                    </Carousel>
+                    <div className="text-center mt-6 text-sm font-sans text-zinc-500 dark:text-white/60">
+                      Nutze die Pfeile oder wische, um die Übersicht zu erkunden
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
             </motion.div>
 
             {/* Feature Highlights */}
@@ -125,11 +177,19 @@ export function HeroSection() {
               <Button
                 size="lg"
                 asChild
-                className="rounded-full shadow-xl shadow-primary/20 transition-all hover:scale-105 active:scale-95 px-10 h-16 text-lg font-headline font-black bg-primary hover:bg-primary/90"
+                className="group relative overflow-hidden rounded-full shadow-2xl shadow-primary/20 transition-all hover:shadow-primary/40 hover:scale-105 active:scale-95 px-10 h-16 text-lg font-headline font-black bg-zinc-950 border border-primary/40 hover:border-primary text-white"
               >
                 <Link to="/mitgliedsbeitraege" className="flex items-center gap-3">
-                  Jetzt Teil der Bewegung werden
-                  <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                  <motion.div 
+                    initial={{ x: "-150%" }}
+                    animate={{ x: "200%" }}
+                    transition={{ repeat: Infinity, ease: "linear", duration: 2.5, repeatDelay: 1.5 }}
+                    className="absolute inset-y-0 w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-[30deg]"
+                  />
+                  <span className="relative z-10 flex items-center gap-3 drop-shadow-md">
+                    Jetzt Teil der Bewegung werden
+                    <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform text-primary" />
+                  </span>
                 </Link>
               </Button>
             </motion.div>
@@ -159,7 +219,7 @@ export function HeroSection() {
             <motion.div
               animate={{ y: [0, -20, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-6 -left-6 bg-card border-2 border-primary/20 backdrop-blur-xl p-6 rounded-3xl shadow-2xl z-10"
+              className="absolute -top-6 -right-4 lg:-right-8 bg-card border-2 border-primary/20 backdrop-blur-xl p-6 rounded-3xl shadow-2xl z-10"
             >
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">

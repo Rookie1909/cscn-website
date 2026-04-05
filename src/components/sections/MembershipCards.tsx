@@ -36,8 +36,9 @@ const memberships = [
   },
 ];
 
+// Ticker text – plain string so it never causes layout inflation
 const TICKER_TEXT =
-  '🌿\u00a0 Nur noch \u00a0wenige Plätze\u00a0 verfügbar \u00a0·\u00a0 Sichere dir jetzt deinen \u00a0Early-Bird-Vorteil\u00a0 und profitiere als eines der ersten Mitglieder von der \u00a025\u00a0% Ersparnis\u00a0 \u00a0·\u00a0 Exklusiver Zugriff auf \u00a0limitierte Testgenetiken\u00a0 \u00a0·\u00a0 Jetzt Mitglied werden und dabei sein \u00a0🔥\u00a0\u00a0\u00a0\u00a0';
+  '\u{1F33F}\u00a0 Nur noch \u00a0wenige Pl\u00e4tze\u00a0 verf\u00fcgbar \u00a0\u00b7\u00a0 Sichere dir jetzt deinen \u00a0Early-Bird-Vorteil\u00a0 und profitiere als eines der ersten Mitglieder von der \u00a025\u00a0% Ersparnis\u00a0 \u00a0\u00b7\u00a0 Exklusiver Zugriff auf \u00a0limitierte Testgenetiken\u00a0 \u00a0\u00b7\u00a0 Jetzt Mitglied werden und dabei sein \u00a0\u{1F525}\u00a0\u00a0\u00a0\u00a0';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -105,7 +106,9 @@ export function MembershipCards() {
                   initial={{ opacity: 0, y: -8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.5 }}
-                  className="mb-6 rounded-xl overflow-hidden border border-amber-600 dark:border-amber-500/40 bg-amber-50 dark:bg-amber-500/10"
+                  className="mb-6 rounded-xl border border-amber-600 dark:border-amber-500/40 bg-amber-50 dark:bg-amber-500/10"
+                  // overflow-hidden on the outer wrapper clips the ticker on all browsers
+                  style={{ overflow: 'hidden' }}
                 >
                   {/* Top flash bar */}
                   <div className="flex items-center gap-2 px-4 py-2 bg-amber-500 dark:bg-amber-500/20 border-b border-amber-600 dark:border-amber-500/30">
@@ -126,19 +129,31 @@ export function MembershipCards() {
                     </motion.div>
                   </div>
 
-                  {/* Laufschrift / Marquee ticker */}
-                  <div className="px-0 py-2 overflow-hidden relative">
-                    {/* Fade edges */}
+                  {/* ── Marquee / Laufschrift ──
+                      Key mobile-safe technique:
+                      1. The CONTAINING div has overflow:hidden + contain:paint
+                         so the browser clips at the border — even on WebKit Mobile.
+                      2. whiteSpace:nowrap is on the INNER element only.
+                      3. The motion.div uses translateX, not left/margin,
+                         so it never contributes to scroll-width.
+                  */}
+                  <div
+                    className="relative py-2"
+                    style={{ overflow: 'hidden', contain: 'paint' }}
+                  >
+                    {/* Fade masks */}
                     <div className="absolute inset-y-0 left-0 w-8 z-10 bg-gradient-to-r from-amber-50 dark:from-[#1c1200] to-transparent pointer-events-none" />
                     <div className="absolute inset-y-0 right-0 w-8 z-10 bg-gradient-to-l from-amber-50 dark:from-[#1c1200] to-transparent pointer-events-none" />
+
                     <motion.div
-                      className="flex whitespace-nowrap text-amber-800 dark:text-amber-300/90 font-sans text-xs"
+                      className="flex text-amber-800 dark:text-amber-300/90 font-sans text-xs"
+                      style={{ whiteSpace: 'nowrap', willChange: 'transform' }}
                       animate={{ x: ['0%', '-50%'] }}
                       transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
                     >
-                      {/* Duplicate for seamless loop */}
-                      <span className="pr-0">{TICKER_TEXT}</span>
-                      <span className="pr-0">{TICKER_TEXT}</span>
+                      {/* Two identical copies — second one enters as first exits */}
+                      <span aria-hidden="true">{TICKER_TEXT}</span>
+                      <span>{TICKER_TEXT}</span>
                     </motion.div>
                   </div>
 

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { BookOpen, Euro, Leaf } from 'lucide-react';
+import { BookOpen, Euro } from 'lucide-react';
+import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
 
 const documents = [
   {
@@ -14,7 +15,7 @@ const documents = [
     href: '/documents/Beitragsordnung.pdf',
   },
   {
-    icon: Leaf,
+    icon: CannabisLeaf,
     label: 'Mitgliedsantrag',
     href: 'https://easyverein.com/public/CSCN/applicationform/9895',
   },
@@ -81,7 +82,7 @@ export function DocumentLinks() {
                   className="flex flex-col items-center gap-6 group"
                 >
                   <div className="w-24 h-24 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500 shadow-xl group-hover:shadow-primary/30">
-                    <doc.icon className="w-10 h-10 text-primary group-hover:text-primary-foreground transition-colors duration-500" />
+                    <doc.icon size={40} className="text-primary group-hover:text-primary-foreground transition-colors duration-500" />
                   </div>
                   <span className="text-foreground font-headline font-bold text-lg group-hover:text-primary transition-colors tracking-tight">
                     {doc.label}
@@ -93,7 +94,7 @@ export function DocumentLinks() {
                   className="flex flex-col items-center gap-6 group"
                 >
                   <div className="w-24 h-24 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500 shadow-xl group-hover:shadow-primary/30">
-                    <doc.icon className="w-10 h-10 text-primary group-hover:text-primary-foreground transition-colors duration-500" />
+                    <doc.icon size={40} className="text-primary group-hover:text-primary-foreground transition-colors duration-500" />
                   </div>
                   <span className="text-foreground font-headline font-bold text-lg group-hover:text-primary transition-colors tracking-tight">
                     {doc.label}

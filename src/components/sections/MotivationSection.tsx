@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { FlaskConical, Leaf, Sprout } from 'lucide-react';
+import { FlaskConical, Sprout } from 'lucide-react';
+import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
 
 const features = [
   {
@@ -9,7 +10,7 @@ const features = [
     description: 'wir testen in umfangreichen Probenahmen auf THC/CBD Gehalte und Qualität',
   },
   {
-    icon: Leaf,
+    icon: CannabisLeaf,
     title: 'Sortenvielfalt',
     subtitle: 'vielfältige Auswahl',
     description: 'wir wollen eine ansprechende Sortenauswahl - immer das richtige Kraut',
@@ -84,7 +85,7 @@ export function MotivationSection() {
             >
               <div className="flex flex-col items-center gap-4 mb-6">
                 <div className="p-3 bg-primary/10 rounded-xl group-hover:bg-primary/20 transition-colors">
-                  <feature.icon className="w-8 h-8 text-primary" />
+                  <feature.icon size={32} className="text-primary" />
                 </div>
                 <div>
                   <h3 className="text-foreground font-headline font-semibold text-lg">{feature.title}</h3>

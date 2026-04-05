@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Zap, 
-  Leaf, 
   Droplets, 
   Activity, 
   ChevronDown, 
@@ -10,6 +9,7 @@ import {
   Dna,
   Thermometer
 } from 'lucide-react';
+import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
 import { STRAINS } from '@/constants/strains';
 import type { Strain } from '@/types/strains';
 
@@ -162,7 +162,7 @@ export function StrainLibrary() {
           
           <div className="space-y-4">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full">
-              <Leaf size={14} className="text-primary" />
+              <CannabisLeaf size={14} className="text-primary" />
               <span className="text-primary text-[10px] font-black uppercase tracking-[0.2em]">Raised on Living Soil</span>
             </div>
             <h1 className="text-5xl md:text-8xl font-black tracking-tighter leading-[0.85] text-balance">
@@ -210,7 +210,7 @@ export function StrainLibrary() {
         <footer className="pt-20 border-t border-border flex flex-col md:flex-row justify-between items-center gap-8 text-muted-foreground/40 text-[10px] font-black uppercase tracking-[0.3em]">
           <div className="flex flex-wrap justify-center items-center gap-8">
             <div className="flex items-center gap-2 group hover:text-primary transition-colors cursor-default text-emerald-500">
-              <Leaf size={14} className="group-hover:scale-125 transition-transform" /> 
+              <CannabisLeaf size={14} className="group-hover:scale-125 transition-transform" /> 
               <span>100% Bio</span>
             </div>
             <div className="flex items-center gap-2 group hover:text-primary transition-colors cursor-default">

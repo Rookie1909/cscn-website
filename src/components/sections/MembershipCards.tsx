@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Check, ArrowRight, Leaf } from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
+import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
 import { Button } from '@/components/ui/button';
 
 const memberships = [
@@ -70,7 +71,7 @@ export function MembershipCards() {
           </p>
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="h-px w-24 bg-border" />
-            <Leaf className="w-6 h-6 text-primary" />
+            <CannabisLeaf size={24} className="text-primary" />
             <div className="h-px w-24 bg-border" />
           </div>
           <h2 className="text-3xl lg:text-4xl font-headline font-black text-foreground">
@@ -98,7 +99,7 @@ export function MembershipCards() {
             >
                {/* Cannabis leaf decoration */}
                <div className="absolute top-6 right-6">
-                 <Leaf className={`w-8 h-8 transition-transform duration-700 group-hover:rotate-12 ${
+                 <CannabisLeaf size={32} className={`transition-transform duration-700 group-hover:rotate-12 ${
                    membership.highlighted ? 'text-primary/20' : 'text-muted-foreground/10'
                  }`} />
                </div>

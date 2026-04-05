@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Award, Users, Leaf, Scale, Star, ShieldCheck, Zap } from 'lucide-react';
+import { ArrowRight, Award, Users, Scale, ShieldCheck, Zap } from 'lucide-react';
+import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
@@ -36,13 +37,13 @@ const itemVariants = {
 const stats = [
   { icon: Award, label: "1. CSC", sub: "In Niedersachsen", color: "text-primary" },
   { icon: Users, label: "170+", sub: "Mitglieder", color: "text-blue-400" },
-  { icon: Leaf, label: "500+", sub: "Bio-Pflanzen", color: "text-emerald-400" },
-  { icon: Scale, label: "2500g+", sub: "Erfolgreiche Abgabe", color: "text-amber-400" },
+  { icon: CannabisLeaf, label: "500+", sub: "Bio-Pflanzen", color: "text-emerald-400" },
+  { icon: Scale, label: "2500g+", sub: "Abgabe pro Monat", color: "text-amber-400" },
 ];
 
 const highlights = [
   { icon: Zap, title: "Experten-Support", text: "Best Practices & Wissensaustausch." },
-  { icon: Leaf, title: "100% Bio-Anbau", text: "0% Chemie, rein biologisch." },
+  { icon: CannabisLeaf, title: "100% Bio-Anbau", text: "0% Chemie, rein biologisch." },
   { icon: ShieldCheck, title: "Rechtssicher", text: "Garantierte Compliance & Legalität." },
 ];
 
@@ -85,7 +86,7 @@ export function HeroSection() {
                 <div key={i} className="group relative p-3 sm:p-4 rounded-[1.5rem] sm:rounded-3xl bg-secondary/5 border border-border/50 backdrop-blur-sm transition-all hover:bg-secondary/10 hover:border-primary/30 flex flex-col items-center text-center">
                   <stat.icon className={`w-6 h-6 sm:w-8 sm:h-8 ${stat.color} mb-2 sm:mb-3`} />
                   <div className="text-xl sm:text-2xl font-headline font-extrabold text-foreground">{stat.label}</div>
-                  <div className="text-[9px] sm:text-[10px] uppercase tracking-wider text-muted-foreground font-bold mt-0.5 sm:mt-1 truncate w-full">{stat.sub}</div>
+                  <div className="text-[9px] sm:text-[10px] uppercase tracking-wider text-muted-foreground font-bold mt-0.5 sm:mt-1 w-full whitespace-normal leading-tight">{stat.sub}</div>
                 </div>
               ))}
             </motion.div>
@@ -96,11 +97,11 @@ export function HeroSection() {
                 <DialogTrigger asChild>
                   <button className="relative w-full p-6 rounded-[2rem] bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border-2 border-primary/20 overflow-hidden group hover:border-primary/40 hover:bg-primary/5 transition-all duration-500 flex flex-col items-center text-center lg:items-start lg:text-left cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background">
                     <div className="absolute top-4 right-6 text-primary/20 rotate-12 group-hover:rotate-45 transition-transform duration-700">
-                      <Star className="w-20 h-20 fill-current" />
+                      <CannabisLeaf size={80} className="fill-current" />
                     </div>
                     <div className="flex items-center gap-4 mb-4">
                       <div className="p-3 bg-primary rounded-2xl shadow-lg shadow-primary/20">
-                        <Star className="w-6 h-6 text-white fill-current" />
+                        <CannabisLeaf size={24} className="text-white fill-current" />
                       </div>
                       <h3 className="text-xl font-headline font-black text-foreground">Exklusive Auswahl</h3>
                     </div>
@@ -135,7 +136,7 @@ export function HeroSection() {
                                 }}
                               />
                               <div className="hidden absolute inset-0 flex-col items-center justify-center p-8 text-center text-foreground/50 dark:text-white/50 space-y-4">
-                                <Leaf className="w-16 h-16 opacity-30" />
+                                <CannabisLeaf size={64} className="opacity-30" />
                                 <p className="font-headline font-bold text-lg">{info.title}</p>
                                 <p className="text-sm">Bilddatei fehlt:<br/><code className="text-primary/70">{info.src}</code></p>
                                 <p className="text-xs max-w-sm mt-4 leading-relaxed">Bitte stelle sicher, dass du die Chat-Anhänge in diesem öffentlichen Ordner deines Projektes gespeichert hast.</p>

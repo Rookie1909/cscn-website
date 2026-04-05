@@ -130,31 +130,40 @@ export function MembershipCards() {
                   </div>
 
                   {/* ── Marquee / Laufschrift ──
-                      Key mobile-safe technique:
-                      1. The CONTAINING div has overflow:hidden + contain:paint
-                         so the browser clips at the border — even on WebKit Mobile.
-                      2. whiteSpace:nowrap is on the INNER element only.
-                      3. The motion.div uses translateX, not left/margin,
-                         so it never contributes to scroll-width.
+                      Mobile-safe: ticker is position:absolute so it is fully
+                      removed from document flow → never inflates scroll-width.
+                      Pure CSS @keyframes (not Framer Motion) for iOS Safari compat.
                   */}
+                  <style>{`
+                    @keyframes cscn-marquee {
+                      0%   { transform: translateX(0); }
+                      100% { transform: translateX(-50%); }
+                    }
+                    .cscn-ticker {
+                      position: absolute;
+                      top: 0; left: 0;
+                      display: inline-flex;
+                      white-space: nowrap;
+                      animation: cscn-marquee 22s linear infinite;
+                      will-change: transform;
+                    }
+                  `}</style>
+                  {/* Container: explicit height + overflow:hidden clips the absolute ticker */}
                   <div
-                    className="relative py-2"
-                    style={{ overflow: 'hidden', contain: 'paint' }}
+                    className="relative w-full"
+                    style={{ height: '32px', overflow: 'hidden' }}
                   >
                     {/* Fade masks */}
-                    <div className="absolute inset-y-0 left-0 w-8 z-10 bg-gradient-to-r from-amber-50 dark:from-[#1c1200] to-transparent pointer-events-none" />
-                    <div className="absolute inset-y-0 right-0 w-8 z-10 bg-gradient-to-l from-amber-50 dark:from-[#1c1200] to-transparent pointer-events-none" />
-
-                    <motion.div
-                      className="flex text-amber-800 dark:text-amber-300/90 font-sans text-xs"
-                      style={{ whiteSpace: 'nowrap', willChange: 'transform' }}
-                      animate={{ x: ['0%', '-50%'] }}
-                      transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+                    <div className="absolute inset-y-0 left-0 w-8 z-10 bg-gradient-to-r from-amber-50 dark:from-[#1c1200] to-transparent pointer-events-none" style={{ zIndex: 2 }} />
+                    <div className="absolute inset-y-0 right-0 w-8 z-10 bg-gradient-to-l from-amber-50 dark:from-[#1c1200] to-transparent pointer-events-none" style={{ zIndex: 2 }} />
+                    {/* Ticker — absolutely positioned, out of flow */}
+                    <div
+                      className="cscn-ticker text-amber-800 dark:text-amber-300/90 font-sans text-xs items-center"
+                      style={{ paddingTop: '7px' }}
                     >
-                      {/* Two identical copies — second one enters as first exits */}
                       <span aria-hidden="true">{TICKER_TEXT}</span>
                       <span>{TICKER_TEXT}</span>
-                    </motion.div>
+                    </div>
                   </div>
 
                   {/* Spots-remaining bar */}

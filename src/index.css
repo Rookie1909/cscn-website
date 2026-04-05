@@ -57,9 +57,12 @@
   }
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden; /* prevent any child from inflating scroll-width */
   }
   body {
     @apply bg-background text-foreground antialiased;
+    overflow-x: hidden;
+    max-width: 100vw;
   }
 }
 

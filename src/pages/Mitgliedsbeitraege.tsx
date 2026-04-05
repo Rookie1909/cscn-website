@@ -2,6 +2,7 @@ import { PageHero } from '@/components/sections/PageHero';
 import { DocumentLinks } from '@/components/sections/DocumentLinks';
 import { RequirementsSection } from '@/components/sections/RequirementsSection';
 import { MembershipCards } from '@/components/sections/MembershipCards';
+import { AmortisationSection } from '@/components/sections/AmortisationSection';
 
 export function Mitgliedsbeitraege() {
   return (
@@ -12,6 +13,7 @@ export function Mitgliedsbeitraege() {
         backgroundImage="/images/cannabis-jars.jpg"
       />
       <MembershipCards />
+      <AmortisationSection />
       <RequirementsSection />
       <DocumentLinks />
     </div>

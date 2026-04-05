@@ -61,7 +61,7 @@ export function HeroSection() {
             <div className="space-y-6">
               <motion.h1
                 variants={itemVariants}
-                className="text-5xl lg:text-7xl font-headline font-black text-foreground leading-[0.95] tracking-tight"
+                className="text-4xl sm:text-5xl lg:text-7xl font-headline font-black text-foreground leading-[0.95] tracking-tight break-words"
               >
                 Pioniere des <br />
                 <span className="text-primary italic">biologischen</span> <br />
@@ -79,13 +79,13 @@ export function HeroSection() {
             {/* Stats Grid */}
             <motion.div 
               variants={itemVariants}
-              className="grid grid-cols-2 sm:grid-cols-4 gap-4"
+              className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4"
             >
               {stats.map((stat, i) => (
-                <div key={i} className="group relative p-4 rounded-3xl bg-secondary/5 border border-border/50 backdrop-blur-sm transition-all hover:bg-secondary/10 hover:border-primary/30 flex flex-col items-center text-center">
-                  <stat.icon className={`w-8 h-8 ${stat.color} mb-3`} />
-                  <div className="text-2xl font-headline font-extrabold text-foreground">{stat.label}</div>
-                  <div className="text-[10px] uppercase tracking-wider text-muted-foreground font-bold mt-1">{stat.sub}</div>
+                <div key={i} className="group relative p-3 sm:p-4 rounded-[1.5rem] sm:rounded-3xl bg-secondary/5 border border-border/50 backdrop-blur-sm transition-all hover:bg-secondary/10 hover:border-primary/30 flex flex-col items-center text-center">
+                  <stat.icon className={`w-6 h-6 sm:w-8 sm:h-8 ${stat.color} mb-2 sm:mb-3`} />
+                  <div className="text-xl sm:text-2xl font-headline font-extrabold text-foreground">{stat.label}</div>
+                  <div className="text-[9px] sm:text-[10px] uppercase tracking-wider text-muted-foreground font-bold mt-0.5 sm:mt-1 truncate w-full">{stat.sub}</div>
                 </div>
               ))}
             </motion.div>
@@ -173,22 +173,22 @@ export function HeroSection() {
               ))}
             </motion.div>
 
-            <motion.div variants={itemVariants} className="pt-4">
+            <motion.div variants={itemVariants} className="pt-4 flex justify-center lg:justify-start w-full">
               <Button
                 size="lg"
                 asChild
-                className="group relative overflow-hidden rounded-full shadow-2xl shadow-primary/20 transition-all hover:shadow-primary/40 hover:scale-105 active:scale-95 px-10 h-16 text-lg font-headline font-black bg-zinc-950 border border-primary/40 hover:border-primary text-white"
+                className="group relative overflow-hidden rounded-full shadow-2xl shadow-primary/20 transition-all hover:shadow-primary/40 hover:scale-105 active:scale-95 px-6 sm:px-10 h-14 sm:h-16 text-sm sm:text-lg font-headline font-black bg-zinc-950 text-white dark:bg-primary dark:text-primary-foreground border border-primary/40 dark:border-primary/80 hover:border-primary dark:hover:bg-primary/90 w-full sm:w-auto overflow-hidden whitespace-normal break-words"
               >
-                <Link to="/mitgliedsbeitraege" className="flex items-center gap-3">
+                <Link to="/mitgliedsbeitraege" className="flex items-center justify-center gap-2 sm:gap-3 w-full">
                   <motion.div 
                     initial={{ x: "-150%" }}
                     animate={{ x: "200%" }}
                     transition={{ repeat: Infinity, ease: "linear", duration: 2.5, repeatDelay: 1.5 }}
                     className="absolute inset-y-0 w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-[30deg]"
                   />
-                  <span className="relative z-10 flex items-center gap-3 drop-shadow-md">
-                    Jetzt Teil der Bewegung werden
-                    <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform text-primary" />
+                  <span className="relative z-10 flex items-center gap-2 sm:gap-3 drop-shadow-md text-center">
+                    <span className="line-clamp-1">Jetzt Teil der Bewegung werden</span>
+                    <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 shrink-0 group-hover:translate-x-1 transition-transform text-primary dark:text-white" />
                   </span>
                 </Link>
               </Button>
@@ -219,15 +219,15 @@ export function HeroSection() {
             <motion.div
               animate={{ y: [0, -20, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-6 -right-4 lg:-right-8 bg-card border-2 border-primary/20 backdrop-blur-xl p-6 rounded-3xl shadow-2xl z-10"
+              className="absolute -top-6 right-0 sm:-right-4 lg:-right-8 bg-card border-2 border-primary/20 backdrop-blur-xl p-4 sm:p-6 rounded-3xl shadow-2xl z-10 max-w-[90vw]"
             >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <ShieldCheck className="w-6 h-6 text-primary" />
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                 </div>
                 <div>
-                  <div className="text-xl font-headline font-black text-foreground leading-none">100% Legal</div>
-                  <div className="text-[10px] uppercase tracking-widest text-muted-foreground mt-1 font-bold">Regulierter Anbau</div>
+                  <div className="text-lg sm:text-xl font-headline font-black text-foreground leading-none">100% Legal</div>
+                  <div className="text-[9px] sm:text-[10px] uppercase tracking-widest text-muted-foreground mt-1 font-bold">Regulierter Anbau</div>
                 </div>
               </div>
             </motion.div>

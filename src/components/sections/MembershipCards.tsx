@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Check, ArrowRight } from 'lucide-react';
+import { Check, ArrowRight, Flame, Timer } from 'lucide-react';
 import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
 import { Button } from '@/components/ui/button';
 
@@ -97,6 +97,68 @@ export function MembershipCards() {
                   : 'border-border bg-card'
               } hover:border-primary/40 group`}
             >
+               {/* ── Early-Bird urgency banner (Supporter only) ── */}
+               {membership.highlighted && (
+                 <motion.div
+                   initial={{ opacity: 0, y: -8 }}
+                   animate={{ opacity: 1, y: 0 }}
+                   transition={{ delay: 0.3, duration: 0.5 }}
+                   className="mb-6 rounded-xl overflow-hidden border border-amber-600 dark:border-amber-500/40 bg-amber-50 dark:bg-amber-500/10"
+                 >
+                   {/* Top flash bar */}
+                   <div className="flex items-center gap-2 px-4 py-2 bg-amber-500 dark:bg-amber-500/20 border-b border-amber-600 dark:border-amber-500/30">
+                     <motion.div
+                       animate={{ scale: [1, 1.25, 1] }}
+                       transition={{ repeat: Infinity, duration: 1.4, ease: 'easeInOut' }}
+                     >
+                       <Flame className="w-4 h-4 text-white dark:text-amber-400" />
+                     </motion.div>
+                     <span className="text-white dark:text-amber-400 font-black text-xs uppercase tracking-widest font-sans">
+                       Limitiertes Kontingent – Nur noch wenige Plätze!
+                     </span>
+                     <motion.div
+                       animate={{ scale: [1, 1.25, 1] }}
+                       transition={{ repeat: Infinity, duration: 1.4, ease: 'easeInOut', delay: 0.7 }}
+                     >
+                       <Flame className="w-4 h-4 text-white dark:text-amber-400" />
+                     </motion.div>
+                   </div>
+
+                   {/* Body */}
+                   <div className="px-4 py-3 space-y-2.5">
+                     <p className="text-amber-800 dark:text-amber-300/90 font-sans text-xs leading-relaxed">
+                       Die Supporter-Mitgliedschaft ist auf eine <span className="font-bold text-amber-900 dark:text-amber-300">begrenzte Anzahl</span> von
+                       Plätzen limitiert. Sichere dir jetzt deinen Early-Bird-Vorteil und profitiere
+                       als eines der ersten Mitglieder von allen Vergünstigungen.
+                     </p>
+
+                     {/* Spots-remaining bar */}
+                     <div className="space-y-1">
+                       <div className="flex justify-between items-center">
+                         <span className="text-[10px] uppercase font-black tracking-widest text-amber-700 dark:text-amber-400/80 font-sans">
+                           Verfügbare Plätze
+                         </span>
+                         <span className="text-[10px] font-black text-amber-700 dark:text-amber-400 font-mono">Schnell sein!</span>
+                       </div>
+                       <div className="h-2 w-full bg-amber-200 dark:bg-amber-950/50 rounded-full overflow-hidden">
+                         <motion.div
+                           className="h-full rounded-full bg-gradient-to-r from-amber-600 to-amber-400 dark:from-amber-500 dark:to-amber-300"
+                           initial={{ width: '95%' }}
+                           animate={{ width: ['72%', '68%', '72%'] }}
+                           transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                         />
+                       </div>
+                       <div className="flex items-center gap-1.5">
+                         <Timer className="w-3 h-3 text-amber-600 dark:text-amber-400/70" />
+                         <span className="text-[10px] text-amber-700 dark:text-amber-400/70 font-sans">
+                           Plätze werden laufend vergeben – jetzt Early Bird sein!
+                         </span>
+                       </div>
+                     </div>
+                   </div>
+                 </motion.div>
+               )}
+
                {/* Cannabis leaf decoration */}
                <div className="absolute top-6 right-6">
                  <CannabisLeaf size={32} className={`transition-transform duration-700 group-hover:rotate-12 ${

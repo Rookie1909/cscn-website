@@ -262,23 +262,23 @@ export function AmortisationSection() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedImages(null)}
-              className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm cursor-pointer"
+              className="fixed inset-0 z-[100] flex items-center justify-center bg-background/80 p-4 backdrop-blur-sm cursor-pointer"
             >
               <motion.div
                 initial={{ scale: 0.9, opacity: 0, y: 20 }}
                 animate={{ scale: 1, opacity: 1, y: 0 }}
                 exit={{ scale: 0.9, opacity: 0, y: 20 }}
                 transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                className="relative max-w-2xl w-full max-h-[90vh] flex flex-col bg-card rounded-3xl overflow-hidden border border-white/10 shadow-2xl cursor-default"
+                className="relative max-w-2xl w-full max-h-[90vh] flex flex-col bg-card rounded-3xl overflow-hidden border border-border shadow-2xl cursor-default"
                 onClick={(e) => e.stopPropagation()}
               >
                 <button
                   onClick={() => setSelectedImages(null)}
-                  className="absolute top-4 right-4 z-10 p-2.5 bg-black/50 hover:bg-primary text-white rounded-full backdrop-blur-md transition-all hover:scale-110"
+                  className="absolute top-4 right-4 z-10 p-2.5 bg-background/50 hover:bg-primary text-foreground hover:text-primary-foreground border border-border rounded-full backdrop-blur-md transition-all hover:scale-110"
                 >
                   <X size={20} strokeWidth={2.5} />
                 </button>
-                <div className="overflow-y-auto w-full h-full p-2 bg-black/95 flex flex-col gap-4">
+                <div className="overflow-y-auto w-full h-full p-2 bg-card flex flex-col gap-4">
                   {selectedImages.map((src, idx) => (
                     <img key={idx} src={src} alt={`Amortisation Infografik ${idx + 1}`} className="w-full h-auto object-contain rounded-2xl" />
                   ))}

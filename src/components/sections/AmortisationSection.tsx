@@ -11,7 +11,7 @@ const data = [
     breakEven: '120 g',
     breakEvenGrams: 120,
     highlight: false,
-    infographic: '/images/infographics/1.png',
+    infographics: ['/images/infographics/1.png', '/images/infographics/2.png'],
   },
   {
     category: 'Bubble Hash',
@@ -20,7 +20,7 @@ const data = [
     breakEven: '60 g',
     breakEvenGrams: 60,
     highlight: false,
-    infographic: '/images/infographics/2.png',
+    infographics: ['/images/infographics/3.png'],
   },
   {
     category: 'Hash Rosin',
@@ -29,7 +29,7 @@ const data = [
     breakEven: '30 g',
     breakEvenGrams: 30,
     highlight: true,
-    infographic: '/images/infographics/3.png',
+    infographics: ['/images/infographics/4.png'],
   },
   {
     category: 'Piattella',
@@ -38,7 +38,7 @@ const data = [
     breakEven: '20 g',
     breakEvenGrams: 20,
     highlight: false,
-    infographic: '/images/infographics/4.png',
+    infographics: ['/images/infographics/5.jpg'],
   },
   {
     category: 'WPFF Rosin',
@@ -47,7 +47,7 @@ const data = [
     breakEven: '15 g',
     breakEvenGrams: 15,
     highlight: false,
-    infographic: '/images/infographics/5.jpg',
+    infographics: [],
   },
 ];
 
@@ -65,7 +65,7 @@ const rowVariants = {
 };
 
 export function AmortisationSection() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImages, setSelectedImages] = useState<string[] | null>(null);
 
   return (
     <section className="py-16 lg:py-24 bg-background">
@@ -118,8 +118,10 @@ export function AmortisationSection() {
             <motion.div
               key={row.category}
               variants={rowVariants}
-              onClick={() => row.infographic && setSelectedImage(row.infographic)}
-              className={`grid grid-cols-[2fr_1fr_1fr_1fr] items-center px-6 py-5 gap-4 border-b last:border-b-0 border-border transition-all duration-300 hover:bg-primary/5 cursor-pointer group ${
+              onClick={() => row.infographics && row.infographics.length > 0 && setSelectedImages(row.infographics)}
+              className={`grid grid-cols-[2fr_1fr_1fr_1fr] items-center px-6 py-5 gap-4 border-b last:border-b-0 border-border transition-all duration-300 hover:bg-primary/5 ${
+                row.infographics && row.infographics.length > 0 ? 'cursor-pointer' : ''
+              } group ${
                 row.highlight ? 'bg-primary/5' : ''
               }`}
             >
@@ -182,8 +184,10 @@ export function AmortisationSection() {
             <motion.div
               key={row.category}
               variants={rowVariants}
-              onClick={() => row.infographic && setSelectedImage(row.infographic)}
-              className={`p-5 rounded-2xl border border-border bg-card shadow-md cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-primary/50 group ${
+              onClick={() => row.infographics && row.infographics.length > 0 && setSelectedImages(row.infographics)}
+              className={`p-5 rounded-2xl border border-border bg-card shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-primary/50 group ${
+                row.infographics && row.infographics.length > 0 ? 'cursor-pointer' : ''
+              } ${
                 row.highlight ? 'border-primary/40 bg-primary/5' : ''
               }`}
             >
@@ -221,7 +225,9 @@ export function AmortisationSection() {
                   <p className="text-[10px] text-muted-foreground uppercase font-bold tracking-wider">
                     Amortisation
                   </p>
-                  <span className="text-[10px] text-primary opacity-0 group-hover:opacity-100 transition-opacity font-bold">Klicken für Info</span>
+                  {row.infographics && row.infographics.length > 0 && (
+                    <span className="text-[10px] text-primary opacity-0 group-hover:opacity-100 transition-opacity font-bold">Klicken für Info</span>
+                  )}
                 </div>
                 <div className="h-2 w-full bg-muted rounded-full overflow-hidden">
                   <motion.div
@@ -250,12 +256,12 @@ export function AmortisationSection() {
 
         {/* Infographic Modal */}
         <AnimatePresence>
-          {selectedImage && (
+          {selectedImages && selectedImages.length > 0 && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              onClick={() => setSelectedImage(null)}
+              onClick={() => setSelectedImages(null)}
               className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm cursor-pointer"
             >
               <motion.div
@@ -267,13 +273,15 @@ export function AmortisationSection() {
                 onClick={(e) => e.stopPropagation()}
               >
                 <button
-                  onClick={() => setSelectedImage(null)}
+                  onClick={() => setSelectedImages(null)}
                   className="absolute top-4 right-4 z-10 p-2.5 bg-black/50 hover:bg-primary text-white rounded-full backdrop-blur-md transition-all hover:scale-110"
                 >
                   <X size={20} strokeWidth={2.5} />
                 </button>
-                <div className="overflow-y-auto w-full h-full p-1 bg-black/95">
-                  <img src={selectedImage} alt="Amortisation Infografik" className="w-full h-auto object-contain rounded-2xl" />
+                <div className="overflow-y-auto w-full h-full p-2 bg-black/95 flex flex-col gap-4">
+                  {selectedImages.map((src, idx) => (
+                    <img key={idx} src={src} alt={`Amortisation Infografik ${idx + 1}`} className="w-full h-auto object-contain rounded-2xl" />
+                  ))}
                 </div>
               </motion.div>
             </motion.div>

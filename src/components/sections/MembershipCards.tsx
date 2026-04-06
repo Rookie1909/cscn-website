@@ -94,7 +94,7 @@ export function MembershipCards() {
             <motion.div
               key={membership.name}
               variants={itemVariants}
-              className={`relative p-8 rounded-[2rem] border transition-all duration-500 shadow-xl ${
+              className={`relative p-5 sm:p-8 rounded-[2rem] border transition-all duration-500 shadow-xl ${
                 membership.highlighted
                   ? 'border-primary/50 bg-primary/5 ring-4 ring-primary/5'
                   : 'border-border bg-card'
@@ -106,19 +106,19 @@ export function MembershipCards() {
                   initial={{ opacity: 0, y: -8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.5 }}
-                  className="mb-6 rounded-xl border border-amber-600 dark:border-amber-500/40 bg-amber-50 dark:bg-amber-500/10"
+                  className="mb-6 rounded-xl border border-amber-600 w-full overflow-hidden dark:border-amber-500/40 bg-amber-50 dark:bg-amber-500/10"
                   // overflow-hidden on the outer wrapper clips the ticker on all browsers
                   style={{ overflow: 'hidden' }}
                 >
                   {/* Top flash bar */}
-                  <div className="flex items-center gap-2 px-4 py-2 bg-amber-500 dark:bg-amber-500/20 border-b border-amber-600 dark:border-amber-500/30">
+                  <div className="flex items-center justify-center text-center gap-2 px-3 sm:px-4 py-2 bg-amber-500 dark:bg-amber-500/20 border-b border-amber-600 dark:border-amber-500/30">
                     <motion.div
                       animate={{ scale: [1, 1.25, 1] }}
                       transition={{ repeat: Infinity, duration: 1.4, ease: 'easeInOut' }}
                     >
                       <Flame className="w-4 h-4 text-white dark:text-amber-400" />
                     </motion.div>
-                    <span className="text-white dark:text-amber-400 font-black text-xs uppercase tracking-widest font-sans">
+                    <span className="text-white dark:text-amber-400 font-black text-xs uppercase tracking-widest font-sans text-center leading-tight">
                       Limitiertes Kontingent – Nur noch wenige Plätze!
                     </span>
                     <motion.div
@@ -185,7 +185,7 @@ export function MembershipCards() {
                       />
                     </div>
                     <div className="flex items-center gap-1.5">
-                      <Timer className="w-3 h-3 text-amber-600 dark:text-amber-400/70" />
+                      <Timer className="w-3 h-3 text-amber-600 dark:text-amber-400/70 flex-shrink-0" />
                       <span className="text-[10px] text-amber-700 dark:text-amber-400/70 font-sans">
                         Plätze werden laufend vergeben – jetzt Early Bird sein!
                       </span>
@@ -201,7 +201,7 @@ export function MembershipCards() {
                 }`} />
               </div>
 
-              <h3 className="text-2xl font-headline font-black text-foreground mb-4">
+              <h3 className="text-2xl font-headline font-black text-foreground mb-4 break-words hyphens-auto">
                 {membership.name}
               </h3>
 
@@ -247,7 +247,7 @@ export function MembershipCards() {
                   asChild
                   variant={membership.highlighted ? 'default' : 'outline'}
                   size="lg"
-                  className={`w-full rounded-xl font-bold font-sans h-12 shadow-lg transition-all active:scale-[0.98] ${
+                  className={`w-full rounded-xl font-bold font-sans h-auto min-h-[3rem] py-3 whitespace-normal text-center shadow-lg transition-all active:scale-[0.98] ${
                     membership.highlighted ? 'shadow-primary/20' : 'border-border'
                   }`}
                 >
@@ -255,7 +255,7 @@ export function MembershipCards() {
                     href="https://easyverein.com/public/CSCN/applicationform/9895"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2"
+                    className="flex items-center justify-center gap-2 text-center"
                   >
                     {membership.cta}
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

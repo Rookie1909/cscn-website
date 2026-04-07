@@ -11,7 +11,8 @@ const infographics = [
   { title: "Hash (Dry Sift)", src: "/images/infographics/2.png" },
   { title: "Bubble Hash", src: "/images/infographics/3.png" },
   { title: "Hash Rosin", src: "/images/infographics/4.png" },
-  { title: "WPFF Rosin", src: "/images/infographics/5.jpg" },
+  { title: "Piattella", src: "/images/infographics/5.png" },
+  { title: "WPFF Rosin", src: "/images/infographics/6.png" },
 ];
 
 const containerVariants = {

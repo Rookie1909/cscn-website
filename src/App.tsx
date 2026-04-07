@@ -13,7 +13,7 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 
 function App() {
   return (
-    <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
       <AgeVerificationProvider>
         <HashRouter>
         <AgeVerificationModal />

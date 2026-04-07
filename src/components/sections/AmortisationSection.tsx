@@ -1,7 +1,17 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
-import { TrendingDown, Zap, X } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { TrendingDown, Zap } from 'lucide-react';
 import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+
+const infographics = [
+  { title: "Cannabis-Blüten", src: "/images/infographics/1.png" },
+  { title: "Hash (Dry Sift)", src: "/images/infographics/2.png" },
+  { title: "Bubble Hash", src: "/images/infographics/3.png" },
+  { title: "Hash Rosin", src: "/images/infographics/4.png" },
+  { title: "Piattella", src: "/images/infographics/5.png" },
+  { title: "WPFF Rosin", src: "/images/infographics/6.png" },
+];
 
 const data = [
   {
@@ -11,7 +21,7 @@ const data = [
     breakEven: '120 g',
     breakEvenGrams: 120,
     highlight: false,
-    infographics: ['/images/infographics/1.png', '/images/infographics/2.png'],
+    imgIndex: 0, // Cannabis-Blüten
   },
   {
     category: 'Bubble Hash',
@@ -20,7 +30,7 @@ const data = [
     breakEven: '60 g',
     breakEvenGrams: 60,
     highlight: false,
-    infographics: ['/images/infographics/3.png'],
+    imgIndex: 2, // Bubble Hash
   },
   {
     category: 'Hash Rosin',
@@ -29,7 +39,7 @@ const data = [
     breakEven: '30 g',
     breakEvenGrams: 30,
     highlight: true,
-    infographics: ['/images/infographics/4.png'],
+    imgIndex: 3, // Hash Rosin
   },
   {
     category: 'Piattella',
@@ -38,7 +48,7 @@ const data = [
     breakEven: '20 g',
     breakEvenGrams: 20,
     highlight: false,
-    infographics: ['/images/infographics/5.jpg'],
+    imgIndex: 4, // Piattella
   },
   {
     category: 'WPFF Rosin',
@@ -47,7 +57,7 @@ const data = [
     breakEven: '15 g',
     breakEvenGrams: 15,
     highlight: false,
-    infographics: [],
+    imgIndex: 5, // WPFF Rosin
   },
 ];
 
@@ -65,8 +75,6 @@ const rowVariants = {
 };
 
 export function AmortisationSection() {
-  const [selectedImages, setSelectedImages] = useState<string[] | null>(null);
-
   return (
     <section className="py-16 lg:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -97,13 +105,7 @@ export function AmortisationSection() {
         </motion.div>
 
         {/* Table – desktop */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="hidden md:block rounded-2xl border border-border overflow-hidden bg-card shadow-xl"
-        >
+        <div className="hidden md:block rounded-2xl border border-border overflow-hidden bg-card shadow-xl">
           {/* Table header */}
           <div className="grid grid-cols-[2fr_1fr_1fr_1fr] bg-primary/5 border-b border-border px-6 py-3">
             {['Produktkategorie', 'Preis / g\u00a0(Markt)', 'Ersparnis / g', 'Break-even'].map((h) => (
@@ -113,64 +115,94 @@ export function AmortisationSection() {
             ))}
           </div>
 
-          {/* Rows */}
-          {data.map((row, i) => (
-            <motion.div
-              key={row.category}
-              variants={rowVariants}
-              onClick={() => row.infographics && row.infographics.length > 0 && setSelectedImages(row.infographics)}
-              className={`grid grid-cols-[2fr_1fr_1fr_1fr] items-center px-6 py-5 gap-4 border-b last:border-b-0 border-border transition-all duration-300 hover:bg-primary/5 ${
-                row.infographics && row.infographics.length > 0 ? 'cursor-pointer' : ''
-              } group ${
-                row.highlight ? 'bg-primary/5' : ''
-              }`}
-            >
-              {/* Category */}
-              <div className="flex items-center gap-3">
-                <div className={`p-1.5 rounded-lg transition-transform duration-500 group-hover:scale-110 ${row.highlight ? 'bg-primary/20' : 'bg-muted'}`}>
-                  <CannabisLeaf size={16} className={row.highlight ? 'text-primary' : 'text-muted-foreground'} />
-                </div>
-                <span className={`font-headline font-bold text-base transition-colors group-hover:text-primary ${row.highlight ? 'text-primary' : 'text-foreground'}`}>
-                  {row.category}
-                </span>
-                {row.highlight && (
-                  <span className="hidden lg:inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider bg-primary/15 text-primary px-2 py-0.5 rounded-full">
-                    <Zap size={10} /> Beliebt
-                  </span>
-                )}
-              </div>
-
-              {/* Market price */}
-              <span className="font-mono font-semibold text-muted-foreground text-sm group-hover:text-foreground transition-colors">
-                {row.marketPrice}
-              </span>
-
-              {/* Saving */}
-              <div className="flex items-center gap-1.5">
-                <TrendingDown size={14} className="text-emerald-500 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <span className="font-mono font-bold text-emerald-500 text-sm">
-                  {row.saving}
-                </span>
-              </div>
-
-              {/* Break-even with bar */}
-              <div className="space-y-1.5">
-                <span className={`font-mono font-black text-sm ${row.highlight ? 'text-primary' : 'text-foreground'}`}>
-                  {row.breakEven}
-                </span>
-                <div className="h-1.5 w-full bg-muted rounded-full overflow-hidden">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {data.map((row, i) => (
+              <Dialog key={row.category}>
+                <DialogTrigger asChild>
                   <motion.div
-                    className="h-full bg-primary rounded-full"
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${(row.breakEvenGrams / MAX_GRAMS) * 100}%` }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: i * 0.08, ease: 'easeOut' }}
-                  />
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+                    variants={rowVariants}
+                    className={`grid grid-cols-[2fr_1fr_1fr_1fr] items-center px-6 py-5 gap-4 border-b last:border-b-0 border-border transition-colors hover:bg-primary/5 group cursor-pointer ${
+                      row.highlight ? 'bg-primary/5' : ''
+                    }`}
+                  >
+                    {/* Category */}
+                    <div className="flex items-center gap-3">
+                      <div className={`p-1.5 rounded-lg ${row.highlight ? 'bg-primary/20' : 'bg-muted'}`}>
+                        <CannabisLeaf size={16} className={row.highlight ? 'text-primary' : 'text-muted-foreground'} />
+                      </div>
+                      <span className={`font-headline font-bold text-base ${row.highlight ? 'text-primary' : 'text-foreground'}`}>
+                        {row.category}
+                      </span>
+                      {row.highlight && (
+                        <span className="hidden lg:inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider bg-primary/15 text-primary px-2 py-0.5 rounded-full">
+                          <Zap size={10} /> Beliebt
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Market price */}
+                    <span className="font-mono font-semibold text-muted-foreground text-sm">
+                      {row.marketPrice}
+                    </span>
+
+                    {/* Saving */}
+                    <div className="flex items-center gap-1.5">
+                      <TrendingDown size={14} className="text-emerald-500 flex-shrink-0" />
+                      <span className="font-mono font-bold text-emerald-500 text-sm">
+                        {row.saving}
+                      </span>
+                    </div>
+
+                    {/* Break-even with bar */}
+                    <div className="space-y-1.5">
+                      <span className={`font-mono font-black text-sm ${row.highlight ? 'text-primary' : 'text-foreground'}`}>
+                        {row.breakEven}
+                      </span>
+                      <div className="h-1.5 w-full bg-muted rounded-full overflow-hidden">
+                        <motion.div
+                          className="h-full bg-primary rounded-full"
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${(row.breakEvenGrams / MAX_GRAMS) * 100}%` }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.8, delay: i * 0.08, ease: 'easeOut' }}
+                        />
+                      </div>
+                    </div>
+                  </motion.div>
+                </DialogTrigger>
+                <DialogContent className="max-w-[95vw] md:max-w-5xl max-h-[95vh] border-none bg-white/80 dark:bg-black/60 backdrop-blur-2xl p-0 overflow-hidden sm:rounded-[2rem] [&>button]:text-primary [&>button]:bg-secondary/40 [&>button:hover]:bg-primary [&>button:hover]:text-white dark:[&>button]:bg-black/40">
+                  <div className="p-4 sm:p-8 flex flex-col h-full w-full justify-center">
+                    <h2 className="text-2xl font-headline font-black text-zinc-900 dark:text-white text-center mb-6 drop-shadow-sm dark:drop-shadow-md">
+                      {row.category} Details
+                    </h2>
+                    <Carousel className="w-full" opts={{ startIndex: row.imgIndex }}>
+                      <CarouselContent>
+                        {infographics.map((info, idx) => (
+                          <CarouselItem key={idx} className="flex justify-center items-center">
+                            <div className="relative flex justify-center items-center rounded-2xl overflow-hidden border border-primary/20 dark:border-white/10 shadow-[0_0_40px_-10px_rgba(20,184,166,0.2)] dark:shadow-[0_0_40px_-10px_rgba(20,184,166,0.3)] bg-secondary/10 dark:bg-black/40 w-full md:w-auto min-h-[40vh]">
+                              <img 
+                                src={info.src} 
+                                alt={info.title} 
+                                className="w-full md:max-w-3xl max-h-[65vh] object-contain dark:invert dark:hue-rotate-180 dark:brightness-110 transition-all duration-300"
+                              />
+                            </div>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious className="left-2 md:-left-12 h-12 w-12 border-primary/50 text-foreground dark:text-white hover:border-primary backdrop-blur-md" />
+                      <CarouselNext className="right-2 md:-right-12 h-12 w-12 border-primary/50 text-foreground dark:text-white hover:border-primary backdrop-blur-md" />
+                    </Carousel>
+                  </div>
+                </DialogContent>
+              </Dialog>
+            ))}
+          </motion.div>
+        </div>
 
         {/* Cards – mobile */}
         <motion.div
@@ -178,68 +210,85 @@ export function AmortisationSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="md:hidden space-y-4"
+          className="grid md:hidden gap-4"
         >
           {data.map((row, i) => (
-            <motion.div
-              key={row.category}
-              variants={rowVariants}
-              onClick={() => row.infographics && row.infographics.length > 0 && setSelectedImages(row.infographics)}
-              className={`p-5 rounded-2xl border border-border bg-card shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-primary/50 group ${
-                row.infographics && row.infographics.length > 0 ? 'cursor-pointer' : ''
-              } ${
-                row.highlight ? 'border-primary/40 bg-primary/5' : ''
-              }`}
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-xl bg-muted group-hover:bg-primary/10 transition-colors duration-300">
-                    <CannabisLeaf size={18} className={`transition-transform duration-500 group-hover:scale-110 ${row.highlight ? 'text-primary' : 'text-muted-foreground'}`} />
+            <Dialog key={row.category}>
+              <DialogTrigger asChild>
+                <motion.div
+                  variants={rowVariants}
+                  className={`p-5 rounded-2xl border border-border bg-card shadow-md cursor-pointer ${
+                    row.highlight ? 'border-primary/40 bg-primary/5' : ''
+                  }`}
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2">
+                      <CannabisLeaf size={18} className={row.highlight ? 'text-primary' : 'text-muted-foreground'} />
+                      <span className={`font-headline font-black text-base ${row.highlight ? 'text-primary' : 'text-foreground'}`}>
+                        {row.category}
+                      </span>
+                    </div>
+                    {row.highlight && (
+                      <span className="text-[10px] font-black uppercase tracking-wider bg-primary/15 text-primary px-2 py-0.5 rounded-full">
+                        Beliebt
+                      </span>
+                    )}
                   </div>
-                  <span className={`font-headline font-black text-base group-hover:text-primary transition-colors ${row.highlight ? 'text-primary' : 'text-foreground'}`}>
-                    {row.category}
-                  </span>
-                </div>
-                {row.highlight && (
-                  <span className="text-[10px] font-black uppercase tracking-wider bg-primary/15 text-primary px-2 py-0.5 rounded-full">
-                    Beliebt
-                  </span>
-                )}
-              </div>
 
-              <div className="grid grid-cols-3 gap-3 text-center mb-4">
-                {[
-                  { label: 'Marktpreis', value: row.marketPrice, color: 'text-muted-foreground' },
-                  { label: 'Ersparnis', value: row.saving, color: 'text-emerald-500' },
-                  { label: 'Break-even', value: row.breakEven, color: row.highlight ? 'text-primary' : 'text-foreground' },
-                ].map(({ label, value, color }) => (
-                  <div key={label} className="bg-muted/40 rounded-xl p-2 group-hover:bg-muted/60 transition-colors">
-                    <p className="text-[10px] text-muted-foreground uppercase font-bold tracking-wider mb-1">{label}</p>
-                    <p className={`font-mono font-black text-sm ${color}`}>{value}</p>
+                  <div className="grid grid-cols-3 gap-3 text-center mb-4">
+                    {[
+                      { label: 'Marktpreis', value: row.marketPrice, color: 'text-muted-foreground' },
+                      { label: 'Ersparnis', value: row.saving, color: 'text-emerald-500' },
+                      { label: 'Break-even', value: row.breakEven, color: row.highlight ? 'text-primary' : 'text-foreground' },
+                    ].map(({ label, value, color }) => (
+                      <div key={label} className="bg-muted/40 rounded-xl p-2">
+                        <p className="text-[10px] text-muted-foreground uppercase font-bold tracking-wider mb-1">{label}</p>
+                        <p className={`font-mono font-black text-sm ${color}`}>{value}</p>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
 
-              <div className="space-y-1">
-                <div className="flex justify-between items-center mb-1">
-                  <p className="text-[10px] text-muted-foreground uppercase font-bold tracking-wider">
-                    Amortisation
-                  </p>
-                  {row.infographics && row.infographics.length > 0 && (
-                    <span className="text-[10px] text-primary opacity-0 group-hover:opacity-100 transition-opacity font-bold">Klicken für Info</span>
-                  )}
+                  <div className="space-y-1">
+                    <p className="text-[10px] text-muted-foreground uppercase font-bold tracking-wider">
+                      Amortisation
+                    </p>
+                    <div className="h-2 w-full bg-muted rounded-full overflow-hidden">
+                      <motion.div
+                        className="h-full bg-primary rounded-full"
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${(row.breakEvenGrams / MAX_GRAMS) * 100}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: i * 0.1, ease: 'easeOut' }}
+                      />
+                    </div>
+                  </div>
+                </motion.div>
+              </DialogTrigger>
+              <DialogContent className="max-w-[95vw] md:max-w-5xl max-h-[95vh] border-none bg-white/80 dark:bg-black/60 backdrop-blur-2xl p-0 overflow-hidden sm:rounded-[2rem] [&>button]:text-primary [&>button]:bg-secondary/40 [&>button:hover]:bg-primary [&>button:hover]:text-white dark:[&>button]:bg-black/40">
+                <div className="p-4 sm:p-8 flex flex-col h-full w-full justify-center">
+                  <h2 className="text-2xl font-headline font-black text-zinc-900 dark:text-white text-center mb-6 drop-shadow-sm dark:drop-shadow-md">
+                    {row.category} Details
+                  </h2>
+                  <Carousel className="w-full" opts={{ startIndex: row.imgIndex }}>
+                    <CarouselContent>
+                      {infographics.map((info, idx) => (
+                        <CarouselItem key={idx} className="flex justify-center items-center">
+                          <div className="relative flex justify-center items-center rounded-2xl overflow-hidden border border-primary/20 dark:border-white/10 shadow-[0_0_40px_-10px_rgba(20,184,166,0.2)] dark:shadow-[0_0_40px_-10px_rgba(20,184,166,0.3)] bg-secondary/10 dark:bg-black/40 w-full md:w-auto min-h-[40vh]">
+                            <img 
+                              src={info.src} 
+                              alt={info.title} 
+                              className="w-full md:max-w-3xl max-h-[65vh] object-contain dark:invert dark:hue-rotate-180 dark:brightness-110 transition-all duration-300"
+                            />
+                          </div>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="left-2 md:-left-12 h-12 w-12 border-primary/50 text-foreground dark:text-white hover:border-primary backdrop-blur-md" />
+                    <CarouselNext className="right-2 md:-right-12 h-12 w-12 border-primary/50 text-foreground dark:text-white hover:border-primary backdrop-blur-md" />
+                  </Carousel>
                 </div>
-                <div className="h-2 w-full bg-muted rounded-full overflow-hidden">
-                  <motion.div
-                    className="h-full bg-primary rounded-full group-hover:brightness-110 transition-all"
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${(row.breakEvenGrams / MAX_GRAMS) * 100}%` }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: i * 0.1, ease: 'easeOut' }}
-                  />
-                </div>
-              </div>
-            </motion.div>
+              </DialogContent>
+            </Dialog>
           ))}
         </motion.div>
 
@@ -253,40 +302,6 @@ export function AmortisationSection() {
           * Berechnung basiert auf der einmaligen Supporter-Aufnahmegebühr von 300,–&nbsp;€ sowie einem
           pauschalen Marktpreis-Abschlag von 25&nbsp;%. Individuelle Bezugsmengen können variieren.
         </motion.p>
-
-        {/* Infographic Modal */}
-        <AnimatePresence>
-          {selectedImages && selectedImages.length > 0 && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSelectedImages(null)}
-              className="fixed inset-0 z-[100] flex items-center justify-center bg-background/80 p-4 backdrop-blur-sm cursor-pointer"
-            >
-              <motion.div
-                initial={{ scale: 0.9, opacity: 0, y: 20 }}
-                animate={{ scale: 1, opacity: 1, y: 0 }}
-                exit={{ scale: 0.9, opacity: 0, y: 20 }}
-                transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                className="relative max-w-2xl w-full max-h-[90vh] flex flex-col bg-card rounded-3xl overflow-hidden border border-border shadow-2xl cursor-default"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <button
-                  onClick={() => setSelectedImages(null)}
-                  className="absolute top-4 right-4 z-10 p-2.5 bg-background/50 hover:bg-primary text-foreground hover:text-primary-foreground border border-border rounded-full backdrop-blur-md transition-all hover:scale-110"
-                >
-                  <X size={20} strokeWidth={2.5} />
-                </button>
-                <div className="overflow-y-auto w-full h-full p-2 bg-card flex flex-col gap-4">
-                  {selectedImages.map((src, idx) => (
-                    <img key={idx} src={src} alt={`Amortisation Infografik ${idx + 1}`} className="w-full h-auto object-contain rounded-2xl" />
-                  ))}
-                </div>
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
 
       </div>
     </section>

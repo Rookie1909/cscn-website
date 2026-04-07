@@ -100,14 +100,39 @@ export function MembershipCards() {
                   : 'border-border bg-card'
               } hover:border-primary/40 group`}
             >
+              {/* Cannabis leaf decoration */}
+              <div className="absolute top-6 right-6">
+                <CannabisLeaf size={32} className={`transition-transform duration-700 group-hover:rotate-12 ${
+                  membership.highlighted ? 'text-primary/20' : 'text-muted-foreground/10'
+                }`} />
+              </div>
+
+              <h3 className="text-2xl font-headline font-black text-foreground mb-4 break-words hyphens-auto">
+                {membership.name}
+              </h3>
+
+              <p className="text-muted-foreground font-sans text-sm mb-6 leading-relaxed">
+                Für die {membership.name} ist eine{' '}
+                <span className={membership.highlighted ? 'text-foreground font-bold' : ''}>
+                  {membership.highlighted ? 'einmalige' : 'entfällt die'}
+                </span>{' '}
+                Aufnahmegebühr von {membership.highlighted ? '300,-€' : 'komplett'} zu zahlen.
+                {membership.highlighted
+                  ? ' Die Supporter-Mitgliedschaft enthält:'
+                  : ' In der Standard-Mitgliedschaft enthalten:'}
+              </p>
+
+              <div className="mb-6">
+                <p className="text-primary font-bold font-sans">{membership.monthly}</p>
+              </div>
+
               {/* ── Early-Bird urgency banner (Supporter only) ── */}
               {membership.highlighted && (
                 <motion.div
                   initial={{ opacity: 0, y: -8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.5 }}
-                  className="mb-6 rounded-xl border border-amber-600 w-full overflow-hidden dark:border-amber-500/40 bg-amber-50 dark:bg-amber-500/10"
-                  // overflow-hidden on the outer wrapper clips the ticker on all browsers
+                  className="mb-8 rounded-xl border border-amber-600 w-full overflow-hidden dark:border-amber-500/40 bg-amber-50 dark:bg-amber-500/10"
                   style={{ overflow: 'hidden' }}
                 >
                   {/* Top flash bar */}
@@ -129,11 +154,6 @@ export function MembershipCards() {
                     </motion.div>
                   </div>
 
-                  {/* ── Marquee / Laufschrift ──
-                      Mobile-safe: ticker is position:absolute so it is fully
-                      removed from document flow → never inflates scroll-width.
-                      Pure CSS @keyframes (not Framer Motion) for iOS Safari compat.
-                  */}
                   <style>{`
                     @keyframes cscn-marquee {
                       0%   { transform: translateX(0); }
@@ -148,15 +168,12 @@ export function MembershipCards() {
                       will-change: transform;
                     }
                   `}</style>
-                  {/* Container: explicit height + overflow:hidden clips the absolute ticker */}
                   <div
                     className="relative w-full"
                     style={{ height: '32px', overflow: 'hidden' }}
                   >
-                    {/* Fade masks */}
                     <div className="absolute inset-y-0 left-0 w-8 z-10 bg-gradient-to-r from-amber-50 dark:from-[#1c1200] to-transparent pointer-events-none" style={{ zIndex: 2 }} />
                     <div className="absolute inset-y-0 right-0 w-8 z-10 bg-gradient-to-l from-amber-50 dark:from-[#1c1200] to-transparent pointer-events-none" style={{ zIndex: 2 }} />
-                    {/* Ticker — absolutely positioned, out of flow */}
                     <div
                       className="cscn-ticker text-amber-800 dark:text-amber-300/90 font-sans text-xs items-center"
                       style={{ paddingTop: '7px' }}
@@ -166,7 +183,6 @@ export function MembershipCards() {
                     </div>
                   </div>
 
-                  {/* Spots-remaining bar */}
                   <div className="px-4 pb-3 space-y-1">
                     <div className="flex justify-between items-center">
                       <span className="text-[10px] uppercase font-black tracking-widest text-amber-700 dark:text-amber-400/80 font-sans">
@@ -193,32 +209,6 @@ export function MembershipCards() {
                   </div>
                 </motion.div>
               )}
-
-              {/* Cannabis leaf decoration */}
-              <div className="absolute top-6 right-6">
-                <CannabisLeaf size={32} className={`transition-transform duration-700 group-hover:rotate-12 ${
-                  membership.highlighted ? 'text-primary/20' : 'text-muted-foreground/10'
-                }`} />
-              </div>
-
-              <h3 className="text-2xl font-headline font-black text-foreground mb-4 break-words hyphens-auto">
-                {membership.name}
-              </h3>
-
-              <p className="text-muted-foreground font-sans text-sm mb-6 leading-relaxed">
-                Für die {membership.name} ist eine{' '}
-                <span className={membership.highlighted ? 'text-foreground font-bold' : ''}>
-                  {membership.highlighted ? 'einmalige' : 'entfällt die'}
-                </span>{' '}
-                Aufnahmegebühr von {membership.highlighted ? '300,-€' : 'komplett'} zu zahlen.
-                {membership.highlighted
-                  ? ' Die Supporter-Mitgliedschaft enthält:'
-                  : ' In der Standard-Mitgliedschaft enthalten:'}
-              </p>
-
-              <div className="mb-6">
-                <p className="text-primary font-bold font-sans">{membership.monthly}</p>
-              </div>
 
               <ul className="space-y-3 mb-8">
                 {membership.features.map((feature) => (

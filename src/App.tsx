@@ -10,11 +10,13 @@ import { Standorte } from '@/pages/Standorte';
 import { Impressum } from '@/pages/Impressum';
 import { Gesundheitsschutz } from '@/pages/Gesundheitsschutz';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import { LanguageProvider } from '@/contexts/LanguageContext';
 
 function App() {
   return (
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
-      <AgeVerificationProvider>
+      <LanguageProvider>
+        <AgeVerificationProvider>
         <HashRouter>
         <AgeVerificationModal />
         <Routes>
@@ -30,6 +32,7 @@ function App() {
         </Routes>
       </HashRouter>
       </AgeVerificationProvider>
+        </LanguageProvider>
     </ThemeProvider>
   );
 }

@@ -4,28 +4,30 @@ import { Menu, ChevronDown, Cannabis, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
 import { useTheme } from 'next-themes';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 
-const navItems = [
-  { label: 'Home', href: '/' },
+const getNavItems = (t: any) => [
+  { label: t('nav.home'), href: '/' },
   {
-    label: 'Verein',
+    label: t('nav.verein'),
     href: '/verein',
     children: [
-      { label: 'Über uns', href: '/verein' },
-      { label: 'Gesundheits- & Jugendschutz', href: '/gesundheitsschutz' },
+      { label: t('nav.about'), href: '/verein' },
+      { label: t('nav.health'), href: '/gesundheitsschutz' },
     ],
   },
-  { label: 'Sortiment', href: '/sortiment' },
-  { label: 'Standorte', href: '/standorte' },
-  { label: 'Mitgliedsanträge', href: '/mitgliedsbeitraege' },
+  { label: t('nav.assortment'), href: '/sortiment' },
+  { label: t('nav.locations'), href: '/standorte' },
+  { label: t('nav.membership'), href: '/mitgliedsbeitraege' },
 ];
 
 export function Header() {
+  const { theme, setTheme } = useTheme();
+  const { language, setLanguage, t } = useLanguage();
   const { isScrolled } = useScrollPosition();
   const location = useLocation();
-  const { theme, setTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [isLogoFullscreen, setIsLogoFullscreen] = useState(false);
@@ -56,17 +58,17 @@ export function Header() {
             </button>
             <Link to="/" className="block group">
               <h1 className="text-foreground font-headline font-black text-[13px] sm:text-xl lg:text-2xl leading-[1.1] sm:leading-[0.9] tracking-tight group-hover:text-primary transition-colors duration-300">
-                Cannabis Social Club
+                {t("header.title")}
                 <br />
-                Nordheide E.V.
+                {t("header.subtitle")}
               </h1>
-              <p className="text-muted-foreground text-[8px] sm:text-[11px] font-sans uppercase tracking-[0.1em] sm:tracking-[0.2em] mt-1 sm:mt-1.5 font-bold">Vereinswebsite des CSC Nordheide e.V.</p>
+              <p className="text-muted-foreground text-[8px] sm:text-[11px] font-sans uppercase tracking-[0.1em] sm:tracking-[0.2em] mt-1 sm:mt-1.5 font-bold">{t("header.desc")}</p>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
-            {navItems.map((item) => (
+            {getNavItems(t).map((item) => (
               <div key={item.label} className="relative">
                 {item.children ? (
                   <div
@@ -131,6 +133,16 @@ export function Header() {
             >
               <Cannabis className={`w-6 h-6 transition-all duration-700 ${theme === 'dark' ? 'fill-primary scale-110' : 'scale-90'}`} />
             </Button>
+            {/* Language Toggle */}
+            <Button
+              variant="outline"
+              onClick={() => setLanguage(language === 'de' ? 'en' : 'de')}
+              className="ml-2 w-11 h-11 rounded-xl border-border bg-background/50 hover:bg-primary/5 hover:border-primary/50 text-primary transition-all duration-500 shadow-lg shadow-black/5 font-black text-xs uppercase"
+              title={language === 'de' ? 'Switch to English' : 'Auf Deutsch wechseln'}
+            >
+              {language === 'de' ? 'EN' : 'DE'}
+            </Button>
+
           </nav>
 
           {/* Mobile Menu */}
@@ -155,7 +167,7 @@ export function Header() {
                     <h2 className="text-xl font-headline font-black text-foreground">Menü</h2>
                   </div>
                   <div className="flex flex-col gap-6">
-                    {navItems.map((item) => (
+                    {getNavItems(t).map((item) => (
                       <div key={item.label}>
                         {item.children ? (
                           <div className="space-y-4">

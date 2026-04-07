@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Award, Users, Scale, ShieldCheck, Zap } from 'lucide-react';
 import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
@@ -48,6 +49,7 @@ const highlights = [
 ];
 
 export function HeroSection() {
+  const { t } = useLanguage();
   return (
     <section className="py-16 lg:py-24 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,16 +66,16 @@ export function HeroSection() {
                 variants={itemVariants}
                 className="text-4xl sm:text-5xl lg:text-7xl font-headline font-black text-foreground leading-[0.95] tracking-tight break-words"
               >
-                Pioniere des <br />
-                <span className="text-primary italic">biologischen</span> <br />
-                Anbaus in Niedersachsen
+                {t("hero.titleLine1")} <br />
+                <span className="text-primary italic">{t("hero.titleLine2")}</span> <br />
+                {t("hero.titleLine3")}
               </motion.h1>
 
               <motion.p
                 variants={itemVariants}
                 className="text-xl text-muted-foreground font-sans leading-relaxed max-w-xl"
               >
-                Der erste CSC in Niedersachsen mit über 170 engagierten Mitgliedern – Qualität, die überzeugt.
+                {t("hero.subtitle")}
               </motion.p>
             </div>
 
@@ -103,14 +105,14 @@ export function HeroSection() {
                       <div className="p-3 bg-primary rounded-2xl shadow-lg shadow-primary/20">
                         <CannabisLeaf size={24} className="text-white fill-current" />
                       </div>
-                      <h3 className="text-xl font-headline font-black text-foreground">Exklusive Auswahl</h3>
+                      <h3 className="text-xl font-headline font-black text-foreground">{t("hero.exclusive")}</h3>
                     </div>
                     <p className="text-sm font-sans text-muted-foreground leading-relaxed font-medium">
-                      Blüten, Hash (Dry Sift), Bubble Hash, Hash Rosin, Piattella, WPFF Rosin.
+                      {t("hero.exclusiveDesc")}
                     </p>
                     <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-primary text-[10px] font-headline font-black uppercase tracking-widest">
                       <Zap className="w-3 h-3 fill-current" />
-                      Nur bei uns erhältlich
+                      {t("hero.exclusiveTag")}
                     </div>
                   </button>
                 </DialogTrigger>
@@ -188,7 +190,7 @@ export function HeroSection() {
                     className="absolute inset-y-0 w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-[30deg]"
                   />
                   <span className="relative z-10 flex items-center gap-2 sm:gap-3 drop-shadow-md text-center">
-                    <span className="line-clamp-1">Jetzt Teil der Bewegung werden</span>
+                    <span className="line-clamp-1">{t("hero.cta")}</span>
                     <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 shrink-0 group-hover:translate-x-1 transition-transform text-primary dark:text-white" />
                   </span>
                 </Link>
@@ -211,8 +213,8 @@ export function HeroSection() {
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
-                <p className="text-white font-headline font-black text-2xl tracking-tight">Biologischer Anbau</p>
-                <p className="text-primary font-sans text-sm mt-2">100% Reinheit ohne Kompromisse</p>
+                <p className="text-white font-headline font-black text-2xl tracking-tight">{t("hero.imgTitle")}</p>
+                <p className="text-primary font-sans text-sm mt-2">{t("hero.imgSubtitle")}</p>
               </div>
             </div>
             
@@ -227,8 +229,8 @@ export function HeroSection() {
                   <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                 </div>
                 <div>
-                  <div className="text-lg sm:text-xl font-headline font-black text-foreground leading-none">100% Legal</div>
-                  <div className="text-[9px] sm:text-[10px] uppercase tracking-widest text-muted-foreground mt-1 font-bold">Regulierter Anbau</div>
+                  <div className="text-lg sm:text-xl font-headline font-black text-foreground leading-none">{t("hero.badgeTitle")}</div>
+                  <div className="text-[9px] sm:text-[10px] uppercase tracking-widest text-muted-foreground mt-1 font-bold">{t("hero.badgeSubtitle")}</div>
                 </div>
               </div>
             </motion.div>

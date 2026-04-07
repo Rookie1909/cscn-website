@@ -2,39 +2,9 @@ import { motion } from 'framer-motion';
 import { Check, ArrowRight, Flame, Timer } from 'lucide-react';
 import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
-const memberships = [
-  {
-    name: 'Standard-Mitgliedschaft',
-    price: '0,-€',
-    priceNote: 'Aufnahmegebühr!',
-    monthly: 'Monatlicher Mindestbeitrag 50€',
-    features: [
-      'Zugriff auf das Standardsortiment (Blüten- und Haschischprodukte)',
-      'Bezug von Stecklingen für den Eigenanbau (demnächst)',
-      'kein Zugriff auf Testgenetiken (Cannabisblüten)',
-      'keine Reservierungsmöglichkeit',
-      'Upgrade zur Supporter-Mitgliedschaft ist jederzeit möglich',
-    ],
-    cta: 'Mitgliedsantrag Standard-Mitgliedschaft',
-    highlighted: false,
-  },
-  {
-    name: 'Supporter-Mitgliedschaft',
-    price: '300,-€',
-    priceNote: 'einmalige Aufnahmegebühr!',
-    monthly: 'Monatlicher Mindestbeitrag 50€',
-    features: [
-      '25% Vergünstigung auf alle Pauschalen/Beiträge/TopUps',
-      'Alle 6 Monate ein Premium-Steckling für den Homegrow (optional)',
-      'Exklusiver Zugriff auf limitierte Testgenetiken (Cannabisblüten)',
-      'Reservierungsmöglichkeit für Lieblingssorten (demnächst)',
-      'ein offizielles CSC Nordheide e.V. Polo-Shirt/T-Shirt',
-    ],
-    cta: 'Mitgliedsantrag Supporter-Mitgliedschaft',
-    highlighted: true,
-  },
-];
+
 
 // Ticker text – plain string so it never causes layout inflation
 const TICKER_TEXT =
@@ -58,6 +28,19 @@ const itemVariants = {
 };
 
 export function MembershipCards() {
+  const { t } = useLanguage();
+  
+  const memberships = [
+    {
+      ...t("membership.cards")[0],
+      highlighted: false,
+    },
+    {
+      ...t("membership.cards")[1],
+      highlighted: true,
+    }
+  ];
+
   return (
     <section className="py-16 lg:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,7 +53,7 @@ export function MembershipCards() {
           className="text-center mb-12"
         >
           <p className="text-primary text-sm font-bold tracking-widest uppercase mb-4 font-sans">
-            Gemeinsam ans Ziel
+            {t("membership.title")}
           </p>
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="h-px w-24 bg-border" />
@@ -78,7 +61,7 @@ export function MembershipCards() {
             <div className="h-px w-24 bg-border" />
           </div>
           <h2 className="text-3xl lg:text-4xl font-headline font-black text-foreground">
-            Unsere Mitgliedschaften
+            {t("membership.heading")}
           </h2>
         </motion.div>
 
@@ -119,7 +102,7 @@ export function MembershipCards() {
                       <Flame className="w-4 h-4 text-white dark:text-amber-400" />
                     </motion.div>
                     <span className="text-white dark:text-amber-400 font-black text-xs uppercase tracking-widest font-sans text-center leading-tight">
-                      Limitiertes Kontingent – Nur noch wenige Plätze!
+                      {t("membership.limitText")}
                     </span>
                     <motion.div
                       animate={{ scale: [1, 1.25, 1] }}
@@ -170,10 +153,10 @@ export function MembershipCards() {
                   <div className="px-4 pb-3 space-y-1">
                     <div className="flex justify-between items-center">
                       <span className="text-[10px] uppercase font-black tracking-widest text-amber-700 dark:text-amber-400/80 font-sans">
-                        Verfügbare Plätze
+                        {t("membership.availableSpots")}
                       </span>
                       <span className="text-[10px] font-black text-amber-700 dark:text-amber-400 font-mono">
-                        Schnell sein!
+                        {t("membership.fast")}
                       </span>
                     </div>
                     <div className="h-2 w-full bg-amber-200 dark:bg-amber-950/50 rounded-full overflow-hidden">
@@ -187,7 +170,7 @@ export function MembershipCards() {
                     <div className="flex items-center gap-1.5">
                       <Timer className="w-3 h-3 text-amber-600 dark:text-amber-400/70 flex-shrink-0" />
                       <span className="text-[10px] text-amber-700 dark:text-amber-400/70 font-sans">
-                        Plätze werden laufend vergeben – jetzt Early Bird sein!
+                        {t("membership.earlyBird")}
                       </span>
                     </div>
                   </div>
@@ -208,12 +191,10 @@ export function MembershipCards() {
               <p className="text-muted-foreground font-sans text-sm mb-6 leading-relaxed">
                 Für die {membership.name} ist eine{' '}
                 <span className={membership.highlighted ? 'text-foreground font-bold' : ''}>
-                  {membership.highlighted ? 'einmalige' : 'entfällt die'}
+                  {membership.highlighted ? t('membership.feeOnce') : t('membership.feeNone')}
                 </span>{' '}
-                Aufnahmegebühr von {membership.highlighted ? '300,-€' : 'komplett'} zu zahlen.
-                {membership.highlighted
-                  ? ' Die Supporter-Mitgliedschaft enthält:'
-                  : ' In der Standard-Mitgliedschaft enthalten:'}
+                Aufnahmegebühr von {membership.highlighted ? t('membership.feeAmountHighlight') : t('membership.feeAmountNormal')} zu zahlen.
+                {membership.highlighted ? t('membership.textHighlight') : t('membership.textNormal')}
               </p>
 
               <div className="mb-6">
@@ -221,7 +202,7 @@ export function MembershipCards() {
               </div>
 
               <ul className="space-y-3 mb-8">
-                {membership.features.map((feature) => (
+                {membership.features.map((feature: string) => (
                   <li key={feature} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                     <span className="text-muted-foreground font-sans text-sm font-medium">{feature}</span>

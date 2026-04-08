@@ -1,44 +1,8 @@
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Check, ArrowRight, Flame, Timer } from 'lucide-react';
 import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
 import { Button } from '@/components/ui/button';
-
-const memberships = [
-  {
-    name: 'Standard-Mitgliedschaft',
-    price: '0,-€',
-    priceNote: 'Aufnahmegebühr!',
-    monthly: 'Monatlicher Mindestbeitrag 50€',
-    features: [
-      'Zugriff auf das Standardsortiment (Blüten- und Haschischprodukte)',
-      'Bezug von Stecklingen für den Eigenanbau (demnächst)',
-      'kein Zugriff auf Testgenetiken (Cannabisblüten)',
-      'keine Reservierungsmöglichkeit',
-      'Upgrade zur Supporter-Mitgliedschaft ist jederzeit möglich',
-    ],
-    cta: 'Mitgliedsantrag Standard-Mitgliedschaft',
-    highlighted: false,
-  },
-  {
-    name: 'Supporter-Mitgliedschaft',
-    price: '300,-€',
-    priceNote: 'einmalige Aufnahmegebühr!',
-    monthly: 'Monatlicher Mindestbeitrag 50€',
-    features: [
-      '25% Vergünstigung auf alle Pauschalen/Beiträge/TopUps',
-      'Alle 6 Monate ein Premium-Steckling für den Homegrow (optional)',
-      'Exklusiver Zugriff auf limitierte Testgenetiken (Cannabisblüten)',
-      'Reservierungsmöglichkeit für Lieblingssorten (demnächst)',
-      'ein offizielles CSC Nordheide e.V. Polo-Shirt/T-Shirt',
-    ],
-    cta: 'Mitgliedsantrag Supporter-Mitgliedschaft',
-    highlighted: true,
-  },
-];
-
-// Ticker text – plain string so it never causes layout inflation
-const TICKER_TEXT =
-  '\u{1F33F}\u00a0 Nur noch \u00a0wenige Pl\u00e4tze\u00a0 verf\u00fcgbar \u00a0\u00b7\u00a0 Sichere dir jetzt deinen \u00a0Early-Bird-Vorteil\u00a0 und profitiere als eines der ersten Mitglieder von der \u00a025\u00a0% Ersparnis\u00a0 \u00a0\u00b7\u00a0 Exklusiver Zugriff auf \u00a0limitierte Testgenetiken\u00a0 \u00a0\u00b7\u00a0 Jetzt Mitglied werden und dabei sein \u00a0\u{1F525}\u00a0\u00a0\u00a0\u00a0';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -58,6 +22,35 @@ const itemVariants = {
 };
 
 export function MembershipCards() {
+  const { t } = useTranslation();
+
+  const memberships = [
+    {
+      id: 'standard',
+      name: t('membership_cards.standard.name'),
+      price: '0,-€',
+      priceNote: t('membership_cards.standard.priceNote'),
+      monthly: t('membership_cards.standard.monthly'),
+      description: t('membership_cards.standard.description'),
+      features: t('membership_cards.standard.features', { returnObjects: true }) as string[],
+      cta: t('membership_cards.standard.cta'),
+      highlighted: false,
+    },
+    {
+      id: 'supporter',
+      name: t('membership_cards.supporter.name'),
+      price: '300,-€',
+      priceNote: t('membership_cards.supporter.priceNote'),
+      monthly: t('membership_cards.supporter.monthly'),
+      description: t('membership_cards.supporter.description'),
+      features: t('membership_cards.supporter.features', { returnObjects: true }) as string[],
+      cta: t('membership_cards.supporter.cta'),
+      highlighted: true,
+    },
+  ];
+
+  const TICKER_TEXT = t('membership_cards.supporter.urgency.ticker');
+
   return (
     <section className="py-16 lg:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,7 +63,7 @@ export function MembershipCards() {
           className="text-center mb-12"
         >
           <p className="text-primary text-sm font-bold tracking-widest uppercase mb-4 font-sans">
-            Gemeinsam ans Ziel
+            {t('membership_cards.badge')}
           </p>
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="h-px w-24 bg-border" />
@@ -78,7 +71,7 @@ export function MembershipCards() {
             <div className="h-px w-24 bg-border" />
           </div>
           <h2 className="text-3xl lg:text-4xl font-headline font-black text-foreground">
-            Unsere Mitgliedschaften
+            {t('membership_cards.title')}
           </h2>
         </motion.div>
 
@@ -92,7 +85,7 @@ export function MembershipCards() {
         >
           {memberships.map((membership) => (
             <motion.div
-              key={membership.name}
+              key={membership.id}
               variants={itemVariants}
               className={`relative p-5 sm:p-8 rounded-[2rem] border transition-all duration-500 shadow-xl ${
                 membership.highlighted
@@ -112,14 +105,7 @@ export function MembershipCards() {
               </h3>
 
               <p className="text-muted-foreground font-sans text-sm mb-6 leading-relaxed">
-                Für die {membership.name} ist eine{' '}
-                <span className={membership.highlighted ? 'text-foreground font-bold' : ''}>
-                  {membership.highlighted ? 'einmalige' : 'entfällt die'}
-                </span>{' '}
-                Aufnahmegebühr von {membership.highlighted ? '300,-€' : 'komplett'} zu zahlen.
-                {membership.highlighted
-                  ? ' Die Supporter-Mitgliedschaft enthält:'
-                  : ' In der Standard-Mitgliedschaft enthalten:'}
+                {membership.description}
               </p>
 
               <div className="mb-6">
@@ -144,7 +130,7 @@ export function MembershipCards() {
                       <Flame className="w-4 h-4 text-white dark:text-amber-400" />
                     </motion.div>
                     <span className="text-white dark:text-amber-400 font-black text-xs uppercase tracking-widest font-sans text-center leading-tight">
-                      Limitiertes Kontingent – Nur noch wenige Plätze!
+                      {t('membership_cards.supporter.urgency.title')}
                     </span>
                     <motion.div
                       animate={{ scale: [1, 1.25, 1] }}
@@ -186,10 +172,10 @@ export function MembershipCards() {
                   <div className="px-4 pb-3 space-y-1">
                     <div className="flex justify-between items-center">
                       <span className="text-[10px] uppercase font-black tracking-widest text-amber-700 dark:text-amber-400/80 font-sans">
-                        Verfügbare Plätze
+                        {t('membership_cards.supporter.urgency.label')}
                       </span>
                       <span className="text-[10px] font-black text-amber-700 dark:text-amber-400 font-mono">
-                        Schnell sein!
+                        {t('membership_cards.supporter.urgency.status')}
                       </span>
                     </div>
                     <div className="h-2 w-full bg-amber-200 dark:bg-amber-950/50 rounded-full overflow-hidden">
@@ -203,7 +189,7 @@ export function MembershipCards() {
                     <div className="flex items-center gap-1.5">
                       <Timer className="w-3 h-3 text-amber-600 dark:text-amber-400/70 flex-shrink-0" />
                       <span className="text-[10px] text-amber-700 dark:text-amber-400/70 font-sans">
-                        Plätze werden laufend vergeben – jetzt Early Bird sein!
+                        {t('membership_cards.supporter.urgency.footer')}
                       </span>
                     </div>
                   </div>

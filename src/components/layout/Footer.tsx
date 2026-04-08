@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export function Footer() {
+  const { t } = useTranslation();
+  
   return (
     <footer className="bg-muted border-t border-border py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -9,7 +12,7 @@ export function Footer() {
             to="/impressum-und-datenschutz"
             className="text-muted-foreground hover:text-primary transition-colors text-sm font-sans font-medium"
           >
-            Impressum und Datenschutz
+            {t('footer.impressum')}
           </Link>
           <div className="text-center md:text-right">
             <p className="text-muted-foreground/80 text-sm font-sans">

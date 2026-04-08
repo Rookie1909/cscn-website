@@ -1,14 +1,13 @@
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 
-const requirements = [
-  'Vollendung des 18. Lebensjahres',
-  'Mindestens 6 Monate Wohnsitz oder gewöhnlicher Aufenthalt in Deutschland',
-  'Keine Doppelmitgliedschaften in anderen Anbauvereinigungen',
-  'Monatlicher Mindestbeitrag 50€',
-];
+// Requirements list is now handled inside the component via t()
 
 export function RequirementsSection() {
+  const { t } = useTranslation();
+  const requirements = t('requirements.list', { returnObjects: true }) as string[];
+
   return (
     <section className="py-16 lg:py-24 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,7 +18,7 @@ export function RequirementsSection() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl lg:text-5xl font-headline font-black text-foreground tracking-tight">
-            Anforderungen
+            {t('requirements.title')}
           </h2>
         </motion.div>
 

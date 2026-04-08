@@ -1,7 +1,9 @@
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { MapPin, Mail, ArrowRight } from 'lucide-react';
 
 export function ContactSection() {
+  const { t } = useTranslation();
   return (
     <section className="py-16 lg:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,18 +16,18 @@ export function ContactSection() {
             className="space-y-6"
           >
             <h2 className="text-3xl lg:text-4xl font-headline font-bold text-foreground">
-              Informier dich!
+              {t('home.contact.title')}
             </h2>
 
             <p className="text-muted-foreground font-sans leading-relaxed">
-              Schreib uns einfach eine E-Mail und wir versuchen dir mit Rat und Tat zur Seite zu stehen.
+              {t('home.contact.description')}
             </p>
 
             <a
               href="mailto:info@csc-nordheide.de"
               className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-bold font-sans group transition-colors"
             >
-              Nimm Kontakt auf!
+              {t('home.contact.link')}
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>
@@ -47,7 +49,7 @@ export function ContactSection() {
                 <MapPin className="w-5 h-5 text-primary" />
               </div>
               <span className="text-foreground font-sans font-medium transition-colors">
-                21244 Buchholz
+                {t('home.contact.location')}
               </span>
             </a>
 

@@ -1,3 +1,5 @@
+import { useTranslation, Trans } from 'react-i18next';
+import type { TFunction } from 'i18next';
 import { motion } from 'framer-motion';
 import { TrendingDown, Zap } from 'lucide-react';
 import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
@@ -13,56 +15,53 @@ const infographics = [
   { title: "WPFF Rosin", src: "/images/infographics/6.png" },
 ];
 
-const data = [
+const getAmortisationData = (t: TFunction) => [
   {
-    category: 'Blüten / Hash',
+    category: t('amortisation.categories.flowers_hash'),
     marketPrice: '10,00 €',
     saving: '2,50 €',
     breakEven: '120 g',
     breakEvenGrams: 120,
     highlight: false,
-    imgIndex: 0, // Cannabis-Blüten
+    imgIndex: 0,
   },
   {
-    category: 'Bubble Hash',
+    category: t('amortisation.categories.bubble_hash'),
     marketPrice: '20,00 €',
     saving: '5,00 €',
     breakEven: '60 g',
     breakEvenGrams: 60,
     highlight: false,
-    imgIndex: 2, // Bubble Hash
+    imgIndex: 2,
   },
   {
-    category: 'Hash Rosin',
+    category: t('amortisation.categories.hash_rosin'),
     marketPrice: '40,00 €',
     saving: '10,00 €',
     breakEven: '30 g',
     breakEvenGrams: 30,
     highlight: true,
-    imgIndex: 3, // Hash Rosin
+    imgIndex: 3,
   },
   {
-    category: 'Piattella',
+    category: t('amortisation.categories.piattella'),
     marketPrice: '60,00 €',
     saving: '15,00 €',
     breakEven: '20 g',
     breakEvenGrams: 20,
     highlight: false,
-    imgIndex: 4, // Piattella
+    imgIndex: 4,
   },
   {
-    category: 'WPFF Rosin',
+    category: t('amortisation.categories.wpff_rosin'),
     marketPrice: '80,00 €',
     saving: '20,00 €',
     breakEven: '15 g',
     breakEvenGrams: 15,
     highlight: false,
-    imgIndex: 5, // WPFF Rosin
+    imgIndex: 5,
   },
 ];
-
-/** Maximum break-even grams – used to scale the progress bar. */
-const MAX_GRAMS = Math.max(...data.map((d) => d.breakEvenGrams));
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -75,6 +74,10 @@ const rowVariants = {
 };
 
 export function AmortisationSection() {
+  const { t } = useTranslation();
+  const data = getAmortisationData(t);
+  const MAX_GRAMS = Math.max(...data.map((d) => d.breakEvenGrams));
+
   return (
     <section className="py-16 lg:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -87,7 +90,7 @@ export function AmortisationSection() {
           className="text-center mb-12"
         >
           <p className="text-primary text-sm font-bold tracking-widest uppercase mb-4 font-sans">
-            Supporter-Mitgliedschaft
+            {t('amortisation.badge')}
           </p>
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="h-px w-24 bg-border" />
@@ -95,12 +98,14 @@ export function AmortisationSection() {
             <div className="h-px w-24 bg-border" />
           </div>
           <h2 className="text-3xl lg:text-4xl font-headline font-black text-foreground mb-4">
-            Amortisationsdauer
+            {t('amortisation.title')}
           </h2>
           <p className="text-muted-foreground font-sans max-w-2xl mx-auto leading-relaxed">
-            Ab wann rechnet sich die <span className="text-foreground font-semibold">Supporter-Aufnahmegebühr von 300,–&nbsp;€</span>?
-            Mit der 25&nbsp;% Ersparnis auf alle Produkte ist der Break-even je nach Produktkategorie
-            schnell erreicht.
+            <Trans i18nKey="amortisation.description">
+              Ab wann rechnet sich die <span className="text-foreground font-semibold">Supporter-Aufnahmegebühr von 300,–&nbsp;€</span>?
+              Mit der 25&nbsp;% Ersparnis auf alle Produkte ist der Break-even je nach Produktkategorie
+              schnell erreicht.
+            </Trans>
           </p>
         </motion.div>
 
@@ -108,7 +113,7 @@ export function AmortisationSection() {
         <div className="hidden md:block rounded-2xl border border-border overflow-hidden bg-card shadow-xl">
           {/* Table header */}
           <div className="grid grid-cols-[2fr_1fr_1fr_1fr] bg-primary/5 border-b border-border px-6 py-3">
-            {['Produktkategorie', 'Preis / g\u00a0(Markt)', 'Ersparnis / g', 'Break-even'].map((h) => (
+            {[t('amortisation.table.category'), t('amortisation.table.market_price'), t('amortisation.table.saving'), t('amortisation.table.break_even')].map((h) => (
               <span key={h} className="text-[11px] font-black uppercase tracking-widest text-muted-foreground font-sans">
                 {h}
               </span>
@@ -140,7 +145,7 @@ export function AmortisationSection() {
                       </span>
                       {row.highlight && (
                         <span className="hidden lg:inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider bg-primary/15 text-primary px-2 py-0.5 rounded-full">
-                          <Zap size={10} /> Beliebt
+                          <Zap size={10} /> {t('amortisation.table.popular')}
                         </span>
                       )}
                     </div>
@@ -178,7 +183,7 @@ export function AmortisationSection() {
                 <DialogContent className="max-w-[95vw] md:max-w-5xl max-h-[95vh] border-none bg-white/80 dark:bg-black/60 backdrop-blur-2xl p-0 overflow-hidden sm:rounded-[2rem] [&>button]:text-primary [&>button]:bg-secondary/40 [&>button:hover]:bg-primary [&>button:hover]:text-white dark:[&>button]:bg-black/40">
                   <div className="p-4 sm:p-8 flex flex-col h-full w-full justify-center">
                     <h2 className="text-2xl font-headline font-black text-zinc-900 dark:text-white text-center mb-6 drop-shadow-sm dark:drop-shadow-md">
-                      {row.category} Details
+                      {row.category} {t('amortisation.table.details')}
                     </h2>
                     <Carousel className="w-full" opts={{ startIndex: row.imgIndex }}>
                       <CarouselContent>
@@ -230,16 +235,16 @@ export function AmortisationSection() {
                     </div>
                     {row.highlight && (
                       <span className="text-[10px] font-black uppercase tracking-wider bg-primary/15 text-primary px-2 py-0.5 rounded-full">
-                        Beliebt
+                        {t('amortisation.table.popular')}
                       </span>
                     )}
                   </div>
 
                   <div className="grid grid-cols-3 gap-3 text-center mb-4">
                     {[
-                      { label: 'Marktpreis', value: row.marketPrice, color: 'text-muted-foreground' },
-                      { label: 'Ersparnis', value: row.saving, color: 'text-emerald-500' },
-                      { label: 'Break-even', value: row.breakEven, color: row.highlight ? 'text-primary' : 'text-foreground' },
+                      { label: t('amortisation.table.market_price'), value: row.marketPrice, color: 'text-muted-foreground' },
+                      { label: t('amortisation.table.saving'), value: row.saving, color: 'text-emerald-500' },
+                      { label: t('amortisation.table.break_even'), value: row.breakEven, color: row.highlight ? 'text-primary' : 'text-foreground' },
                     ].map(({ label, value, color }) => (
                       <div key={label} className="bg-muted/40 rounded-xl p-2">
                         <p className="text-[10px] text-muted-foreground uppercase font-bold tracking-wider mb-1">{label}</p>
@@ -250,7 +255,7 @@ export function AmortisationSection() {
 
                   <div className="space-y-1">
                     <p className="text-[10px] text-muted-foreground uppercase font-bold tracking-wider">
-                      Amortisation
+                      {t('amortisation.table.amortisation')}
                     </p>
                     <div className="h-2 w-full bg-muted rounded-full overflow-hidden">
                       <motion.div
@@ -267,7 +272,7 @@ export function AmortisationSection() {
               <DialogContent className="max-w-[95vw] md:max-w-5xl max-h-[95vh] border-none bg-white/80 dark:bg-black/60 backdrop-blur-2xl p-0 overflow-hidden sm:rounded-[2rem] [&>button]:text-primary [&>button]:bg-secondary/40 [&>button:hover]:bg-primary [&>button:hover]:text-white dark:[&>button]:bg-black/40">
                 <div className="p-4 sm:p-8 flex flex-col h-full w-full justify-center">
                   <h2 className="text-2xl font-headline font-black text-zinc-900 dark:text-white text-center mb-6 drop-shadow-sm dark:drop-shadow-md">
-                    {row.category} Details
+                    {row.category} {t('amortisation.table.details')}
                   </h2>
                   <Carousel className="w-full" opts={{ startIndex: row.imgIndex }}>
                     <CarouselContent>
@@ -299,8 +304,7 @@ export function AmortisationSection() {
           viewport={{ once: true }}
           className="text-center text-muted-foreground/60 font-sans text-xs mt-8 leading-relaxed"
         >
-          * Berechnung basiert auf der einmaligen Supporter-Aufnahmegebühr von 300,–&nbsp;€ sowie einem
-          pauschalen Marktpreis-Abschlag von 25&nbsp;%. Individuelle Bezugsmengen können variieren.
+          {t('amortisation.footer')}
         </motion.p>
 
       </div>

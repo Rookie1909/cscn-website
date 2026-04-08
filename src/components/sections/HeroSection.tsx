@@ -1,3 +1,4 @@
+import { useTranslation, Trans } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Award, Users, Scale, ShieldCheck, Zap } from 'lucide-react';
@@ -35,20 +36,21 @@ const itemVariants = {
   },
 };
 
-const stats = [
-  { icon: Award, label: "1. CSC", sub: "In Niedersachsen", color: "text-primary" },
-  { icon: Users, label: "170+", sub: "Mitglieder", color: "text-blue-400" },
-  { icon: CannabisLeaf, label: "500+", sub: "Bio-Pflanzen", color: "text-emerald-400" },
-  { icon: Scale, label: "2500g+", sub: "Abgabe pro Monat", color: "text-amber-400" },
-];
-
-const highlights = [
-  { icon: Zap, title: "Experten-Support", text: "Best Practices & Wissensaustausch." },
-  { icon: CannabisLeaf, title: "100% Bio-Anbau", text: "0% Chemie, rein biologisch." },
-  { icon: ShieldCheck, title: "Rechtssicher", text: "Garantierte Compliance & Legalität." },
-];
-
 export function HeroSection() {
+  const { t } = useTranslation();
+
+  const stats = [
+    { icon: Award, label: t('home.hero.stats.award.label'), sub: t('home.hero.stats.award.sub'), color: "text-primary" },
+    { icon: Users, label: t('home.hero.stats.members.label'), sub: t('home.hero.stats.members.sub'), color: "text-blue-400" },
+    { icon: CannabisLeaf, label: t('home.hero.stats.plants.label'), sub: t('home.hero.stats.plants.sub'), color: "text-emerald-400" },
+    { icon: Scale, label: t('home.hero.stats.dispense.label'), sub: t('home.hero.stats.dispense.sub'), color: "text-amber-400" },
+  ];
+
+  const highlights = [
+    { icon: Zap, title: t('home.hero.highlights.support.title'), text: t('home.hero.highlights.support.text') },
+    { icon: CannabisLeaf, title: t('home.hero.highlights.organic.title'), text: t('home.hero.highlights.organic.text') },
+    { icon: ShieldCheck, title: t('home.hero.highlights.legal.title'), text: t('home.hero.highlights.legal.text') },
+  ];
   return (
     <section className="py-16 lg:py-24 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,16 +67,18 @@ export function HeroSection() {
                 variants={itemVariants}
                 className="text-4xl sm:text-5xl lg:text-7xl font-headline font-black text-foreground leading-[0.95] tracking-tight break-words"
               >
-                Pioniere des <br />
-                <span className="text-primary italic">biologischen</span> <br />
-                Anbaus in Niedersachsen
+                <Trans i18nKey="home.hero.title">
+                  Pioniere des <br />
+                  <span className="text-primary italic">biologischen</span> <br />
+                  Anbaus in Niedersachsen
+                </Trans>
               </motion.h1>
 
               <motion.p
                 variants={itemVariants}
                 className="text-xl text-muted-foreground font-sans leading-relaxed max-w-xl"
               >
-                Der erste CSC in Niedersachsen mit über 170 engagierten Mitgliedern – Qualität, die überzeugt.
+                {t('home.hero.subtitle')}
               </motion.p>
             </div>
 
@@ -104,21 +108,21 @@ export function HeroSection() {
                       <div className="p-3 bg-primary rounded-2xl shadow-lg shadow-primary/20">
                         <CannabisLeaf size={24} className="text-white fill-current" />
                       </div>
-                      <h3 className="text-xl font-headline font-black text-foreground">Exklusive Auswahl</h3>
+                      <h3 className="text-xl font-headline font-black text-foreground">{t('home.hero.exclusive.title')}</h3>
                     </div>
                     <p className="text-sm font-sans text-muted-foreground leading-relaxed font-medium">
-                      Blüten, Hash (Dry Sift), Bubble Hash, Hash Rosin, Piattella, WPFF Rosin.
+                      {t('home.hero.exclusive.desc')}
                     </p>
                     <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-primary text-[10px] font-headline font-black uppercase tracking-widest">
                       <Zap className="w-3 h-3 fill-current" />
-                      Nur bei uns erhältlich
+                      {t('home.hero.exclusive.badge')}
                     </div>
                   </button>
                 </DialogTrigger>
                 <DialogContent className="max-w-[95vw] md:max-w-5xl max-h-[95vh] border-none bg-white/80 dark:bg-black/60 backdrop-blur-2xl p-0 overflow-hidden sm:rounded-[2rem] [&>button]:text-primary [&>button]:bg-secondary/40 [&>button:hover]:bg-primary [&>button:hover]:text-white dark:[&>button]:bg-black/40">
                   <div className="p-4 sm:p-8 flex flex-col h-full w-full justify-center">
                     <h2 className="text-2xl font-headline font-black text-zinc-900 dark:text-white text-center mb-6 drop-shadow-sm dark:drop-shadow-md">
-                      Botanische Extraktionskunst
+                      {t('home.hero.infographics.title')}
                     </h2>
                     <Carousel className="w-full">
                       <CarouselContent>
@@ -139,8 +143,8 @@ export function HeroSection() {
                               <div className="hidden absolute inset-0 flex-col items-center justify-center p-8 text-center text-foreground/50 dark:text-white/50 space-y-4">
                                 <CannabisLeaf size={64} className="opacity-30" />
                                 <p className="font-headline font-bold text-lg">{info.title}</p>
-                                <p className="text-sm">Bilddatei fehlt:<br/><code className="text-primary/70">{info.src}</code></p>
-                                <p className="text-xs max-w-sm mt-4 leading-relaxed">Bitte stelle sicher, dass du die Chat-Anhänge in diesem öffentlichen Ordner deines Projektes gespeichert hast.</p>
+                                <p className="text-sm">{t('home.hero.infographics.missing')}<br/><code className="text-primary/70">{info.src}</code></p>
+                                <p className="text-xs max-w-sm mt-4 leading-relaxed">{t('home.hero.infographics.missing_desc')}</p>
                               </div>
                             </div>
                           </CarouselItem>
@@ -150,7 +154,7 @@ export function HeroSection() {
                       <CarouselNext className="right-2 md:-right-12 h-12 w-12 border-primary/50 text-foreground dark:text-white hover:border-primary backdrop-blur-md" />
                     </Carousel>
                     <div className="text-center mt-6 text-sm font-sans text-zinc-500 dark:text-white/60">
-                      Nutze die Pfeile oder wische, um die Übersicht zu erkunden
+                      {t('home.hero.infographics.navigation')}
                     </div>
                   </div>
                 </DialogContent>
@@ -189,7 +193,7 @@ export function HeroSection() {
                     className="absolute inset-y-0 w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-[30deg]"
                   />
                   <span className="relative z-10 flex items-center gap-2 sm:gap-3 drop-shadow-md text-center">
-                    <span className="line-clamp-1">Jetzt Teil der Bewegung werden</span>
+                    <span className="line-clamp-1">{t('home.hero.cta')}</span>
                     <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 shrink-0 group-hover:translate-x-1 transition-transform text-primary dark:text-white" />
                   </span>
                 </Link>
@@ -212,8 +216,8 @@ export function HeroSection() {
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
-                <p className="text-white font-headline font-black text-2xl tracking-tight">Biologischer Anbau</p>
-                <p className="text-primary font-sans text-sm mt-2">100% Reinheit ohne Kompromisse</p>
+                <p className="text-white font-headline font-black text-2xl tracking-tight">{t('home.hero.image_overlay.title')}</p>
+                <p className="text-primary font-sans text-sm mt-2">{t('home.hero.image_overlay.sub')}</p>
               </div>
             </div>
             
@@ -228,8 +232,8 @@ export function HeroSection() {
                   <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                 </div>
                 <div>
-                  <div className="text-lg sm:text-xl font-headline font-black text-foreground leading-none">100% Legal</div>
-                  <div className="text-[9px] sm:text-[10px] uppercase tracking-widest text-muted-foreground mt-1 font-bold">Regulierter Anbau</div>
+                  <div className="text-lg sm:text-xl font-headline font-black text-foreground leading-none">{t('home.hero.image_badge.title')}</div>
+                  <div className="text-[9px] sm:text-[10px] uppercase tracking-widest text-muted-foreground mt-1 font-bold">{t('home.hero.image_badge.sub')}</div>
                 </div>
               </div>
             </motion.div>

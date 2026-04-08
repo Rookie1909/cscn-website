@@ -1,8 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Heart, ArrowRight } from 'lucide-react';
 
 export function SafetySection() {
+  const { t } = useTranslation();
   return (
     <section className="py-16 lg:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,18 +18,18 @@ export function SafetySection() {
           >
             <div>
               <h2 className="text-3xl lg:text-4xl font-headline font-bold text-foreground mb-2">
-                sicher unterwegs
+                {t('home.safety.title')}
               </h2>
-              <p className="text-primary font-medium text-xl">geschützter Raum</p>
+              <p className="text-primary font-medium text-xl">{t('home.safety.subtitle')}</p>
             </div>
 
             <p className="text-muted-foreground font-sans leading-relaxed">
-              Als Cannabis Social Club Nordheide legen wir großen Wert auf Prävention, Jugendschutz und Gesundheitsschutz. Unsere Präventionsbeauftragte stellt sicher, dass alle Maßnahmen zum Schutz der Mitglieder eingehalten werden und bietet Unterstützung für Mitglieder mit problematischem Konsumverhalten.
+              {t('home.safety.description')}
             </p>
 
             <div className="p-6 bg-muted border border-border rounded-xl">
               <p className="text-muted-foreground text-sm font-sans leading-relaxed italic">
-                Bitte beachte, dass der Bezug von Cannabisprodukten exklusiv unseren geschätzten Mitgliedern vorbehalten sein wird. Anfragen bezüglich des Erwerbs von Cannabisprodukten ohne der Absicht unserem Verein beizutreten, bleiben unsererseits unbeantwortet. Als verantwortungsbewusster Verein legen wir größten Wert auf die Sicherheit und Zufriedenheit unserer Mitglieder. Wir distanzieren uns entschieden von illegalen Aktivitäten und verpflichten uns, die strengen Vorgaben des Cannabisgesetzes gewissenhaft einzuhalten.
+                {t('home.safety.warning')}
               </p>
             </div>
           </motion.div>
@@ -46,12 +48,12 @@ export function SafetySection() {
                   </div>
                   <div>
                     <h3 className="text-xl font-headline font-bold text-foreground">
-                      Gesundheits- & Jugendschutz
+                      {t('home.safety.card_title')}
                     </h3>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 text-primary font-bold font-sans">
-                  <span className="text-sm">Mehr erfahren</span>
+                  <span className="text-sm">{t('home.safety.more_link')}</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>

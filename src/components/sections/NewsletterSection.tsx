@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Check } from 'lucide-react';
@@ -6,6 +7,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Button } from '@/components/ui/button';
 
 export function NewsletterSection() {
+  const { t } = useTranslation();
   const [email, setEmail] = useState('');
   const [consent, setConsent] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -32,15 +34,15 @@ export function NewsletterSection() {
           className="text-center space-y-6"
         >
           <h2 className="text-3xl lg:text-4xl font-headline font-bold text-foreground">
-            Melde dich für unseren Newsletter an!
+            {t('home.newsletter.title')}
           </h2>
 
           <p className="text-muted-foreground font-sans text-lg">
-            Du möchtest immer auf dem Laufenden bleiben?
+            {t('home.newsletter.subtitle')}
           </p>
 
           <p className="text-muted-foreground/80 font-sans text-sm leading-relaxed">
-            Bei uns gibt es nicht nur interessante politische Themen und Diskussionen, sondern auch immer wieder Tipps und Tricks für den Eigenanbau und alles rund um das Thema Cannabis.
+            {t('home.newsletter.description')}
           </p>
 
           {submitted ? (
@@ -51,7 +53,7 @@ export function NewsletterSection() {
             >
               <Check className="w-6 h-6 text-primary" />
               <span className="text-primary font-bold font-sans">
-                Vielen Dank für deine Anmeldung!
+                {t('home.newsletter.success')}
               </span>
             </motion.div>
           ) : (
@@ -61,7 +63,7 @@ export function NewsletterSection() {
                   <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                   <Input
                     type="email"
-                    placeholder="E-Mail"
+                    placeholder={t('home.newsletter.email_placeholder')}
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -78,7 +80,7 @@ export function NewsletterSection() {
                   className="mt-1 border-border data-[state=checked]:bg-primary data-[state=checked]:border-primary"
                 />
                 <label htmlFor="consent" className="text-muted-foreground font-sans text-sm text-left leading-snug">
-                  <span className="text-destructive">*</span> Ich willige ein, dass diese Website meine übermittelten Informationen speichert, sodass meine Anfrage beantwortet werden kann.
+                  <span className="text-destructive">*</span> {t('home.newsletter.consent_label')}
                 </label>
               </div>
 
@@ -87,7 +89,7 @@ export function NewsletterSection() {
                 disabled={!consent}
                 className="w-full sm:w-auto px-10 h-12 rounded-full font-bold shadow-lg shadow-primary/20 transition-all active:scale-95"
               >
-                Anmelden
+                {t('home.newsletter.button')}
               </Button>
             </form>
           )}

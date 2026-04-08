@@ -1,0 +1,434 @@
+{
+  "nav": {
+    "home": "Home",
+    "verein": "Club",
+    "about": "About Us",
+    "protection": "Health & Youth Protection",
+    "sortiment": "Strains",
+    "standorte": "Locations",
+    "membership": "Membership",
+    "news": "News"
+  },
+  "header": {
+    "logo_subtitle": "Official Website of CSC Nordheide e.V.",
+    "menu": "Menu",
+    "switch_light": "Switch to Light Mode",
+    "switch_dark": "Switch to Dark Mode"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "impressum": "Imprint & Privacy"
+  },
+  "news": {
+    "tag": "Club Diary",
+    "headline": "Latest News & Updates",
+    "body": "Join us on our journey. Here we post weekly updates on construction progress, cultivation, and events at CSC Nordheide.",
+    "impressions": "Impressions",
+    "read_more": "Read details",
+    "footer_text": "Don't want to miss any updates? Subscribe to our",
+    "newsletter": "Newsletter"
+  },
+  "strains": {
+    "tag": "Cultivation Portfolio",
+    "headline": "Our Current Genetics",
+    "body": "Discover our carefully selected strains. From classic favorites to modern Californian crosses, we focus on the highest quality and genetic diversity.",
+    "analysis": "Analysis",
+    "effects_aroma": "Effects & Aroma",
+    "genetics": "Genetics",
+    "breeder": "Breeder",
+    "sold_out": "Sold Out",
+    "medical_effects": "Medical Effects",
+    "terpenes": "Terpenes",
+    "thc": "THC",
+    "cbd": "CBD",
+    "library_tag": "Raised on Living Soil",
+    "library_title_1": "CURRENT CSCN",
+    "library_title_2": "ASSORTMENT",
+    "library_desc": "Discover the genetic diversity and complex terpene profile of our exclusive selection of premium strains. Scientifically based & transparent.",
+    "stats_available": "Available Strains",
+    "stats_avg_thc": "Average THC",
+    "show_more": "Show more details",
+    "show_less": "Show less",
+    "footer_bio": "100% Organic",
+    "footer_local": "100% Local from Lower Saxony",
+    "footer_growth": "Controlled Cultivation",
+    "footer_breeding": "Transparent Breeding",
+    "footer_copyright": "© 2026 CSC Nordheide E.V. Assortment"
+  },
+  "features": {
+    "perm": {
+      "title": "Cultivation Permit",
+      "desc": "We have received our official cultivation permit according to §11 KCanG and have already begun cultivation."
+    },
+    "energy": {
+      "title": "Energy",
+      "desc": "We only use renewable energy for our club and cultivation areas and aim to grow cannabis in greenhouses in due course."
+    },
+    "quality": {
+      "title": "Quality Control",
+      "desc": "We offer our members consistently high quality. Therefore, we have introduced high standards and subject ourselves to strict controls."
+    },
+    "farming": {
+      "title": "Cultivation Method",
+      "desc": "We have consciously decided on a sustainable and resource-saving cultivation method. Pesticides and chemical fertilizers are out of the question for us."
+    },
+    "variety": {
+      "title": "Variety of Strains",
+      "desc": "We offer over 40+ rotating premium strains for our members. From consistent old-school genetics to the latest Cali strains, everything is represented."
+    },
+    "exclusive": {
+      "title": "Exclusive Products",
+      "desc": "In addition to cannabis flowers, we also offer the possibility to purchase exclusive hash products, such as live extracts."
+    }
+  },
+  "home": {
+    "banner": "We still have spots available – Click here for our membership models",
+    "hero": {
+      "subtitle": "The first CSC in Lower Saxony with over 170 dedicated members – quality that convinces.",
+      "stats": {
+        "award": { "label": "1st CSC", "sub": "In Lower Saxony" },
+        "members": { "label": "170+", "sub": "Members" },
+        "plants": { "label": "500+", "sub": "Bio-Plants" },
+        "dispense": { "label": "2500g+", "sub": "Dispensing per month" }
+      },
+      "exclusive": {
+        "title": "Exclusive Selection",
+        "desc": "Flowers, Hash (Dry Sift), Bubble Hash, Hash Rosin, Piattella, WPFF Rosin.",
+        "badge": "Only available from us"
+      },
+      "infographics": {
+        "title": "Botanical Extraction Art",
+        "navigation": "Use the arrows or swipe to explore the overview",
+        "missing": "Image file missing:",
+        "missing_desc": "Please make sure you have saved the chat attachments in this public folder of your project."
+      },
+      "highlights": {
+        "support": { "title": "Expert Support", "text": "Best practices & knowledge exchange." },
+        "organic": { "title": "100% Organic", "text": "0% Chemicals, purely biological." },
+        "legal": { "title": "Legal Security", "text": "Guaranteed compliance & legality." }
+      },
+      "cta": "Join the movement now",
+      "image_badge": {
+        "title": "100% Legal",
+        "sub": "Regulated Cultivation"
+      },
+      "image_overlay": {
+        "title": "Organic Cultivation",
+        "sub": "100% purity without compromise"
+      }
+    },
+    "motivation": {
+      "title": "Our Motivation",
+      "subtitle": "clean flowers",
+      "description": "Our motivation is to enable every member to have free access to controlled, high-quality cannabis without having to resort to the black market and the associated risks.",
+      "features": {
+        "quality": {
+          "title": "Quality Standards",
+          "subtitle": "extensively tested",
+          "text": "we test in extensive sampling for THC/CBD content and quality"
+        },
+        "variety": {
+          "title": "Variety of Strains",
+          "subtitle": "diverse selection",
+          "text": "we want an appealing selection of strains - always the right herb"
+        },
+        "organic": {
+          "title": "100% Organic",
+          "subtitle": "natural cultivation",
+          "text": "we will not use chemical or synthetic fertilizers in cultivation"
+        }
+      }
+    },
+    "club_info": {
+      "title": "The Association",
+      "watermark": "CSCN",
+      "watermark_sub": "Everything for the plant - Everything for the club",
+      "image_alt": "Cannabis plant",
+      "description": "We are a non-commercial association, based in Buchholz in der Nordheide, which is financed by membership fees. Now, after receiving the license, we as Cannabis Social Club Nordheide will focus exclusively on providing our members with comprehensive information and providing a limited quantity of high-quality cannabis products for personal consumption within legal requirements. We place particular emphasis on a professional and sustainable way of working, a special, exclusive selection of strains and high-quality products for our members!",
+      "more_link": "Learn more",
+      "features": [
+        "100% organic cultivation",
+        "True Living Organics",
+        "State-of-the-art LED systems",
+        "Extensive expertise",
+        "Carefully tested",
+        "Cultivated as a community",
+        "Variety of strains",
+        "Legal"
+      ]
+    },
+    "safety": {
+      "title": "Stay Safe",
+      "subtitle": "Protected Space",
+      "description": "As Cannabis Social Club Nordheide, we attach great importance to prevention, youth protection and health protection. Our prevention officer ensures that all measures to protect members are complied with and offers support for members with problematic consumption behavior.",
+      "warning": "Please note that the purchase of cannabis products will be exclusively reserved for our valued members. Inquiries regarding the acquisition of cannabis products without the intention of joining our association will remain unanswered on our part. As a responsible association, we attach the greatest importance to the safety and satisfaction of our members. We decisively distance ourselves from illegal activities and commit ourselves to conscientiously complying with the strict requirements of the Cannabis Act.",
+      "card_title": "Health & Youth Protection",
+      "more_link": "Learn more"
+    },
+    "newsletter": {
+      "title": "Sign up for our newsletter!",
+      "subtitle": "Do you want to stay up to date?",
+      "description": "With us, there are not only interesting political topics and discussions, but also tips and tricks for home cultivation and everything about cannabis.",
+      "success": "Thank you for registering!",
+      "email_placeholder": "E-Mail",
+      "consent_label": "I agree that this website stores my submitted information so that my request can be answered.",
+      "button": "Sign Up"
+    },
+    "contact": {
+      "title": "Get Informed!",
+      "description": "Just send us an email and we will try to help you with advice and action.",
+      "link": "Get in touch!",
+      "location": "21244 Buchholz"
+    }
+  },
+  "verein": {
+    "hero": {
+      "banner": "We still have spots available – click here for the membership application",
+      "title": "Our Standards for a Cannabis Cultivation Association",
+      "description": "Sustainable Organic Cannabis Cultivation",
+      "cta": "Membership Application"
+    },
+    "intro": "We offer top quality and an appealing selection of strains exclusively for our members"
+  },
+  "membership": {
+    "hero": {
+      "title": "Membership Applications",
+      "description": "Submit your membership application now and become part of CSC Nordheide e.V. Choose between the free standard membership or the supporter membership with exclusive advantages."
+    }
+  },
+  "membership_cards": {
+    "badge": "Reaching the Goal Together",
+    "title": "Our Memberships",
+    "standard": {
+      "name": "Standard Membership",
+      "priceNote": "Admission fee!",
+      "monthly": "Minimum monthly contribution 50€",
+      "description": "For the standard membership, the admission fee is waived completely. Included in the standard membership:",
+      "features": [
+        "Access to the standard range (flower and hashish products)",
+        "Obtaining cuttings for home cultivation (coming soon)",
+        "No access to test genetics (cannabis flowers)",
+        "No reservation possibility",
+        "Upgrade to supporter membership is possible at any time"
+      ],
+      "cta": "Standard Membership Application"
+    },
+    "supporter": {
+      "name": "Supporter Membership",
+      "priceNote": "one-time admission fee!",
+      "monthly": "Minimum monthly contribution 50€",
+      "description": "For the supporter membership, a one-time admission fee of 300,-€ is payable. The supporter membership includes:",
+      "features": [
+        "25% discount on all flat rates/contributions/top-ups",
+        "A premium cutting for homegrow every 6 months (optional)",
+        "Exclusive access to limited test genetics (cannabis flowers)",
+        "Reservation possibility for favorite strains (coming soon)",
+        "An official CSC Nordheide e.V. polo shirt/T-shirt"
+      ],
+      "cta": "Supporter Membership Application",
+      "urgency": {
+        "title": "Limited Contingent – Only a few spots left!",
+        "ticker": "🌿 Only a few spots available · Secure your early bird advantage now and benefit as one of the first members from the 25% savings · Exclusive access to limited test genetics · Become a member now and be there 🔥    ",
+        "label": "Available spots",
+        "status": "Be fast!",
+        "footer": "Spots are constantly assigned – be an early bird now!"
+      }
+    }
+  },
+  "amortisation": {
+    "badge": "Supporter Membership",
+    "title": "Amortisation Period",
+    "description": "When does the <1>supporter admission fee of 300,– €</1> pay off? With the 25% savings on all products, the break-even is quickly reached depending on the product category.",
+    "table": {
+      "category": "Product Category",
+      "market_price": "Price / g (Market)",
+      "saving": "Savings / g",
+      "break_even": "Break-even",
+      "popular": "Popular",
+      "details": "Details",
+      "amortisation": "Amortisation"
+    },
+    "categories": {
+      "flowers_hash": "Flowers / Hash",
+      "bubble_hash": "Bubble Hash",
+      "hash_rosin": "Hash Rosin",
+      "piattella": "Piattella",
+      "wpff_rosin": "WPFF Rosin"
+    },
+    "footer": "* Calculation is based on the one-time supporter admission fee of 300,– € and a flat market price discount of 25%. Individual purchase quantities may vary."
+  },
+  "requirements": {
+    "title": "Requirements",
+    "list": [
+      "Completion of the 18th year of life",
+      "At least 6 months of residence or habitual abode in Germany",
+      "No dual memberships in other cultivation associations",
+      "Minimum monthly contribution 50€"
+    ]
+  },
+  "documents": {
+    "description": "Via the tabs you can view our <1>articles of association</1>, our <2>contribution rules</2> and our <3>membership application</3>.",
+    "footer": "If you have any questions, feel free to send us an email",
+    "labels": {
+      "statutes": "Association Statutes",
+      "contribution_rules": "Contribution Rules",
+      "application": "Membership Application"
+    }
+  },
+  "locations": {
+    "badge": "Locations & Opening Hours",
+    "title": "Visit Us On Site",
+    "description": "At this location you will find our distribution point and the club's registered office. We look forward to exchanging ideas with our members.",
+    "hours_label": "Opening Hours",
+    "closed": "Closed",
+    "office_description": "Your point of contact for all club matters and general questions.",
+    "days": {
+      "Mo": "Mon",
+      "Di": "Tue",
+      "Mi": "Wed",
+      "Do": "Thu",
+      "Fr": "Fri",
+      "Sa": "Sat",
+      "So": "Sun"
+    },
+    "titles": {
+      "dispensary": "Distribution Point",
+      "club": "Cannabis Social Club Nordheide e.V."
+    }
+  },
+  "gesundheitsschutz": {
+    "hero": {
+      "title": "Health & Youth Protection",
+      "description": "Responsible handling and the highest safety standards at CSC Nordheide."
+    },
+    "prevention": {
+      "title": "Prevention Concept",
+      "description": "Download our detailed brief information on prevention as a PDF to have all important information at a glance.",
+      "button": "Prevention Information Brief PDF"
+    },
+    "contact": {
+      "title": "Prevention Officers",
+      "role": "Consumer Protection & Addiction Prevention"
+    },
+    "concept": {
+      "title": "Youth and Health Protection Concept",
+      "subtitle": "KCanG Guidelines on Child and Youth Protection",
+      "intro": "Excerpt from our concept (§2). We are committed to the following points:"
+    },
+    "sections": {
+      "child_protection": {
+        "title": "Child and Youth Protection",
+        "content": "Notifications within the cultivation association regarding the KCanG in relation to child and youth protection."
+      },
+      "signage": {
+        "title": "Signage",
+        "content": "To attract little attention, external signage is largely avoided and restricted to the bare essentials. In every entrance area of the association's properties, signage will indicate that access is prohibited for children and adolescents under 18 according to KCanG."
+      },
+      "applications": {
+        "title": "Membership Applications",
+        "content": "When applying for membership, the applicant is explicitly informed about the prevention concept, the KCanG regulations, and the BzgA documents \"Information on Cannabis & Important Notes on Cannabis Consumption.\" This is done by providing these in paper form or as a digital document during the online application. By signing the application, the member confirms they have read and accepted this information."
+      },
+      "brochures": {
+        "title": "Brochures",
+        "content": "Both the KCanG and BzgA information materials are clearly displayed within the cultivation association's premises."
+      },
+      "entrance_controls": {
+        "title": "Entrance Controls",
+        "content": "A membership card is issued to every member of our association. This card is used for access to the distribution rooms and for verifying collection data.\nWhen entering an association property, the member is additionally checked by a distributing member or a representative using their photo ID in case of identity doubts."
+      },
+      "advertising_ban": {
+        "title": "Advertising Ban",
+        "content": "No signage. No advertising or sponsorship. The association does not run advertisements. Existing social media accounts are only used for information purposes."
+      },
+      "minimum_distance": {
+        "title": "Minimum Distance",
+        "content": "Every association property is located more than 200m away from schools, child and youth facilities, and playgrounds."
+      },
+      "property_protection": {
+        "title": "Property Protection Measures",
+        "content": "External signage of the association's properties is completely avoided. Our properties have a doorbell sign at the entrance to the association rooms. Any other external signage is omitted."
+      },
+      "product_protection": {
+        "title": "Product Protection Measures",
+        "content": "Cannabis consumption goods (cannabis flower and hashish) are distributed in childproof, neutral containers. Additionally, a product description is included, which specifies the THC/CBD content, health risks, and usage instructions, explicitly requesting that the product be kept away from children and adolescents."
+      },
+      "child_welfare": {
+        "title": "Handling Child Welfare Endangerment",
+        "content": "The association has no contact with children or minors during its activities. If it becomes aware that members are passing on shared cannabis or propagation material to minors, the statutes specify that such behavior leads to immediate expulsion.\nDistributing members are informed about the reporting chain and measures to take in case of child welfare endangerment. Essential documentation explaining these actions is provided in their workspace. The member must ensure that the prevention officer or a board member is notified immediately to initiate measures with local youth welfare services."
+      },
+      "youth_institutions": {
+        "title": "Contact with Youth Protection Institutions",
+        "content": "The association has no regular contact with youth welfare institutions. An agreement is being developed with local youth welfare services on how to establish low-threshold contact between the association, affected members, and the welfare office when needed."
+      },
+      "entry_ban": {
+        "title": "Entry Ban for Property",
+        "content": "The instruction that distributing members must complete ensures they have the necessary knowledge and skills to comply with laws and guidelines and to enforce the entry ban for children and adolescents."
+      },
+      "instruction": {
+        "title": "Member Instruction",
+        "content": "All distributing members, as well as board members and other responsible parties, are instructed by the externally trained prevention officer in child and youth protection, health protection, and prevention."
+      },
+      "special_measures": {
+        "title": "Special Measures (18-21 Year Olds)",
+        "content": "Members aged 18–21 have a membership number clearly indicating that a maximum of 30 grams of cannabis per month (max 25g per day) with a maximum 10% THC content may be distributed."
+      }
+    }
+  },
+  "impressum": {
+    "title": "Imprint & Privacy Policy",
+    "imprint": {
+      "title": "Imprint",
+      "labels": {
+        "phone": "Phone:",
+        "email": "Email:",
+        "auth_rep": "Jointly Authorized to Represent:",
+        "board": "Board",
+        "deputy_board": "Deputy Board",
+        "treasurer": "Treasurer",
+        "court": "Registration Court:",
+        "reg_num": "Registration Number:",
+        "responsible": "Responsible according to § 18 Abs. 2 MStV"
+      }
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "preamble": {
+        "title": "Preamble",
+        "content": "With the following privacy policy, we would like to inform you about the types of your personal data (hereinafter also referred to as \"data\") that we process, for what purposes, and to what extent. The privacy policy applies to all processing of personal data carried out by us, both as part of the provision of our services and especially on our websites, in mobile applications, and within external online presences, such as our social media profiles (hereinafter collectively referred to as \"online offer\")."
+      },
+      "responsible": {
+        "title": "Responsible Party"
+      },
+      "data_types": {
+        "title": "Types of Processed Data",
+        "list": [
+          "Inventory data",
+          "Contact data",
+          "Content data",
+          "Usage data",
+          "Meta, communication, and procedural data"
+        ]
+      },
+      "subjects": {
+        "title": "Categories of Affected Persons",
+        "list": [
+          "Members",
+          "Interested parties",
+          "Communication partners",
+          "Users"
+        ]
+      },
+      "purposes": {
+        "title": "Purposes of Processing",
+        "list": [
+          "Provision of contractual services and customer service",
+          "Contact requests and communication",
+          "Security measures",
+          "Reach measurement",
+          "Tracking",
+          "Management and answering of inquiries"
+        ]
+      }
+    }
+  }
+}

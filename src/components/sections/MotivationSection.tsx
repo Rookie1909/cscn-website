@@ -1,27 +1,7 @@
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { FlaskConical, Sprout } from 'lucide-react';
 import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
-
-const features = [
-  {
-    icon: FlaskConical,
-    title: 'Qualitätsansprüche',
-    subtitle: 'ausgiebig getestet',
-    description: 'wir testen in umfangreichen Probenahmen auf THC/CBD Gehalte und Qualität',
-  },
-  {
-    icon: CannabisLeaf,
-    title: 'Sortenvielfalt',
-    subtitle: 'vielfältige Auswahl',
-    description: 'wir wollen eine ansprechende Sortenauswahl - immer das richtige Kraut',
-  },
-  {
-    icon: Sprout,
-    title: '100% Organisch',
-    subtitle: 'natürlicher Anbau',
-    description: 'wir werden keine chemischen oder synthetischen Dünger in der Zucht verwenden',
-  },
-];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -43,6 +23,29 @@ const itemVariants = {
 };
 
 export function MotivationSection() {
+  const { t } = useTranslation();
+
+  const features = [
+    {
+      icon: FlaskConical,
+      title: t('home.motivation.features.quality.title'),
+      subtitle: t('home.motivation.features.quality.subtitle'),
+      description: t('home.motivation.features.quality.text'),
+    },
+    {
+      icon: CannabisLeaf,
+      title: t('home.motivation.features.variety.title'),
+      subtitle: t('home.motivation.features.variety.subtitle'),
+      description: t('home.motivation.features.variety.text'),
+    },
+    {
+      icon: Sprout,
+      title: t('home.motivation.features.organic.title'),
+      subtitle: t('home.motivation.features.organic.subtitle'),
+      description: t('home.motivation.features.organic.text'),
+    },
+  ];
+
   return (
     <section className="py-16 lg:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,9 +57,9 @@ export function MotivationSection() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl lg:text-4xl font-headline font-bold text-foreground mb-2">
-            Unsere Motivation
+            {t('home.motivation.title')}
           </h2>
-          <p className="text-primary font-medium text-lg">saubere Blüten</p>
+          <p className="text-primary font-medium text-lg">{t('home.motivation.subtitle')}</p>
         </motion.div>
 
         {/* Intro Text */}
@@ -66,7 +69,7 @@ export function MotivationSection() {
           viewport={{ once: true }}
           className="text-muted-foreground font-sans text-center max-w-3xl mx-auto mb-12 leading-relaxed"
         >
-          Unsere Motivation ist es, jedem Mitglied den freien Zugang zu kontrolliert angebautem, qualitativ hochwertigem Cannabis zu ermöglichen, ohne dabei auf den Schwarzmarkt und die damit einhergehenden Risiken zurückgreifen zu müssen.
+          {t('home.motivation.description')}
         </motion.p>
 
         {/* Feature Cards */}

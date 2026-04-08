@@ -1,43 +1,14 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { FileCheck, Zap, Microscope, Sprout, Flower2, Gem } from 'lucide-react';
 
-const features = [
-  {
-    icon: FileCheck,
-    title: 'Anbauerlaubnis',
-    description:
-      'Wir haben unsere offizielle Anbauerlaubnis nach §11 KCanG erhalten und bereits mit dem Anbau begonnen.',
-  },
-  {
-    icon: Zap,
-    title: 'Energie',
-    description:
-      'Wir verwenden nur erneuerbare Energie für unseren Verein und die Anbauflächen und streben an zu gegebener Zeit Cannabis auch im Gewächshaus anzubauen.',
-  },
-  {
-    icon: Microscope,
-    title: 'Qualitätskontrollen',
-    description:
-      'Wir bieten unseren Mitgliedern eine konstant hohe Qualität. Daher haben wir hohe Standarts eingeführt und unterziehen uns selbst strengen Kontrollen.',
-  },
-  {
-    icon: Sprout,
-    title: 'Anbauform',
-    description:
-      'Wir haben uns bewusst für eine möglichst nachhaltige und ressourcenschonende Anbauform entschieden. Pestizide und chemische Dünger kommen uns nicht in die Tüte.',
-  },
-  {
-    icon: Flower2,
-    title: 'Sortenvielfalt',
-    description:
-      'Wir bieten über 40+ rotierende Premiumsorten für unsere Mitglieder an. Von beständiger Oldschoolgenetik, bis zu den neusten Cali-Sorten ist alles vertreten.',
-  },
-  {
-    icon: Gem,
-    title: 'Exklusive Produkte',
-    description:
-      'Neben Cannabis als Blütenware bieten wir auch die Möglichkeit exklusive Haschischprodukte, wie Live-Extrakte zu erwerben.',
-  },
+const featuresList = [
+  { id: 'perm', icon: FileCheck },
+  { id: 'energy', icon: Zap },
+  { id: 'quality', icon: Microscope },
+  { id: 'farming', icon: Sprout },
+  { id: 'variety', icon: Flower2 },
+  { id: 'exclusive', icon: Gem },
 ];
 
 const containerVariants = {
@@ -60,6 +31,8 @@ const itemVariants = {
 };
 
 export function FeaturesGrid() {
+  const { t } = useTranslation();
+
   return (
     <section className="py-16 lg:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,9 +43,9 @@ export function FeaturesGrid() {
           viewport={{ once: true }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {features.map((feature) => (
+          {featuresList.map((feature) => (
             <motion.div
-              key={feature.title}
+              key={feature.id}
               variants={itemVariants}
               className="group p-8 border border-border rounded-2xl flex flex-col items-center text-center hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300 bg-card/50 backdrop-blur-sm"
             >
@@ -80,10 +53,10 @@ export function FeaturesGrid() {
                 <feature.icon className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-xl font-headline font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                {feature.title}
+                {t(`features.${feature.id}.title`)}
               </h3>
               <p className="text-muted-foreground font-sans text-sm leading-relaxed">
-                {feature.description}
+                {t(`features.${feature.id}.desc`)}
               </p>
             </motion.div>
           ))}

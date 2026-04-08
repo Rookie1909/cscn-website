@@ -1,31 +1,34 @@
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, ExternalLink } from 'lucide-react';
 
-const locations = [
-  {
-    title: "Ausgabestelle",
-    address: "Bei den Kämpen 11a, 21220 Seevetal, Deutschland",
-    mapUrl: "https://www.openstreetmap.org/export/embed.html?bbox=10.015,53.340,10.035,53.355&layer=mapnik&marker=53.347184,10.024412",
-    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Bei+den+Kämpen+11a,+21220+Seevetal",
-    hours: [
-      { day: "Mo", time: "Geschlossen" },
-      { day: "Di", time: "Geschlossen" },
-      { day: "Mi", time: "18:00 - 20:00 Uhr" },
-      { day: "Do", time: "Geschlossen" },
-      { day: "Fr", time: "15:00 - 17:00 Uhr" },
-      { day: "Sa", time: "16:00 - 18:00 Uhr" },
-      { day: "So", time: "Geschlossen" }
-    ]
-  },
-  {
-    title: "Cannabis Social Club Nordheide e.V.",
-    address: "Bahnhofstraße 1, 21244 Buchholz i.d. Nordheide, Deutschland",
-    mapUrl: "https://www.openstreetmap.org/export/embed.html?bbox=9.865,53.315,9.885,53.335&layer=mapnik&marker=53.324417,9.876389",
-    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Bahnhofstraße+1,+21244+Buchholz+i.d.+Nordheide"
-  }
-];
-
 export function LocationSection() {
+  const { t } = useTranslation();
+
+  const locations = [
+    {
+      title: t('locations.titles.dispensary'),
+      address: "Bei den Kämpen 11a, 21220 Seevetal, Deutschland",
+      mapUrl: "https://www.openstreetmap.org/export/embed.html?bbox=10.015,53.340,10.035,53.355&layer=mapnik&marker=53.347184,10.024412",
+      googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Bei+den+Kämpen+11a,+21220+Seevetal",
+      hours: [
+        { day: t('locations.days.Mo'), time: t('locations.closed') },
+        { day: t('locations.days.Di'), time: t('locations.closed') },
+        { day: t('locations.days.Mi'), time: "18:00 - 20:00 Uhr" },
+        { day: t('locations.days.Do'), time: t('locations.closed') },
+        { day: t('locations.days.Fr'), time: "15:00 - 17:00 Uhr" },
+        { day: t('locations.days.Sa'), time: "16:00 - 18:00 Uhr" },
+        { day: t('locations.days.So'), time: t('locations.closed') }
+      ]
+    },
+    {
+      title: t('locations.titles.club'),
+      address: "Bahnhofstraße 1, 21244 Buchholz i.d. Nordheide, Deutschland",
+      mapUrl: "https://www.openstreetmap.org/export/embed.html?bbox=9.865,53.315,9.885,53.335&layer=mapnik&marker=53.324417,9.876389",
+      googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Bahnhofstraße+1,+21244+Buchholz+i.d.+Nordheide"
+    }
+  ];
+
   return (
     <section className="py-24 relative overflow-hidden bg-background">
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-primary/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
@@ -40,7 +43,7 @@ export function LocationSection() {
             className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-primary text-xs font-black uppercase tracking-widest mb-4"
           >
             <MapPin size={12} />
-            Standorte & Öffnungszeiten
+            {t('locations.badge')}
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -49,7 +52,7 @@ export function LocationSection() {
             transition={{ delay: 0.1 }}
             className="text-4xl lg:text-5xl font-headline font-black tracking-tighter mb-6"
           >
-            Besuche uns vor Ort
+            {t('locations.title')}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -58,7 +61,7 @@ export function LocationSection() {
             transition={{ delay: 0.2 }}
             className="text-muted-foreground text-lg leading-relaxed font-medium"
           >
-            An diesem Ort findet ihr unsere Ausgabestelle und den Vereinssitz. Wir freuen uns auf den Austausch mit unseren Mitgliedern.
+            {t('locations.description')}
           </motion.p>
         </div>
 
@@ -75,7 +78,7 @@ export function LocationSection() {
               {/* Header */}
               <div className="p-8 pb-4">
                 <div className="flex justify-between items-start mb-4">
-                  <div className="p-3 bg-primary/10 rounded-2xl text-primary border border-primary/20 group-hover:bg-primary/20 transition-all duration-500">
+                   <div className="p-3 bg-primary/10 rounded-2xl text-primary border border-primary/20 group-hover:bg-primary/20 transition-all duration-500">
                     <MapPin size={24} />
                   </div>
                   <a 
@@ -118,13 +121,13 @@ export function LocationSection() {
                   <div className="space-y-4">
                     <div className="flex items-center gap-2 text-primary">
                       <Clock size={16} />
-                      <span className="text-xs font-black uppercase tracking-widest">Öffnungszeiten</span>
+                      <span className="text-xs font-black uppercase tracking-widest">{t('locations.hours_label')}</span>
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-4">
                       {loc.hours.map((h) => (
                         <div key={h.day} className="flex justify-between items-center py-2 border-b border-border/30 last:border-0 group/hour">
                           <span className="text-sm font-black text-foreground group-hover/hour:text-primary transition-colors">{h.day}:</span>
-                          <span className={`text-sm font-medium ${h.time === 'Geschlossen' ? 'text-muted-foreground' : 'text-primary font-bold'}`}>
+                          <span className={`text-sm font-medium ${h.time === t('locations.closed') ? 'text-muted-foreground' : 'text-primary font-bold'}`}>
                             {h.time}
                           </span>
                         </div>
@@ -134,7 +137,7 @@ export function LocationSection() {
                 ) : (
                   <div className="h-full flex items-center">
                     <p className="text-sm text-muted-foreground italic leading-relaxed">
-                      Eure Anlaufstelle für alle Vereinsangelegenheiten und allgemeinen Fragen. 
+                      {t('locations.office_description')}
                     </p>
                   </div>
                 )}

@@ -4,34 +4,41 @@ import { Menu, ChevronDown, Cannabis, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
 import { useTheme } from 'next-themes';
+import { useTranslation } from 'react-i18next';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
-
-const navItems = [
-  { label: 'Home', href: '/' },
-  {
-    label: 'Verein',
-    href: '/verein',
-    children: [
-      { label: 'Über uns', href: '/verein' },
-      { label: 'Gesundheits- & Jugendschutz', href: '/gesundheitsschutz' },
-    ],
-  },
-  { label: 'Sortiment', href: '/sortiment' },
-  { label: 'Standorte', href: '/standorte' },
-  { label: 'Mitgliedsanträge', href: '/mitgliedsbeitraege' },
-  { label: 'Neuigkeiten', href: '/neuigkeiten' },
-];
 
 export function Header() {
   const { isScrolled } = useScrollPosition();
   const location = useLocation();
   const { theme, setTheme } = useTheme();
+  const { t, i18n } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [isLogoFullscreen, setIsLogoFullscreen] = useState(false);
 
   const isActive = (href: string) => location.pathname === href;
+
+  const toggleLanguage = () => {
+    const nextLang = i18n.language === 'de' ? 'en' : 'de';
+    i18n.changeLanguage(nextLang);
+  };
+
+  const navItems = [
+    { label: t('nav.home'), href: '/' },
+    {
+      label: t('nav.verein'),
+      href: '/verein',
+      children: [
+        { label: t('nav.about'), href: '/verein' },
+        { label: t('nav.protection'), href: '/gesundheitsschutz' },
+      ],
+    },
+    { label: t('nav.sortiment'), href: '/sortiment' },
+    { label: t('nav.standorte'), href: '/standorte' },
+    { label: t('nav.membership'), href: '/mitgliedsbeitraege' },
+    { label: t('nav.news'), href: '/neuigkeiten' },
+  ];
 
   return (
     <header
@@ -61,7 +68,9 @@ export function Header() {
                 <br />
                 Nordheide E.V.
               </h1>
-              <p className="text-muted-foreground text-[8px] sm:text-[11px] font-sans uppercase tracking-[0.1em] sm:tracking-[0.2em] mt-1 sm:mt-1.5 font-bold">Vereinswebsite des CSC Nordheide e.V.</p>
+              <p className="text-muted-foreground text-[8px] sm:text-[11px] font-sans uppercase tracking-[0.1em] sm:tracking-[0.2em] mt-1 sm:mt-1.5 font-bold">
+                {t('header.logo_subtitle')}
+              </p>
             </Link>
           </div>
 
@@ -122,20 +131,41 @@ export function Header() {
               </div>
             ))}
 
-            {/* Theme Toggle */}
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="ml-6 w-11 h-11 rounded-xl border-border bg-background/50 hover:bg-primary/5 hover:border-primary/50 text-primary transition-all duration-500 hover:rotate-[30deg] shadow-lg shadow-black/5"
-              title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-            >
-              <Cannabis className={`w-6 h-6 transition-all duration-700 ${theme === 'dark' ? 'fill-primary scale-110' : 'scale-90'}`} />
-            </Button>
+            <div className="flex items-center gap-3 ml-6">
+              {/* Language Toggle */}
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={toggleLanguage}
+                className="w-11 h-11 rounded-xl border-border bg-background/50 hover:bg-primary/5 hover:border-primary/50 text-xl transition-all duration-500 hover:scale-110 shadow-lg shadow-black/5"
+                title={i18n.language === 'de' ? 'Switch to English' : 'Auf Deutsch umstellen'}
+              >
+                {i18n.language === 'de' ? '🇩🇪' : '🇬🇧'}
+              </Button>
+
+              {/* Theme Toggle */}
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className="w-11 h-11 rounded-xl border-border bg-background/50 hover:bg-primary/5 hover:border-primary/50 text-primary transition-all duration-500 hover:rotate-[30deg] shadow-lg shadow-black/5"
+                title={theme === 'dark' ? t('header.switch_light') : t('header.switch_dark')}
+              >
+                <Cannabis className={`w-6 h-6 transition-all duration-700 ${theme === 'dark' ? 'fill-primary scale-110' : 'scale-90'}`} />
+              </Button>
+            </div>
           </nav>
 
           {/* Mobile Menu */}
           <div className="flex items-center gap-4 lg:hidden">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleLanguage}
+              className="text-xl"
+            >
+              {i18n.language === 'de' ? '🇩🇪' : '🇬🇧'}
+            </Button>
             <Button
               variant="ghost"
               size="icon"
@@ -153,7 +183,7 @@ export function Header() {
               </SheetTrigger>
               <SheetContent side="right" className="w-80 bg-background border-border">
                   <div className="mt-8 mb-6 px-2">
-                    <h2 className="text-xl font-headline font-black text-foreground">Menü</h2>
+                    <h2 className="text-xl font-headline font-black text-foreground">{t('header.menu')}</h2>
                   </div>
                   <div className="flex flex-col gap-6">
                     {navItems.map((item) => (

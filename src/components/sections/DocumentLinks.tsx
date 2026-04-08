@@ -1,25 +1,10 @@
+import { useTranslation, Trans } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { BookOpen, Euro } from 'lucide-react';
 import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
 
-const documents = [
-  {
-    icon: BookOpen,
-    label: 'Vereinssatzung',
-    href: '/documents/Vereinssatzung.pdf',
-  },
-  {
-    icon: Euro,
-    label: 'Beitragsordnung',
-    href: '/documents/Beitragsordnung.pdf',
-  },
-  {
-    icon: CannabisLeaf,
-    label: 'Mitgliedsantrag',
-    href: 'https://easyverein.com/public/CSCN/applicationform/9895',
-  },
-];
+// Document links are now handled inside the component via t()
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -41,6 +26,26 @@ const itemVariants = {
 };
 
 export function DocumentLinks() {
+  const { t } = useTranslation();
+
+  const documents = [
+    {
+      icon: BookOpen,
+      label: t('documents.labels.statutes'),
+      href: '/documents/Vereinssatzung.pdf',
+    },
+    {
+      icon: Euro,
+      label: t('documents.labels.contribution_rules'),
+      href: '/documents/Beitragsordnung.pdf',
+    },
+    {
+      icon: CannabisLeaf,
+      label: t('documents.labels.application'),
+      href: 'https://easyverein.com/public/CSCN/applicationform/9895',
+    },
+  ];
+
   return (
     <section className="py-16 lg:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,11 +56,13 @@ export function DocumentLinks() {
           className="text-center mb-16"
         >
           <p className="text-muted-foreground font-sans max-w-2xl mx-auto text-lg leading-relaxed">
-            Über die Reiter kannst du unsere <span className="text-foreground font-bold">Vereinssatzung</span>, unsere <span className="text-foreground font-bold">Beitragsordnung</span> und
-            unseren <span className="text-foreground font-bold">Mitgliedsantrag</span> einsehen.
+            <Trans i18nKey="documents.description">
+              Über die Reiter kannst du unsere <span className="text-foreground font-bold">Vereinssatzung</span>, unsere <span className="text-foreground font-bold">Beitragsordnung</span> und
+              unseren <span className="text-foreground font-bold">Mitgliedsantrag</span> einsehen.
+            </Trans>
           </p>
           <p className="text-muted-foreground/80 font-sans mt-6">
-            Bei Fragen schreib uns gerne eine Mail{' '}
+            {t('documents.footer')}{' '}
             <a
               href="mailto:info@csc-nordheide.de"
               className="text-primary hover:text-primary/80 font-bold underline underline-offset-4 transition-all"

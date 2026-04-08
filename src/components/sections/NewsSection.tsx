@@ -1,5 +1,6 @@
-import { motion } from 'framer-motion';
-import { Calendar, Image as ImageIcon, Newspaper, ArrowRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Calendar, Image as ImageIcon, Newspaper, ArrowRight, X } from 'lucide-react';
 import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
 import newsData from '@/data/news.json';
 
@@ -33,6 +34,28 @@ const itemVariants = {
 
 export function NewsSection() {
   const news = newsData as NewsItem[];
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  // Lock body scroll when an image is selected
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedImage]);
+
+  // Handle Esc key to close
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelectedImage(null);
+    };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, []);
 
   return (
     <section className="py-20 lg:py-32 bg-background relative overflow-hidden">
@@ -127,16 +150,18 @@ export function NewsSection() {
                       {item.images.map((img, imgIndex) => (
                         <div 
                           key={imgIndex} 
-                          className={`relative rounded-xl overflow-hidden shadow-md aspect-video ${
+                          className={`relative rounded-xl overflow-hidden shadow-md aspect-video cursor-zoom-in group/img ${
                             item.images.length === 3 && imgIndex === 2 ? 'col-span-2' : ''
                           }`}
+                          onClick={() => setSelectedImage(img)}
                         >
                           <img 
                             src={img} 
                             alt={`${item.title} view ${imgIndex + 1}`}
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105"
                             loading="lazy"
                           />
+                          <div className="absolute inset-0 bg-primary/0 group-hover/img:bg-primary/5 transition-colors duration-300" />
                         </div>
                       ))}
                     </div>
@@ -174,6 +199,53 @@ export function NewsSection() {
           </p>
         </motion.div>
       </div>
+
+      {/* Fullscreen Image Lightbox */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-background/95 backdrop-blur-2xl flex items-center justify-center p-4 sm:p-8 md:p-12"
+            onClick={() => setSelectedImage(null)}
+          >
+            <motion.button
+              initial={{ scale: 0.5, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.5, opacity: 0 }}
+              className="absolute top-6 right-6 sm:top-10 sm:right-10 p-3 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-all duration-300 shadow-lg hover:rotate-90 z-10"
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedImage(null);
+              }}
+            >
+              <X className="w-6 h-6 sm:w-8 sm:h-8" />
+            </motion.button>
+
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="relative max-w-7xl w-full h-full flex items-center justify-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="relative group/modal w-full h-full flex items-center justify-center">
+                <img 
+                  src={selectedImage} 
+                  alt="News highlight" 
+                  className="max-w-full max-h-full object-contain rounded-2xl shadow-2xl ring-1 ring-white/10"
+                />
+                
+                {/* Decorative corner glow */}
+                <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/20 blur-3xl rounded-full opacity-50 pointer-events-none" />
+                <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-primary/20 blur-3xl rounded-full opacity-50 pointer-events-none" />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

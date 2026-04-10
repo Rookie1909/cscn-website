@@ -28,6 +28,10 @@
     "footer_text": "Möchtest du keine Neuigkeiten verpassen? Abonniere auch unseren",
     "newsletter": "Newsletter"
   },
+  "news_page": {
+    "title": "Neuigkeiten",
+    "description": "Aktuelle Einblicke, Baufortschritte und Updates aus dem Club-Tagebuch des CSC Nordheide."
+  },
   "strains": {
     "tag": "Anbau-Portfolio",
     "headline": "Unsere aktuellen Genetiken",

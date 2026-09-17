@@ -19,4 +19,4 @@ jobs:
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           REMOTE_DIR: /csc-nordhigh.de
-        run: node .github/scripts/deploy.js
+        run: node .github/scripts/deploy.cjs

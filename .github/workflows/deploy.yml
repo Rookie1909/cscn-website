@@ -14,6 +14,7 @@ jobs:
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
       - name: Deploy via SFTP (lftp mirror)
+        timeout-minutes: 5
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
@@ -21,7 +22,8 @@ jobs:
         run: |
           lftp -e "
           set sftp:auto-confirm yes;
-          open -u \"$FTP_USERNAME\",\"$FTP_PASSWORD\" sftp://$FTP_HOST:22;
+          set sftp:connect-program \"ssh -a -x -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null\";
+          open -u \"\$FTP_USERNAME\",\"\$FTP_PASSWORD\" sftp://\$FTP_HOST:22;
           mirror -R --delete --verbose ./dist/ /csc-nordhigh.de/;
           bye
           "

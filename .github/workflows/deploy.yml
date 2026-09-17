@@ -11,12 +11,12 @@ jobs:
         with: { node-version: 22 }
       - run: npm ci
       - run: npm run build
-      - uses: Dylan700/sftp-upload-action@v1.2.4
+      - run: npm install --no-save ssh2-sftp-client
+      - name: Deploy via SFTP
         timeout-minutes: 5
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 22
-          uploads: |
-            ./dist/** => /csc-nordhigh.de/
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          REMOTE_DIR: /csc-nordhigh.de
+        run: node .github/scripts/deploy.js

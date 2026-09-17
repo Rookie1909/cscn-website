@@ -11,19 +11,12 @@ jobs:
         with: { node-version: 22 }
       - run: npm ci
       - run: npm run build
-      - name: Install lftp
-        run: sudo apt-get update && sudo apt-get install -y lftp
-      - name: Deploy via SFTP (lftp mirror)
+      - uses: Dylan700/sftp-upload-action@v1.2.4
         timeout-minutes: 5
-        env:
-          FTP_HOST: ${{ secrets.FTP_HOST }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        run: |
-          lftp -e "
-          set sftp:auto-confirm yes;
-          set sftp:connect-program \"ssh -a -x -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null\";
-          open -u \"\$FTP_USERNAME\",\"\$FTP_PASSWORD\" sftp://\$FTP_HOST:22;
-          mirror -R --delete --verbose ./dist/ /csc-nordhigh.de/;
-          bye
-          "
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 22
+          uploads: |
+            ./dist/** => /csc-nordhigh.de/

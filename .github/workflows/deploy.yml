@@ -11,12 +11,17 @@ jobs:
         with: { node-version: 22 }
       - run: npm ci
       - run: npm run build
-      - uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 22
-          source: "dist/*"
-          target: "/csc-nordhigh.de/"
-          strip_components: 1
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+      - name: Deploy via SFTP (lftp mirror)
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          lftp -e "
+          set sftp:auto-confirm yes;
+          open -u \"$FTP_USERNAME\",\"$FTP_PASSWORD\" sftp://$FTP_HOST:22;
+          mirror -R --delete --verbose ./dist/ /csc-nordhigh.de/;
+          bye
+          "

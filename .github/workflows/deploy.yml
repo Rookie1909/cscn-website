@@ -11,12 +11,11 @@ jobs:
         with: { node-version: 22 }
       - run: npm ci
       - run: npm run build
-      - uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - uses: Dylan700/sftp-upload-action@v1.2.4
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: sftp
           port: 22
-          local-dir: ./dist/
-          server-dir: /csc-nordhigh.de/
+          uploads: |
+            ./dist/ => /csc-nordhigh.de/

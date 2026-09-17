@@ -228,7 +228,7 @@ export function MembershipCards() {
                   }`}
                 >
                   <a
-                    href="https://easyverein.com/public/CSCN/applicationform/9895"
+                    href="https://account.cannanas.club/register-frame/E_2wFxpO8552VfJEpC3Kt_nVI8u-5Pie"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 text-center"

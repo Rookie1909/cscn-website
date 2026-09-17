@@ -42,7 +42,7 @@ export function DocumentLinks() {
     {
       icon: CannabisLeaf,
       label: t('documents.labels.application'),
-      href: 'https://easyverein.com/public/CSCN/applicationform/9895',
+      href: 'https://account.cannanas.club/register-frame/E_2wFxpO8552VfJEpC3Kt_nVI8u-5Pie',
     },
   ];
 

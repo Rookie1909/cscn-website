@@ -16,7 +16,7 @@ export function Verein() {
         backgroundImage="/images/cannabis-sunset.jpg"
         cta={{
           text: t('verein.hero.cta'),
-          link: '/mitmachen',
+          link: '/mitgliedsbeitraege',
         }}
       />
       <div className="py-12 text-center bg-muted/30">

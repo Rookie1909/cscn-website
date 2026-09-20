@@ -70,7 +70,7 @@ export const CannabisLeaf: React.FC<CannabisLeafProps> = ({
         `color: inherit` makes `currentColor` inside the filter resolve correctly.
       */}
       <image
-        href="/icons/cannabis-leaf.png"
+        href="/site-icons/cannabis-leaf.png"
         x="0" y="0"
         width="100" height="100"
         preserveAspectRatio="xMidYMid meet"

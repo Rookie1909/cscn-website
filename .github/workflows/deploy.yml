@@ -10,6 +10,8 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
       - run: npm ci
+      - run: npm install --no-save sharp
+      - run: node .github/scripts/optimize-images.cjs
       - run: npm run build
       - run: npm install --no-save ssh2-sftp-client
       - name: Deploy via SFTP

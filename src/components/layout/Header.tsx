@@ -43,6 +43,7 @@ export function Header() {
       children: [
         { label: t('nav.about'), href: '/verein' },
         { label: t('nav.protection'), href: '/gesundheitsschutz' },
+        { label: t('grow_rooms.nav'), href: '/anbau' },
       ],
     },
     { label: t('nav.sortiment'), href: '/sortiment' },

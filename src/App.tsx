@@ -10,6 +10,7 @@ import { StrainLibrary } from '@/pages/StrainLibrary';
 import { Standorte } from '@/pages/Standorte';
 import { Impressum } from '@/pages/Impressum';
 import { Gesundheitsschutz } from '@/pages/Gesundheitsschutz';
+import { Anbau } from '@/pages/Anbau';
 import { ThemeProvider } from '@/components/ThemeProvider';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<RootLayout />}>
             <Route index element={<Home />} />
             <Route path="verein" element={<Verein />} />
+            <Route path="anbau" element={<Anbau />} />
             <Route path="sortiment" element={<StrainLibrary />} />
             <Route path="standorte" element={<Standorte />} />
             <Route path="mitgliedsbeitraege" element={<Mitgliedsbeitraege />} />

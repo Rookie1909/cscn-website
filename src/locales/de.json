@@ -92,10 +92,22 @@
     "hero": {
       "subtitle": "Der erste CSC in Niedersachsen mit über 170 engagierten Mitgliedern – Qualität, die überzeugt.",
       "stats": {
-        "award": { "label": "1. CSC", "sub": "In Niedersachsen" },
-        "members": { "label": "170+", "sub": "Mitglieder" },
-        "plants": { "label": "500+", "sub": "Bio-Pflanzen" },
-        "dispense": { "label": "2500g+", "sub": "Abgabe pro Monat" }
+        "award": {
+          "label": "1. CSC",
+          "sub": "In Niedersachsen"
+        },
+        "members": {
+          "label": "170+",
+          "sub": "Mitglieder"
+        },
+        "plants": {
+          "label": "500+",
+          "sub": "Bio-Pflanzen"
+        },
+        "dispense": {
+          "label": "2500g+",
+          "sub": "Abgabe pro Monat"
+        }
       },
       "exclusive": {
         "title": "Exklusive Auswahl",
@@ -109,9 +121,18 @@
         "missing_desc": "Bitte stelle sicher, dass du die Chat-Anhänge in diesem öffentlichen Ordner deines Projektes gespeichert hast."
       },
       "highlights": {
-        "support": { "title": "Experten-Support", "text": "Best Practices & Wissensaustausch." },
-        "organic": { "title": "100% Bio-Anbau", "text": "0% Chemie, rein biologisch." },
-        "legal": { "title": "Rechtssicher", "text": "Garantierte Compliance & Legalität." }
+        "support": {
+          "title": "Experten-Support",
+          "text": "Best Practices & Wissensaustausch."
+        },
+        "organic": {
+          "title": "100% Bio-Anbau",
+          "text": "0% Chemie, rein biologisch."
+        },
+        "legal": {
+          "title": "Rechtssicher",
+          "text": "Garantierte Compliance & Legalität."
+        }
       },
       "cta": "Verein beitreten - Jeder ist herzlich willkommen",
       "image_badge": {
@@ -435,6 +456,32 @@
           "Verwaltung und Beantwortung von Anfragen"
         ]
       }
+    }
+  },
+  "grow_rooms": {
+    "nav": "Anbauräume",
+    "teaser": {
+      "tag": "Live aus dem Anbau",
+      "title": "Unsere Anbauräume",
+      "description": "Ein Blick in die aktuell aktiven Räume unseres Grows – Sorten und Wachstumsphasen, live synchronisiert.",
+      "cta": "Alle Räume ansehen"
+    },
+    "page": {
+      "tag": "Live aus dem Anbau",
+      "title_1": "UNSERE",
+      "title_2": "ANBAURÄUME",
+      "description": "Ein schematischer Überblick über die aktuell aktiven Räume – Sorten und Wachstumsphasen, automatisch synchronisiert aus unserem Cannanas-System. Aus Sicherheitsgründen zeigen wir keine exakten Pflanzenzahlen.",
+      "empty": "Aktuell keine aktiven Räume verfügbar."
+    },
+    "stage": {
+      "cutting": "Stecklinge",
+      "vegetative": "Vegetativ",
+      "flowering": "Blüte"
+    },
+    "fill": {
+      "few": "wenige",
+      "moderate": "mehrere",
+      "many": "viele"
     }
   }
 }

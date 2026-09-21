@@ -322,5 +322,31 @@
       "dispensary": "Jakelupiste",
       "club": "Cannabis Social Club Nordheide e.V."
     }
+  },
+  "grow_rooms": {
+    "nav": "Kasvatushuoneet",
+    "teaser": {
+      "tag": "Suoraan kasvatuksesta",
+      "title": "Kasvatushuoneemme",
+      "description": "Katsaus kasvatuksemme tällä hetkellä aktiivisiin huoneisiin - lajikkeet ja kasvuvaiheet, synkronoituna reaaliajassa.",
+      "cta": "Katso kaikki huoneet"
+    },
+    "page": {
+      "tag": "Suoraan kasvatuksesta",
+      "title_1": "KASVATUS-",
+      "title_2": "HUONEEMME",
+      "description": "Skemaattinen yleiskatsaus tällä hetkellä aktiivisiin huoneisiin - lajikkeet ja kasvuvaiheet, synkronoituna automaattisesti Cannanas-järjestelmästämme. Turvallisuussyistä emme näytä tarkkoja kasvimääriä.",
+      "empty": "Tällä hetkellä ei ole aktiivisia huoneita saatavilla."
+    },
+    "stage": {
+      "cutting": "Pistokkaat",
+      "vegetative": "Vegetatiivinen",
+      "flowering": "Kukinta"
+    },
+    "fill": {
+      "few": "vähän",
+      "moderate": "kohtalaisesti",
+      "many": "paljon"
+    }
   }
 }

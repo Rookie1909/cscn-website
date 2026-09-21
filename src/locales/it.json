@@ -322,5 +322,31 @@
       "dispensary": "Punto di distribuzione",
       "club": "Cannabis Social Club Nordheide e.V."
     }
+  },
+  "grow_rooms": {
+    "nav": "Sale di coltivazione",
+    "teaser": {
+      "tag": "In diretta dalla coltivazione",
+      "title": "Le nostre sale di coltivazione",
+      "description": "Uno sguardo alle sale attualmente attive della nostra coltivazione - varietà e fasi di crescita, sincronizzate in tempo reale.",
+      "cta": "Vedi tutte le sale"
+    },
+    "page": {
+      "tag": "In diretta dalla coltivazione",
+      "title_1": "LE NOSTRE",
+      "title_2": "SALE DI COLTIVAZIONE",
+      "description": "Una panoramica schematica delle sale attualmente attive - varietà e fasi di crescita, sincronizzate automaticamente dal nostro sistema Cannanas. Per motivi di sicurezza non mostriamo il numero esatto di piante.",
+      "empty": "Al momento nessuna sala attiva disponibile."
+    },
+    "stage": {
+      "cutting": "Talee",
+      "vegetative": "Vegetativa",
+      "flowering": "Fioritura"
+    },
+    "fill": {
+      "few": "poche",
+      "moderate": "diverse",
+      "many": "molte"
+    }
   }
 }

@@ -1,0 +1,280 @@
+[
+  {
+    "id": "bluteraum-2-og",
+    "name": "Blüteraum #2  OG",
+    "description": "Der zweite und auch zweitgrößte Blüteraum",
+    "image": "/images/zones/bluteraum-2-og.webp",
+    "strains": [
+      {
+        "name": "Zushers",
+        "stage": "flowering",
+        "fillLevel": "moderate"
+      },
+      {
+        "name": "Gorilla Zkittles",
+        "stage": "vegetative",
+        "fillLevel": "many"
+      },
+      {
+        "name": "Atomic Blue Dream",
+        "stage": "vegetative",
+        "fillLevel": "moderate"
+      },
+      {
+        "name": "C.Banana",
+        "stage": "vegetative",
+        "fillLevel": "moderate"
+      },
+      {
+        "name": "Cobalt Haze",
+        "stage": "vegetative",
+        "fillLevel": "moderate"
+      },
+      {
+        "name": "Tiramisu",
+        "stage": "vegetative",
+        "fillLevel": "moderate"
+      },
+      {
+        "name": "Apple Banana Flamb’e",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Cherrizozki",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Dosimosa",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Fat Catz",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Gruntz",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Liquid Hydrogen Peach",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Milk Mustache",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Papayadawg",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Zushers",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Dosimosa",
+        "stage": "cutting",
+        "fillLevel": "many"
+      }
+    ]
+  },
+  {
+    "id": "reproduktion",
+    "name": "Reproduktion",
+    "description": "Die \"Kronjuwelen\" und Genpool des CSCs.\n\n",
+    "image": "/images/zones/reproduktion.webp",
+    "strains": [
+      {
+        "name": "Skunk #1",
+        "stage": "flowering",
+        "fillLevel": "few"
+      },
+      {
+        "name": "24K Gold",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "All the Sauces",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Bubble OG",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Cherrizozki",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Falcon Heavy",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Grape Venom",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Lemon Game",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "London Lobster",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Midnight Sunset",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Pink Runtz x Hollywood",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Red Mandarine",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Romscotti",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Romulan",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Superchronic",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Thornberry Sunshine",
+        "stage": "vegetative",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Bubble OG",
+        "stage": "cutting",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Kacklesnatch",
+        "stage": "cutting",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Monster Maker",
+        "stage": "cutting",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Moon Glow",
+        "stage": "cutting",
+        "fillLevel": "few"
+      },
+      {
+        "name": "Red Mandarine",
+        "stage": "cutting",
+        "fillLevel": "few"
+      }
+    ]
+  },
+  {
+    "id": "zwischenlager-og",
+    "name": "Zwischenlager (OG)",
+    "description": "Der alte Stecklingsraum, bzw. die \"Notfallrepro\" oder auch: \"BT 2 1/2\" ;)",
+    "strains": [
+      {
+        "name": "Cherrizozki",
+        "stage": "vegetative",
+        "fillLevel": "many"
+      },
+      {
+        "name": "Falcon Heavy",
+        "stage": "vegetative",
+        "fillLevel": "many"
+      },
+      {
+        "name": "Kacklesnatch",
+        "stage": "vegetative",
+        "fillLevel": "many"
+      },
+      {
+        "name": "Lemon Game",
+        "stage": "vegetative",
+        "fillLevel": "many"
+      },
+      {
+        "name": "Moon Glow",
+        "stage": "vegetative",
+        "fillLevel": "many"
+      },
+      {
+        "name": "Superchronic",
+        "stage": "vegetative",
+        "fillLevel": "many"
+      },
+      {
+        "name": "24K Gold",
+        "stage": "vegetative",
+        "fillLevel": "moderate"
+      },
+      {
+        "name": "Forbidden Flazh",
+        "stage": "vegetative",
+        "fillLevel": "moderate"
+      },
+      {
+        "name": "Neon Wormz",
+        "stage": "vegetative",
+        "fillLevel": "moderate"
+      },
+      {
+        "name": "Pink Runtz x Hollywood",
+        "stage": "vegetative",
+        "fillLevel": "moderate"
+      },
+      {
+        "name": "Thornberry Sunshine",
+        "stage": "vegetative",
+        "fillLevel": "moderate"
+      },
+      {
+        "name": "London Lobster",
+        "stage": "cutting",
+        "fillLevel": "many"
+      },
+      {
+        "name": "Bubble OG",
+        "stage": "cutting",
+        "fillLevel": "moderate"
+      },
+      {
+        "name": "Romscotti",
+        "stage": "cutting",
+        "fillLevel": "moderate"
+      }
+    ]
+  }
+]

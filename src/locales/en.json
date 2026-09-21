@@ -322,5 +322,31 @@
       "dispensary": "Distribution Point",
       "club": "Cannabis Social Club Nordheide e.V."
     }
+  },
+  "grow_rooms": {
+    "nav": "Grow Rooms",
+    "teaser": {
+      "tag": "Live from the grow",
+      "title": "Our Grow Rooms",
+      "description": "A look into the currently active rooms of our grow - strains and growth stages, synced live.",
+      "cta": "View all rooms"
+    },
+    "page": {
+      "tag": "Live from the grow",
+      "title_1": "OUR",
+      "title_2": "GROW ROOMS",
+      "description": "A schematic overview of the currently active rooms - strains and growth stages, automatically synced from our Cannanas system. For security reasons we don't show exact plant counts.",
+      "empty": "No active rooms available at the moment."
+    },
+    "stage": {
+      "cutting": "Cuttings",
+      "vegetative": "Vegetative",
+      "flowering": "Flowering"
+    },
+    "fill": {
+      "few": "few",
+      "moderate": "several",
+      "many": "many"
+    }
   }
 }

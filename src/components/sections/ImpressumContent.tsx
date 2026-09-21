@@ -2,7 +2,9 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
 export function ImpressumContent() {
-  const { t } = useTranslation();
+  // Legal notice & privacy policy are legally binding and must stay German
+  // regardless of the site's selected language.
+  const { t } = useTranslation('translation', { lng: 'de' });
 
   return (
     <section className="py-16 lg:py-24 bg-background">

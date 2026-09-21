@@ -2,7 +2,9 @@ import { useTranslation } from 'react-i18next';
 import { ImpressumContent } from '@/components/sections/ImpressumContent';
 
 export function Impressum() {
-  const { t } = useTranslation();
+  // Legal notice & privacy policy are legally binding and must stay German
+  // regardless of the site's selected language.
+  const { t } = useTranslation('translation', { lng: 'de' });
 
   return (
     <div className="bg-background min-h-screen">

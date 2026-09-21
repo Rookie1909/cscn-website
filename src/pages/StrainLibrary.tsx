@@ -13,6 +13,7 @@ import {
 import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
 import { STRAINS } from '@/constants/strains';
 import type { Strain } from '@/types/strains';
+import { localized } from '@/lib/localized';
 
 interface StrainCardProps {
   strain: Strain;
@@ -36,10 +37,10 @@ const StrainCard: React.FC<StrainCardProps> = ({ strain }) => {
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [isImageOpen, isDetailsOpen]);
 
-  const description = currentLang === 'en' && strain.description_en ? strain.description_en : strain.description;
-  const effects = currentLang === 'en' && strain.effects_en ? strain.effects_en : strain.effects;
-  const terpenes = currentLang === 'en' && strain.terpenes_en ? strain.terpenes_en : strain.terpenes;
-  const medicalEffects = currentLang === 'en' && strain.medicalEffects_en ? strain.medicalEffects_en : strain.medicalEffects;
+  const description = localized(strain, 'description', currentLang);
+  const effects = localized(strain, 'effects', currentLang);
+  const terpenes = localized(strain, 'terpenes', currentLang);
+  const medicalEffects = localized(strain, 'medicalEffects', currentLang);
 
   return (
     <motion.div 

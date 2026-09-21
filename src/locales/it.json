@@ -1,0 +1,326 @@
+{
+  "nav": {
+    "home": "Home",
+    "verein": "Associazione",
+    "about": "Chi siamo",
+    "protection": "Tutela della salute e dei minori",
+    "sortiment": "Varietà",
+    "standorte": "Sedi",
+    "membership": "Domande di iscrizione",
+    "news": "Novità"
+  },
+  "header": {
+    "logo_subtitle": "Sito ufficiale del CSC Nordheide e.V.",
+    "menu": "Menu",
+    "switch_light": "Passa alla modalità chiara",
+    "switch_dark": "Passa alla modalità scura"
+  },
+  "footer": {
+    "rights": "Tutti i diritti riservati.",
+    "impressum": "Note legali e privacy"
+  },
+  "news": {
+    "tag": "Diario del club",
+    "headline": "Ultime notizie e aggiornamenti",
+    "body": "Seguici nel nostro percorso. Qui pubblichiamo aggiornamenti settimanali sui progressi dei lavori, sulle coltivazioni e sugli eventi del CSC Nordheide.",
+    "impressions": "Impressioni",
+    "read_more": "Leggi i dettagli",
+    "footer_text": "Non vuoi perderti nessuna novità? Iscriviti alla nostra",
+    "newsletter": "Newsletter"
+  },
+  "news_page": {
+    "title": "Novità",
+    "description": "Ultimi aggiornamenti, progressi dei lavori e novità dal diario del club del CSC Nordheide."
+  },
+  "strains": {
+    "tag": "Portfolio di coltivazione",
+    "headline": "Le nostre genetiche attuali",
+    "body": "Scopri le varietà selezionate con cura. Dai classici intramontabili alle moderne selezioni californiane, puntiamo sulla massima qualità e diversità genetica.",
+    "analysis": "Analisi",
+    "effects_aroma": "Effetti & Aroma",
+    "genetics": "Genetica",
+    "breeder": "Breeder",
+    "sold_out": "Esaurito",
+    "view_image": "Ingrandisci immagine",
+    "close": "Chiudi",
+    "medical_effects": "Effetti medicinali",
+    "terpenes": "Terpeni",
+    "thc": "THC",
+    "cbd": "CBD",
+    "library_tag": "Raised on Living Soil",
+    "library_title_1": "ASSORTIMENTO",
+    "library_title_2": "ATTUALE CSCN",
+    "library_desc": "Scopri la diversità genetica e il complesso profilo terpenico della nostra selezione esclusiva di varietà premium. Basato su criteri scientifici e trasparenti.",
+    "stats_available": "Varietà disponibili",
+    "stats_avg_thc": "THC medio",
+    "show_more": "Maggiori dettagli",
+    "show_less": "Mostra meno",
+    "footer_bio": "100% Bio",
+    "footer_local": "100% locale dalla Bassa Sassonia",
+    "footer_growth": "Coltivazione controllata",
+    "footer_breeding": "Coltivazione trasparente",
+    "footer_copyright": "© 2026 CSC Nordheide E.V. Assortimento"
+  },
+  "features": {
+    "perm": {
+      "title": "Autorizzazione alla coltivazione",
+      "desc": "Abbiamo ottenuto la nostra autorizzazione ufficiale alla coltivazione ai sensi del §11 KCanG e abbiamo già iniziato la coltivazione."
+    },
+    "energy": {
+      "title": "Energia",
+      "desc": "Utilizziamo solo energia rinnovabile per la nostra associazione e le aree di coltivazione e puntiamo, a tempo debito, a coltivare cannabis anche in serra."
+    },
+    "quality": {
+      "title": "Controlli di qualità",
+      "desc": "Offriamo ai nostri soci una qualità costantemente elevata. Per questo abbiamo introdotto standard elevati e ci sottoponiamo noi stessi a controlli rigorosi."
+    },
+    "farming": {
+      "title": "Metodo di coltivazione",
+      "desc": "Abbiamo scelto consapevolmente un metodo di coltivazione il più possibile sostenibile e a basso impatto sulle risorse. Pesticidi e fertilizzanti chimici sono per noi fuori discussione."
+    },
+    "variety": {
+      "title": "Varietà di genetiche",
+      "desc": "Offriamo ai nostri soci oltre 40 varietà premium a rotazione. Dalle genetiche old-school più consolidate fino alle più recenti selezioni californiane, c'è di tutto."
+    },
+    "exclusive": {
+      "title": "Prodotti esclusivi",
+      "desc": "Oltre alle infiorescenze di cannabis, offriamo anche la possibilità di acquistare prodotti di hashish esclusivi, come gli estratti live."
+    }
+  },
+  "home": {
+    "banner": "Abbiamo ancora posti disponibili – scopri qui i nostri modelli di iscrizione",
+    "hero": {
+      "subtitle": "Il primo CSC della Bassa Sassonia con oltre 170 soci impegnati – una qualità che convince.",
+      "stats": {
+        "award": {
+          "label": "1° CSC",
+          "sub": "In Bassa Sassonia"
+        },
+        "members": {
+          "label": "170+",
+          "sub": "Soci"
+        },
+        "plants": {
+          "label": "500+",
+          "sub": "Piante Bio"
+        },
+        "dispense": {
+          "label": "2500g+",
+          "sub": "Distribuzione al mese"
+        }
+      },
+      "exclusive": {
+        "title": "Selezione esclusiva",
+        "desc": "Infiorescenze, Hash (Dry Sift), Bubble Hash, Hash Rosin, Piattella, WPFF Rosin.",
+        "badge": "Disponibile solo da noi"
+      },
+      "infographics": {
+        "title": "Arte dell'estrazione botanica",
+        "navigation": "Usa le frecce o scorri per esplorare la panoramica",
+        "missing": "File immagine mancante:",
+        "missing_desc": "Assicurati di aver salvato gli allegati della chat in questa cartella pubblica del tuo progetto."
+      },
+      "highlights": {
+        "support": {
+          "title": "Supporto esperto",
+          "text": "Best practice e scambio di conoscenze."
+        },
+        "organic": {
+          "title": "100% coltivazione biologica",
+          "text": "0% sostanze chimiche, puramente biologico."
+        },
+        "legal": {
+          "title": "Sicurezza legale",
+          "text": "Conformità e legalità garantite."
+        }
+      },
+      "cta": "Iscriviti all'associazione - tutti sono i benvenuti",
+      "image_badge": {
+        "title": "100% Legale",
+        "sub": "Coltivazione regolamentata"
+      },
+      "image_overlay": {
+        "title": "Coltivazione biologica",
+        "sub": "100% purezza senza compromessi"
+      }
+    },
+    "motivation": {
+      "title": "La nostra motivazione",
+      "subtitle": "fiori puliti",
+      "description": "La nostra motivazione è quella di consentire a ogni socio l'accesso libero a cannabis coltivata in modo controllato e di alta qualità, senza dover ricorrere al mercato nero e ai rischi ad esso legati.",
+      "features": {
+        "quality": {
+          "title": "Standard di qualità",
+          "subtitle": "ampiamente testati",
+          "text": "testiamo con campionature approfondite il contenuto di THC/CBD e la qualità"
+        },
+        "variety": {
+          "title": "Varietà di genetiche",
+          "subtitle": "selezione variegata",
+          "text": "vogliamo offrire una selezione di varietà interessante - sempre l'erba giusta"
+        },
+        "organic": {
+          "title": "100% biologico",
+          "subtitle": "coltivazione naturale",
+          "text": "non utilizzeremo fertilizzanti chimici o sintetici nella coltivazione"
+        }
+      }
+    },
+    "club_info": {
+      "title": "L'associazione",
+      "watermark": "CSCN",
+      "watermark_sub": "Tutto per la pianta - Tutto per il club",
+      "image_alt": "Pianta di cannabis",
+      "description": "Siamo un'associazione non commerciale, con sede a Buchholz in der Nordheide, finanziata tramite le quote associative. Ora, dopo aver ottenuto la licenza, come Cannabis Social Club Nordheide ci concentreremo esclusivamente sull'informare in modo completo i nostri soci e sul mettere a disposizione, entro i limiti previsti dalla legge, una quantità limitata di prodotti a base di cannabis di alta qualità per il consumo personale. Diamo particolare importanza a un modo di lavorare professionale e sostenibile, a una selezione di varietà speciale ed esclusiva e a prodotti di alta qualità per i nostri soci!",
+      "more_link": "Scopri di più",
+      "features": [
+        "100% coltivazione biologica",
+        "True Living Organics",
+        "Sistemi LED all'avanguardia",
+        "Ampio know-how tecnico",
+        "Testato con cura",
+        "Coltivato in comunità",
+        "Varietà di genetiche",
+        "Legale"
+      ]
+    },
+    "safety": {
+      "title": "in sicurezza",
+      "subtitle": "spazio protetto",
+      "description": "Come Cannabis Social Club Nordheide, attribuiamo grande importanza alla prevenzione, alla tutela dei minori e alla tutela della salute. La nostra responsabile della prevenzione garantisce il rispetto di tutte le misure a tutela dei soci e offre supporto ai soci con comportamenti di consumo problematici.",
+      "warning": "Ti preghiamo di notare che l'acquisto di prodotti a base di cannabis sarà riservato esclusivamente ai nostri stimati soci. Le richieste relative all'acquisto di prodotti a base di cannabis senza l'intenzione di diventare soci della nostra associazione resteranno senza risposta da parte nostra. Come associazione responsabile, attribuiamo la massima importanza alla sicurezza e alla soddisfazione dei nostri soci. Prendiamo decisamente le distanze da attività illegali e ci impegniamo a rispettare scrupolosamente i rigidi requisiti della legge sulla cannabis.",
+      "card_title": "Tutela della salute e dei minori",
+      "more_link": "Scopri di più"
+    },
+    "newsletter": {
+      "title": "Iscriviti alla nostra newsletter!",
+      "subtitle": "Vuoi restare sempre aggiornato?",
+      "description": "Da noi non troverai solo interessanti temi politici e discussioni, ma anche consigli e trucchi per l'autocoltivazione e tutto ciò che riguarda il mondo della cannabis.",
+      "success": "Grazie per la tua iscrizione!",
+      "email_placeholder": "E-Mail",
+      "consent_label": "Acconsento che questo sito memorizzi le informazioni inviate, in modo che la mia richiesta possa essere elaborata.",
+      "button": "Iscriviti"
+    },
+    "contact": {
+      "title": "Informati!",
+      "description": "Scrivici semplicemente un'e-mail e cercheremo di aiutarti con consigli e supporto concreto.",
+      "link": "Contattaci!",
+      "location": "21244 Buchholz"
+    }
+  },
+  "verein": {
+    "hero": {
+      "banner": "Abbiamo ancora posti disponibili – vai qui alla domanda di iscrizione",
+      "title": "I nostri standard per un'associazione di coltivazione di cannabis",
+      "description": "Coltivazione biologica e sostenibile di cannabis",
+      "cta": "Domanda di iscrizione"
+    },
+    "intro": "Offriamo la massima qualità e una varietà interessante di genetiche esclusivamente per i nostri soci"
+  },
+  "membership": {
+    "hero": {
+      "title": "Domande di iscrizione",
+      "description": "Presenta subito la tua domanda di iscrizione ed entra a far parte del CSC Nordheide e.V. Scegli tra l'iscrizione standard gratuita o l'iscrizione supporter con vantaggi esclusivi."
+    }
+  },
+  "membership_cards": {
+    "badge": "Insieme verso l'obiettivo",
+    "title": "Le nostre iscrizioni",
+    "standard": {
+      "name": "Iscrizione Standard",
+      "priceNote": "Quota d'iscrizione!",
+      "monthly": "Contributo mensile minimo 50€",
+      "description": "Per l'iscrizione standard la quota d'iscrizione viene completamente eliminata. L'iscrizione standard include:",
+      "features": [
+        "Accesso all'assortimento standard (prodotti a base di infiorescenze e hashish)",
+        "Ricezione di talee per l'autocoltivazione (prossimamente)",
+        "Nessun accesso alle genetiche di prova (infiorescenze di cannabis)",
+        "Nessuna possibilità di prenotazione",
+        "L'upgrade all'iscrizione supporter è possibile in qualsiasi momento"
+      ],
+      "cta": "Domanda di iscrizione Standard"
+    },
+    "supporter": {
+      "name": "Iscrizione Supporter",
+      "priceNote": "quota d'iscrizione una tantum!",
+      "monthly": "Contributo mensile minimo 50€",
+      "description": "Per l'iscrizione supporter è dovuta una quota d'iscrizione una tantum di 300,-€. L'iscrizione supporter include:",
+      "features": [
+        "25% di sconto su tutti i forfait/contributi/ricariche",
+        "Ogni 6 mesi una talea premium per l'autocoltivazione (opzionale)",
+        "Accesso esclusivo a genetiche di prova limitate (infiorescenze di cannabis)",
+        "Possibilità di prenotazione per le varietà preferite (prossimamente)",
+        "Una polo/t-shirt ufficiale del CSC Nordheide e.V."
+      ],
+      "cta": "Domanda di iscrizione Supporter",
+      "urgency": {
+        "title": "Contingente limitato – solo pochi posti rimasti!",
+        "ticker": "🌿 Solo pochi posti disponibili · Assicurati subito il tuo vantaggio early bird e approfitta come uno dei primi soci del 25% di risparmio · Accesso esclusivo a genetiche di prova limitate · Iscriviti ora e partecipa 🔥    ",
+        "label": "Posti disponibili",
+        "status": "Fai in fretta!",
+        "footer": "I posti vengono assegnati continuamente – diventa early bird ora!"
+      }
+    }
+  },
+  "amortisation": {
+    "badge": "Iscrizione Supporter",
+    "title": "Tempo di ammortamento",
+    "description": "Da quando si ripaga la <1>quota d'iscrizione supporter di 300,– €</1>? Con il 25% di risparmio su tutti i prodotti, il punto di pareggio si raggiunge rapidamente a seconda della categoria di prodotto.",
+    "table": {
+      "category": "Categoria prodotto",
+      "market_price": "Prezzo / g (mercato)",
+      "saving": "Risparmio / g",
+      "break_even": "Punto di pareggio",
+      "popular": "Popolare",
+      "details": "Dettagli",
+      "amortisation": "Ammortamento"
+    },
+    "categories": {
+      "flowers_hash": "Infiorescenze / Hash",
+      "bubble_hash": "Bubble Hash",
+      "hash_rosin": "Hash Rosin",
+      "piattella": "Piattella",
+      "wpff_rosin": "WPFF Rosin"
+    },
+    "footer": "* Il calcolo si basa sulla quota d'iscrizione supporter una tantum di 300,– € e su uno sconto forfettario del 25% sul prezzo di mercato. Le quantità individuali acquistabili possono variare."
+  },
+  "requirements": {
+    "title": "Requisiti",
+    "list": [
+      "Aver compiuto 18 anni",
+      "Almeno 6 mesi di residenza o dimora abituale in Germania",
+      "Nessuna doppia iscrizione presso altre associazioni di coltivazione",
+      "Contributo mensile minimo 50€"
+    ]
+  },
+  "documents": {
+    "description": "Tramite le schede puoi consultare il nostro <1>statuto associativo</1>, il nostro <2>regolamento sui contributi</2> e la nostra <3>domanda di iscrizione</3>.",
+    "footer": "Per domande scrivici pure una email",
+    "labels": {
+      "statutes": "Statuto associativo",
+      "contribution_rules": "Regolamento sui contributi",
+      "application": "Domanda di iscrizione"
+    }
+  },
+  "locations": {
+    "badge": "Sedi & orari di apertura",
+    "title": "Vieni a trovarci",
+    "description": "In questo luogo trovi il nostro punto di distribuzione e la sede legale dell'associazione. Non vediamo l'ora di confrontarci con i nostri soci.",
+    "hours_label": "Orari di apertura",
+    "closed": "Chiuso",
+    "office_description": "Il tuo punto di riferimento per tutte le questioni associative e le domande generali.",
+    "days": {
+      "Mo": "Lun",
+      "Di": "Mar",
+      "Mi": "Mer",
+      "Do": "Gio",
+      "Fr": "Ven",
+      "Sa": "Sab",
+      "So": "Dom"
+    },
+    "titles": {
+      "dispensary": "Punto di distribuzione",
+      "club": "Cannabis Social Club Nordheide e.V."
+    }
+  }
+}

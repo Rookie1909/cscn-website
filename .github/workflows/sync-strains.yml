@@ -18,6 +18,7 @@ jobs:
         env:
           CANNANAS_API_KEY: ${{ secrets.CANNANAS_API_KEY }}
           CANNANAS_CLUB_ID: ${{ secrets.CANNANAS_CLUB_ID }}
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
         run: node .github/scripts/sync-strains.cjs
       - name: Commit and push if data changed
         run: |

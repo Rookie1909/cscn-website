@@ -4,19 +4,30 @@ import { Calendar, Image as ImageIcon, Newspaper, ArrowRight, X } from 'lucide-r
 import { useTranslation } from 'react-i18next';
 import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
 import newsData from '@/data/news.json';
+import { localized } from '@/lib/localized';
 
 interface NewsItem {
   id: string;
   week: string;
   week_en?: string;
+  week_fi?: string;
+  week_it?: string;
   month: string;
   month_en?: string;
+  month_fi?: string;
+  month_it?: string;
   title: string;
   title_en?: string;
+  title_fi?: string;
+  title_it?: string;
   description: string;
   description_en?: string;
+  description_fi?: string;
+  description_it?: string;
   content: string;
   content_en?: string;
+  content_fi?: string;
+  content_it?: string;
   images: string[];
   date: string;
 }
@@ -107,11 +118,11 @@ export function NewsSection() {
           <div className="absolute left-0 lg:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-border to-transparent hidden sm:block" />
 
           {news.map((item, index) => {
-            const week = currentLang === 'en' && item.week_en ? item.week_en : item.week;
-            const month = currentLang === 'en' && item.month_en ? item.month_en : item.month;
-            const title = currentLang === 'en' && item.title_en ? item.title_en : item.title;
-            const description = currentLang === 'en' && item.description_en ? item.description_en : item.description;
-            const content = currentLang === 'en' && item.content_en ? item.content_en : item.content;
+            const week = localized(item, 'week', currentLang);
+            const month = localized(item, 'month', currentLang);
+            const title = localized(item, 'title', currentLang);
+            const description = localized(item, 'description', currentLang);
+            const content = localized(item, 'content', currentLang);
 
             return (
               <motion.div

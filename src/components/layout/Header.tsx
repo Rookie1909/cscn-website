@@ -15,13 +15,24 @@ export function Header() {
   const { t, i18n } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [langMenuOpen, setLangMenuOpen] = useState(false);
+  const [mobileLangMenuOpen, setMobileLangMenuOpen] = useState(false);
   const [isLogoFullscreen, setIsLogoFullscreen] = useState(false);
 
   const isActive = (href: string) => location.pathname === href;
 
-  const toggleLanguage = () => {
-    const nextLang = i18n.language === 'de' ? 'en' : 'de';
-    i18n.changeLanguage(nextLang);
+  const languages = [
+    { code: 'de', flag: '🇩🇪', label: 'Deutsch' },
+    { code: 'en', flag: '🇬🇧', label: 'English' },
+    { code: 'fi', flag: '🇫🇮', label: 'Suomi' },
+    { code: 'it', flag: '🇮🇹', label: 'Italiano' },
+  ];
+  const currentLanguage = languages.find((l) => l.code === i18n.language) || languages[0];
+
+  const selectLanguage = (code: string) => {
+    i18n.changeLanguage(code);
+    setLangMenuOpen(false);
+    setMobileLangMenuOpen(false);
   };
 
   const navItems = [
@@ -132,16 +143,47 @@ export function Header() {
             ))}
 
             <div className="flex items-center gap-3 ml-6">
-              {/* Language Toggle */}
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={toggleLanguage}
-                className="w-11 h-11 rounded-xl border-border bg-background/50 hover:bg-primary/5 hover:border-primary/50 text-xl transition-all duration-500 hover:scale-110 shadow-lg shadow-black/5"
-                title={i18n.language === 'de' ? 'Switch to English' : 'Auf Deutsch umstellen'}
+              {/* Language Switcher */}
+              <div
+                className="relative"
+                onMouseEnter={() => setLangMenuOpen(true)}
+                onMouseLeave={() => setLangMenuOpen(false)}
               >
-                {i18n.language === 'de' ? '🇩🇪' : '🇬🇧'}
-              </Button>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => setLangMenuOpen((o) => !o)}
+                  className="w-11 h-11 rounded-xl border-border bg-background/50 hover:bg-primary/5 hover:border-primary/50 text-xl transition-all duration-500 hover:scale-110 shadow-lg shadow-black/5"
+                  title={currentLanguage.label}
+                >
+                  {currentLanguage.flag}
+                </Button>
+                <AnimatePresence>
+                  {langMenuOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                      className="absolute top-full right-0 mt-3 w-44 bg-card/95 backdrop-blur-xl border border-border rounded-2xl shadow-2xl overflow-hidden py-2"
+                    >
+                      {languages.map((lang) => (
+                        <button
+                          key={lang.code}
+                          onClick={() => selectLanguage(lang.code)}
+                          className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm font-headline font-bold transition-all ${
+                            lang.code === i18n.language
+                              ? 'text-primary bg-primary/5'
+                              : 'text-foreground/70 hover:bg-primary/5 hover:text-primary'
+                          }`}
+                        >
+                          <span className="text-lg">{lang.flag}</span>
+                          {lang.label}
+                        </button>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
 
               {/* Theme Toggle */}
               <Button
@@ -158,14 +200,41 @@ export function Header() {
 
           {/* Mobile Menu */}
           <div className="flex items-center gap-4 lg:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={toggleLanguage}
-              className="text-xl"
-            >
-              {i18n.language === 'de' ? '🇩🇪' : '🇬🇧'}
-            </Button>
+            <div className="relative">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setMobileLangMenuOpen((o) => !o)}
+                className="text-xl"
+              >
+                {currentLanguage.flag}
+              </Button>
+              <AnimatePresence>
+                {mobileLangMenuOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    className="absolute top-full right-0 mt-3 w-44 bg-card/95 backdrop-blur-xl border border-border rounded-2xl shadow-2xl overflow-hidden py-2 z-50"
+                  >
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => selectLanguage(lang.code)}
+                        className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm font-headline font-bold transition-all ${
+                          lang.code === i18n.language
+                            ? 'text-primary bg-primary/5'
+                            : 'text-foreground/70 hover:bg-primary/5 hover:text-primary'
+                        }`}
+                      >
+                        <span className="text-lg">{lang.flag}</span>
+                        {lang.label}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
             <Button
               variant="ghost"
               size="icon"

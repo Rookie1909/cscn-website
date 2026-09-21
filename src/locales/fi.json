@@ -1,0 +1,326 @@
+{
+  "nav": {
+    "home": "Etusivu",
+    "verein": "Yhdistys",
+    "about": "Meistä",
+    "protection": "Terveyden- ja nuorisonsuojelu",
+    "sortiment": "Lajikkeet",
+    "standorte": "Toimipisteet",
+    "membership": "Jäsenhakemukset",
+    "news": "Uutiset"
+  },
+  "header": {
+    "logo_subtitle": "CSC Nordheide e.V.:n virallinen verkkosivusto",
+    "menu": "Valikko",
+    "switch_light": "Vaihda vaaleaan tilaan",
+    "switch_dark": "Vaihda tummaan tilaan"
+  },
+  "footer": {
+    "rights": "Kaikki oikeudet pidätetään.",
+    "impressum": "Yhteystiedot ja tietosuoja"
+  },
+  "news": {
+    "tag": "Klubin päiväkirja",
+    "headline": "Ajankohtaiset uutiset ja päivitykset",
+    "body": "Seuraa mukanamme matkaamme. Julkaisemme täällä viikoittain päivityksiä rakennustöiden edistymisestä, kasvatuksesta ja CSC Nordheiden tapahtumista.",
+    "impressions": "Kuvia",
+    "read_more": "Lue lisää",
+    "footer_text": "Etkö halua jäädä paitsi uutisista? Tilaa myös",
+    "newsletter": "Uutiskirjeemme"
+  },
+  "news_page": {
+    "title": "Uutiset",
+    "description": "Ajankohtaisia näkymiä, rakennustöiden edistymistä ja päivityksiä CSC Nordheiden klubipäiväkirjasta."
+  },
+  "strains": {
+    "tag": "Kasvatusvalikoima",
+    "headline": "Nykyiset genetiikkamme",
+    "body": "Tutustu huolella valittuihin lajikkeisiimme. Klassisista suosikeista moderneihin kalifornialaisiin risteytyksiin – panostamme korkeimpaan laatuun ja geneettiseen monimuotoisuuteen.",
+    "analysis": "Analyysi",
+    "effects_aroma": "Vaikutus & Aromi",
+    "genetics": "Genetiikka",
+    "breeder": "Jalostaja",
+    "sold_out": "Loppuunmyyty",
+    "view_image": "Suurenna kuva",
+    "close": "Sulje",
+    "medical_effects": "Lääkinnälliset vaikutukset",
+    "terpenes": "Terpeenit",
+    "thc": "THC",
+    "cbd": "CBD",
+    "library_tag": "Raised on Living Soil",
+    "library_title_1": "AJANKOHTAINEN CSCN",
+    "library_title_2": "VALIKOIMA",
+    "library_desc": "Tutustu premium-lajikkeidemme geneettiseen monimuotoisuuteen ja monimutkaiseen terpeeniprofiiliin. Tieteellisesti perusteltua ja läpinäkyvää.",
+    "stats_available": "Saatavilla olevat lajikkeet",
+    "stats_avg_thc": "Keskimääräinen THC",
+    "show_more": "Lisätiedot",
+    "show_less": "Näytä vähemmän",
+    "footer_bio": "100% Luomu",
+    "footer_local": "100% paikallista Ala-Saksista",
+    "footer_growth": "Valvottu kasvatus",
+    "footer_breeding": "Läpinäkyvä kasvatus",
+    "footer_copyright": "© 2026 CSC Nordheide E.V. Valikoima"
+  },
+  "features": {
+    "perm": {
+      "title": "Kasvatuslupa",
+      "desc": "Olemme saaneet virallisen kasvatuslupamme KCanG-lain §11:n mukaisesti ja olemme jo aloittaneet kasvatuksen."
+    },
+    "energy": {
+      "title": "Energia",
+      "desc": "Käytämme yhdistyksessämme ja kasvatustiloissamme vain uusiutuvaa energiaa ja pyrimme aikanaan kasvattamaan cannabista myös kasvihuoneessa."
+    },
+    "quality": {
+      "title": "Laadunvalvonta",
+      "desc": "Tarjoamme jäsenillemme tasaisen korkeaa laatua. Siksi olemme ottaneet käyttöön korkeat standardit ja teemme itsellemme tiukkoja tarkastuksia."
+    },
+    "farming": {
+      "title": "Kasvatustapa",
+      "desc": "Olemme tietoisesti valinneet mahdollisimman kestävän ja resursseja säästävän kasvatustavan. Torjunta-aineet ja kemialliset lannoitteet eivät tule meillä kyseeseen."
+    },
+    "variety": {
+      "title": "Lajikevalikoima",
+      "desc": "Tarjoamme jäsenillemme yli 40 vaihtuvaa premium-lajiketta. Vakiintuneesta old school -genetiikasta uusimpiin Kalifornian lajikkeisiin – valikoimastamme löytyy kaikkea."
+    },
+    "exclusive": {
+      "title": "Eksklusiiviset tuotteet",
+      "desc": "Cannabiskukkien lisäksi tarjoamme myös mahdollisuuden hankkia eksklusiivisia hasistuotteita, kuten live-uutteita."
+    }
+  },
+  "home": {
+    "banner": "Meillä on vielä vapaita paikkoja – tutustu jäsenyysmalleihimme täältä",
+    "hero": {
+      "subtitle": "Ala-Saksin ensimmäinen CSC, jossa on yli 170 sitoutunutta jäsentä – laatua, joka vakuuttaa.",
+      "stats": {
+        "award": {
+          "label": "1. CSC",
+          "sub": "Ala-Saksissa"
+        },
+        "members": {
+          "label": "170+",
+          "sub": "Jäsentä"
+        },
+        "plants": {
+          "label": "500+",
+          "sub": "Luomukasvia"
+        },
+        "dispense": {
+          "label": "2500g+",
+          "sub": "Jakelua kuukaudessa"
+        }
+      },
+      "exclusive": {
+        "title": "Eksklusiivinen valikoima",
+        "desc": "Kukat, Hash (Dry Sift), Bubble Hash, Hash Rosin, Piattella, WPFF Rosin.",
+        "badge": "Saatavilla vain meiltä"
+      },
+      "infographics": {
+        "title": "Kasviuuttamisen taidetta",
+        "navigation": "Käytä nuolia tai pyyhkäise selataksesi yhteenvetoa",
+        "missing": "Kuvatiedosto puuttuu:",
+        "missing_desc": "Varmista, että olet tallentanut chatin liitetiedostot tähän projektisi julkiseen kansioon."
+      },
+      "highlights": {
+        "support": {
+          "title": "Asiantuntijatuki",
+          "text": "Parhaat käytännöt & tiedon jakaminen."
+        },
+        "organic": {
+          "title": "100% luomukasvatus",
+          "text": "0% kemikaaleja, puhtaasti biologista."
+        },
+        "legal": {
+          "title": "Lainmukaisuus",
+          "text": "Taattu vaatimustenmukaisuus & laillisuus."
+        }
+      },
+      "cta": "Liity yhdistykseen - kaikki ovat tervetulleita",
+      "image_badge": {
+        "title": "100% Laillista",
+        "sub": "Säänneltyä kasvatusta"
+      },
+      "image_overlay": {
+        "title": "Luomukasvatus",
+        "sub": "100% puhtautta ilman kompromisseja"
+      }
+    },
+    "motivation": {
+      "title": "Motiivimme",
+      "subtitle": "puhtaita kukkia",
+      "description": "Motiivimme on mahdollistaa jokaiselle jäsenelle vapaa pääsy valvotusti kasvatettuun, korkealaatuiseen cannabikseen ilman, että heidän tarvitsee turvautua mustaan pörssiin ja siihen liittyviin riskeihin.",
+      "features": {
+        "quality": {
+          "title": "Laatuvaatimukset",
+          "subtitle": "laajasti testattua",
+          "text": "testaamme laajoilla näytteenotoilla THC/CBD-pitoisuuksia ja laatua"
+        },
+        "variety": {
+          "title": "Lajikevalikoima",
+          "subtitle": "monipuolinen valikoima",
+          "text": "haluamme tarjota houkuttelevan lajikevalikoiman - aina oikean yrtin"
+        },
+        "organic": {
+          "title": "100% luomua",
+          "subtitle": "luonnonmukainen kasvatus",
+          "text": "emme käytä kasvatuksessa kemiallisia tai synteettisiä lannoitteita"
+        }
+      }
+    },
+    "club_info": {
+      "title": "Yhdistys",
+      "watermark": "CSCN",
+      "watermark_sub": "Kaikki kasville - kaikki klubille",
+      "image_alt": "Cannabiskasvi",
+      "description": "Olemme voittoa tavoittelematon yhdistys, jonka kotipaikka on Buchholz in der Nordheide ja joka rahoitetaan jäsenmaksuilla. Nyt, saatuamme luvan, keskitymme Cannabis Social Club Nordheidena yksinomaan jäsentemme kattavaan tiedottamiseen sekä rajoitetun määrän korkealaatuisia cannabistuotteita tarjoamiseen omaan käyttöön lakisääteisten vaatimusten puitteissa. Kiinnitämme erityistä huomiota ammattimaiseen ja kestävään toimintatapaan, erityiseen ja eksklusiiviseen lajikevalikoimaan sekä korkealaatuisiin tuotteisiin jäsenillemme!",
+      "more_link": "Lue lisää",
+      "features": [
+        "100% luomukasvatusta",
+        "True Living Organics",
+        "uusimmat LED-järjestelmät",
+        "laaja asiantuntemus",
+        "huolellisesti testattua",
+        "yhteisöllisesti kasvatettua",
+        "lajikevalikoima",
+        "laillista"
+      ]
+    },
+    "safety": {
+      "title": "turvallisesti liikkeellä",
+      "subtitle": "suojattu tila",
+      "description": "Cannabis Social Club Nordheidena panostamme voimakkaasti ennaltaehkäisyyn, nuorisonsuojeluun ja terveydensuojeluun. Ennaltaehkäisyvastaavamme varmistaa, että kaikkia jäsenten suojelemiseksi tarkoitettuja toimenpiteitä noudatetaan, ja tarjoaa tukea jäsenille, joilla on ongelmallista käyttäytymistä käytön suhteen.",
+      "warning": "Huomioithan, että cannabistuotteiden hankinta on varattu yksinomaan arvostetuille jäsenillemme. Cannabistuotteiden hankintaa koskeviin tiedusteluihin, joihin ei liity aikomusta liittyä yhdistykseemme, emme vastaa. Vastuullisena yhdistyksenä panostamme suuresti jäsentemme turvallisuuteen ja tyytyväisyyteen. Sanoudumme jyrkästi irti laittomasta toiminnasta ja sitoudumme noudattamaan tunnollisesti cannabislain tiukkoja vaatimuksia.",
+      "card_title": "Terveyden- ja nuorisonsuojelu",
+      "more_link": "Lue lisää"
+    },
+    "newsletter": {
+      "title": "Tilaa uutiskirjeemme!",
+      "subtitle": "Haluatko pysyä aina ajan tasalla?",
+      "description": "Meillä on tarjolla mielenkiintoisia poliittisia aiheita ja keskusteluja, mutta myös jatkuvasti vinkkejä omaan kasvatukseen ja kaikkea cannabikseen liittyvää.",
+      "success": "Kiitos ilmoittautumisestasi!",
+      "email_placeholder": "Sähköposti",
+      "consent_label": "Suostun siihen, että tämä verkkosivusto tallentaa lähettämäni tiedot, jotta pyyntööni voidaan vastata.",
+      "button": "Tilaa"
+    },
+    "contact": {
+      "title": "Ota selvää!",
+      "description": "Lähetä meille sähköpostia, niin autamme sinua neuvoin ja teoin.",
+      "link": "Ota yhteyttä!",
+      "location": "21244 Buchholz"
+    }
+  },
+  "verein": {
+    "hero": {
+      "banner": "Meillä on vielä vapaita paikkoja – tästä jäsenhakemukseen",
+      "title": "Vaatimuksemme cannabiksen kasvatusyhdistykselle",
+      "description": "Kestävää luomu-cannabiksen kasvatusta",
+      "cta": "Jäsenhakemus"
+    },
+    "intro": "Tarjoamme korkeinta laatua ja houkuttelevan lajikevalikoiman yksinomaan jäsenillemme"
+  },
+  "membership": {
+    "hero": {
+      "title": "Jäsenhakemukset",
+      "description": "Jätä jäsenhakemuksesi nyt ja liity osaksi CSC Nordheide e.V.:tä. Valitse maksuttoman perusjäsenyyden tai eksklusiivisia etuja tarjoavan tukijäsenyyden välillä."
+    }
+  },
+  "membership_cards": {
+    "badge": "Yhdessä kohti tavoitetta",
+    "title": "Jäsenyytemme",
+    "standard": {
+      "name": "Perusjäsenyys",
+      "priceNote": "Liittymismaksu!",
+      "monthly": "Kuukausittainen vähimmäismaksu 50€",
+      "description": "Perusjäsenyydessä liittymismaksu poistuu kokonaan. Perusjäsenyyteen sisältyy:",
+      "features": [
+        "Pääsy perusvalikoimaan (kukka- ja hasistuotteet)",
+        "Pistokkaiden hankinta omaan kasvatukseen (pian)",
+        "Ei pääsyä testigenetiikkoihin (cannabiskukat)",
+        "Ei varausmahdollisuutta",
+        "Päivitys tukijäsenyyteen on mahdollista milloin tahansa"
+      ],
+      "cta": "Perusjäsenyyden hakemus"
+    },
+    "supporter": {
+      "name": "Tukijäsenyys",
+      "priceNote": "kertaluontoinen liittymismaksu!",
+      "monthly": "Kuukausittainen vähimmäismaksu 50€",
+      "description": "Tukijäsenyydestä maksetaan kertaluontoinen 300,-€ liittymismaksu. Tukijäsenyyteen sisältyy:",
+      "features": [
+        "25% alennus kaikista paketeista/maksuista/latauksista",
+        "Joka 6. kuukausi premium-pistokas omaan kasvatukseen (valinnainen)",
+        "Eksklusiivinen pääsy rajoitettuihin testigenetiikkoihin (cannabiskukat)",
+        "Varausmahdollisuus suosikkilajikkeille (pian)",
+        "Virallinen CSC Nordheide e.V. -pikeepaita/t-paita"
+      ],
+      "cta": "Tukijäsenyyden hakemus",
+      "urgency": {
+        "title": "Rajoitettu kiintiö – vain muutama paikka jäljellä!",
+        "ticker": "🌿 Vain muutama paikka jäljellä · Varmista nyt early bird -etusi ja hyödy yhtenä ensimmäisistä jäsenistä 25 % säästöstä · Eksklusiivinen pääsy rajoitettuihin testigenetiikkoihin · Liity jäseneksi nyt ja ole mukana 🔥    ",
+        "label": "Vapaita paikkoja",
+        "status": "Ole nopea!",
+        "footer": "Paikkoja myönnetään jatkuvasti – ole early bird nyt!"
+      }
+    }
+  },
+  "amortisation": {
+    "badge": "Tukijäsenyys",
+    "title": "Takaisinmaksuaika",
+    "description": "Milloin <1>300,– € tukijäsenyyden liittymismaksu</1> maksaa itsensä takaisin? Kaikkien tuotteiden 25 % säästöllä kannattavuusraja saavutetaan tuoteryhmästä riippuen nopeasti.",
+    "table": {
+      "category": "Tuoteryhmä",
+      "market_price": "Hinta / g (markkinahinta)",
+      "saving": "Säästö / g",
+      "break_even": "Kannattavuusraja",
+      "popular": "Suosittu",
+      "details": "Tiedot",
+      "amortisation": "Takaisinmaksu"
+    },
+    "categories": {
+      "flowers_hash": "Kukat / Hash",
+      "bubble_hash": "Bubble Hash",
+      "hash_rosin": "Hash Rosin",
+      "piattella": "Piattella",
+      "wpff_rosin": "WPFF Rosin"
+    },
+    "footer": "* Laskelma perustuu kertaluontoiseen 300,– € tukijäsenyyden liittymismaksuun sekä kiinteään 25 %:n alennukseen markkinahinnasta. Yksilölliset hankintamäärät voivat vaihdella."
+  },
+  "requirements": {
+    "title": "Vaatimukset",
+    "list": [
+      "18 vuoden iän täyttäminen",
+      "Vähintään 6 kuukauden asuinpaikka tai vakituinen oleskelu Saksassa",
+      "Ei kaksoisjäsenyyttä muissa kasvatusyhdistyksissä",
+      "Kuukausittainen vähimmäismaksu 50€"
+    ]
+  },
+  "documents": {
+    "description": "Välilehtien kautta voit tarkastella <1>yhdistyksen sääntöjä</1>, <2>maksujärjestystämme</2> ja <3>jäsenhakemustamme</3>.",
+    "footer": "Kysyttävää? Lähetä meille rohkeasti sähköpostia",
+    "labels": {
+      "statutes": "Yhdistyksen säännöt",
+      "contribution_rules": "Maksujärjestys",
+      "application": "Jäsenhakemus"
+    }
+  },
+  "locations": {
+    "badge": "Toimipisteet & aukioloajat",
+    "title": "Käy tutustumassa meihin paikan päällä",
+    "description": "Tästä paikasta löydät jakelupisteemme ja yhdistyksen kotipaikan. Odotamme innolla vuorovaikutusta jäsentemme kanssa.",
+    "hours_label": "Aukioloajat",
+    "closed": "Suljettu",
+    "office_description": "Yhteyspisteesi kaikissa yhdistysasioissa ja yleisissä kysymyksissä.",
+    "days": {
+      "Mo": "Ma",
+      "Di": "Ti",
+      "Mi": "Ke",
+      "Do": "To",
+      "Fr": "Pe",
+      "Sa": "La",
+      "So": "Su"
+    },
+    "titles": {
+      "dispensary": "Jakelupiste",
+      "club": "Cannabis Social Club Nordheide e.V."
+    }
+  }
+}

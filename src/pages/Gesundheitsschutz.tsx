@@ -5,7 +5,9 @@ import { PageHero } from '@/components/sections/PageHero';
 import { Button } from '@/components/ui/button';
 
 export function Gesundheitsschutz() {
-  const { t } = useTranslation();
+  // Youth/health protection concept is legally binding and must stay German
+  // regardless of the site's selected language.
+  const { t } = useTranslation('translation', { lng: 'de' });
 
   const sections = [
     {

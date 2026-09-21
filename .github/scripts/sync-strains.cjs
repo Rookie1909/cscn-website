@@ -4,6 +4,11 @@ const path = require('path');
 const CLUB_ID = process.env.CANNANAS_CLUB_ID;
 const API_KEY = process.env.CANNANAS_API_KEY;
 const API_BASE = 'https://api.cannanas.club';
+const DEEPL_API_KEY = process.env.DEEPL_API_KEY;
+// DeepL marks free-tier keys with a ":fx" suffix, which also determines the endpoint.
+const DEEPL_URL = DEEPL_API_KEY && DEEPL_API_KEY.endsWith(':fx')
+  ? 'https://api-free.deepl.com/v2/translate'
+  : 'https://api.deepl.com/v2/translate';
 
 const OVERRIDES_PATH = path.join(__dirname, '..', '..', 'src', 'data', 'strain-overrides.json');
 const OUTPUT_PATH = path.join(__dirname, '..', '..', 'src', 'data', 'strains-sync.json');
@@ -57,6 +62,83 @@ function extractTerpeneTags(profile) {
     return { tags, rest };
   }
   return { tags: [], rest: profile.trim() };
+}
+
+// Languages the site is translated into besides German (the source), and the
+// suffix used for each on both locale keys (e.g. description_fi) and DeepL's
+// target_lang codes.
+const TRANSLATION_TARGETS = [
+  { suffix: 'en', deepl: 'EN' },
+  { suffix: 'fi', deepl: 'FI' },
+  { suffix: 'it', deepl: 'IT' },
+];
+
+// Translates a list of German strings to the given DeepL target language in
+// one request, preserving order and skipping empty entries.
+async function translateTo(texts, targetLang) {
+  if (!DEEPL_API_KEY) return texts.map(() => undefined);
+  const nonEmptyIndexes = texts.map((t, i) => (t ? i : -1)).filter((i) => i !== -1);
+  if (nonEmptyIndexes.length === 0) return texts.map(() => undefined);
+
+  const params = new URLSearchParams();
+  nonEmptyIndexes.forEach((i) => params.append('text', texts[i]));
+  params.append('source_lang', 'DE');
+  params.append('target_lang', targetLang);
+
+  try {
+    const res = await fetch(DEEPL_URL, {
+      method: 'POST',
+      headers: {
+        Authorization: `DeepL-Auth-Key ${DEEPL_API_KEY}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: params,
+    });
+    if (!res.ok) {
+      console.error(`DeepL translation (${targetLang}) failed: ${res.status} ${await res.text()}`);
+      return texts.map(() => undefined);
+    }
+    const data = await res.json();
+    const result = new Array(texts.length).fill(undefined);
+    nonEmptyIndexes.forEach((origIndex, j) => {
+      result[origIndex] = data.translations[j].text;
+    });
+    return result;
+  } catch (err) {
+    console.error(`DeepL translation (${targetLang}) error:`, err.message);
+    return texts.map(() => undefined);
+  }
+}
+
+// Builds the missing translated fields for a strain (for every target
+// language) in one DeepL call per language, skipping whatever a manual
+// override already covers.
+async function autoTranslate({ description, terpenes, effects, medicalEffects }, override) {
+  const result = {};
+  for (const { suffix, deepl } of TRANSLATION_TARGETS) {
+    const jobs = [];
+    const texts = [];
+    const push = (job, text) => { jobs.push(job); texts.push(text); };
+
+    if (description && !override[`description_${suffix}`]) push('description', description);
+    if (!override[`terpenes_${suffix}`]) terpenes.forEach((t) => push('terpenes', t));
+    if (!override[`effects_${suffix}`]) effects.forEach((e) => push('effects', e));
+    if (!override[`medicalEffects_${suffix}`]) medicalEffects.forEach((m) => push('medicalEffects', m));
+
+    if (texts.length === 0) continue;
+
+    const translated = await translateTo(texts, deepl);
+    const out = { terpenes: [], effects: [], medicalEffects: [] };
+    jobs.forEach((job, i) => {
+      if (job === 'description') out.description = translated[i];
+      else out[job].push(translated[i]);
+    });
+    if (out.description) result[`description_${suffix}`] = out.description;
+    if (out.terpenes.length > 0) result[`terpenes_${suffix}`] = out.terpenes;
+    if (out.effects.length > 0) result[`effects_${suffix}`] = out.effects;
+    if (out.medicalEffects.length > 0) result[`medicalEffects_${suffix}`] = out.medicalEffects;
+  }
+  return result;
 }
 
 async function fetchJson(urlPath) {
@@ -124,7 +206,16 @@ async function main() {
 
     const image = await downloadStrainImage(id, s.image);
 
-    mapped.push({
+    const germanEffects = override.effects || [];
+    const germanMedical = override.medicalEffects || [];
+
+    // Auto-translate via DeepL whatever a manual override doesn't already cover.
+    const auto = await autoTranslate(
+      { description, terpenes: finalTerpenes, effects: germanEffects, medicalEffects: germanMedical },
+      override
+    );
+
+    const entry = {
       id,
       name: s.name,
       // The product-level thc/cbd reflect the actual tested batch; fall back
@@ -134,17 +225,21 @@ async function main() {
       indica,
       sativa,
       description,
-      description_en: override.description_en,
-      effects: override.effects || [],
-      effects_en: override.effects_en,
+      effects: germanEffects,
       medicalEffects: override.medicalEffects,
-      medicalEffects_en: override.medicalEffects_en,
       terpenes: finalTerpenes,
-      terpenes_en: override.terpenes_en,
       genetics: s.genetics || '',
       breeder: s.breeder || '',
       image,
-    });
+    };
+    for (const { suffix } of TRANSLATION_TARGETS) {
+      entry[`description_${suffix}`] = override[`description_${suffix}`] || auto[`description_${suffix}`];
+      entry[`effects_${suffix}`] = override[`effects_${suffix}`] || auto[`effects_${suffix}`];
+      entry[`medicalEffects_${suffix}`] = override[`medicalEffects_${suffix}`] || auto[`medicalEffects_${suffix}`];
+      entry[`terpenes_${suffix}`] = override[`terpenes_${suffix}`] || auto[`terpenes_${suffix}`];
+    }
+
+    mapped.push(entry);
   }
 
   mapped.sort((a, b) => a.name.localeCompare(b.name, 'de'));

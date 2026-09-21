@@ -1,0 +1,74 @@
+{
+  "ak48": {
+    "description_en": "Since the mid-90s, AK varieties have become increasingly popular. Our AK-48 is one of the strongest, earliest flowering varieties available. The plants produce hard buds with an exceptional, pungent aroma. Although AK-48 is a hybrid of Indica and Sativa, its high effect is more similar to Sativa. While most growers would opt for a longer growth phase, under perfect conditions it is possible to make AK-48 ready for harvest in just 48 days.",
+    "effects": ["Tatkräftig", "Erhebend", "Energetisch"],
+    "effects_en": ["Energetic", "Uplifting", "Active"],
+    "medicalEffects": ["Gute Schlafförderung", "Möglicher Einsatz bei chronischen Schmerzen"],
+    "medicalEffects_en": ["Good sleep support", "Possible use for chronic pain"],
+    "terpenes": ["Moschus", "Säuerlich", "Haschisch", "Floral"],
+    "terpenes_en": ["Musk", "Sour", "Hashish", "Floral"]
+  },
+  "bizcocho": {
+    "description_en": "The cookie-dominant phenotype of Bizcocho offers an exceptionally complex and deep flavor profile, particularly interesting for lovers of sweet, gassy strains. The effects of Bizcocho are long-lasting and combine mental clarity with physical relaxation, ideal for various activities or unwinding.",
+    "effects": ["Mentale Klarheit", "Körperliche Entspannung"],
+    "effects_en": ["Mental Clarity", "Physical Relaxation"],
+    "terpenes": ["Süß", "Frisch gebackene Kekse", "Cookie-Gassigkeit", "Diesel", "Zkittlez"],
+    "terpenes_en": ["Sweet", "Freshly baked cookies", "Cookie gassiness", "Diesel", "Zkittlez"]
+  },
+  "blue-gelato-41": {
+    "description_en": "Blue Gelato 41 is our sensational Blueberry supercross from the West Coast. It was created by crossing the famous Blueberry genetics with Thin Mint Girl Scout Cookies and the fresh-fruity Indica Sunset Sherbet. Blue Gelato 41 quickly pulls you into a sea of deep psychedelic relaxation. The buds of this strain are resinous and exude a sweet-earthy lemon scent, with many phenotypes appearing blue to purple in color.",
+    "effects": ["Sanfte Euphorie", "Stimmungsaufhellend", "Kreativ", "Körperliche Entspannung"],
+    "effects_en": ["Gentle Euphoria", "Mood-enhancing", "Creative", "Physical Relaxation"],
+    "terpenes": ["Cremig-süß", "Fruchtig", "Erde", "Kush", "Vanillecreme", "Beeren"],
+    "terpenes_en": ["Creamy-sweet", "Fruity", "Earthy", "Kush", "Vanilla Cream", "Berries"]
+  },
+  "bubble-og": {
+    "description_en": "BUBBLE OG by LITFARMS is a cross between Bubble Bath (The Soap x Project 4516) x LIT OG. By mixing the minty-soapy nuances of The Soap and the Zkittlez notes from Project 4516 combined with OG-heavy notes containing gas and pastry tones on the finish, a completely new blend emerges.",
+    "effects": ["Entspannend", "Beruhigend"],
+    "effects_en": ["Relaxing", "Calming"],
+    "terpenes": ["Seifig", "Minze", "Lavendel", "Salbei", "Chemikalien", "Ammoniak", "OG-Noten", "Süßigkeiten"],
+    "terpenes_en": ["Soapy", "Mint", "Lavender", "Sage", "Chemicals", "Ammonia", "OG notes", "Sweets"]
+  },
+  "double-rainbow-sherb": {
+    "description_en": "RS-11 is an Indica-dominant hybrid created by crossing Pink Guava x OZK. Lemon Cherry Gelato offers an amazing taste and an effect that will put you in pure bliss. This bud has a flavor that matches exactly what its name suggests – sour lemons paired with rich cherries and berries.",
+    "effects": ["Beruhigend", "Gemütlichkeit", "Glückseligkeit"],
+    "effects_en": ["Calming", "Comfort", "Bliss"],
+    "terpenes": ["Süß", "Fruchtig", "Kirsch-Beeren", "Zuckerbonbons", "Kiefer"],
+    "terpenes_en": ["Sweet", "Fruity", "Cherry-Berry", "Sugar Candy", "Pine"]
+  },
+  "gorilla-blueberry": {
+    "description_en": "A powerful cross between the legendary Gorilla Glue and the fruity Blueberry.",
+    "effects": ["Ausgewogen"],
+    "effects_en": ["Balanced"],
+    "terpenes": ["Beeren", "Erde", "Diesel"],
+    "terpenes_en": ["Berries", "Earth", "Diesel"]
+  },
+  "jelly-donutz": {
+    "description_en": "The effect is initially clear, creative, and activating before transitioning into a pleasant physical relaxation. With very high THC levels, Jelly Donutz is one of the more potent strains in the CSCN portfolio, while remaining pleasantly balanced.",
+    "effects": ["Klar", "Kreativ", "Aktivierend", "Körperliche Entspannung"],
+    "effects_en": ["Clear", "Creative", "Activating", "Physical Relaxation"],
+    "terpenes": ["Süß", "Gummibärchen", "Gasig", "Tropisch", "Sahnig", "Gebratener Donut"],
+    "terpenes_en": ["Sweet", "Gummy bears", "Gassy", "Tropical", "Creamy", "Fried Donut"]
+  },
+  "platinum-kush": {
+    "description_en": "Platinum Kush Breath from In-House is Platinum x OGKB V2.1. It looks fantastic, smells like a muted hash-gas aroma, and has a grounding effect. Platinum is reportedly an old-school cross of UW Hashplant and Permafrost.",
+    "effects": ["Beruhigend", "Körperbetonte Wirkung"],
+    "effects_en": ["Calming", "Body-focused effect"],
+    "terpenes": ["Erdig", "Würzig", "Kush", "Hash-lastig"],
+    "terpenes_en": ["Earthy", "Spicy", "Kush", "Hashy"]
+  },
+  "pnw-cherries": {
+    "description_en": "PNW Cherries produces a balanced, rather clear, head-heavy effect. It starts with a cerebral high that is creativity-enhancing and mood-boosting. In the further course, a pleasant body feeling can set in.",
+    "effects": ["Zerebral", "Kreativ", "Stimmungsaufhellend", "Körpergefühl"],
+    "effects_en": ["Cerebral", "Creative", "Mood-enhancing", "Body sensation"],
+    "terpenes": ["Süßlich", "Erdig", "Kirschduft"],
+    "terpenes_en": ["Sweetish", "Earthy", "Cherry scent"]
+  },
+  "sugar-cane": {
+    "description_en": "The effect sets in with an uplifting cerebral high that clears the mind and stimulates creativity. As the high progresses, a soothing physical relaxation occurs that does not lead to being couch-locked.",
+    "effects": ["Erhebend", "Geist klärend", "Kreativität", "Körperliche Entspannung"],
+    "effects_en": ["Uplifting", "Mind-clearing", "Creativity", "Physical Relaxation"],
+    "terpenes": ["Süß", "Karamellisierter Zucker", "Sirup", "Trauben", "Blumig", "Zuckerwatte"],
+    "terpenes_en": ["Sweet", "Caramelized sugar", "Syrup", "Grapes", "Floral", "Cotton candy"]
+  }
+}

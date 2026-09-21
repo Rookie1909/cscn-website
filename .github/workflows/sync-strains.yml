@@ -23,7 +23,7 @@ jobs:
         run: |
           git config user.name "cannanas-sync-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add src/data/strains-sync.json
+          git add src/data/strains-sync.json public/images/strains
           if git diff --staged --quiet; then
             echo "No changes in strain data."
           else

@@ -36,7 +36,8 @@
     "terpenes": ["Süß", "Fruchtig", "Kirsch-Beeren", "Zuckerbonbons", "Kiefer"],
     "terpenes_en": ["Sweet", "Fruity", "Cherry-Berry", "Sugar Candy", "Pine"]
   },
-  "gorilla-blueberry": {
+  "gorilla-x-blueberry": {
+    "description": "Eine kraftvolle Kreuzung zwischen der legendären Gorilla Glue und der fruchtigen Blueberry.",
     "description_en": "A powerful cross between the legendary Gorilla Glue and the fruity Blueberry.",
     "effects": ["Ausgewogen"],
     "effects_en": ["Balanced"],

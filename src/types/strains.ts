@@ -16,4 +16,5 @@ export interface Strain {
   genetics: string;
   breeder: string;
   isSoldOut?: boolean;
+  image?: string;
 }

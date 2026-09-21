@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { 
-  Zap, 
-  Droplets, 
-  Activity, 
-  ChevronDown, 
-  ChevronUp, 
+import {
+  Zap,
+  Droplets,
+  Activity,
+  ChevronDown,
+  ChevronUp,
   Dna,
-  Thermometer
+  Thermometer,
+  X
 } from 'lucide-react';
 import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
 import { STRAINS } from '@/constants/strains';
@@ -21,7 +22,17 @@ interface StrainCardProps {
 const StrainCard: React.FC<StrainCardProps> = ({ strain }) => {
   const { t, i18n } = useTranslation();
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isImageOpen, setIsImageOpen] = useState(false);
   const currentLang = i18n.language;
+
+  useEffect(() => {
+    if (!isImageOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsImageOpen(false);
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [isImageOpen]);
 
   const description = currentLang === 'en' && strain.description_en ? strain.description_en : strain.description;
   const effects = currentLang === 'en' && strain.effects_en ? strain.effects_en : strain.effects;
@@ -44,9 +55,26 @@ const StrainCard: React.FC<StrainCardProps> = ({ strain }) => {
         </div>
       )}
       <div className="flex justify-between items-start">
-        <div>
-          <h3 className="text-2xl font-black text-primary tracking-tighter group-hover:scale-[1.02] transition-transform duration-500">{strain.name}</h3>
-          <p className="text-[10px] text-muted-foreground uppercase tracking-[0.2em] font-bold mt-1">{strain.breeder}</p>
+        <div className="flex items-center gap-3">
+          {strain.image && (
+            <button
+              type="button"
+              onClick={() => setIsImageOpen(true)}
+              className="shrink-0 rounded-xl overflow-hidden border border-primary/20 hover:border-primary/60 transition-colors duration-300"
+              aria-label={t('strains.view_image')}
+            >
+              <img
+                src={strain.image}
+                alt={strain.name}
+                className="w-14 h-14 object-cover transition-transform duration-300 hover:scale-125 cursor-zoom-in"
+                loading="lazy"
+              />
+            </button>
+          )}
+          <div>
+            <h3 className="text-2xl font-black text-primary tracking-tighter group-hover:scale-[1.02] transition-transform duration-500">{strain.name}</h3>
+            <p className="text-[10px] text-muted-foreground uppercase tracking-[0.2em] font-bold mt-1">{strain.breeder}</p>
+          </div>
         </div>
         <div className="flex gap-3">
           <div className="flex flex-col items-end">
@@ -154,6 +182,37 @@ const StrainCard: React.FC<StrainCardProps> = ({ strain }) => {
           <>{t('strains.show_more')} <ChevronDown size={14} strokeWidth={3} /></>
         )}
       </button>
+
+      <AnimatePresence>
+        {isImageOpen && strain.image && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/90 backdrop-blur-sm"
+            onClick={() => setIsImageOpen(false)}
+          >
+            <motion.img
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              src={strain.image}
+              alt={strain.name}
+              className="max-w-full max-h-full rounded-2xl object-contain shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button
+              type="button"
+              onClick={() => setIsImageOpen(false)}
+              aria-label={t('strains.close')}
+              className="absolute top-6 right-6 p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors duration-300"
+            >
+              <X size={20} strokeWidth={2.5} />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 };

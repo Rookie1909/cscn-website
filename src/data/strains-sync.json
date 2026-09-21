@@ -1,388 +1,173 @@
 [
-    {
-        "id":  "ak48",
-        "name":  "AK48",
-        "thc":  "11-13%",
-        "cbd":  "9-10%",
-        "indica":  20,
-        "sativa":  80,
-        "description":  "Seit Mitte der 90er Jahre sind AK-Varietäten immer beliebter geworden. Unsere AK-48 ist eine der stärksten, frühest blühenden Varietäten vorhanden. Die Pflanzen erzeugen harte Knospen mit einem außergewöhnlichen, penetranten Aroma. AK-48 ist zwar eine Hybride aus Indica und Sativa, doch bei seinem High-Effekt ähnelt er eher den Sativa. Obwohl die meisten Züchter sich für eine längere Wachstumsphase entscheiden würden, ist es unter perfekten Bedingungen möglich, AK-48 in nur 48 Tagen erntefähig zu machen.\n\nTatkräftig, Erhebend \u0026 Energetisch",
-        "description_en":  "Since the mid-90s, AK varieties have become increasingly popular. Our AK-48 is one of the strongest, earliest flowering varieties available. The plants produce hard buds with an exceptional, pungent aroma. Although AK-48 is a hybrid of Indica and Sativa, its high effect is more similar to Sativa. While most growers would opt for a longer growth phase, under perfect conditions it is possible to make AK-48 ready for harvest in just 48 days.",
-        "effects":  [
-                        "Tatkräftig",
-                        "Erhebend",
-                        "Energetisch"
-                    ],
-        "effects_en":  [
-                           "Energetic",
-                           "Uplifting",
-                           "Active"
-                       ],
-        "medicalEffects":  [
-                               "Gute Schlafförderung",
-                               "Möglicher Einsatz bei chronischen Schmerzen"
-                           ],
-        "medicalEffects_en":  [
-                                  "Good sleep support",
-                                  "Possible use for chronic pain"
-                              ],
-        "terpenes":  [
-                         "Moschus",
-                         "Säuerlich",
-                         "Haschisch",
-                         "Floral"
-                     ],
-        "terpenes_en":  [
-                            "Musk",
-                            "Sour",
-                            "Hashish",
-                            "Floral"
-                        ],
-        "genetics":  "AK47 (Kolumbien x Mexiko x Thailand x Afghanistan) x ?",
-        "breeder":  "Nirvana",
-        "isSoldOut":  true
-    },
-    {
-        "id":  "bizcocho",
-        "name":  "Bizcocho",
-        "thc":  "19-21%",
-        "cbd":  "\u003c2%",
-        "indica":  60,
-        "sativa":  40,
-        "description":  "Der keksdominante Phänotyp von Bizcocho bietet ein außergewöhnlich komplexes und tiefes Geschmacksprofil, das besonders für Liebhaber von süßen, gasigen Sorten interessant ist.\n\nDie Effekte von Bizcocho ist langanhaltend und kombiniert mentale Klarheit mit körperlicher Entspannung, ideal für verschiedene Aktivitäten oder zur Entspannung.",
-        "description_en":  "The cookie-dominant phenotype of Bizcocho offers an exceptionally complex and deep flavor profile, particularly interesting for lovers of sweet, gassy strains. The effects of Bizcocho are long-lasting and combine mental clarity with physical relaxation, ideal for various activities or unwinding.",
-        "effects":  [
-                        "Mentale Klarheit",
-                        "Körperliche Entspannung"
-                    ],
-        "effects_en":  [
-                           "Mental Clarity",
-                           "Physical Relaxation"
-                       ],
-        "medicalEffects":  null,
-        "medicalEffects_en":  null,
-        "terpenes":  [
-                         "Süß",
-                         "Frisch gebackene Kekse",
-                         "Cookie-Gassigkeit",
-                         "Diesel",
-                         "Zkittlez"
-                     ],
-        "terpenes_en":  [
-                            "Sweet",
-                            "Freshly baked cookies",
-                            "Cookie gassiness",
-                            "Diesel",
-                            "Zkittlez"
-                        ],
-        "genetics":  "Biscotti x Bacio #4 × Zkittlez x (Road Dawg x Face Off OG Bx2)",
-        "breeder":  "Grounded Genetics",
-        "isSoldOut":  false
-    },
-    {
-        "id":  "blue-gelato-41",
-        "name":  "Blue Gelato 41",
-        "thc":  "20-22%",
-        "cbd":  "\u003c2%",
-        "indica":  50,
-        "sativa":  50,
-        "description":  "Blue Gelato 41 ist unsere sensationelle Blueberry Superkreuzung von der Westküste. Sie entstand durch das Kreuzen der berühmten Blueberry-Genetik mit Thin Mint Girl Scout Cookies und dem frisch-fruchtigem Indica Sunset Sherbet. Blue Gelato 41 reißt dich schnellstens in einen See tiefster psychedelischer Entspannung.\n\nDie Buds dieser Sorte sind harzig und versprühen ein süß-erdigen Zitronengeruch, wobei bei vielen Phänotypen die Färbung der Blüten blau bis lila wirkt.   Lass dich von einem Geschmackserlebnis begeistern, während dieses Indica deine Schmerzen „wegmassiert“. \n\nDie Wirkung ist ausgewogen und vielschichtig: Sie setzt mit einer sanften Euphorie im Kopf ein, hebt die Stimmung und fördert kreative Gedanken. Gleichzeitig entfaltet sich eine wohltuende körperliche Entspannung, ohne träge zu machen.",
-        "description_en":  "Blue Gelato 41 is our sensational Blueberry supercross from the West Coast. It was created by crossing the famous Blueberry genetics with Thin Mint Girl Scout Cookies and the fresh-fruity Indica Sunset Sherbet. Blue Gelato 41 quickly pulls you into a sea of deep psychedelic relaxation. The buds of this strain are resinous and exude a sweet-earthy lemon scent, with many phenotypes appearing blue to purple in color.",
-        "effects":  [
-                        "Sanfte Euphorie",
-                        "Stimmungsaufhellend",
-                        "Kreativ",
-                        "Körperliche Entspannung"
-                    ],
-        "effects_en":  [
-                           "Gentle Euphoria",
-                           "Mood-enhancing",
-                           "Creative",
-                           "Physical Relaxation"
-                       ],
-        "medicalEffects":  null,
-        "medicalEffects_en":  null,
-        "terpenes":  [
-                         "Cremig-süß",
-                         "Fruchtig",
-                         "Erde",
-                         "Kush",
-                         "Vanillecreme",
-                         "Beeren"
-                     ],
-        "terpenes_en":  [
-                            "Creamy-sweet",
-                            "Fruity",
-                            "Earthy",
-                            "Kush",
-                            "Vanilla Cream",
-                            "Berries"
-                        ],
-        "genetics":  "Sunset Sherbet × Thin Mint Girl Scout Cookies",
-        "breeder":  "Seedstockers",
-        "isSoldOut":  true
-    },
-    {
-        "id":  "bubble-og",
-        "name":  "Bubble OG",
-        "thc":  "-",
-        "cbd":  "-",
-        "indica":  70,
-        "sativa":  30,
-        "description":  "Bubble OG ist eine moderne, überwiegend Indica-dominierte Hybridsorte von LIT Farms, entstanden aus der Kreuzung von Bubble Bath und LIT OG. Ziel dieser Kreuzung war es, die außergewöhnlichen \"Soapy\"-Terpene der preisgekrönten Bubble Bath mit der kraftvollen OG-Struktur und Harzproduktion der LIT-OG-Linie zu kombinieren. Das Ergebnis ist eine Sorte mit markanter Aromatik, hoher Trichomproduktion und kräftigem Wachstum. Die Pflanzen entwickeln kompakte, dichte Blüten mit hervorragendem Bag Appeal und eignen sich sowohl für den Blütenkonsum als auch für hochwertige Extraktionen\n\nBubble OG entwickelt eine kräftige und langanhaltende Hybridwirkung. Der Wirkungseintritt beginnt häufig mit einer angenehmen Euphorie und geistigen Gelassenheit, bevor sich eine intensive körperliche Entspannung entfaltet. Trotz der deutlichen Indica-Dominanz bleibt die Wirkung zunächst angenehm klar und stimmungsaufhellend. Mit steigender Dosierung entwickelt sich ein ausgeprägter Body-Stone, der besonders für ruhige Abendstunden geeignet ist",
-        "description_en":  "BUBBLE OG by LITFARMS is a cross between Bubble Bath (The Soap x Project 4516) x LIT OG. By mixing the minty-soapy nuances of The Soap and the Zkittlez notes from Project 4516 combined with OG-heavy notes containing gas and pastry tones on the finish, a completely new blend emerges.",
-        "effects":  [
-                        "Entspannend",
-                        "Beruhigend"
-                    ],
-        "effects_en":  [
-                           "Relaxing",
-                           "Calming"
-                       ],
-        "medicalEffects":  null,
-        "medicalEffects_en":  null,
-        "terpenes":  [
-                         "Seifig",
-                         "Minze",
-                         "Lavendel",
-                         "Salbei",
-                         "Chemikalien",
-                         "Ammoniak",
-                         "OG-Noten",
-                         "Süßigkeiten"
-                     ],
-        "terpenes_en":  [
-                            "Soapy",
-                            "Mint",
-                            "Lavender",
-                            "Sage",
-                            "Chemicals",
-                            "Ammonia",
-                            "OG notes",
-                            "Sweets"
-                        ],
-        "genetics":  "Bubble Bath (The Soap x Project 4516) x LIT OG",
-        "breeder":  "LIT Farms Genetics",
-        "isSoldOut":  true
-    },
-    {
-        "id":  "double-rainbow-sherb",
-        "name":  "Double Rainbow Sherb",
-        "thc":  "20-24%",
-        "cbd":  "\u003c2%",
-        "indica":  50,
-        "sativa":  50,
-        "description":  "RS-11 ist eine Indica-dominante Hybride, die durch Kreuzung von Pink Guava x OZK entstanden ist.\n\nDiese Blüte hat dichte und flauschige, traubenförmige, blaugrüne Nuggets mit vielen dünnen, hellorangefarbenen Härchen und einer Schicht aus frostigen, blau getönten, weißen Kristalltrichomen.\n\n Lemon Cherry Gelato ist eine Indica-dominante Hybridsorte, die durch Kreuzung der berüchtigten Sunset Sherbet x Girl Scout Cookies x einer weiteren unbekannten Sorte entstanden ist. Lemon Cherry Gelato bietet einen erstaunlichen Geschmack und eine Wirkung, die Sie in pure Glückseligkeit versetzen wird. Diese Knospe hat einen Geschmack, der genau dem entspricht, was ihr Name vermuten lässt – saure Zitronen gepaart mit reichhaltigen Kirschen und Beeren. Das Aroma ist ebenso köstlich, mit einer säuerlichen Zitrusnote, akzentuiert durch frische Beeren und Himbeeren und einem Hauch von erdiger Kiefer.\n\nDiese Knospe hat flache, superdichte, übergroße, waldgrüne Nuggets mit vielen dünnen bernsteinfarbenen Härchen und einer Schicht milchig-bernsteinfarbener Kristalltrichome.\n\nBeruhigender Touch, mit einer angenehmen, hybriden Wirkung:\n\nSowohl Kopf als auch Körper werden von der Wirkung dieses Kultivars bedient. \n\nEine Blüte, welche in verregneten Tagen etwas Gemütlichkeit bringt.",
-        "description_en":  "RS-11 is an Indica-dominant hybrid created by crossing Pink Guava x OZK. Lemon Cherry Gelato offers an amazing taste and an effect that will put you in pure bliss. This bud has a flavor that matches exactly what its name suggests – sour lemons paired with rich cherries and berries.",
-        "effects":  [
-                        "Beruhigend",
-                        "Gemütlichkeit",
-                        "Glückseligkeit"
-                    ],
-        "effects_en":  [
-                           "Calming",
-                           "Comfort",
-                           "Bliss"
-                       ],
-        "medicalEffects":  null,
-        "medicalEffects_en":  null,
-        "terpenes":  [
-                         "Süß",
-                         "Fruchtig",
-                         "Kirsch-Beeren",
-                         "Zuckerbonbons",
-                         "Kiefer"
-                     ],
-        "terpenes_en":  [
-                            "Sweet",
-                            "Fruity",
-                            "Cherry-Berry",
-                            "Sugar Candy",
-                            "Pine"
-                        ],
-        "genetics":  "RS11 x (RS11 x Lemon Cherry Gelato)",
-        "breeder":  "LIT Farms Genetics",
-        "isSoldOut":  true
-    },
-    {
-        "id":  "gorilla-x-blueberry",
-        "name":  "Gorilla x Blueberry",
-        "thc":  "-",
-        "cbd":  "-",
-        "indica":  50,
-        "sativa":  50,
-        "description":  "",
-        "description_en":  null,
-        "effects":  {
-
-                    },
-        "effects_en":  null,
-        "medicalEffects":  null,
-        "medicalEffects_en":  null,
-        "terpenes":  {
-
-                     },
-        "terpenes_en":  null,
-        "genetics":  "",
-        "breeder":  "",
-        "isSoldOut":  true
-    },
-    {
-        "id":  "jelly-donutz",
-        "name":  "Jelly Donutz",
-        "thc":  "19-21%",
-        "cbd":  "\u003c2%",
-        "indica":  50,
-        "sativa":  50,
-        "description":  "\n\nDie Wirkung ist zunächst klar, kreativ und aktivierend, bevor sie in eine angenehme körperliche Entspannung übergeht.\nMit sehr hohen THC-Werten zählt Jelly Donutz zu den potenteren Sorten im CSCN-Portfolio, bleibt dabei aber angenehm ausbalanciert.\nDie Sorte eignet sich hervorragend für Tagesgebrauch, kreative Tätigkeiten oder gesellige Momente, ohne übermäßig sedierend zu wirken.",
-        "description_en":  "The effect is initially clear, creative, and activating before transitioning into a pleasant physical relaxation. With very high THC levels, Jelly Donutz is one of the more potent strains in the CSCN portfolio, while remaining pleasantly balanced.",
-        "effects":  [
-                        "Klar",
-                        "Kreativ",
-                        "Aktivierend",
-                        "Körperliche Entspannung"
-                    ],
-        "effects_en":  [
-                           "Clear",
-                           "Creative",
-                           "Activating",
-                           "Physical Relaxation"
-                       ],
-        "medicalEffects":  null,
-        "medicalEffects_en":  null,
-        "terpenes":  [
-                         "Süß",
-                         "Gummibärchen",
-                         "Gasig",
-                         "Tropisch",
-                         "Sahnig",
-                         "Gebratener Donut"
-                     ],
-        "terpenes_en":  [
-                            "Sweet",
-                            "Gummy bears",
-                            "Gassy",
-                            "Tropical",
-                            "Creamy",
-                            "Fried Donut"
-                        ],
-        "genetics":  "Jelly Donutz (#160x#17) x Hella Jelly x White Runtz",
-        "breeder":  "Humboldt Seed Company (Twentyk Cut)",
-        "isSoldOut":  false
-    },
-    {
-        "id":  "platinum-kush",
-        "name":  "Platinum Kush",
-        "thc":  "22%",
-        "cbd":  "\u003c2%",
-        "indica":  80,
-        "sativa":  20,
-        "description":  "Der Züchter In-House Genetics arbeitet an der OG Kush Breath-Linie mit der Cannabissorte Platinum Kush Breath. Platinum Kush Breath von In-House ist Platinum x OGKB V2.1, es sieht also so aus, als würde In-House dem struppigen, scharfen OGKB Glanz und Stabilität verleihen – keine schlechte Idee. Platinum ist angeblich eine Old-School-Kreuzung aus UW Hashplant und Permafrost. Sie sieht fantastisch aus, duftet nach einem gedämpften Haschisch-Gas-Aroma und wirkt erdend.\n\nBeruhigend, Körperbetonte Wirkung",
-        "description_en":  "Platinum Kush Breath from In-House is Platinum x OGKB V2.1. It looks fantastic, smells like a muted hash-gas aroma, and has a grounding effect. Platinum is reportedly an old-school cross of UW Hashplant and Permafrost.",
-        "effects":  [
-                        "Beruhigend",
-                        "Körperbetonte Wirkung"
-                    ],
-        "effects_en":  [
-                           "Calming",
-                           "Body-focused effect"
-                       ],
-        "medicalEffects":  null,
-        "medicalEffects_en":  null,
-        "terpenes":  [
-                         "Erdig",
-                         "Würzig",
-                         "Kush",
-                         "Hash-lastig"
-                     ],
-        "terpenes_en":  [
-                            "Earthy",
-                            "Spicy",
-                            "Kush",
-                            "Hashy"
-                        ],
-        "genetics":  "Platinum x OGKB",
-        "breeder":  "In House Genetics",
-        "isSoldOut":  true
-    },
-    {
-        "id":  "pnw-cherries",
-        "name":  "PNW Cherries",
-        "thc":  "20-22%",
-        "cbd":  "0-8%",
-        "indica":  50,
-        "sativa":  50,
-        "description":  "",
-        "description_en":  "PNW Cherries produces a balanced, rather clear, head-heavy effect. It starts with a cerebral high that is creativity-enhancing and mood-boosting. In the further course, a pleasant body feeling can set in.",
-        "effects":  [
-                        "Zerebral",
-                        "Kreativ",
-                        "Stimmungsaufhellend",
-                        "Körpergefühl"
-                    ],
-        "effects_en":  [
-                           "Cerebral",
-                           "Creative",
-                           "Mood-enhancing",
-                           "Body sensation"
-                       ],
-        "medicalEffects":  null,
-        "medicalEffects_en":  null,
-        "terpenes":  [
-                         "Süßlich",
-                         "Erdig",
-                         "Kirschduft"
-                     ],
-        "terpenes_en":  [
-                            "Sweetish",
-                            "Earthy",
-                            "Cherry scent"
-                        ],
-        "genetics":  "PNW Dogshit × Black Cherry Honey",
-        "breeder":  "Inhouse Genetics",
-        "isSoldOut":  true
-    },
-    {
-        "id":  "sugar-cane",
-        "name":  "Sugar Cane",
-        "thc":  "20%",
-        "cbd":  "\u003c2%",
-        "indica":  50,
-        "sativa":  50,
-        "description":  "\n\nDie Wirkung setzt mit einem erhebenden zerebralen High ein, das den Geist klärt und die Kreativität anregt. Während das High fortschreitet, tritt eine wohltuende körperliche Entspannung ein, die jedoch nicht dazu führt an die Couch gebunden zu sein (Couch-Lock). Diese ausgewogene Wirkung macht sie sowohl für kreative Aktivitäten als auch für entspannte Abende geeignet.",
-        "description_en":  "The effect sets in with an uplifting cerebral high that clears the mind and stimulates creativity. As the high progresses, a soothing physical relaxation occurs that does not lead to being couch-locked.",
-        "effects":  [
-                        "Erhebend",
-                        "Geist klärend",
-                        "Kreativität",
-                        "Körperliche Entspannung"
-                    ],
-        "effects_en":  [
-                           "Uplifting",
-                           "Mind-clearing",
-                           "Creativity",
-                           "Physical Relaxation"
-                       ],
-        "medicalEffects":  null,
-        "medicalEffects_en":  null,
-        "terpenes":  [
-                         "Süß",
-                         "Karamellisierter Zucker",
-                         "Sirup",
-                         "Trauben",
-                         "Blumig",
-                         "Zuckerwatte"
-                     ],
-        "terpenes_en":  [
-                            "Sweet",
-                            "Caramelized sugar",
-                            "Syrup",
-                            "Grapes",
-                            "Floral",
-                            "Cotton candy"
-                        ],
-        "genetics":  "Platinum x Slurricane",
-        "breeder":  "Inhouse Genetics",
-        "isSoldOut":  true
-    }
+  {
+    "id": "all-the-sauces",
+    "name": "All the Sauces",
+    "thc": "88.13%",
+    "cbd": "0%",
+    "indica": 60,
+    "sativa": 40,
+    "description": "All the Sauces R1 ist eine moderne Hybridgenetik von ETHOS Genetics, entstanden aus der Kreuzung von Original Zkittlez und Wrank. Die Sorte verbindet die intensive Frucht- und Candy-Aromatik der Original-Z-Linie mit der kräftigen Struktur, Vitalität und gasigen Tiefe von Wrank.\n\nIn unserer Selektion wird All the Sauces ausschließlich zur Herstellung von Rosin verwendet. Ausschlaggebend dafür sind die ausgeprägte Harzproduktion, die großen Trichomköpfe und das komplexe Terpenprofil, das sich im Konzentrat besonders intensiv und vielschichtig präsentiert.\n\nAls Rosin entwickelt die Sorte eine sehr konzentrierte Aromatik aus süßen Z-Terpenen, frischer Zitrusfrucht, floralen und erdigen Nuancen sowie einer markanten Gas- und Benzinkomponente. Gerade diese Kombination macht All the Sauces für uns zu einem besonders interessanten Extraktionskultivar.\n\nAll the Sauces entwickelt eine kräftige und ausgewogene Hybridwirkung. Zu Beginn stehen häufig Euphorie, gute Stimmung und eine deutlich wahrnehmbare mentale Präsenz im Vordergrund.\n\nMit zunehmender Dauer setzt eine angenehm körperliche Entspannung ein, ohne die geistige Wirkung vollständig zu verdrängen. Im konzentrierten Rosin kann die Wirkung entsprechend intensiv ausfallen und sollte hinsichtlich der Dosierung nicht unterschätzt werden.",
+    "effects": [],
+    "terpenes": [
+      "Z-Candy",
+      "Zitrus",
+      "tropische Früchte",
+      "florale Erde",
+      "Gas",
+      "Benzin"
+    ],
+    "genetics": "Original Z (Zkittlez) × Wrank",
+    "breeder": "Ethos Genetics",
+    "image": "/images/strains/all-the-sauces.webp"
+  },
+  {
+    "id": "cobalt-haze",
+    "name": "Cobalt Haze",
+    "thc": "19.5%",
+    "cbd": "2%",
+    "indica": 30,
+    "sativa": 70,
+    "description": "Cobalt Haze ist eine der bekanntesten Sorten aus dem ehemaligen Sensi Seeds Research Programm. Ursprünglich wurde sie als Sensi #11 veröffentlicht und später durch ein Community-Voting dauerhaft ins Sortiment aufgenommen und in Cobalt Haze umbenannt. Die Sorte vereint drei Cannabis-Klassiker: Silver Haze, Blueberry und Afghani #1. Dadurch kombiniert sie die geistige Klarheit und Wuchskraft einer Haze mit der Fruchtigkeit der Blueberry und der Robustheit sowie Ertragsstärke einer Afghani.\n\nCobalt Haze liefert eine ausgewogene, aber deutlich geistig geprägte Wirkung. Typisch sind Euphorie, Kreativität, Mentale Wachheit, Fokus, Angenehme körperliche Entspannung.\nDie Silver-Haze-Genetik sorgt für einen klaren, aktiven Kopf, während Blueberry und Afghani #1 die Wirkung abrunden und körperlich entspannender machen. Dadurch entsteht eine Sorte, die sowohl tagsüber als auch am frühen Abend gut funktioniert.",
+    "effects": [],
+    "terpenes": [
+      "Blaubeere",
+      "Zitrus",
+      "Skunk",
+      "Weihrauch",
+      "Erde",
+      "Kiefer"
+    ],
+    "genetics": "Silver Haze × Blueberry × Afghani #1",
+    "breeder": "Sensi Seeds ",
+    "image": "/images/strains/cobalt-haze.webp"
+  },
+  {
+    "id": "dosimosa",
+    "name": "Dosimosa",
+    "thc": "19.5%",
+    "cbd": "2%",
+    "indica": 60,
+    "sativa": 40,
+    "description": "Dosimosa ist eine moderne Hybridgenetik aus dem Sensi Seeds Research Programm, entstanden aus der Kreuzung von Dosidos und Mimosa. Ziel der Züchtung war es, die enorme Harzproduktion, Potenz und cremigen Cookie-Terpene von Dosidos mit der fruchtigen Frische und der belebenden Wirkung von Mimosa zu kombinieren. Das Ergebnis ist eine kompakte, sehr leistungsfähige Sorte mit hoher Potenz, dichtem Blütenaufbau und einem außergewöhnlich ausgewogenen Wirkungsprofil.\n\nDosimosa vereint die besten Eigenschaften ihrer Eltern. Die Wirkung beginnt mit einer angenehmen Euphorie und geistigen Aufhellung, die Motivation und Kreativität fördern kann. Kurz darauf entfaltet sich die typische Dosidos-Seite mit einer tiefen körperlichen Entspannung, die Stress und Anspannung löst, ohne sofort in einen Couch-Lock überzugehen.\n\nDurch ihren THC-Gehalt von häufig über 20 % gehört Dosimosa zu den potenten modernen Hybriden. Sie eignet sich hervorragend zum Abschalten nach einem langen Tag, bleibt dabei jedoch ausreichend klar, um Gespräche zu führen oder kreative Tätigkeiten auszuüben. Erst bei höheren Dosierungen entwickelt sie eine deutlich sedierendere Wirkung.",
+    "effects": [],
+    "terpenes": [
+      "Cookies",
+      "Süße Zitrusfrüchte",
+      "Beeren",
+      "Erde",
+      "Creme",
+      "Gewürze"
+    ],
+    "genetics": "Dosidos × Mimosa",
+    "breeder": "Sensi Seeds",
+    "image": "/images/strains/dosimosa.webp"
+  },
+  {
+    "id": "fat-catz",
+    "name": "Fat Catz",
+    "thc": "23.5%",
+    "cbd": "2%",
+    "indica": 65,
+    "sativa": 35,
+    "description": "Unser selektierter Fat Catz-Phänotyp wird deutlich von der Hardcore-OG-Seite der Genetik geprägt. Statt eines überwiegend süßen Candy-Profils präsentiert sich dieses Kultivar schwer, cremig und kompromisslos kushig. Tiefe OG- und Kush-Aromen bilden das Fundament, während markante seifige Nuancen aus der Zoap-Linie dem Profil eine ungewöhnliche Frische und zusätzliche Komplexität verleihen.\n\nBesonders charakteristisch ist der ausgesprochen dichte und schwere Rauch. Er wirkt vollmundig, cremig und bleibt lange am Gaumen präsent. Die Kombination aus dunklem Kush, floraler Seifigkeit und cremiger Tiefe verleiht unserem Fat Catz einen hohen Wiedererkennungswert und hebt ihn deutlich von fruchtigeren oder candybetonten Phänotypen dieser Genetik ab.\n\nUnsere Fat Catz besitzt eine überraschend intensive und durchsetzungsstarke Wirkung. Der Effekt setzt kräftig ein und geht schnell in eine schwere körperliche Entspannung über. Selbst erfahrene Konsumenten können von der ausgeprägten Intensität und Tiefe der Wirkung überrascht werden.\n\nDie Sorte wirkt beruhigend, körperbetont und zunehmend schwer. Bei höherer Dosierung kann sie deutlich sedierend werden und selbst gestandene Konsumenten regelrecht in die Knie zwingen.",
+    "effects": [],
+    "terpenes": [
+      "Hardcore Kush",
+      "Creme",
+      "Seife",
+      "Erde",
+      "Gas",
+      "Florale Noten"
+    ],
+    "genetics": "Gushers x Hardcore OG x Zoap",
+    "breeder": "Nasha Genetics",
+    "image": "/images/strains/fat-catz.webp"
+  },
+  {
+    "id": "gorilla-zkittles",
+    "name": "Gorilla Zkittles",
+    "thc": "22.5%",
+    "cbd": "2%",
+    "indica": 60,
+    "sativa": 40,
+    "description": "Gorilla Zkittlez ist eine moderne Hybridgenetik von Philosopher Seeds, die zwei der einflussreichsten US-Elitegenetiken miteinander vereint: Gorilla Glue #4 und Zkittlez. Die Sorte kombiniert die enorme Harzproduktion, Potenz und Wuchskraft der GG4 mit dem exotischen Fruchtprofil der Zkittlez. Das Ergebnis ist eine äußerst produktive, robuste und terpeneiche Genetik mit kräftigem Wachstum und einer außergewöhnlich dichten Trichombildung.\n\nGorilla Zkittlez entwickelt eine kräftige und langanhaltende Hybridwirkung. Zu Beginn sorgt sie für eine angenehme Euphorie, gesteigerte Kreativität und gute Laune. Im weiteren Verlauf setzt eine deutliche körperliche Entspannung ein, die Stress abbaut, ohne unmittelbar in einen Couch-Lock überzugehen. Aufgrund ihres hohen THC-Gehalts eignet sich die Sorte besonders für erfahrene Konsumenten und für entspannte Nachmittage oder den Abend.",
+    "effects": [],
+    "terpenes": [
+      "Tropische Früchte",
+      "Candy",
+      "Beeren",
+      "Erde",
+      "Diesel",
+      "Creme"
+    ],
+    "genetics": "Zkittlez x Gorilla Glue #4",
+    "breeder": "Philosopher Seeds",
+    "image": "/images/strains/gorilla-zkittles.webp"
+  },
+  {
+    "id": "liquid-hydrogen-peach",
+    "name": "Liquid Hydrogen Peach",
+    "thc": "20%",
+    "cbd": "2%",
+    "indica": 60,
+    "sativa": 40,
+    "description": "LH2P, ausgeschrieben Liquid Hydrogen Peach, ist eine moderne Hybridgenetik von Perfect Tree, entstanden aus der Kreuzung ihres preisgekrönten Jet A-Cuts mit Peach Ozz. Die Sorte verbindet die enorme Harzproduktion, Potenz und kräftige Fuel-Aromatik von Jet A mit den süßen, fruchtigen Z-Terpenen der Peach-Ozz-Linie.\n\nLH2P entwickelt mittelgroße, unkompliziert wachsende Pflanzen mit sehr guter Harzproduktion und attraktiven, stark bereiften Blüten. Besonders spannend ist die deutliche phänotypische Bandbreite: Einige Pflanzen tendieren stark zur Jet-A-Seite und entwickeln ein ausgesprochen gasiges Kraftstoffprofil, während andere mehr Candy- und Fruchtnoten zeigen. Peach-Ozz-dominante Exemplare können besonders süß, tropisch und fruchtbetont ausfallen.\n\nLH2P entwickelt eine kräftige, überwiegend entspannende Hybridwirkung. Die Wirkung kann zunächst euphorisch und geistig angenehm präsent einsetzen, bevor die körperliche Komponente zunehmend in den Vordergrund tritt.\n\nBesonders Jet-A-dominante Phänotypen können ausgesprochen potent und schwer wirken. Fruchtigere Peach-Ozz-Phänotypen werden dagegen häufig als etwas ausgewogener wahrgenommen. Insgesamt ist die Wirkung entspannend, langanhaltend und körperlich deutlich spürbar, ohne zwangsläufig unmittelbar stark sedierend zu werden.",
+    "effects": [],
+    "terpenes": [
+      "Tropische Früchte",
+      "Z-Candy",
+      "Fruchtgummi",
+      "Gas",
+      "Kerosin",
+      "süßes Fuel"
+    ],
+    "genetics": "Jet A × Peach Ozz",
+    "breeder": "Perfect Tree",
+    "image": "/images/strains/liquid-hydrogen-peach.webp"
+  },
+  {
+    "id": "papayadawg",
+    "name": "Papayadawg",
+    "thc": "26%",
+    "cbd": "2%",
+    "indica": 65,
+    "sativa": 35,
+    "description": "PapayaDawg ist eine moderne Hybridgenetik von Grounded Genetics, entstanden aus der Kreuzung von Papaya und Chem D. Die Sorte verbindet die intensive tropische Fruchtigkeit der Papaya mit dem legendären Chem-Charakter der Chem-D-Linie und gehört mittlerweile zu den wichtigen Zuchtbausteinen von Grounded Genetics.\n\nCharakteristisch ist die außergewöhnliche Verbindung aus reifer tropischer Frucht und einem schweren, chemisch-gasigen Untergrund. PapayaDawg besitzt zudem eine ausgeprägte Harzproduktion und wurde von Grounded Genetics wiederholt für neue Kreuzungen eingesetzt.\n\nPapayaDawg entwickelt eine ausgesprochen kräftige und überwiegend entspannende Hybridwirkung. Zu Beginn kann eine euphorische und mental deutlich wahrnehmbare Phase auftreten, die anschließend zunehmend von einer schweren körperlichen Entspannung abgelöst wird.\n\nDie Wirkung wird als langanhaltend und intensiv beschrieben. Besonders bei höheren Dosierungen kann die körperliche Seite stark in den Vordergrund treten und deutlich sedierend wirken. Appetitsteigerung und ein ausgeprägtes Gefühl körperlicher Ruhe werden ebenfalls berichtet.",
+    "effects": [],
+    "terpenes": [
+      "Papaya",
+      "Tropische Früchte",
+      "Gas",
+      "Chem",
+      "Diesel",
+      "Sauer",
+      "Erde",
+      "Gewürze"
+    ],
+    "genetics": "Papaya × Chem D",
+    "breeder": "Grounded Genetics",
+    "image": "/images/strains/papayadawg.webp"
+  },
+  {
+    "id": "tiramisu",
+    "name": "Tiramisu",
+    "thc": "19%",
+    "cbd": "2%",
+    "indica": 70,
+    "sativa": 30,
+    "description": "Tiramisu ist eine überwiegend Indica-dominierte Hybridgenetik von Black Farm Genetix, entstanden aus der Kreuzung von L.A. Kush und Acai Cake. Die Sorte verbindet die kräftige, körperbetonte Kush-Seite mit der süßen und fruchtigen Dessert-Aromatik der Acai-Cake-Genetik.\n\nCharakteristisch sind dichte, stark harzbesetzte Blüten und ein komplexes Aromaprofil, das seinem Namen durchaus gerecht wird. Süße und cremige Noten treffen auf erdige Kush-Töne, leichte Würze und eine markante Kaffee-Assoziation. Dadurch wirkt Tiramisu weniger wie eine typische Candy-Sorte, sondern eher wie ein dunkles, reichhaltiges Dessert mit einer klassischen Kush-Basis.\n\nTiramisu entwickelt eine ausgewogene, jedoch zunehmend körperbetonte Wirkung. Zu Beginn stehen Euphorie, gute Stimmung und Kreativität im Vordergrund. Die Wirkung fühlt sich zunächst geistig angenehm aktiv und aufhellend an.\n\nIm weiteren Verlauf setzt eine deutlich spürbare körperliche Entspannung ein. Der anfängliche mentale Drive weicht zunehmend einer ruhigen und gelassenen Wirkung, ohne abrupt schwer zu werden. Bei höheren Dosierungen kann die ausgeprägte Indica-Seite entsprechend stärker in den Vordergrund treten.",
+    "effects": [],
+    "terpenes": [
+      "Creme",
+      "Kaffee",
+      "Süße",
+      "Erde",
+      "Gewürze",
+      "Kush",
+      "dunkle Früchte"
+    ],
+    "genetics": "Açai Berry Cake x L.A. Kush",
+    "breeder": "Black Farm Genetics",
+    "image": "/images/strains/tiramisu.webp"
+  }
 ]

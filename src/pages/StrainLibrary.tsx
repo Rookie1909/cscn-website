@@ -6,7 +6,6 @@ import {
   Droplets,
   Activity,
   ChevronDown,
-  ChevronUp,
   Dna,
   Thermometer,
   X
@@ -21,18 +20,21 @@ interface StrainCardProps {
 
 const StrainCard: React.FC<StrainCardProps> = ({ strain }) => {
   const { t, i18n } = useTranslation();
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [isImageOpen, setIsImageOpen] = useState(false);
   const currentLang = i18n.language;
 
   useEffect(() => {
-    if (!isImageOpen) return;
+    if (!isImageOpen && !isDetailsOpen) return;
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setIsImageOpen(false);
+      if (e.key === 'Escape') {
+        setIsImageOpen(false);
+        setIsDetailsOpen(false);
+      }
     };
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, [isImageOpen]);
+  }, [isImageOpen, isDetailsOpen]);
 
   const description = currentLang === 'en' && strain.description_en ? strain.description_en : strain.description;
   const effects = currentLang === 'en' && strain.effects_en ? strain.effects_en : strain.effects;
@@ -115,72 +117,11 @@ const StrainCard: React.FC<StrainCardProps> = ({ strain }) => {
         </div>
       </div>
 
-      <AnimatePresence>
-        {isExpanded && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden space-y-6 pt-4 border-t border-border/50"
-          >
-            <div className="space-y-2">
-              <p className="text-sm text-muted-foreground leading-relaxed italic font-medium">
-                "{description}"
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <div className="flex items-center gap-2 text-primary">
-                  <Thermometer size={16} strokeWidth={2.5} />
-                  <span className="text-[10px] uppercase font-black tracking-[0.1em]">{t('strains.terpenes')}</span>
-                </div>
-                <div className="flex flex-wrap gap-y-1 gap-x-2">
-                  {terpenes.map((t, i) => (
-                    <span key={i} className="text-[11px] text-foreground/70 font-bold tracking-tight bg-muted/30 px-1.5 py-0.5 rounded">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div className="space-y-2">
-                <div className="flex items-center gap-2 text-emerald-500">
-                  <Dna size={16} strokeWidth={2.5} />
-                  <span className="text-[10px] uppercase font-black tracking-[0.1em]">{t('strains.genetics')}</span>
-                </div>
-                <p className="text-[11px] text-foreground/70 leading-snug font-bold">{strain.genetics}</p>
-              </div>
-            </div>
-
-            {medicalEffects && (
-              <div className="space-y-2">
-                <div className="flex items-center gap-2 text-blue-500">
-                  <Activity size={16} strokeWidth={2.5} />
-                  <span className="text-[10px] uppercase font-black tracking-[0.1em]">{t('strains.medical_effects')}</span>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {medicalEffects.map((me, i) => (
-                    <span key={i} className="text-[11px] text-foreground/70 font-medium flex items-center gap-1">
-                      <div className="w-1 h-1 rounded-full bg-blue-500" /> {me}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <button 
-        onClick={() => setIsExpanded(!isExpanded)}
+      <button
+        onClick={() => setIsDetailsOpen(true)}
         className="mt-4 flex items-center justify-center gap-2 py-3 text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground hover:text-primary transition-all duration-300 border-t border-border/30 hover:bg-primary/5 rounded-b-xl"
       >
-        {isExpanded ? (
-          <>{t('strains.show_less')} <ChevronUp size={14} strokeWidth={3} /></>
-        ) : (
-          <>{t('strains.show_more')} <ChevronDown size={14} strokeWidth={3} /></>
-        )}
+        {t('strains.show_more')} <ChevronDown size={14} strokeWidth={3} />
       </button>
 
       <AnimatePresence>
@@ -210,6 +151,128 @@ const StrainCard: React.FC<StrainCardProps> = ({ strain }) => {
             >
               <X size={20} strokeWidth={2.5} />
             </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {isDetailsOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-2 md:p-6 bg-black/80 backdrop-blur-sm"
+            onClick={() => setIsDetailsOpen(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.97, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.97, opacity: 0 }}
+              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              className="relative w-full h-full max-w-5xl overflow-y-auto bg-card backdrop-blur-xl border border-border/50 rounded-2xl shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                type="button"
+                onClick={() => setIsDetailsOpen(false)}
+                aria-label={t('strains.close')}
+                className="absolute top-5 right-5 z-10 p-2.5 rounded-full bg-black/40 text-white hover:bg-black/60 transition-colors duration-300"
+              >
+                <X size={20} strokeWidth={2.5} />
+              </button>
+
+              {/* Full-width banner image */}
+              {strain.image && (
+                <img
+                  src={strain.image}
+                  alt={strain.name}
+                  className="w-full h-64 md:h-80 object-cover rounded-t-2xl"
+                />
+              )}
+
+              {/* Centered, readable text column */}
+              <div className="max-w-2xl mx-auto px-6 md:px-8 py-10 md:py-12 space-y-8">
+                  <div>
+                    <h3 className="text-3xl md:text-5xl font-black text-primary tracking-tighter">{strain.name}</h3>
+                    <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] font-bold mt-2">{strain.breeder}</p>
+                  </div>
+
+                  <div className="flex flex-wrap gap-8">
+                    <div className="flex flex-col">
+                      <span className="text-xs text-muted-foreground uppercase font-black tracking-widest">{t('strains.thc')}</span>
+                      <span className="text-2xl font-mono font-black text-primary leading-none mt-1.5">{strain.thc}</span>
+                    </div>
+                    <div className="flex flex-col border-l border-border pl-8">
+                      <span className="text-xs text-muted-foreground uppercase font-black tracking-widest">{t('strains.cbd')}</span>
+                      <span className="text-2xl font-mono font-black text-emerald-500 leading-none mt-1.5">{strain.cbd}</span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2 max-w-sm">
+                    <div className="flex justify-between text-xs uppercase font-black tracking-wider">
+                      <span className="text-emerald-600 dark:text-emerald-400">Indica {strain.indica}%</span>
+                      <span className="text-primary">Sativa {strain.sativa}%</span>
+                    </div>
+                    <div className="stat-bar-bg">
+                      <div className="h-full bg-emerald-500/80" style={{ width: `${strain.indica}%` }} />
+                      <div className="h-full bg-primary/80" style={{ width: `${strain.sativa}%` }} />
+                    </div>
+                  </div>
+
+                  {effects.length > 0 && (
+                    <div className="flex flex-wrap gap-2">
+                      {effects.map((effect, idx) => (
+                        <span key={idx} className="px-3 py-1.5 bg-primary/5 text-primary text-xs rounded-lg border border-primary/10 font-black uppercase tracking-wider">
+                          {effect}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
+                  <p className="text-base text-foreground/80 leading-relaxed font-medium whitespace-pre-line">
+                    {description}
+                  </p>
+
+                  <div className="grid sm:grid-cols-2 gap-8">
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2 text-primary">
+                        <Thermometer size={18} strokeWidth={2.5} />
+                        <span className="text-xs uppercase font-black tracking-[0.1em]">{t('strains.terpenes')}</span>
+                      </div>
+                      <div className="flex flex-wrap gap-y-1.5 gap-x-2">
+                        {terpenes.map((terpene, i) => (
+                          <span key={i} className="text-xs text-foreground/70 font-bold tracking-tight bg-muted/30 px-2 py-1 rounded">
+                            {terpene}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2 text-emerald-500">
+                        <Dna size={18} strokeWidth={2.5} />
+                        <span className="text-xs uppercase font-black tracking-[0.1em]">{t('strains.genetics')}</span>
+                      </div>
+                      <p className="text-sm text-foreground/70 leading-relaxed font-bold">{strain.genetics}</p>
+                    </div>
+                  </div>
+
+                  {medicalEffects && (
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2 text-blue-500">
+                        <Activity size={18} strokeWidth={2.5} />
+                        <span className="text-xs uppercase font-black tracking-[0.1em]">{t('strains.medical_effects')}</span>
+                      </div>
+                      <div className="flex flex-wrap gap-3">
+                        {medicalEffects.map((me, i) => (
+                          <span key={i} className="text-sm text-foreground/70 font-medium flex items-center gap-1.5">
+                            <div className="w-1.5 h-1.5 rounded-full bg-blue-500" /> {me}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+              </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

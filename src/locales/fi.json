@@ -336,7 +336,8 @@
       "title_1": "KASVATUS-",
       "title_2": "HUONEEMME",
       "description": "Skemaattinen yleiskatsaus tällä hetkellä aktiivisiin huoneisiin - lajikkeet ja kasvuvaiheet, synkronoituna automaattisesti Cannanas-järjestelmästämme. Turvallisuussyistä emme näytä tarkkoja kasvimääriä.",
-      "empty": "Tällä hetkellä ei ole aktiivisia huoneita saatavilla."
+      "empty": "Tällä hetkellä ei ole aktiivisia huoneita saatavilla.",
+      "room_empty": "Ei tällä hetkellä kasveja - syklien välissä"
     },
     "stage": {
       "cutting": "Pistokkaat",

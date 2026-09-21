@@ -84,14 +84,19 @@ async function main() {
 
   const activeBatches = batches.filter((b) => !b.archived && b.zone_id && STAGE_MAP[b.status]);
 
-  // Only rooms that currently have active cultivation show up - this
-  // naturally excludes the dispensary, storage, drying room, etc. without
-  // having to hardcode room names.
+  // Show every room named "Blüteraum", whether or not it currently has
+  // plants (an empty room between cycles is still a real room) - plus any
+  // other room that's currently in active use, whatever it's called (rooms
+  // get repurposed, e.g. a storage room pressed into service as a veg room).
+  // This only ever skips zones that are both unnamed-as-flowering-room and
+  // currently unused, i.e. the dispensary, drying room, etc.
   const zoneIdsInUse = new Set(activeBatches.map((b) => b.zone_id));
-  const activeZones = zones.filter((z) => zoneIdsInUse.has(z.id) && !z.archived);
+  const growRooms = zones.filter(
+    (z) => !z.archived && (/bl[üu]teraum/i.test(z.name) || zoneIdsInUse.has(z.id))
+  );
 
   const rooms = [];
-  for (const zone of activeZones) {
+  for (const zone of growRooms) {
     const id = slugify(zone.name);
     const zoneBatches = activeBatches.filter((b) => b.zone_id === zone.id);
 

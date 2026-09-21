@@ -336,7 +336,8 @@
       "title_1": "OUR",
       "title_2": "GROW ROOMS",
       "description": "A schematic overview of the currently active rooms - strains and growth stages, automatically synced from our Cannanas system. For security reasons we don't show exact plant counts.",
-      "empty": "No active rooms available at the moment."
+      "empty": "No active rooms available at the moment.",
+      "room_empty": "Currently no plants - between cycles"
     },
     "stage": {
       "cutting": "Cuttings",

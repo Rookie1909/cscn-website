@@ -1,7 +1,14 @@
 [
   {
+    "id": "bluteraum-1-og",
+    "name": "Blüteraum #1 OG",
+    "description": "Der Erste Blüteraum und auch der Größte",
+    "image": "/images/zones/bluteraum-1-og.webp",
+    "strains": []
+  },
+  {
     "id": "bluteraum-2-og",
-    "name": "Blüteraum #2  OG",
+    "name": "Blüteraum #2 OG",
     "description": "Der zweite und auch zweitgrößte Blüteraum",
     "image": "/images/zones/bluteraum-2-og.webp",
     "strains": [
@@ -86,6 +93,13 @@
         "fillLevel": "many"
       }
     ]
+  },
+  {
+    "id": "bluteraum-3-og",
+    "name": "Blüteraum #3 OG",
+    "description": "Ehemals die große Reproduktion, frisch saniert und als Blüteraum #3 neu aufgebaut.",
+    "image": "/images/zones/bluteraum-3-og.webp",
+    "strains": []
   },
   {
     "id": "reproduktion",

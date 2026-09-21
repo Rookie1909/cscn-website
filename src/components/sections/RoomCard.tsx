@@ -26,7 +26,18 @@ export function RoomCard({ room, compact = false }: RoomCardProps) {
       className="bg-card/60 backdrop-blur-xl border border-border/50 rounded-2xl shadow-2xl overflow-hidden flex flex-col"
     >
       {room.image && !compact && (
-        <img src={room.image} alt={room.name} className="w-full h-40 object-cover" />
+        <div className="relative w-full h-40 overflow-hidden">
+          <img
+            src={room.image}
+            alt={room.name}
+            className="w-full h-full object-cover grayscale contrast-125"
+          />
+          {/* Duotone tint: mix-blend-color takes this gradient's hue while
+              keeping the photo's luminance, so it reads as styled branding
+              rather than a literal "this is what's in there right now" shot. */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/70 to-black mix-blend-color" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+        </div>
       )}
       <div className="p-6">
         <h3 className="text-xl font-black text-primary tracking-tighter">{room.name}</h3>
@@ -34,6 +45,11 @@ export function RoomCard({ room, compact = false }: RoomCardProps) {
           <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{room.description}</p>
         )}
 
+        {room.strains.length === 0 ? (
+          <p className={`text-xs text-muted-foreground italic ${compact ? 'mt-4' : 'mt-5'}`}>
+            {t('grow_rooms.page.room_empty')}
+          </p>
+        ) : (
         <div className={`flex flex-wrap gap-2 ${compact ? 'mt-4' : 'mt-5'}`}>
           {room.strains.slice(0, compact ? 4 : undefined).map((s, i) => (
             <div
@@ -59,6 +75,7 @@ export function RoomCard({ room, compact = false }: RoomCardProps) {
             </div>
           )}
         </div>
+        )}
       </div>
     </motion.div>
   );

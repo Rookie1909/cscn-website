@@ -471,7 +471,8 @@
       "title_1": "UNSERE",
       "title_2": "ANBAURÄUME",
       "description": "Ein schematischer Überblick über die aktuell aktiven Räume – Sorten und Wachstumsphasen, automatisch synchronisiert aus unserem Cannanas-System. Aus Sicherheitsgründen zeigen wir keine exakten Pflanzenzahlen.",
-      "empty": "Aktuell keine aktiven Räume verfügbar."
+      "empty": "Aktuell keine aktiven Räume verfügbar.",
+      "room_empty": "Aktuell keine Pflanzen – zwischen den Zyklen"
     },
     "stage": {
       "cutting": "Stecklinge",

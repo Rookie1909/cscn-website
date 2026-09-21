@@ -336,7 +336,8 @@
       "title_1": "LE NOSTRE",
       "title_2": "SALE DI COLTIVAZIONE",
       "description": "Una panoramica schematica delle sale attualmente attive - varietà e fasi di crescita, sincronizzate automaticamente dal nostro sistema Cannanas. Per motivi di sicurezza non mostriamo il numero esatto di piante.",
-      "empty": "Al momento nessuna sala attiva disponibile."
+      "empty": "Al momento nessuna sala attiva disponibile.",
+      "room_empty": "Attualmente nessuna pianta - tra un ciclo e l'altro"
     },
     "stage": {
       "cutting": "Talee",

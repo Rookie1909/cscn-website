@@ -124,10 +124,10 @@ export function LocationSection() {
                       <span className="text-xs font-black uppercase tracking-widest">{t('locations.hours_label')}</span>
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-4">
-                      {loc.hours.map((h) => (
+                      {loc.hours.filter((h) => h.time !== t('locations.closed')).map((h) => (
                         <div key={h.day} className="flex justify-between items-center py-2 border-b border-border/30 last:border-0 group/hour">
                           <span className="text-sm font-black text-foreground group-hover/hour:text-primary transition-colors">{h.day}:</span>
-                          <span className={`text-sm font-medium ${h.time === t('locations.closed') ? 'text-muted-foreground' : 'text-primary font-bold'}`}>
+                          <span className="text-sm font-medium text-primary font-bold">
                             {h.time}
                           </span>
                         </div>

@@ -66,7 +66,7 @@ export function ClubInfoSection() {
               ))}
             </div>
 
-            <p className="text-muted-foreground font-sans leading-relaxed">
+            <p className="text-muted-foreground font-sans leading-relaxed text-justify">
               {t('home.club_info.description')}
             </p>
 

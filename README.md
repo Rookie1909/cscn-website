@@ -47,13 +47,25 @@ npm run check:content
 
 GitHub Actions runs on every push to `main` and on pull requests:
 
-- `npm run check:content` — i18n key parity, static asset paths, internal route validation
-- `npm run lint` — ESLint
+- `npm run check:content` — i18n key parity and usage, empty strings, news/strain `_en` fields, HashRouter fragment links, static asset paths, internal routes
+- `npm run lint` — ESLint with `--max-warnings 0`
 - `npm run build` — TypeScript + Vite production build
+- `npm run audit` — `npm audit --audit-level=high`
+- Gitleaks — committed-secret scan (git history)
+- CodeQL — JavaScript/TypeScript SAST (also weekly on Mondays)
+- Dependency review — blocks PRs that introduce high-severity vulnerable packages
 
-Workflow: [`.github/workflows/ci.yml`](.github/workflows/ci.yml)
+Workflows: [`.github/workflows/ci.yml`](.github/workflows/ci.yml), [`.github/workflows/codeql.yml`](.github/workflows/codeql.yml), [`.github/workflows/dependency-review.yml`](.github/workflows/dependency-review.yml)
 
-**Branch protection (GitHub repo settings):** After the first CI run on `main`, enable branch protection under Settings → Branches → Add rule for `main`: require status check **CI / quality** before merge.
+**Branch protection (GitHub repo settings):** After the first CI run on `main`, enable branch protection under Settings → Branches → Add rule for `main`. Require these status checks before merge:
+
+- **CI / quality**
+- **CI / audit**
+- **CI / secrets**
+- **CodeQL / analyze**
+- **Dependency review / dependency-review** (PRs only)
+
+CodeQL and Dependency review need GitHub Advanced Security on a **private** repo (included for public repos). `audit` and `secrets` run without that.
 
 ---
 

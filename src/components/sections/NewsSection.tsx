@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, Image as ImageIcon, Newspaper, ArrowRight, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
 import newsData from '@/data/news.json';
 
@@ -211,7 +212,7 @@ export function NewsSection() {
         >
           <p className="text-muted-foreground font-sans text-sm">
             {t('news.footer_text')} <br className="sm:hidden" />
-            &nbsp;<a href="#newsletter" className="text-primary font-bold hover:underline">{t('news.newsletter')}</a>.
+            &nbsp;<Link to="/" state={{ scrollTo: 'newsletter' }} className="text-primary font-bold hover:underline">{t('news.newsletter')}</Link>.
           </p>
         </motion.div>
       </div>

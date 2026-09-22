@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mail, Check } from 'lucide-react';
 import { Input } from '@/components/ui/input';
@@ -8,9 +9,17 @@ import { Button } from '@/components/ui/button';
 
 export function NewsletterSection() {
   const { t } = useTranslation();
+  const location = useLocation();
   const [email, setEmail] = useState('');
   const [consent, setConsent] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    const scrollTo = (location.state as { scrollTo?: string } | null)?.scrollTo;
+    if (scrollTo === 'newsletter') {
+      document.getElementById('newsletter')?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [location.state]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,7 +34,7 @@ export function NewsletterSection() {
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-muted/30">
+    <section id="newsletter" className="py-16 lg:py-24 bg-muted/30">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

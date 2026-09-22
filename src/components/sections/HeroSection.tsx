@@ -67,11 +67,13 @@ export function HeroSection() {
                 variants={itemVariants}
                 className="text-4xl sm:text-5xl lg:text-7xl font-headline font-black text-foreground leading-[0.95] tracking-tight break-words"
               >
-                <Trans i18nKey="home.hero.title">
-                  Pioniere des <br />
-                  <span className="text-primary italic">biologischen</span> <br />
-                  Anbaus in Niedersachsen
-                </Trans>
+                <Trans
+                  i18nKey="home.hero.title"
+                  components={{
+                    br: <br />,
+                    highlight: <span className="text-primary italic" />,
+                  }}
+                />
               </motion.h1>
 
               <motion.p

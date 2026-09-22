@@ -24,9 +24,7 @@
     "headline": "Ultime notizie e aggiornamenti",
     "body": "Seguici nel nostro percorso. Qui pubblichiamo aggiornamenti settimanali sui progressi dei lavori, sulle coltivazioni e sugli eventi del CSC Nordheide.",
     "impressions": "Impressioni",
-    "read_more": "Leggi i dettagli",
-    "footer_text": "Non vuoi perderti nessuna novità? Iscriviti alla nostra",
-    "newsletter": "Newsletter"
+    "read_more": "Leggi i dettagli"
   },
   "news_page": {
     "title": "Novità",
@@ -192,15 +190,6 @@
       "card_title": "Tutela della salute e dei minori",
       "more_link": "Scopri di più"
     },
-    "newsletter": {
-      "title": "Iscriviti alla nostra newsletter!",
-      "subtitle": "Vuoi restare sempre aggiornato?",
-      "description": "Da noi non troverai solo interessanti temi politici e discussioni, ma anche consigli e trucchi per l'autocoltivazione e tutto ciò che riguarda il mondo della cannabis.",
-      "success": "Grazie per la tua iscrizione!",
-      "email_placeholder": "E-Mail",
-      "consent_label": "Acconsento che questo sito memorizzi le informazioni inviate, in modo che la mia richiesta possa essere elaborata.",
-      "button": "Iscriviti"
-    },
     "contact": {
       "title": "Informati!",
       "description": "Scrivici semplicemente un'e-mail e cercheremo di aiutarti con consigli e supporto concreto.",
@@ -338,16 +327,6 @@
       "description": "Una panoramica schematica delle sale attualmente attive - varietà e fasi di crescita, sincronizzate automaticamente dal nostro sistema Cannanas. Per motivi di sicurezza non mostriamo il numero esatto di piante.",
       "empty": "Al momento nessuna sala attiva disponibile.",
       "room_empty": "Attualmente nessuna pianta - tra un ciclo e l'altro"
-    },
-    "stage": {
-      "cutting": "Talee",
-      "vegetative": "Vegetativa",
-      "flowering": "Fioritura"
-    },
-    "fill": {
-      "few": "poche",
-      "moderate": "diverse",
-      "many": "molte"
     }
   }
 }

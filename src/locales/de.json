@@ -24,9 +24,7 @@
     "headline": "Aktuelle News & Updates",
     "body": "Begleite uns auf unserem Weg. Hier posten wir wöchentlich Updates zu Baufortschritten, Züchtungen und Events im CSC Nordheide.",
     "impressions": "Impressionen",
-    "read_more": "Details lesen",
-    "footer_text": "Möchtest du keine Neuigkeiten verpassen? Abonniere auch unseren",
-    "newsletter": "Newsletter"
+    "read_more": "Details lesen"
   },
   "news_page": {
     "title": "Neuigkeiten",
@@ -191,15 +189,6 @@
       "warning": "Bitte beachte, dass der Bezug von Cannabisprodukten exklusiv unseren geschätzten Mitgliedern vorbehalten sein wird. Anfragen bezüglich des Erwerbs von Cannabisprodukten ohne der Absicht unserem Verein beizutreten, bleiben unsererseits unbeantwortet. Als verantwortungsbewusster Verein legen wir größten Wert auf die Sicherheit und Zufriedenheit unserer Mitglieder. Wir distanzieren uns entschieden von illegalen Aktivitäten und verpflichten uns, die strengen Vorgaben des Cannabisgesetzes gewissenhaft einzuhalten.",
       "card_title": "Gesundheits- & Jugendschutz",
       "more_link": "Mehr erfahren"
-    },
-    "newsletter": {
-      "title": "Melde dich für unseren Newsletter an!",
-      "subtitle": "Du möchtest immer auf dem Laufenden bleiben?",
-      "description": "Bei uns gibt es nicht nur interessante politische Themen und Diskussionen, sondern auch immer wieder Tipps und Tricks für den Eigenanbau und alles rund um das Thema Cannabis.",
-      "success": "Vielen Dank für deine Anmeldung!",
-      "email_placeholder": "E-Mail",
-      "consent_label": "Ich willige ein, dass diese Website meine übermittelten Informationen speichert, sodass meine Anfrage beantwortet werden kann.",
-      "button": "Anmelden"
     },
     "contact": {
       "title": "Informier dich!",
@@ -473,16 +462,6 @@
       "description": "Ein schematischer Überblick über die aktuell aktiven Räume – Sorten und Wachstumsphasen, automatisch synchronisiert aus unserem Cannanas-System. Aus Sicherheitsgründen zeigen wir keine exakten Pflanzenzahlen.",
       "empty": "Aktuell keine aktiven Räume verfügbar.",
       "room_empty": "Aktuell keine Pflanzen – zwischen den Zyklen"
-    },
-    "stage": {
-      "cutting": "Stecklinge",
-      "vegetative": "Vegetativ",
-      "flowering": "Blüte"
-    },
-    "fill": {
-      "few": "wenige",
-      "moderate": "mehrere",
-      "many": "viele"
     }
   }
 }

@@ -1,14 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import type { GrowRoom, FillLevel, GrowStage } from '@/types/growRoom';
-
-const STAGE_STYLES: Record<GrowStage, string> = {
-  cutting: 'bg-muted text-muted-foreground border-border',
-  vegetative: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20',
-  flowering: 'bg-primary/10 text-primary border-primary/20',
-};
-
-const FILL_DOTS: Record<FillLevel, number> = { few: 1, moderate: 2, many: 3 };
+import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
+import type { GrowRoom } from '@/types/growRoom';
 
 interface RoomCardProps {
   room: GrowRoom;
@@ -50,31 +43,28 @@ export function RoomCard({ room, compact = false }: RoomCardProps) {
             {t('grow_rooms.page.room_empty')}
           </p>
         ) : (
-        <div className={`flex flex-wrap gap-2 ${compact ? 'mt-4' : 'mt-5'}`}>
-          {room.strains.slice(0, compact ? 4 : undefined).map((s, i) => (
-            <div
-              key={i}
-              className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border text-[11px] font-bold ${STAGE_STYLES[s.stage]}`}
-            >
-              <span>{s.name}</span>
-              <span className="opacity-60">·</span>
-              <span className="uppercase tracking-wide">{t(`grow_rooms.stage.${s.stage}`)}</span>
-              <span className="flex items-center gap-0.5 ml-1" title={t(`grow_rooms.fill.${s.fillLevel}`)}>
-                {[1, 2, 3].map((n) => (
-                  <span
-                    key={n}
-                    className={`w-1.5 h-1.5 rounded-full ${n <= FILL_DOTS[s.fillLevel] ? 'bg-current' : 'bg-current opacity-20'}`}
-                  />
-                ))}
-              </span>
-            </div>
-          ))}
-          {compact && room.strains.length > 4 && (
-            <div className="flex items-center px-2.5 py-1.5 rounded-lg border border-border text-[11px] font-bold text-muted-foreground">
-              +{room.strains.length - 4}
-            </div>
-          )}
-        </div>
+          <div className={`flex flex-wrap gap-2 ${compact ? 'mt-4' : 'mt-5'}`}>
+            {room.strains.slice(0, compact ? 6 : undefined).map((s, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-2 pl-1.5 pr-3 py-1.5 rounded-full border border-border bg-background/60"
+              >
+                {s.image ? (
+                  <img src={s.image} alt={s.name} className="w-6 h-6 rounded-full object-cover" />
+                ) : (
+                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
+                    <CannabisLeaf size={11} className="text-primary" />
+                  </div>
+                )}
+                <span className="text-[11px] font-bold text-foreground">{s.name}</span>
+              </div>
+            ))}
+            {compact && room.strains.length > 6 && (
+              <div className="flex items-center px-2.5 py-1.5 rounded-full border border-border text-[11px] font-bold text-muted-foreground">
+                +{room.strains.length - 6}
+              </div>
+            )}
+          </div>
         )}
       </div>
     </motion.div>

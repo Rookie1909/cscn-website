@@ -13,84 +13,57 @@
     "image": "/images/zones/bluteraum-2-og.webp",
     "strains": [
       {
-        "name": "Zushers",
-        "stage": "flowering",
-        "fillLevel": "moderate"
-      },
-      {
-        "name": "Gorilla Zkittles",
-        "stage": "vegetative",
-        "fillLevel": "many"
+        "name": "Apple Banana Flamb’e"
       },
       {
         "name": "Atomic Blue Dream",
-        "stage": "vegetative",
-        "fillLevel": "moderate"
+        "image": "/images/strains/atomic-blue-dream.webp"
       },
       {
         "name": "C.Banana",
-        "stage": "vegetative",
-        "fillLevel": "moderate"
-      },
-      {
-        "name": "Cobalt Haze",
-        "stage": "vegetative",
-        "fillLevel": "moderate"
-      },
-      {
-        "name": "Tiramisu",
-        "stage": "vegetative",
-        "fillLevel": "moderate"
-      },
-      {
-        "name": "Apple Banana Flamb’e",
-        "stage": "vegetative",
-        "fillLevel": "few"
+        "image": "/images/strains/c-banana.webp"
       },
       {
         "name": "Cherrizozki",
-        "stage": "vegetative",
-        "fillLevel": "few"
+        "image": "/images/strains/cherrizozki.webp"
+      },
+      {
+        "name": "Cobalt Haze",
+        "image": "/images/strains/cobalt-haze.webp"
       },
       {
         "name": "Dosimosa",
-        "stage": "vegetative",
-        "fillLevel": "few"
+        "image": "/images/strains/dosimosa.webp"
       },
       {
         "name": "Fat Catz",
-        "stage": "vegetative",
-        "fillLevel": "few"
+        "image": "/images/strains/fat-catz.webp"
       },
       {
-        "name": "Gruntz",
-        "stage": "vegetative",
-        "fillLevel": "few"
+        "name": "Gorilla Zkittles",
+        "image": "/images/strains/gorilla-zkittles.webp"
+      },
+      {
+        "name": "Gruntz"
       },
       {
         "name": "Liquid Hydrogen Peach",
-        "stage": "vegetative",
-        "fillLevel": "few"
+        "image": "/images/strains/liquid-hydrogen-peach.webp"
       },
       {
         "name": "Milk Mustache",
-        "stage": "vegetative",
-        "fillLevel": "few"
+        "image": "/images/strains/milk-mustache.webp"
       },
       {
         "name": "Papayadawg",
-        "stage": "vegetative",
-        "fillLevel": "few"
+        "image": "/images/strains/papayadawg.webp"
       },
       {
-        "name": "Zushers",
-        "stage": "vegetative",
-        "fillLevel": "few"
+        "name": "Tiramisu",
+        "image": "/images/strains/tiramisu.webp"
       },
       {
-        "name": "Dosimosa",
-        "stage": "cutting",
-        "fillLevel": "many"
+        "name": "Zushers"
       }
     ]
   },
@@ -108,109 +81,77 @@
     "image": "/images/zones/reproduktion.webp",
     "strains": [
       {
-        "name": "Skunk #1",
-        "stage": "flowering",
-        "fillLevel": "few"
-      },
-      {
         "name": "24K Gold",
-        "stage": "vegetative",
-        "fillLevel": "few"
+        "image": "/images/strains/24k-gold.webp"
       },
       {
         "name": "All the Sauces",
-        "stage": "vegetative",
-        "fillLevel": "few"
+        "image": "/images/strains/all-the-sauces.webp"
       },
       {
         "name": "Bubble OG",
-        "stage": "vegetative",
-        "fillLevel": "few"
+        "image": "/images/strains/bubble-og.webp"
       },
       {
         "name": "Cherrizozki",
-        "stage": "vegetative",
-        "fillLevel": "few"
+        "image": "/images/strains/cherrizozki.webp"
       },
       {
         "name": "Falcon Heavy",
-        "stage": "vegetative",
-        "fillLevel": "few"
+        "image": "/images/strains/falcon-heavy.webp"
       },
       {
         "name": "Grape Venom",
-        "stage": "vegetative",
-        "fillLevel": "few"
-      },
-      {
-        "name": "Lemon Game",
-        "stage": "vegetative",
-        "fillLevel": "few"
-      },
-      {
-        "name": "London Lobster",
-        "stage": "vegetative",
-        "fillLevel": "few"
-      },
-      {
-        "name": "Midnight Sunset",
-        "stage": "vegetative",
-        "fillLevel": "few"
-      },
-      {
-        "name": "Pink Runtz x Hollywood",
-        "stage": "vegetative",
-        "fillLevel": "few"
-      },
-      {
-        "name": "Red Mandarine",
-        "stage": "vegetative",
-        "fillLevel": "few"
-      },
-      {
-        "name": "Romscotti",
-        "stage": "vegetative",
-        "fillLevel": "few"
-      },
-      {
-        "name": "Romulan",
-        "stage": "vegetative",
-        "fillLevel": "few"
-      },
-      {
-        "name": "Superchronic",
-        "stage": "vegetative",
-        "fillLevel": "few"
-      },
-      {
-        "name": "Thornberry Sunshine",
-        "stage": "vegetative",
-        "fillLevel": "few"
-      },
-      {
-        "name": "Bubble OG",
-        "stage": "cutting",
-        "fillLevel": "few"
+        "image": "/images/strains/grape-venom.webp"
       },
       {
         "name": "Kacklesnatch",
-        "stage": "cutting",
-        "fillLevel": "few"
+        "image": "/images/strains/kacklesnatch.webp"
       },
       {
-        "name": "Monster Maker",
-        "stage": "cutting",
-        "fillLevel": "few"
+        "name": "Lemon Game",
+        "image": "/images/strains/lemon-game.webp"
+      },
+      {
+        "name": "London Lobster",
+        "image": "/images/strains/london-lobster.webp"
+      },
+      {
+        "name": "Midnight Sunset",
+        "image": "/images/strains/midnight-sunset.webp"
+      },
+      {
+        "name": "Monster Maker"
       },
       {
         "name": "Moon Glow",
-        "stage": "cutting",
-        "fillLevel": "few"
+        "image": "/images/strains/moon-glow.webp"
+      },
+      {
+        "name": "Pink Runtz x Hollywood"
       },
       {
         "name": "Red Mandarine",
-        "stage": "cutting",
-        "fillLevel": "few"
+        "image": "/images/strains/red-mandarine.webp"
+      },
+      {
+        "name": "Romscotti",
+        "image": "/images/strains/romscotti.webp"
+      },
+      {
+        "name": "Romulan",
+        "image": "/images/strains/romulan.webp"
+      },
+      {
+        "name": "Skunk #1",
+        "image": "/images/strains/skunk-1.webp"
+      },
+      {
+        "name": "Superchronic"
+      },
+      {
+        "name": "Thornberry Sunshine",
+        "image": "/images/strains/thornberry-sunshine.webp"
       }
     ]
   },
@@ -220,74 +161,56 @@
     "description": "Der alte Stecklingsraum, bzw. die \"Notfallrepro\" oder auch: \"BT 2 1/2\" ;)",
     "strains": [
       {
-        "name": "Cherrizozki",
-        "stage": "vegetative",
-        "fillLevel": "many"
-      },
-      {
-        "name": "Falcon Heavy",
-        "stage": "vegetative",
-        "fillLevel": "many"
-      },
-      {
-        "name": "Kacklesnatch",
-        "stage": "vegetative",
-        "fillLevel": "many"
-      },
-      {
-        "name": "Lemon Game",
-        "stage": "vegetative",
-        "fillLevel": "many"
-      },
-      {
-        "name": "Moon Glow",
-        "stage": "vegetative",
-        "fillLevel": "many"
-      },
-      {
-        "name": "Superchronic",
-        "stage": "vegetative",
-        "fillLevel": "many"
-      },
-      {
         "name": "24K Gold",
-        "stage": "vegetative",
-        "fillLevel": "moderate"
-      },
-      {
-        "name": "Forbidden Flazh",
-        "stage": "vegetative",
-        "fillLevel": "moderate"
-      },
-      {
-        "name": "Neon Wormz",
-        "stage": "vegetative",
-        "fillLevel": "moderate"
-      },
-      {
-        "name": "Pink Runtz x Hollywood",
-        "stage": "vegetative",
-        "fillLevel": "moderate"
-      },
-      {
-        "name": "Thornberry Sunshine",
-        "stage": "vegetative",
-        "fillLevel": "moderate"
-      },
-      {
-        "name": "London Lobster",
-        "stage": "cutting",
-        "fillLevel": "many"
+        "image": "/images/strains/24k-gold.webp"
       },
       {
         "name": "Bubble OG",
-        "stage": "cutting",
-        "fillLevel": "moderate"
+        "image": "/images/strains/bubble-og.webp"
+      },
+      {
+        "name": "Cherrizozki",
+        "image": "/images/strains/cherrizozki.webp"
+      },
+      {
+        "name": "Falcon Heavy",
+        "image": "/images/strains/falcon-heavy.webp"
+      },
+      {
+        "name": "Forbidden Flazh"
+      },
+      {
+        "name": "Kacklesnatch",
+        "image": "/images/strains/kacklesnatch.webp"
+      },
+      {
+        "name": "Lemon Game",
+        "image": "/images/strains/lemon-game.webp"
+      },
+      {
+        "name": "London Lobster",
+        "image": "/images/strains/london-lobster.webp"
+      },
+      {
+        "name": "Moon Glow",
+        "image": "/images/strains/moon-glow.webp"
+      },
+      {
+        "name": "Neon Wormz"
+      },
+      {
+        "name": "Pink Runtz x Hollywood"
       },
       {
         "name": "Romscotti",
-        "stage": "cutting",
-        "fillLevel": "moderate"
+        "image": "/images/strains/romscotti.webp"
+      },
+      {
+        "name": "Superchronic"
+      },
+      {
+        "name": "Thornberry Sunshine",
+        "image": "/images/strains/thornberry-sunshine.webp"
       }
     ]
   }

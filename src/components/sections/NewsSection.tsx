@@ -213,18 +213,6 @@ export function NewsSection() {
           })}
         </motion.div>
 
-        {/* Footer Link */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="mt-20 text-center"
-        >
-          <p className="text-muted-foreground font-sans text-sm">
-            {t('news.footer_text')} <br className="sm:hidden" />
-            &nbsp;<a href="#newsletter" className="text-primary font-bold hover:underline">{t('news.newsletter')}</a>.
-          </p>
-        </motion.div>
       </div>
 
       {/* Fullscreen Image Lightbox */}

@@ -6,8 +6,10 @@ const API_KEY = process.env.CANNANAS_API_KEY;
 const API_BASE = 'https://api.cannanas.club';
 
 const OUTPUT_PATH = path.join(__dirname, '..', '..', 'src', 'data', 'grow-rooms.json');
-const IMAGES_DIR = path.join(__dirname, '..', '..', 'public', 'images', 'zones');
-const IMAGES_PUBLIC_PATH = '/images/zones';
+const ZONE_IMAGES_DIR = path.join(__dirname, '..', '..', 'public', 'images', 'zones');
+const ZONE_IMAGES_PUBLIC_PATH = '/images/zones';
+const STRAIN_IMAGES_DIR = path.join(__dirname, '..', '..', 'public', 'images', 'strains');
+const STRAIN_IMAGES_PUBLIC_PATH = '/images/strains';
 
 function extFromMime(mimeType) {
   const known = { 'image/webp': 'webp', 'image/png': 'png', 'image/jpeg': 'jpg' };
@@ -23,34 +25,18 @@ function slugify(name) {
     .replace(/^-+|-+$/g, '');
 }
 
-// Same short-lived-signed-URL situation as strain images - download once and
-// commit as a static asset instead of storing the expiring URL.
-async function downloadZoneImage(id, image) {
+// Cannanas image URLs are short-lived signed links (expire after ~24h), so we
+// download the file once per sync and commit it as a normal static asset.
+async function downloadImage(id, image, dir, publicPath) {
   if (!image || !image.url) return undefined;
   const res = await fetch(image.url);
   if (!res.ok) return undefined;
   const buffer = Buffer.from(await res.arrayBuffer());
   const ext = extFromMime(image.mimeType);
-  fs.mkdirSync(IMAGES_DIR, { recursive: true });
-  fs.writeFileSync(path.join(IMAGES_DIR, `${id}.${ext}`), buffer);
-  return `${IMAGES_PUBLIC_PATH}/${id}.${ext}`;
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, `${id}.${ext}`), buffer);
+  return `${publicPath}/${id}.${ext}`;
 }
-
-// We deliberately don't publish exact plant counts (security/theft
-// consideration for a cannabis cultivation site) - just a coarse bucket.
-function fillLevel(count) {
-  if (count >= 25) return 'many';
-  if (count >= 10) return 'moderate';
-  return 'few';
-}
-
-const STAGE_MAP = {
-  VEGETATIVE: 'vegetative',
-  FLOWERING: 'flowering',
-  CUTTING: 'cutting',
-};
-const STAGE_WEIGHT = { flowering: 3, vegetative: 2, cutting: 1 };
-const FILL_WEIGHT = { many: 3, moderate: 2, few: 1 };
 
 async function fetchJson(urlPath) {
   const res = await fetch(`${API_BASE}${urlPath}`, {
@@ -67,22 +53,15 @@ async function main() {
     throw new Error('CANNANAS_CLUB_ID oder CANNANAS_API_KEY ist nicht gesetzt');
   }
 
-  const [zones, batchesResponse, plants, strains] = await Promise.all([
+  const [zones, batchesResponse, strains] = await Promise.all([
     fetchJson(`/v1/clubs/${CLUB_ID}/zones`),
     fetchJson(`/v1/clubs/${CLUB_ID}/batches`),
-    fetchJson(`/v1/clubs/${CLUB_ID}/plants`),
     fetchJson(`/v1/clubs/${CLUB_ID}/strains`),
   ]);
   const batches = batchesResponse.items || [];
 
   const strainById = new Map(strains.map((s) => [s.id, s]));
-  const plantCountByBatch = new Map();
-  for (const p of plants) {
-    if (!p.batch_id) continue;
-    plantCountByBatch.set(p.batch_id, (plantCountByBatch.get(p.batch_id) || 0) + 1);
-  }
-
-  const activeBatches = batches.filter((b) => !b.archived && b.zone_id && STAGE_MAP[b.status]);
+  const activeBatches = batches.filter((b) => !b.archived && b.zone_id && b.status);
 
   // Show every room named "Blüteraum", whether or not it currently has
   // plants (an empty room between cycles is still a real room) - plus any
@@ -95,38 +74,39 @@ async function main() {
     (z) => !z.archived && (/bl[üu]teraum/i.test(z.name) || zoneIdsInUse.has(z.id))
   );
 
+  // Deliberately not tracked or shown at all: growth stage and plant counts.
+  // Knowing which strains are somewhere in the building is one thing; being
+  // able to infer how far along or how much of it there is is a theft/
+  // security risk this page shouldn't create, so that data never even makes
+  // it into the room's strain list below.
+  const strainImageCache = new Map();
+  async function getStrainImage(strain) {
+    if (strainImageCache.has(strain.id)) return strainImageCache.get(strain.id);
+    const url = await downloadImage(
+      slugify(strain.name),
+      strain.image,
+      STRAIN_IMAGES_DIR,
+      STRAIN_IMAGES_PUBLIC_PATH
+    );
+    strainImageCache.set(strain.id, url);
+    return url;
+  }
+
   const rooms = [];
   for (const zone of growRooms) {
     const id = slugify(zone.name);
     const zoneBatches = activeBatches.filter((b) => b.zone_id === zone.id);
 
-    // Merge batches of the same strain + growth stage within this room into
-    // one entry (a strain is often split across several seeding batches).
-    const grouped = new Map();
-    for (const b of zoneBatches) {
-      const strain = strainById.get(b.strain_id);
-      const stage = STAGE_MAP[b.status];
-      const key = `${b.strain_id}:${stage}`;
-      const count = plantCountByBatch.get(b.id) || 0;
-      const existing = grouped.get(key);
-      if (existing) {
-        existing.count += count;
-      } else {
-        grouped.set(key, { name: strain ? strain.name : 'Unbekannt', stage, count });
-      }
+    const strainIdsInRoom = [...new Set(zoneBatches.map((b) => b.strain_id))];
+    const strainsInRoom = [];
+    for (const strainId of strainIdsInRoom) {
+      const strain = strainById.get(strainId);
+      if (!strain) continue;
+      strainsInRoom.push({ name: strain.name, image: await getStrainImage(strain) });
     }
+    strainsInRoom.sort((a, b) => a.name.localeCompare(b.name, 'de'));
 
-    const strainsInRoom = [...grouped.values()]
-      .map(({ name, stage, count }) => ({ name, stage, fillLevel: fillLevel(count) }))
-      .sort((a, b) => {
-        const stageDiff = STAGE_WEIGHT[b.stage] - STAGE_WEIGHT[a.stage];
-        if (stageDiff !== 0) return stageDiff;
-        const fillDiff = FILL_WEIGHT[b.fillLevel] - FILL_WEIGHT[a.fillLevel];
-        if (fillDiff !== 0) return fillDiff;
-        return a.name.localeCompare(b.name, 'de');
-      });
-
-    const image = await downloadZoneImage(id, zone.image);
+    const image = await downloadImage(id, zone.image, ZONE_IMAGES_DIR, ZONE_IMAGES_PUBLIC_PATH);
 
     rooms.push({
       id,

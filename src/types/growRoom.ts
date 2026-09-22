@@ -1,10 +1,6 @@
-export type GrowStage = 'vegetative' | 'flowering' | 'cutting';
-export type FillLevel = 'few' | 'moderate' | 'many';
-
 export interface RoomStrain {
   name: string;
-  stage: GrowStage;
-  fillLevel: FillLevel;
+  image?: string;
 }
 
 export interface GrowRoom {

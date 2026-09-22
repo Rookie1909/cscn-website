@@ -24,9 +24,7 @@
     "headline": "Latest News & Updates",
     "body": "Join us on our journey. Here we post weekly updates on construction progress, cultivation, and events at CSC Nordheide.",
     "impressions": "Impressions",
-    "read_more": "Read details",
-    "footer_text": "Don't want to miss any updates? Subscribe to our",
-    "newsletter": "Newsletter"
+    "read_more": "Read details"
   },
   "news_page": {
     "title": "News",
@@ -192,15 +190,6 @@
       "card_title": "Health & Youth Protection",
       "more_link": "Learn more"
     },
-    "newsletter": {
-      "title": "Sign up for our newsletter!",
-      "subtitle": "Do you want to stay up to date?",
-      "description": "With us, there are not only interesting political topics and discussions, but also tips and tricks for home cultivation and everything about cannabis.",
-      "success": "Thank you for registering!",
-      "email_placeholder": "E-Mail",
-      "consent_label": "I agree that this website stores my submitted information so that my request can be answered.",
-      "button": "Sign Up"
-    },
     "contact": {
       "title": "Get Informed!",
       "description": "Just send us an email and we will try to help you with advice and action.",
@@ -338,16 +327,6 @@
       "description": "A schematic overview of the currently active rooms - strains and growth stages, automatically synced from our Cannanas system. For security reasons we don't show exact plant counts.",
       "empty": "No active rooms available at the moment.",
       "room_empty": "Currently no plants - between cycles"
-    },
-    "stage": {
-      "cutting": "Cuttings",
-      "vegetative": "Vegetative",
-      "flowering": "Flowering"
-    },
-    "fill": {
-      "few": "few",
-      "moderate": "several",
-      "many": "many"
     }
   }
 }

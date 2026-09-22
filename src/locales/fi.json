@@ -24,9 +24,7 @@
     "headline": "Ajankohtaiset uutiset ja päivitykset",
     "body": "Seuraa mukanamme matkaamme. Julkaisemme täällä viikoittain päivityksiä rakennustöiden edistymisestä, kasvatuksesta ja CSC Nordheiden tapahtumista.",
     "impressions": "Kuvia",
-    "read_more": "Lue lisää",
-    "footer_text": "Etkö halua jäädä paitsi uutisista? Tilaa myös",
-    "newsletter": "Uutiskirjeemme"
+    "read_more": "Lue lisää"
   },
   "news_page": {
     "title": "Uutiset",
@@ -192,15 +190,6 @@
       "card_title": "Terveyden- ja nuorisonsuojelu",
       "more_link": "Lue lisää"
     },
-    "newsletter": {
-      "title": "Tilaa uutiskirjeemme!",
-      "subtitle": "Haluatko pysyä aina ajan tasalla?",
-      "description": "Meillä on tarjolla mielenkiintoisia poliittisia aiheita ja keskusteluja, mutta myös jatkuvasti vinkkejä omaan kasvatukseen ja kaikkea cannabikseen liittyvää.",
-      "success": "Kiitos ilmoittautumisestasi!",
-      "email_placeholder": "Sähköposti",
-      "consent_label": "Suostun siihen, että tämä verkkosivusto tallentaa lähettämäni tiedot, jotta pyyntööni voidaan vastata.",
-      "button": "Tilaa"
-    },
     "contact": {
       "title": "Ota selvää!",
       "description": "Lähetä meille sähköpostia, niin autamme sinua neuvoin ja teoin.",
@@ -338,16 +327,6 @@
       "description": "Skemaattinen yleiskatsaus tällä hetkellä aktiivisiin huoneisiin - lajikkeet ja kasvuvaiheet, synkronoituna automaattisesti Cannanas-järjestelmästämme. Turvallisuussyistä emme näytä tarkkoja kasvimääriä.",
       "empty": "Tällä hetkellä ei ole aktiivisia huoneita saatavilla.",
       "room_empty": "Ei tällä hetkellä kasveja - syklien välissä"
-    },
-    "stage": {
-      "cutting": "Pistokkaat",
-      "vegetative": "Vegetatiivinen",
-      "flowering": "Kukinta"
-    },
-    "fill": {
-      "few": "vähän",
-      "moderate": "kohtalaisesti",
-      "many": "paljon"
     }
   }
 }

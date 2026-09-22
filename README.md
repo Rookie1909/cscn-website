@@ -71,3 +71,19 @@ export default defineConfig([
   },
 ])
 ```
+
+## CI / Continuous Integration
+
+GitHub Actions runs on every push to `main` and on pull requests:
+
+- `npm run check:content` — i18n key parity and usage, empty strings, news/strain `_en` fields, HashRouter fragment links, static asset paths, internal routes
+- `npm run lint` — ESLint with `--max-warnings 0`
+- `npm run build` — TypeScript + Vite production build
+- `npm run audit` — `npm audit --audit-level=high`
+- Gitleaks — committed-secret scan (git history)
+- CodeQL — JavaScript/TypeScript SAST (also weekly on Mondays)
+- Dependency review — blocks PRs that introduce high-severity vulnerable packages
+
+Workflows: [`.github/workflows/ci.yml`](.github/workflows/ci.yml), [`.github/workflows/codeql.yml`](.github/workflows/codeql.yml), [`.github/workflows/dependency-review.yml`](.github/workflows/dependency-review.yml)
+
+**Branch protection:** require **CI / quality**, **CI / audit**, and **CI / secrets**. CodeQL and Dependency review need GitHub Advanced Security on a private repo.

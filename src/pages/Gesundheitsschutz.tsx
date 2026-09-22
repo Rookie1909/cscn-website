@@ -100,7 +100,7 @@ export function Gesundheitsschutz() {
       <PageHero
         title={t('gesundheitsschutz.hero.title')}
         description={t('gesundheitsschutz.hero.description')}
-        backgroundImage="/images/prevention.jpg"
+        backgroundImage="/images/cannabis-grow.jpg"
       />
 
       <section className="py-24 relative overflow-hidden">

@@ -88,6 +88,7 @@
   "home": {
     "banner": "We still have spots available – Click here for our membership models",
     "hero": {
+      "title": "Pioneers of <br></br> <highlight>organic</highlight> <br></br> cultivation in Lower Saxony",
       "subtitle": "The first CSC in Lower Saxony with over 170 dedicated members – quality that convinces.",
       "stats": {
         "award": {
@@ -327,6 +328,141 @@
       "description": "A schematic overview of the currently active rooms - strains and growth stages, automatically synced from our Cannanas system. For security reasons we don't show exact plant counts.",
       "empty": "No active rooms available at the moment.",
       "room_empty": "Currently no plants - between cycles"
+    }
+  },
+  "gesundheitsschutz": {
+    "hero": {
+      "title": "Health & Youth Protection",
+      "description": "Responsible handling and the highest safety standards at CSC Nordheide."
+    },
+    "prevention": {
+      "title": "Prevention Concept",
+      "description": "Download our detailed brief information on prevention as a PDF to have all important information at a glance.",
+      "button": "Prevention Information Brief PDF"
+    },
+    "contact": {
+      "title": "Prevention Officers",
+      "role": "Consumer Protection & Addiction Prevention"
+    },
+    "concept": {
+      "title": "Youth and Health Protection Concept",
+      "subtitle": "KCanG Guidelines on Child and Youth Protection",
+      "intro": "Excerpt from our concept (§2). We are committed to the following points:"
+    },
+    "sections": {
+      "child_protection": {
+        "title": "Child and Youth Protection",
+        "content": "Notifications within the cultivation association regarding the KCanG in relation to child and youth protection."
+      },
+      "signage": {
+        "title": "Signage",
+        "content": "To attract little attention, external signage is largely avoided and restricted to the bare essentials. In every entrance area of the association's properties, signage will indicate that access is prohibited for children and adolescents under 18 according to KCanG."
+      },
+      "applications": {
+        "title": "Membership Applications",
+        "content": "When applying for membership, the applicant is explicitly informed about the prevention concept, the KCanG regulations, and the BzgA documents \"Information on Cannabis & Important Notes on Cannabis Consumption.\" This is done by providing these in paper form or as a digital document during the online application. By signing the application, the member confirms they have read and accepted this information."
+      },
+      "brochures": {
+        "title": "Brochures",
+        "content": "Both the KCanG and BzgA information materials are clearly displayed within the cultivation association's premises."
+      },
+      "entrance_controls": {
+        "title": "Entrance Controls",
+        "content": "A membership card is issued to every member of our association. This card is used for access to the distribution rooms and for verifying collection data.\nWhen entering an association property, the member is additionally checked by a distributing member or a representative using their photo ID in case of identity doubts."
+      },
+      "advertising_ban": {
+        "title": "Advertising Ban",
+        "content": "No signage. No advertising or sponsorship. The association does not run advertisements. Existing social media accounts are only used for information purposes."
+      },
+      "minimum_distance": {
+        "title": "Minimum Distance",
+        "content": "Every association property is located more than 200m away from schools, child and youth facilities, and playgrounds."
+      },
+      "property_protection": {
+        "title": "Property Protection Measures",
+        "content": "External signage of the association's properties is completely avoided. Our properties have a doorbell sign at the entrance to the association rooms. Any other external signage is omitted."
+      },
+      "product_protection": {
+        "title": "Product Protection Measures",
+        "content": "Cannabis consumption goods (cannabis flower and hashish) are distributed in childproof, neutral containers. Additionally, a product description is included, which specifies the THC/CBD content, health risks, and usage instructions, explicitly requesting that the product be kept away from children and adolescents."
+      },
+      "child_welfare": {
+        "title": "Handling Child Welfare Endangerment",
+        "content": "The association has no contact with children or minors during its activities. If it becomes aware that members are passing on shared cannabis or propagation material to minors, the statutes specify that such behavior leads to immediate expulsion.\nDistributing members are informed about the reporting chain and measures to take in case of child welfare endangerment. Essential documentation explaining these actions is provided in their workspace. The member must ensure that the prevention officer or a board member is notified immediately to initiate measures with local youth welfare services."
+      },
+      "youth_institutions": {
+        "title": "Contact with Youth Protection Institutions",
+        "content": "The association has no regular contact with youth welfare institutions. An agreement is being developed with local youth welfare services on how to establish low-threshold contact between the association, affected members, and the welfare office when needed."
+      },
+      "entry_ban": {
+        "title": "Entry Ban for Property",
+        "content": "The instruction that distributing members must complete ensures they have the necessary knowledge and skills to comply with laws and guidelines and to enforce the entry ban for children and adolescents."
+      },
+      "instruction": {
+        "title": "Member Instruction",
+        "content": "All distributing members, as well as board members and other responsible parties, are instructed by the externally trained prevention officer in child and youth protection, health protection, and prevention."
+      },
+      "special_measures": {
+        "title": "Special Measures (18-21 Year Olds)",
+        "content": "Members aged 18–21 have a membership number clearly indicating that a maximum of 30 grams of cannabis per month (max 25g per day) with a maximum 10% THC content may be distributed."
+      }
+    }
+  },
+  "impressum": {
+    "title": "Imprint & Privacy Policy",
+    "imprint": {
+      "title": "Imprint",
+      "labels": {
+        "phone": "Phone:",
+        "email": "Email:",
+        "auth_rep": "Jointly Authorized to Represent:",
+        "board": "Board",
+        "deputy_board": "Deputy Board",
+        "treasurer": "Treasurer",
+        "court": "Registration Court:",
+        "reg_num": "Registration Number:",
+        "responsible": "Responsible according to § 18 Abs. 2 MStV"
+      }
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "preamble": {
+        "title": "Preamble",
+        "content": "With the following privacy policy, we would like to inform you about the types of your personal data (hereinafter also referred to as \"data\") that we process, for what purposes, and to what extent. The privacy policy applies to all processing of personal data carried out by us, both as part of the provision of our services and especially on our websites, in mobile applications, and within external online presences, such as our social media profiles (hereinafter collectively referred to as \"online offer\")."
+      },
+      "responsible": {
+        "title": "Responsible Party"
+      },
+      "data_types": {
+        "title": "Types of Processed Data",
+        "list": [
+          "Inventory data",
+          "Contact data",
+          "Content data",
+          "Usage data",
+          "Meta, communication, and procedural data"
+        ]
+      },
+      "subjects": {
+        "title": "Categories of Affected Persons",
+        "list": [
+          "Members",
+          "Interested parties",
+          "Communication partners",
+          "Users"
+        ]
+      },
+      "purposes": {
+        "title": "Purposes of Processing",
+        "list": [
+          "Provision of contractual services and customer service",
+          "Contact requests and communication",
+          "Security measures",
+          "Reach measurement",
+          "Tracking",
+          "Management and answering of inquiries"
+        ]
+      }
     }
   }
 }

@@ -1,6 +1,5 @@
-import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
+import { Lightbulb, Wind, Ruler } from 'lucide-react';
 import type { GrowRoom } from '@/types/growRoom';
 
 interface RoomCardProps {
@@ -9,7 +8,11 @@ interface RoomCardProps {
 }
 
 export function RoomCard({ room, compact = false }: RoomCardProps) {
-  const { t } = useTranslation();
+  const facts = [
+    room.size && { icon: Ruler, label: room.size },
+    room.lighting && { icon: Lightbulb, label: room.lighting },
+    room.ventilation && { icon: Wind, label: room.ventilation },
+  ].filter((f): f is { icon: typeof Ruler; label: string } => Boolean(f));
 
   return (
     <motion.div
@@ -34,36 +37,21 @@ export function RoomCard({ room, compact = false }: RoomCardProps) {
       )}
       <div className="p-6">
         <h3 className="text-xl font-black text-primary tracking-tighter">{room.name}</h3>
-        {!compact && room.description && (
+        {room.description && (
           <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{room.description}</p>
         )}
 
-        {room.strains.length === 0 ? (
-          <p className={`text-xs text-muted-foreground italic ${compact ? 'mt-4' : 'mt-5'}`}>
-            {t('grow_rooms.page.room_empty')}
-          </p>
-        ) : (
-          <div className={`flex flex-wrap gap-2 ${compact ? 'mt-4' : 'mt-5'}`}>
-            {room.strains.slice(0, compact ? 6 : undefined).map((s, i) => (
+        {!compact && facts.length > 0 && (
+          <div className="flex flex-wrap gap-2 mt-5">
+            {facts.map(({ icon: Icon, label }, i) => (
               <div
                 key={i}
-                className="flex items-center gap-2 pl-1.5 pr-3 py-1.5 rounded-full border border-border bg-background/60"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border bg-background/60"
               >
-                {s.image ? (
-                  <img src={s.image} alt={s.name} className="w-6 h-6 rounded-full object-cover" />
-                ) : (
-                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
-                    <CannabisLeaf size={11} className="text-primary" />
-                  </div>
-                )}
-                <span className="text-[11px] font-bold text-foreground">{s.name}</span>
+                <Icon size={13} className="text-primary shrink-0" />
+                <span className="text-[11px] font-bold text-foreground">{label}</span>
               </div>
             ))}
-            {compact && room.strains.length > 6 && (
-              <div className="flex items-center px-2.5 py-1.5 rounded-full border border-border text-[11px] font-bold text-muted-foreground">
-                +{room.strains.length - 6}
-              </div>
-            )}
           </div>
         )}
       </div>

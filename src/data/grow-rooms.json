@@ -4,214 +4,34 @@
     "name": "Blüteraum #1 OG",
     "description": "Der Erste Blüteraum und auch der Größte",
     "image": "/images/zones/bluteraum-1-og.webp",
-    "strains": []
+    "size": "100m²",
+    "lighting": "LED: Platinum King 720W",
+    "ventilation": "Hauptlüftungsanlage"
   },
   {
     "id": "bluteraum-2-og",
     "name": "Blüteraum #2 OG",
     "description": "Der zweite und auch zweitgrößte Blüteraum",
     "image": "/images/zones/bluteraum-2-og.webp",
-    "strains": [
-      {
-        "name": "Apple Banana Flamb’e"
-      },
-      {
-        "name": "Atomic Blue Dream",
-        "image": "/images/strains/atomic-blue-dream.webp"
-      },
-      {
-        "name": "C.Banana",
-        "image": "/images/strains/c-banana.webp"
-      },
-      {
-        "name": "Cherrizozki",
-        "image": "/images/strains/cherrizozki.webp"
-      },
-      {
-        "name": "Cobalt Haze",
-        "image": "/images/strains/cobalt-haze.webp"
-      },
-      {
-        "name": "Dosimosa",
-        "image": "/images/strains/dosimosa.webp"
-      },
-      {
-        "name": "Fat Catz",
-        "image": "/images/strains/fat-catz.webp"
-      },
-      {
-        "name": "Gorilla Zkittles",
-        "image": "/images/strains/gorilla-zkittles.webp"
-      },
-      {
-        "name": "Gruntz"
-      },
-      {
-        "name": "Liquid Hydrogen Peach",
-        "image": "/images/strains/liquid-hydrogen-peach.webp"
-      },
-      {
-        "name": "Milk Mustache",
-        "image": "/images/strains/milk-mustache.webp"
-      },
-      {
-        "name": "Papayadawg",
-        "image": "/images/strains/papayadawg.webp"
-      },
-      {
-        "name": "Tiramisu",
-        "image": "/images/strains/tiramisu.webp"
-      },
-      {
-        "name": "Zushers"
-      }
-    ]
+    "size": "100m²",
+    "lighting": "LED: Platinum King 720W",
+    "ventilation": "Hauptlüftungsanlage"
   },
   {
     "id": "bluteraum-3-og",
     "name": "Blüteraum #3 OG",
     "description": "Ehemals die große Reproduktion, frisch saniert und als Blüteraum #3 neu aufgebaut.",
     "image": "/images/zones/bluteraum-3-og.webp",
-    "strains": []
+    "lighting": "LED: LazerLite Samsung 281+ PRO, 2,95umol/J, 3500°K",
+    "ventilation": "Hauptlüftungsanlage"
   },
   {
     "id": "reproduktion",
     "name": "Reproduktion",
     "description": "Die \"Kronjuwelen\" und Genpool des CSCs.\n\n",
     "image": "/images/zones/reproduktion.webp",
-    "strains": [
-      {
-        "name": "24K Gold",
-        "image": "/images/strains/24k-gold.webp"
-      },
-      {
-        "name": "All the Sauces",
-        "image": "/images/strains/all-the-sauces.webp"
-      },
-      {
-        "name": "Bubble OG",
-        "image": "/images/strains/bubble-og.webp"
-      },
-      {
-        "name": "Cherrizozki",
-        "image": "/images/strains/cherrizozki.webp"
-      },
-      {
-        "name": "Falcon Heavy",
-        "image": "/images/strains/falcon-heavy.webp"
-      },
-      {
-        "name": "Grape Venom",
-        "image": "/images/strains/grape-venom.webp"
-      },
-      {
-        "name": "Kacklesnatch",
-        "image": "/images/strains/kacklesnatch.webp"
-      },
-      {
-        "name": "Lemon Game",
-        "image": "/images/strains/lemon-game.webp"
-      },
-      {
-        "name": "London Lobster",
-        "image": "/images/strains/london-lobster.webp"
-      },
-      {
-        "name": "Midnight Sunset",
-        "image": "/images/strains/midnight-sunset.webp"
-      },
-      {
-        "name": "Monster Maker"
-      },
-      {
-        "name": "Moon Glow",
-        "image": "/images/strains/moon-glow.webp"
-      },
-      {
-        "name": "Pink Runtz x Hollywood"
-      },
-      {
-        "name": "Red Mandarine",
-        "image": "/images/strains/red-mandarine.webp"
-      },
-      {
-        "name": "Romscotti",
-        "image": "/images/strains/romscotti.webp"
-      },
-      {
-        "name": "Romulan",
-        "image": "/images/strains/romulan.webp"
-      },
-      {
-        "name": "Skunk #1",
-        "image": "/images/strains/skunk-1.webp"
-      },
-      {
-        "name": "Superchronic"
-      },
-      {
-        "name": "Thornberry Sunshine",
-        "image": "/images/strains/thornberry-sunshine.webp"
-      }
-    ]
-  },
-  {
-    "id": "zwischenlager-og",
-    "name": "Zwischenlager (OG)",
-    "description": "Der alte Stecklingsraum, bzw. die \"Notfallrepro\" oder auch: \"BT 2 1/2\" ;)",
-    "strains": [
-      {
-        "name": "24K Gold",
-        "image": "/images/strains/24k-gold.webp"
-      },
-      {
-        "name": "Bubble OG",
-        "image": "/images/strains/bubble-og.webp"
-      },
-      {
-        "name": "Cherrizozki",
-        "image": "/images/strains/cherrizozki.webp"
-      },
-      {
-        "name": "Falcon Heavy",
-        "image": "/images/strains/falcon-heavy.webp"
-      },
-      {
-        "name": "Forbidden Flazh"
-      },
-      {
-        "name": "Kacklesnatch",
-        "image": "/images/strains/kacklesnatch.webp"
-      },
-      {
-        "name": "Lemon Game",
-        "image": "/images/strains/lemon-game.webp"
-      },
-      {
-        "name": "London Lobster",
-        "image": "/images/strains/london-lobster.webp"
-      },
-      {
-        "name": "Moon Glow",
-        "image": "/images/strains/moon-glow.webp"
-      },
-      {
-        "name": "Neon Wormz"
-      },
-      {
-        "name": "Pink Runtz x Hollywood"
-      },
-      {
-        "name": "Romscotti",
-        "image": "/images/strains/romscotti.webp"
-      },
-      {
-        "name": "Superchronic"
-      },
-      {
-        "name": "Thornberry Sunshine",
-        "image": "/images/strains/thornberry-sunshine.webp"
-      }
-    ]
+    "size": "23m²",
+    "lighting": "LED: Platinum King 720W",
+    "ventilation": "Hautlüftungsanlage"
   }
 ]

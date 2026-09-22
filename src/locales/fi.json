@@ -317,16 +317,15 @@
     "teaser": {
       "tag": "Suoraan kasvatuksesta",
       "title": "Kasvatushuoneemme",
-      "description": "Katsaus kasvatuksemme tällä hetkellä aktiivisiin huoneisiin - lajikkeet ja kasvuvaiheet, synkronoituna reaaliajassa.",
+      "description": "Katsaus kasvatushuoneisiimme - varustus ja tunnelma, synkronoituna reaaliajassa Cannanas-järjestelmästämme.",
       "cta": "Katso kaikki huoneet"
     },
     "page": {
       "tag": "Suoraan kasvatuksesta",
       "title_1": "KASVATUS-",
       "title_2": "HUONEEMME",
-      "description": "Skemaattinen yleiskatsaus tällä hetkellä aktiivisiin huoneisiin - lajikkeet ja kasvuvaiheet, synkronoituna automaattisesti Cannanas-järjestelmästämme. Turvallisuussyistä emme näytä tarkkoja kasvimääriä.",
-      "empty": "Tällä hetkellä ei ole aktiivisia huoneita saatavilla.",
-      "room_empty": "Ei tällä hetkellä kasveja - syklien välissä"
+      "description": "Skemaattinen yleiskatsaus kasvatushuoneisiimme. Turvallisuussyistä emme näytä täällä tarkoituksella tietoja lajikkeista, kasvuvaiheista tai kasvimääristä.",
+      "empty": "Tällä hetkellä ei ole aktiivisia huoneita saatavilla."
     }
   }
 }

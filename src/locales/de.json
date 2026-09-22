@@ -452,16 +452,15 @@
     "teaser": {
       "tag": "Live aus dem Anbau",
       "title": "Unsere Anbauräume",
-      "description": "Ein Blick in die aktuell aktiven Räume unseres Grows – Sorten und Wachstumsphasen, live synchronisiert.",
+      "description": "Ein Blick in unsere Anbauräume – Ausstattung und Atmosphäre, live synchronisiert aus unserem Cannanas-System.",
       "cta": "Alle Räume ansehen"
     },
     "page": {
       "tag": "Live aus dem Anbau",
       "title_1": "UNSERE",
       "title_2": "ANBAURÄUME",
-      "description": "Ein schematischer Überblick über die aktuell aktiven Räume – Sorten und Wachstumsphasen, automatisch synchronisiert aus unserem Cannanas-System. Aus Sicherheitsgründen zeigen wir keine exakten Pflanzenzahlen.",
-      "empty": "Aktuell keine aktiven Räume verfügbar.",
-      "room_empty": "Aktuell keine Pflanzen – zwischen den Zyklen"
+      "description": "Ein schematischer Überblick über unsere Anbauräume. Aus Sicherheitsgründen zeigen wir hier bewusst keine Informationen zu Sorten, Wachstumsphasen oder Pflanzenzahlen.",
+      "empty": "Aktuell keine aktiven Räume verfügbar."
     }
   }
 }

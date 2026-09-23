@@ -352,5 +352,10 @@
     "empty": "Al momento non sono presenti genetiche.",
     "no_description": "Per questa genetica non è ancora disponibile una descrizione.",
     "placeholder": "Una panoramica dell'intera gamma di varietà è in arrivo a breve."
+  },
+  "not_found": {
+    "title": "Pagina non trovata",
+    "description": "La pagina richiesta non esiste o è stata spostata.",
+    "back_home": "Torna alla home"
   }
 }

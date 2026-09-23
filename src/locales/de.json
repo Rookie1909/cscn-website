@@ -487,5 +487,10 @@
     "empty": "Aktuell sind keine Genetiken hinterlegt.",
     "no_description": "Für diese Genetik liegt noch keine Beschreibung vor.",
     "placeholder": "Hier entsteht bald eine Übersicht über unser gesamtes Sortenangebot."
+  },
+  "not_found": {
+    "title": "Seite nicht gefunden",
+    "description": "Die aufgerufene Seite existiert nicht oder wurde verschoben.",
+    "back_home": "Zurück zur Startseite"
   }
 }

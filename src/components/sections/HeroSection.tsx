@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Award, Scale, ShieldCheck, Zap } from 'lucide-react';
 import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 const infographics = [
@@ -120,9 +120,9 @@ export function HeroSection() {
                 </DialogTrigger>
                 <DialogContent className="max-w-[95vw] md:max-w-5xl max-h-[95vh] border-none bg-white/80 dark:bg-black/60 backdrop-blur-2xl p-0 overflow-hidden sm:rounded-[2rem] [&>button]:text-primary [&>button]:bg-secondary/40 [&>button:hover]:bg-primary [&>button:hover]:text-white dark:[&>button]:bg-black/40">
                   <div className="p-4 sm:p-8 flex flex-col h-full w-full justify-center">
-                    <h2 className="text-2xl font-headline font-black text-zinc-900 dark:text-white text-center mb-6 drop-shadow-sm dark:drop-shadow-md">
+                    <DialogTitle className="text-2xl font-headline font-black text-zinc-900 dark:text-white text-center mb-6 drop-shadow-sm dark:drop-shadow-md">
                       {t('home.hero.infographics.title')}
-                    </h2>
+                    </DialogTitle>
                     <Carousel className="w-full">
                       <CarouselContent>
                         {infographics.map((info, idx) => (

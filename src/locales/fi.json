@@ -352,5 +352,10 @@
     "empty": "Genetiikkoja ei ole tällä hetkellä listattu.",
     "no_description": "Tälle genetiikalle ei ole vielä kuvausta.",
     "placeholder": "Yleiskatsaus koko lajikevalikoimaamme on tulossa pian."
+  },
+  "not_found": {
+    "title": "Sivua ei löytynyt",
+    "description": "Etsimääsi sivua ei ole olemassa tai se on siirretty.",
+    "back_home": "Takaisin etusivulle"
   }
 }

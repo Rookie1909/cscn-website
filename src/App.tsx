@@ -1,5 +1,6 @@
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { ScrollToTop } from '@/components/ScrollToTop';
+import { PageTitle } from '@/components/PageTitle';
 import { AgeVerificationProvider } from '@/contexts/AgeVerificationContext';
 import { AgeVerificationModal } from '@/components/AgeVerificationModal';
 import { RootLayout } from '@/components/layout/RootLayout';
@@ -14,6 +15,7 @@ import { Gesundheitsschutz } from '@/pages/Gesundheitsschutz';
 import { Anbau } from '@/pages/Anbau';
 import { Sortiment } from '@/pages/Sortiment';
 import { SortimentProfil } from '@/pages/SortimentProfil';
+import { NotFound } from '@/pages/NotFound';
 import { ThemeProvider } from '@/components/ThemeProvider';
 
 function App() {
@@ -22,6 +24,7 @@ function App() {
       <AgeVerificationProvider>
         <HashRouter>
         <ScrollToTop />
+        <PageTitle />
         <AgeVerificationModal />
         <Routes>
           <Route path="/" element={<RootLayout />}>
@@ -36,6 +39,7 @@ function App() {
             <Route path="neuigkeiten" element={<Neuigkeiten />} />
             <Route path="impressum-und-datenschutz" element={<Impressum />} />
             <Route path="gesundheitsschutz" element={<Gesundheitsschutz />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </HashRouter>

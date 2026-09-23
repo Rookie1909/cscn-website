@@ -352,5 +352,10 @@
     "empty": "No genetics are currently listed.",
     "no_description": "No description is available for this genetic yet.",
     "placeholder": "An overview of our entire strain range is coming soon."
+  },
+  "not_found": {
+    "title": "Page not found",
+    "description": "The page you requested does not exist or has been moved.",
+    "back_home": "Back to homepage"
   }
 }

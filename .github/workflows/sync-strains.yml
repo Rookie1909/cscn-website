@@ -40,5 +40,9 @@ jobs:
             echo "No changes in Cannanas data."
           else
             git commit -m "chore: sync data from Cannanas"
-            git push
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "Push rejected (someone else pushed in the meantime), retrying ($i/5)..."
+              sleep 5
+            done
           fi

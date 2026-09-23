@@ -1,4 +1,5 @@
 import { HashRouter, Routes, Route } from 'react-router-dom';
+import { ScrollToTop } from '@/components/ScrollToTop';
 import { AgeVerificationProvider } from '@/contexts/AgeVerificationContext';
 import { AgeVerificationModal } from '@/components/AgeVerificationModal';
 import { RootLayout } from '@/components/layout/RootLayout';
@@ -20,6 +21,7 @@ function App() {
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
       <AgeVerificationProvider>
         <HashRouter>
+        <ScrollToTop />
         <AgeVerificationModal />
         <Routes>
           <Route path="/" element={<RootLayout />}>

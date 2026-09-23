@@ -25,11 +25,17 @@ jobs:
           CANNANAS_API_KEY: ${{ secrets.CANNANAS_API_KEY }}
           CANNANAS_CLUB_ID: ${{ secrets.CANNANAS_CLUB_ID }}
         run: node .github/scripts/sync-grow-rooms.cjs
+      - name: Fetch genetics library from Cannanas
+        env:
+          CANNANAS_API_KEY: ${{ secrets.CANNANAS_API_KEY }}
+          CANNANAS_CLUB_ID: ${{ secrets.CANNANAS_CLUB_ID }}
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+        run: node .github/scripts/sync-genetics.cjs
       - name: Commit and push if data changed
         run: |
           git config user.name "cannanas-sync-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add src/data/strains-sync.json public/images/strains src/data/grow-rooms.json public/images/zones
+          git add src/data/strains-sync.json public/images/strains src/data/grow-rooms.json public/images/zones src/data/genetics.json
           if git diff --staged --quiet; then
             echo "No changes in Cannanas data."
           else

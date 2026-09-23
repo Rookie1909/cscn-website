@@ -1,0 +1,645 @@
+[
+  {
+    "id": "ak48",
+    "name": "AK48",
+    "type": "sativa",
+    "indica": 20,
+    "sativa": 80,
+    "thc": "11-13%",
+    "cbd": "9-10%",
+    "genetics": "AK47 (Kolumbien x Mexiko x Thailand x Afghanistan) x ?",
+    "breeder": "Nirvana",
+    "description": "Seit Mitte der 90er Jahre sind AK-Varietäten immer beliebter geworden. Unsere AK-48 ist eine der stärksten, frühest blühenden Varietäten vorhanden. Die Pflanzen erzeugen harte Knospen mit einem außergewöhnlichen, penetranten Aroma. AK-48 ist zwar eine Hybride aus Indica und Sativa, doch bei seinem High-Effekt ähnelt er eher den Sativa. Obwohl die meisten Züchter sich für eine längere Wachstumsphase entscheiden würden, ist es unter perfekten Bedingungen möglich, AK-48 in nur 48 Tagen erntefähig zu machen.\n\nTatkräftig, Erhebend & Energetisch",
+    "effects": [
+      "Tatkräftig",
+      "Erhebend",
+      "Energetisch"
+    ],
+    "terpenes": [
+      "Moschus",
+      "Säuerlich",
+      "Haschisch",
+      "Floral"
+    ],
+    "image": "/images/strains/ak48.webp",
+    "status": "none",
+    "description_en": "Since the mid-90s, AK varieties have become increasingly popular. Our AK-48 is one of the strongest, earliest flowering varieties available. The plants produce hard buds with an exceptional, pungent aroma. Although AK-48 is a hybrid of Indica and Sativa, its high effect is more similar to Sativa. While most growers would opt for a longer growth phase, under perfect conditions it is possible to make AK-48 ready for harvest in just 48 days.",
+    "effects_en": [
+      "Energetic",
+      "Uplifting",
+      "Active"
+    ],
+    "terpenes_en": [
+      "Musk",
+      "Sour",
+      "Hashish",
+      "Floral"
+    ],
+    "description_fi": "90-luvun puolivälistä lähtien AK-lajikkeet ovat tulleet yhä suositummiksi. AK-48 on yksi voimakkaimmista ja aikaisimmin kukkivista lajikkeista, joita on saatavilla. Kasvit tuottavat kovia silmuja, joilla on poikkeuksellinen, voimakas tuoksu. Vaikka AK-48 on indica- ja sativa-lajikkeiden risteytys, sen vaikutus muistuttaa enemmän sativaa. Vaikka useimmat viljelijät valitsisivat pidemmän kasvukauden, täydellisissä olosuhteissa AK-48 on mahdollista saada sadonkorjuukuntoon vain 48 päivässä.\n\nVoimakas, kohottava ja energinen",
+    "effects_fi": [
+      "Aktiivinen",
+      "Piristävä",
+      "Energeettisesti"
+    ],
+    "terpenes_fi": [
+      "Myski",
+      "Hapan",
+      "hasis",
+      "Kukkakuvioinen"
+    ],
+    "description_it": "Dalla metà degli anni '90, le varietà AK hanno riscosso un successo sempre maggiore. La nostra AK-48 è una delle varietà più potenti e a fioritura precoce attualmente disponibili. Le piante producono cime compatte dall’aroma straordinario e penetrante. Sebbene l’AK-48 sia un ibrido tra Indica e Sativa, il suo effetto è più simile a quello delle Sativa. Anche se la maggior parte dei coltivatori opterebbe per una fase di crescita più lunga, in condizioni ottimali è possibile portare l’AK-48 a maturazione in soli 48 giorni.\n\nDinamica, esaltante ed energizzante",
+    "effects_it": [
+      "Dinamico",
+      "Edificante",
+      "Dal punto di vista energetico"
+    ],
+    "terpenes_it": [
+      "Moscato",
+      "Aspro",
+      "Hashish",
+      "Florale"
+    ]
+  },
+  {
+    "id": "bizcocho",
+    "name": "Bizcocho",
+    "type": "indica",
+    "indica": 60,
+    "sativa": 40,
+    "thc": "19-21%",
+    "cbd": "<2%",
+    "genetics": "Biscotti x Bacio #4 × Zkittlez x (Road Dawg x Face Off OG Bx2)",
+    "breeder": "Grounded Genetics",
+    "description": "Der keksdominante Phänotyp von Bizcocho bietet ein außergewöhnlich komplexes und tiefes Geschmacksprofil, das besonders für Liebhaber von süßen, gasigen Sorten interessant ist.\n\nDie Effekte von Bizcocho ist langanhaltend und kombiniert mentale Klarheit mit körperlicher Entspannung, ideal für verschiedene Aktivitäten oder zur Entspannung.",
+    "effects": [
+      "Mentale Klarheit",
+      "Körperliche Entspannung"
+    ],
+    "terpenes": [
+      "Süß",
+      "Frisch gebackene Kekse",
+      "Cookie-Gassigkeit",
+      "Diesel",
+      "Zkittlez"
+    ],
+    "image": "/images/strains/bizcocho.webp",
+    "status": "none",
+    "description_en": "The cookie-dominant phenotype of Bizcocho offers an exceptionally complex and deep flavor profile, particularly interesting for lovers of sweet, gassy strains. The effects of Bizcocho are long-lasting and combine mental clarity with physical relaxation, ideal for various activities or unwinding.",
+    "effects_en": [
+      "Mental Clarity",
+      "Physical Relaxation"
+    ],
+    "terpenes_en": [
+      "Sweet",
+      "Freshly baked cookies",
+      "Cookie gassiness",
+      "Diesel",
+      "Zkittlez"
+    ],
+    "description_fi": "Bizcochon keksimäinen fenotyyppi tarjoaa poikkeuksellisen monipuolisen ja syvän makuprofiilin, joka kiinnostaa erityisesti makeiden ja kaasumaisten lajikkeiden ystäviä.\n\nBizcochon vaikutukset ovat pitkäkestoisia ja niissä yhdistyvät mielen selkeys ja kehon rentoutuminen, mikä sopii erinomaisesti erilaisiin aktiviteetteihin tai rentoutumiseen.",
+    "effects_fi": [
+      "Henkinen selkeys",
+      "Fyysinen rentoutuminen"
+    ],
+    "terpenes_fi": [
+      "Söpö",
+      "Tuoreet keksit",
+      "Evästeiden tiheys",
+      "Diesel",
+      "Zkittlez"
+    ],
+    "description_it": "Il fenotipo di Bizcocho, caratterizzato da note di biscotto, offre un profilo aromatico straordinariamente complesso e intenso, particolarmente interessante per gli amanti delle varietà dolci e frizzanti.\n\nGli effetti di Bizcocho sono di lunga durata e combinano lucidità mentale e rilassamento fisico, rendendola ideale per diverse attività o per il relax.",
+    "effects_it": [
+      "Lucidità mentale",
+      "Rilassamento fisico"
+    ],
+    "terpenes_it": [
+      "Dolce",
+      "Biscotti appena sfornati",
+      "Contenuto di biscotti",
+      "Diesel",
+      "Zkittlez"
+    ]
+  },
+  {
+    "id": "blue-gelato-41",
+    "name": "Blue Gelato 41",
+    "type": "hybrid",
+    "indica": 50,
+    "sativa": 50,
+    "thc": "20-22%",
+    "cbd": "<2%",
+    "genetics": "Sunset Sherbet × Thin Mint Girl Scout Cookies",
+    "breeder": "Seedstockers",
+    "description": "Blue Gelato 41 ist unsere sensationelle Blueberry Superkreuzung von der Westküste. Sie entstand durch das Kreuzen der berühmten Blueberry-Genetik mit Thin Mint Girl Scout Cookies und dem frisch-fruchtigem Indica Sunset Sherbet. Blue Gelato 41 reißt dich schnellstens in einen See tiefster psychedelischer Entspannung.\n\nDie Buds dieser Sorte sind harzig und versprühen ein süß-erdigen Zitronengeruch, wobei bei vielen Phänotypen die Färbung der Blüten blau bis lila wirkt.   Lass dich von einem Geschmackserlebnis begeistern, während dieses Indica deine Schmerzen „wegmassiert“.\n\nDie Wirkung ist ausgewogen und vielschichtig: Sie setzt mit einer sanften Euphorie im Kopf ein, hebt die Stimmung und fördert kreative Gedanken. Gleichzeitig entfaltet sich eine wohltuende körperliche Entspannung, ohne träge zu machen.",
+    "effects": [
+      "Sanfte Euphorie",
+      "Stimmungsaufhellend",
+      "Kreativ",
+      "Körperliche Entspannung"
+    ],
+    "terpenes": [
+      "Cremig-süß",
+      "Fruchtig",
+      "Erde",
+      "Kush",
+      "Vanillecreme",
+      "Beeren"
+    ],
+    "image": "/images/strains/blue-gelato-41.webp",
+    "status": "none",
+    "description_en": "Blue Gelato 41 is our sensational Blueberry supercross from the West Coast. It was created by crossing the famous Blueberry genetics with Thin Mint Girl Scout Cookies and the fresh-fruity Indica Sunset Sherbet. Blue Gelato 41 quickly pulls you into a sea of deep psychedelic relaxation. The buds of this strain are resinous and exude a sweet-earthy lemon scent, with many phenotypes appearing blue to purple in color.",
+    "effects_en": [
+      "Gentle Euphoria",
+      "Mood-enhancing",
+      "Creative",
+      "Physical Relaxation"
+    ],
+    "terpenes_en": [
+      "Creamy-sweet",
+      "Fruity",
+      "Earthy",
+      "Kush",
+      "Vanilla Cream",
+      "Berries"
+    ],
+    "description_fi": "Blue Gelato 41 on sensaatiomainen Blueberry-superristeytys länsirannikolta. Se syntyi risteyttämällä kuuluisaa Blueberry-genetiikkaa Thin Mint Girl Scout Cookies -lajikkeen ja raikkaan hedelmäisen Indica Sunset Sherbetin kanssa. Blue Gelato 41 vie sinut hetkessä syvään psykedeelisen rentoutumisen mereen.\n\nTämän lajikkeen kukinnot ovat hartsipitoisia ja levittävät makean, maanläheisen sitruunan tuoksua, ja monissa fenotyypeissä kukkien väri vaihtelee sinisestä purppuraan.   Anna makuelämyksen innostaa sinua, kun tämä Indica ”hieroo” kivut pois.\n\nVaikutus on tasapainoinen ja monipuolinen: se alkaa lempeällä euforialla päässä, kohottaa mielialaa ja edistää luovia ajatuksia. Samalla kehossa leviää miellyttävä rentoutuminen ilman, että se tekee sinusta uneliaaksi.",
+    "effects_fi": [
+      "Lempeä euforia",
+      "Mielialaa kohottava",
+      "Luova",
+      "Fyysinen rentoutuminen"
+    ],
+    "terpenes_fi": [
+      "Kermainen ja makea",
+      "Hedelmäinen",
+      "Maa",
+      "Kush",
+      "Vaniljakastike",
+      "Marjat"
+    ],
+    "description_it": "Blue Gelato 41 è il nostro sensazionale superincrocio Blueberry proveniente dalla costa occidentale. È nato dall’incrocio tra la famosa genetica Blueberry, la Thin Mint Girl Scout Cookies e l’Indica Sunset Sherbet, dal gusto fresco e fruttato. Blue Gelato 41 ti trascina in un istante in un mare di profondo rilassamento psichedelico.\n\nLe cime di questa varietà sono resinose ed emanano un profumo dolce, terroso e agrumato, mentre in molti fenotipi il colore dei fiori varia dal blu al viola.   Lasciati conquistare da un’esperienza gustativa unica, mentre questa Indica “massaggia via” il tuo dolore.\n\nL’effetto è equilibrato e sfaccettato: inizia con una delicata euforia a livello mentale, migliora l’umore e stimola la creatività. Allo stesso tempo, si sviluppa un benefico rilassamento fisico, senza provocare sonnolenza.",
+    "effects_it": [
+      "Delicata euforia",
+      "Migliora l'umore",
+      "Creativo",
+      "Rilassamento fisico"
+    ],
+    "terpenes_it": [
+      "Cremoso e dolce",
+      "Fruttato",
+      "Terra",
+      "Kush",
+      "Crema alla vaniglia",
+      "Frutti di bosco"
+    ]
+  },
+  {
+    "id": "bubble-og",
+    "name": "Bubble OG",
+    "type": "indica",
+    "indica": 70,
+    "sativa": 30,
+    "thc": "-",
+    "cbd": "-",
+    "genetics": "Bubble Bath (The Soap x Project 4516) x LIT OG",
+    "breeder": "LIT Farms Genetics",
+    "description": "Bubble OG ist eine moderne, überwiegend Indica-dominierte Hybridsorte von LIT Farms, entstanden aus der Kreuzung von Bubble Bath und LIT OG. Ziel dieser Kreuzung war es, die außergewöhnlichen \"Soapy\"-Terpene der preisgekrönten Bubble Bath mit der kraftvollen OG-Struktur und Harzproduktion der LIT-OG-Linie zu kombinieren. Das Ergebnis ist eine Sorte mit markanter Aromatik, hoher Trichomproduktion und kräftigem Wachstum. Die Pflanzen entwickeln kompakte, dichte Blüten mit hervorragendem Bag Appeal und eignen sich sowohl für den Blütenkonsum als auch für hochwertige Extraktionen\n\nBubble OG entwickelt eine kräftige und langanhaltende Hybridwirkung. Der Wirkungseintritt beginnt häufig mit einer angenehmen Euphorie und geistigen Gelassenheit, bevor sich eine intensive körperliche Entspannung entfaltet. Trotz der deutlichen Indica-Dominanz bleibt die Wirkung zunächst angenehm klar und stimmungsaufhellend. Mit steigender Dosierung entwickelt sich ein ausgeprägter Body-Stone, der besonders für ruhige Abendstunden geeignet ist",
+    "effects": [
+      "Entspannend",
+      "Beruhigend"
+    ],
+    "terpenes": [
+      "Seifig",
+      "Minze",
+      "Lavendel",
+      "Salbei",
+      "Chemikalien",
+      "Ammoniak",
+      "OG-Noten",
+      "Süßigkeiten"
+    ],
+    "image": "/images/strains/bubble-og.webp",
+    "status": "none",
+    "description_en": "BUBBLE OG by LITFARMS is a cross between Bubble Bath (The Soap x Project 4516) x LIT OG. By mixing the minty-soapy nuances of The Soap and the Zkittlez notes from Project 4516 combined with OG-heavy notes containing gas and pastry tones on the finish, a completely new blend emerges.",
+    "effects_en": [
+      "Relaxing",
+      "Calming"
+    ],
+    "terpenes_en": [
+      "Soapy",
+      "Mint",
+      "Lavender",
+      "Sage",
+      "Chemicals",
+      "Ammonia",
+      "OG notes",
+      "Sweets"
+    ],
+    "description_fi": "Bubble OG on LIT Farmsin kehittämä moderni, pääosin indica-dominoiva hybridilajike, joka on syntynyt Bubble Bathin ja LIT OG:n risteytyksestä. Risteytyksen tavoitteena oli yhdistää palkitun Bubble Bathin ainutlaatuiset ”saippuamaiset” terpeenit LIT OG -linjan voimakkaaseen rakenteeseen ja hartsituotantoon. Tuloksena on lajike, jolla on tunnusomainen aromi, runsas trikomituotanto ja voimakas kasvu. Kasvit tuottavat kompakteja, tiheitä kukintoja, jotka ovat visuaalisesti erittäin houkuttelevia, ja ne soveltuvat sekä kukkien suoraan käyttöön että korkealaatuisten uutteiden valmistukseen.\n\nBubble OG:n vaikutus on voimakas ja pitkäkestoinen. Vaikutus alkaa usein miellyttävällä euforialla ja henkisellä rauhallisuudella, ennen kuin voimakas fyysinen rentoutuminen leviää. Huolimatta selvästä indica-dominanssista vaikutus pysyy aluksi miellyttävän selkeänä ja mielialaa kohottavana. Annoksen kasvaessa kehittyy voimakas kehon rentoutuminen, joka sopii erityisen hyvin rauhallisiin iltahetkiin",
+    "effects_fi": [
+      "Rentouttava",
+      "Rauhoittava"
+    ],
+    "terpenes_fi": [
+      "Saippuainen",
+      "minttu",
+      "Laventeli",
+      "salvia",
+      "Kemikaalit",
+      "Ammoniakki",
+      "OG-arvosanat",
+      "Makeiset"
+    ],
+    "description_it": "La Bubble OG è una varietà ibrida moderna a predominanza Indica prodotta da LIT Farms, ottenuta dall'incrocio tra la Bubble Bath e la LIT OG. L'obiettivo di questo incrocio era quello di combinare gli straordinari terpeni \"soapy\" della pluripremiata Bubble Bath con la potente struttura OG e la produzione di resina della linea LIT OG. Il risultato è una varietà dal profumo caratteristico, con un'elevata produzione di tricomi e una crescita vigorosa. Le piante sviluppano infiorescenze compatte e dense dall’eccellente aspetto estetico e sono adatte sia al consumo diretto delle infiorescenze che alla produzione di estratti di alta qualità.\n\nLa Bubble OG produce un effetto ibrido potente e di lunga durata. L’effetto inizia spesso con una piacevole euforia e serenità mentale, prima che si manifesti un intenso rilassamento fisico. Nonostante la netta predominanza Indica, l’effetto rimane inizialmente piacevolmente lucido e migliora l’umore. Con l’aumentare del dosaggio si sviluppa un marcato «body stone», particolarmente adatto per tranquille serate.",
+    "effects_it": [
+      "Rilassante",
+      "Rassicurante"
+    ],
+    "terpenes_it": [
+      "Saponoso",
+      "Menta",
+      "Lavanda",
+      "Salvia",
+      "Sostanze chimiche",
+      "Ammoniaca",
+      "Voti OG",
+      "Dolciumi"
+    ]
+  },
+  {
+    "id": "double-rainbow-sherb",
+    "name": "Double Rainbow Sherb",
+    "type": "hybrid",
+    "indica": 50,
+    "sativa": 50,
+    "thc": "20-24%",
+    "cbd": "<2%",
+    "genetics": "RS11 x (RS11 x Lemon Cherry Gelato)",
+    "breeder": "LIT Farms Genetics",
+    "description": "RS-11 ist eine Indica-dominante Hybride, die durch Kreuzung von Pink Guava x OZK entstanden ist.\n\nDiese Blüte hat dichte und flauschige, traubenförmige, blaugrüne Nuggets mit vielen dünnen, hellorangefarbenen Härchen und einer Schicht aus frostigen, blau getönten, weißen Kristalltrichomen.\n\n Lemon Cherry Gelato ist eine Indica-dominante Hybridsorte, die durch Kreuzung der berüchtigten Sunset Sherbet x Girl Scout Cookies x einer weiteren unbekannten Sorte entstanden ist. Lemon Cherry Gelato bietet einen erstaunlichen Geschmack und eine Wirkung, die Sie in pure Glückseligkeit versetzen wird. Diese Knospe hat einen Geschmack, der genau dem entspricht, was ihr Name vermuten lässt – saure Zitronen gepaart mit reichhaltigen Kirschen und Beeren. Das Aroma ist ebenso köstlich, mit einer säuerlichen Zitrusnote, akzentuiert durch frische Beeren und Himbeeren und einem Hauch von erdiger Kiefer.\n\nDiese Knospe hat flache, superdichte, übergroße, waldgrüne Nuggets mit vielen dünnen bernsteinfarbenen Härchen und einer Schicht milchig-bernsteinfarbener Kristalltrichome.\n\nBeruhigender Touch, mit einer angenehmen, hybriden Wirkung:\n\nSowohl Kopf als auch Körper werden von der Wirkung dieses Kultivars bedient. \n\nEine Blüte, welche in verregneten Tagen etwas Gemütlichkeit bringt.",
+    "effects": [
+      "Beruhigend",
+      "Gemütlichkeit",
+      "Glückseligkeit"
+    ],
+    "terpenes": [
+      "Süß",
+      "Fruchtig",
+      "Kirsch-Beeren",
+      "Zuckerbonbons",
+      "Kiefer"
+    ],
+    "image": "/images/strains/double-rainbow-sherb.webp",
+    "status": "none",
+    "description_en": "RS-11 is an Indica-dominant hybrid created by crossing Pink Guava x OZK. Lemon Cherry Gelato offers an amazing taste and an effect that will put you in pure bliss. This bud has a flavor that matches exactly what its name suggests – sour lemons paired with rich cherries and berries.",
+    "effects_en": [
+      "Calming",
+      "Comfort",
+      "Bliss"
+    ],
+    "terpenes_en": [
+      "Sweet",
+      "Fruity",
+      "Cherry-Berry",
+      "Sugar Candy",
+      "Pine"
+    ],
+    "description_fi": "RS-11 on indica-dominoiva hybridi, joka on syntynyt risteyttämällä Pink Guava ja OZK.\n\nTämän lajikkeen kukinnot ovat tiheitä ja pörröisiä, rypälemäisiä, sinivihreitä nugetteja, joissa on runsaasti ohuita, vaaleanoransseja karvoja sekä kerros huurteisia, sinisävyisiä, valkoisia kristallitrikomeja.\n\n Lemon Cherry Gelato on indica-dominoiva hybridilajike, joka on syntynyt risteyttämällä kuuluisaa Sunset Sherbetiä, Girl Scout Cookiesia ja yhtä tuntematonta lajiketta. Lemon Cherry Gelato tarjoaa hämmästyttävän maun ja vaikutuksen, joka vie sinut puhtaaseen autuuteen. Tämän kukinnan maku on juuri sitä, mitä sen nimi antaa ymmärtää – hapokkaita sitruunoita yhdistettynä täyteläisiin kirsikoihin ja marjoihin. Aromi on yhtä herkullinen: siinä on hapahko sitrushedelmien vivahde, jota korostavat tuoreet marjat ja vadelmat sekä ripaus maanläheistä mäntyä.\n\nTämän lajikkeen kukinnot ovat litteitä, erittäin tiheitä, ylikokoisia ja metsänvihreitä, ja niissä on runsaasti ohuita, meripihkanvärisiä karvoja sekä kerros maitomais-meripihkanvärisiä kristallitrikoomeja.\n\nRauhoittava vaikutus, miellyttävä hybridi-vaikutus:\n\nTämän lajikkeen vaikutus kohdistuu sekä päähän että kehoon. \n\nKukka, joka tuo hieman kodikkuutta sateisiin päiviin.",
+    "effects_fi": [
+      "Rauhoittava",
+      "kodikkuus",
+      "autuus"
+    ],
+    "terpenes_fi": [
+      "Söpö",
+      "Hedelmäinen",
+      "kirsikka-marjat",
+      "sokerikarkit",
+      "mänty"
+    ],
+    "description_it": "L'RS-11 è un ibrido a predominanza Indica, ottenuto dall'incrocio tra Pink Guava e OZK.\n\nQuesta varietà presenta cime compatte e soffici, a forma di grappolo, di colore blu-verde, con numerosi peli sottili di colore arancione chiaro e uno strato di tricomi cristallini bianchi, ricoperti di una patina blu.\n\n La Lemon Cherry Gelato è una varietà ibrida a predominanza Indica, ottenuta dall’incrocio tra la famigerata Sunset Sherbet, la Girl Scout Cookies e un’altra varietà sconosciuta. La Lemon Cherry Gelato offre un gusto straordinario e un effetto che vi trasporterà in uno stato di pura beatitudine. Questa infiorescenza ha un sapore che rispecchia esattamente ciò che il suo nome suggerisce: limoni aciduli abbinati a ciliegie e frutti di bosco dal gusto ricco. Anche l’aroma è delizioso, con una nota agrumata acidula, accentuata da frutti di bosco freschi e lamponi, e un tocco di pino terroso.\n\nQuesta varietà presenta cime piatte, super dense, di grandi dimensioni, di colore verde bosco, con numerosi sottili peli color ambra e uno strato di tricomi cristallini di colore ambra lattiginoso.\n\nEffetto rilassante, con un piacevole effetto ibrido:\n\nsia la mente che il corpo traggono beneficio dagli effetti di questa cultivar. \n\nUna fioritura che porta un po’ di intimità nelle giornate piovose.",
+    "effects_it": [
+      "Rassicurante",
+      "Accoglienza",
+      "Beatitudine"
+    ],
+    "terpenes_it": [
+      "Dolce",
+      "Fruttato",
+      "Ciliegie e frutti di bosco",
+      "caramelle allo zucchero",
+      "Pino"
+    ]
+  },
+  {
+    "id": "gorilla-x-blueberry",
+    "name": "Gorilla x Blueberry",
+    "type": "hybrid",
+    "indica": 50,
+    "sativa": 50,
+    "thc": "-",
+    "cbd": "-",
+    "genetics": "",
+    "breeder": "",
+    "description": "Eine kraftvolle Kreuzung zwischen der legendären Gorilla Glue und der fruchtigen Blueberry.",
+    "effects": [
+      "Ausgewogen"
+    ],
+    "terpenes": [
+      "Beeren",
+      "Erde",
+      "Diesel"
+    ],
+    "status": "none",
+    "description_en": "A powerful cross between the legendary Gorilla Glue and the fruity Blueberry.",
+    "effects_en": [
+      "Balanced"
+    ],
+    "terpenes_en": [
+      "Berries",
+      "Earth",
+      "Diesel"
+    ],
+    "description_fi": "Voimakas risteytys legendaarisen Gorilla Glue -lajikkeen ja hedelmäisen Blueberry-lajikkeen välillä.",
+    "effects_fi": [
+      "Tasapainoinen"
+    ],
+    "terpenes_fi": [
+      "Marjat",
+      "Maa",
+      "Diesel"
+    ],
+    "description_it": "Un potente incrocio tra la leggendaria Gorilla Glue e la fruttata Blueberry.",
+    "effects_it": [
+      "Equilibrato"
+    ],
+    "terpenes_it": [
+      "Frutti di bosco",
+      "Terra",
+      "Diesel"
+    ]
+  },
+  {
+    "id": "jelly-donutz",
+    "name": "Jelly Donutz",
+    "type": "hybrid",
+    "indica": 50,
+    "sativa": 50,
+    "thc": "19-21%",
+    "cbd": "<2%",
+    "genetics": "Jelly Donutz (#160x#17) x Hella Jelly x White Runtz",
+    "breeder": "Humboldt Seed Company (Twentyk Cut)",
+    "description": "Die Wirkung ist zunächst klar, kreativ und aktivierend, bevor sie in eine angenehme körperliche Entspannung übergeht.\nMit sehr hohen THC-Werten zählt Jelly Donutz zu den potenteren Sorten im CSCN-Portfolio, bleibt dabei aber angenehm ausbalanciert.\nDie Sorte eignet sich hervorragend für Tagesgebrauch, kreative Tätigkeiten oder gesellige Momente, ohne übermäßig sedierend zu wirken.",
+    "effects": [
+      "Klar",
+      "Kreativ",
+      "Aktivierend",
+      "Körperliche Entspannung"
+    ],
+    "terpenes": [
+      "Süß",
+      "Gummibärchen",
+      "Gasig",
+      "Tropisch",
+      "Sahnig",
+      "Gebratener Donut"
+    ],
+    "image": "/images/strains/jelly-donutz.webp",
+    "status": "none",
+    "description_en": "The effect is initially clear, creative, and activating before transitioning into a pleasant physical relaxation. With very high THC levels, Jelly Donutz is one of the more potent strains in the CSCN portfolio, while remaining pleasantly balanced.",
+    "effects_en": [
+      "Clear",
+      "Creative",
+      "Activating",
+      "Physical Relaxation"
+    ],
+    "terpenes_en": [
+      "Sweet",
+      "Gummy bears",
+      "Gassy",
+      "Tropical",
+      "Creamy",
+      "Fried Donut"
+    ],
+    "description_fi": "Vaikutus on aluksi selkeä, luova ja virkistävä, ennen kuin se muuttuu miellyttäväksi fyysiseksi rentoutumiseksi.\nErittäin korkeiden THC-pitoisuuksiensa ansiosta Jelly Donutz kuuluu CSCN:n valikoiman voimakkaimpiin lajikkeisiin, mutta pysyy silti miellyttävän tasapainoisena.\nLajike sopii erinomaisesti päivittäiseen käyttöön, luoviin harrastuksiin tai seurusteluhetkiin ilman, että se aiheuttaisi liiallista uneliaisuutta.",
+    "effects_fi": [
+      "Selvä",
+      "Luova",
+      "Virkistävä",
+      "Fyysinen rentoutuminen"
+    ],
+    "terpenes_fi": [
+      "Söpö",
+      "kumikarhut",
+      "Kaasumainen",
+      "Trooppinen",
+      "Kermainen",
+      "Paistettu donitsi"
+    ],
+    "description_it": "L'effetto è inizialmente limpido, creativo e stimolante, per poi sfociare in un piacevole rilassamento fisico.\nCon livelli di THC molto elevati, la Jelly Donutz è una delle varietà più potenti del portafoglio CSCN, pur rimanendo piacevolmente equilibrata.\nQuesta varietà è ideale per l’uso diurno, per attività creative o momenti in compagnia, senza esercitare un effetto eccessivamente sedativo.",
+    "effects_it": [
+      "Certo",
+      "Creativo",
+      "Energizzante",
+      "Rilassamento fisico"
+    ],
+    "terpenes_it": [
+      "Dolce",
+      "Orsetti di gomma",
+      "Gassoso",
+      "Tropicale",
+      "Cremoso",
+      "Ciambella fritta"
+    ]
+  },
+  {
+    "id": "platinum-kush",
+    "name": "Platinum Kush",
+    "type": "indica",
+    "indica": 80,
+    "sativa": 20,
+    "thc": "22%",
+    "cbd": "<2%",
+    "genetics": "Platinum x OGKB",
+    "breeder": "In House Genetics",
+    "description": "Der Züchter In-House Genetics arbeitet an der OG Kush Breath-Linie mit der Cannabissorte Platinum Kush Breath. Platinum Kush Breath von In-House ist Platinum x OGKB V2.1, es sieht also so aus, als würde In-House dem struppigen, scharfen OGKB Glanz und Stabilität verleihen – keine schlechte Idee. Platinum ist angeblich eine Old-School-Kreuzung aus UW Hashplant und Permafrost. Sie sieht fantastisch aus, duftet nach einem gedämpften Haschisch-Gas-Aroma und wirkt erdend.\n\nBeruhigend, Körperbetonte Wirkung",
+    "effects": [
+      "Beruhigend",
+      "Körperbetonte Wirkung"
+    ],
+    "terpenes": [
+      "Erdig",
+      "Würzig",
+      "Kush",
+      "Hash-lastig"
+    ],
+    "image": "/images/strains/platinum-kush.webp",
+    "status": "none",
+    "description_en": "Platinum Kush Breath from In-House is Platinum x OGKB V2.1. It looks fantastic, smells like a muted hash-gas aroma, and has a grounding effect. Platinum is reportedly an old-school cross of UW Hashplant and Permafrost.",
+    "effects_en": [
+      "Calming",
+      "Body-focused effect"
+    ],
+    "terpenes_en": [
+      "Earthy",
+      "Spicy",
+      "Kush",
+      "Hashy"
+    ],
+    "description_fi": "Kasvattaja In-House Genetics kehittää OG Kush Breath -linjaa Platinum Kush Breath -kannabislajikkeella. In-Housen Platinum Kush Breath on Platinum x OGKB V2.1, joten näyttää siltä, että In-House lisää karheaan ja terävään OGKB:hen loistoa ja vakautta – ei lainkaan huono idea. Platinum on kuulemma vanhan koulukunnan risteytys, joka on syntynyt UW Hashplantin ja Permafrostin risteytyksestä. Se näyttää upealta, tuoksuu hillityltä hasis-kaasu-aromilta ja vaikuttaa maadoittavalta.\n\nRauhoittava, kehoon vaikuttava vaikutus",
+    "effects_fi": [
+      "Rauhoittava",
+      "Kehon muotoja korostava vaikutus"
+    ],
+    "terpenes_fi": [
+      "Maanläheinen",
+      "Mausteinen",
+      "Kush",
+      "Hash-painotteinen"
+    ],
+    "description_it": "Il coltivatore In-House Genetics sta lavorando alla linea OG Kush Breath con la varietà di cannabis Platinum Kush Breath. La Platinum Kush Breath di In-House è un incrocio tra Platinum e OGKB V2.1, quindi sembra che In-House stia conferendo alla ruvida e pungente OGKB lucentezza e stabilità: non è affatto una cattiva idea. Si dice che la Platinum sia un incrocio old-school tra UW Hashplant e Permafrost. Ha un aspetto fantastico, profuma di un aroma tenue di hashish e gas e ha un effetto che fa sentire con i piedi per terra.\n\nEffetto calmante e che agisce sul corpo",
+    "effects_it": [
+      "Rassicurante",
+      "Effetto che valorizza le forme del corpo"
+    ],
+    "terpenes_it": [
+      "Terroso",
+      "Piccante",
+      "Kush",
+      "Con un uso intensivo di hash"
+    ]
+  },
+  {
+    "id": "pnw-cherries",
+    "name": "PNW Cherries",
+    "type": "hybrid",
+    "indica": 50,
+    "sativa": 50,
+    "thc": "20-22%",
+    "cbd": "0-8%",
+    "genetics": "PNW Dogshit × Black Cherry Honey",
+    "breeder": "Inhouse Genetics",
+    "description": "",
+    "effects": [
+      "Zerebral",
+      "Kreativ",
+      "Stimmungsaufhellend",
+      "Körpergefühl"
+    ],
+    "terpenes": [
+      "Süßlich",
+      "Erdig",
+      "Kirschduft"
+    ],
+    "image": "/images/strains/pnw-cherries.webp",
+    "status": "none",
+    "description_en": "PNW Cherries produces a balanced, rather clear, head-heavy effect. It starts with a cerebral high that is creativity-enhancing and mood-boosting. In the further course, a pleasant body feeling can set in.",
+    "effects_en": [
+      "Cerebral",
+      "Creative",
+      "Mood-enhancing",
+      "Body sensation"
+    ],
+    "terpenes_en": [
+      "Sweetish",
+      "Earthy",
+      "Cherry scent"
+    ],
+    "effects_fi": [
+      "Aivoihin liittyvä",
+      "Luova",
+      "Mielialaa kohottava",
+      "Kehon tuntemus"
+    ],
+    "terpenes_fi": [
+      "Hieman makea",
+      "Maanläheinen",
+      "kirsikan tuoksu"
+    ],
+    "effects_it": [
+      "Cerebrale",
+      "Creativo",
+      "Migliora l'umore",
+      "Consapevolezza del proprio corpo"
+    ],
+    "terpenes_it": [
+      "Dolciastro",
+      "Terroso",
+      "Profumo di ciliegia"
+    ]
+  },
+  {
+    "id": "sugar-cane",
+    "name": "Sugar Cane",
+    "type": "hybrid",
+    "indica": 50,
+    "sativa": 50,
+    "thc": "20%",
+    "cbd": "<2%",
+    "genetics": "Platinum x Slurricane",
+    "breeder": "Inhouse Genetics",
+    "description": "Die Wirkung setzt mit einem erhebenden zerebralen High ein, das den Geist klärt und die Kreativität anregt. Während das High fortschreitet, tritt eine wohltuende körperliche Entspannung ein, die jedoch nicht dazu führt an die Couch gebunden zu sein (Couch-Lock). Diese ausgewogene Wirkung macht sie sowohl für kreative Aktivitäten als auch für entspannte Abende geeignet.",
+    "effects": [
+      "Erhebend",
+      "Geist klärend",
+      "Kreativität",
+      "Körperliche Entspannung"
+    ],
+    "terpenes": [
+      "Süß",
+      "Karamellisierter Zucker",
+      "Sirup",
+      "Trauben",
+      "Blumig",
+      "Zuckerwatte"
+    ],
+    "image": "/images/strains/sugar-cane.webp",
+    "status": "none",
+    "description_en": "The effect sets in with an uplifting cerebral high that clears the mind and stimulates creativity. As the high progresses, a soothing physical relaxation occurs that does not lead to being couch-locked.",
+    "effects_en": [
+      "Uplifting",
+      "Mind-clearing",
+      "Creativity",
+      "Physical Relaxation"
+    ],
+    "terpenes_en": [
+      "Sweet",
+      "Caramelized sugar",
+      "Syrup",
+      "Grapes",
+      "Floral",
+      "Cotton candy"
+    ],
+    "description_fi": "Vaikutus alkaa virkistävällä aivoihin kohdistuvalla pilvellä, joka kirkastaa mieltä ja stimuloi luovuutta. Päihtymyksen edetessä kehossa tuntuu miellyttävä rentoutuminen, joka ei kuitenkaan johda sohvalle juuttumiseen (couch-lock). Tämän tasapainoisen vaikutuksen ansiosta lajike sopii sekä luoviin harrastuksiin että rentouttaviin iltoihin.",
+    "effects_fi": [
+      "Piristävä",
+      "Mielen kirkastava",
+      "Luovuus",
+      "Fyysinen rentoutuminen"
+    ],
+    "terpenes_fi": [
+      "Suloinen",
+      "Karamellisoitu sokeri",
+      "siirappi",
+      "rypäleet",
+      "Kukkainen",
+      "sokerivilla"
+    ],
+    "description_it": "L'effetto inizia con uno \"high\" cerebrale ed esaltante, che schiarisce la mente e stimola la creatività. Man mano che l’effetto progredisce, subentra un piacevole rilassamento fisico che, tuttavia, non porta a rimanere incollati al divano (couch-lock). Questo effetto equilibrato la rende adatta sia alle attività creative che alle serate all’insegna del relax.",
+    "effects_it": [
+      "Edificante",
+      "Che schiarisce la mente",
+      "Creatività",
+      "Rilassamento fisico"
+    ],
+    "terpenes_it": [
+      "Dolce",
+      "Zucchero caramellato",
+      "Sciroppo",
+      "Uva",
+      "Floreale",
+      "Zucchero filato"
+    ]
+  }
+]

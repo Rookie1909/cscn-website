@@ -12,6 +12,7 @@ import { Impressum } from '@/pages/Impressum';
 import { Gesundheitsschutz } from '@/pages/Gesundheitsschutz';
 import { Anbau } from '@/pages/Anbau';
 import { Sortiment } from '@/pages/Sortiment';
+import { SortimentProfil } from '@/pages/SortimentProfil';
 import { ThemeProvider } from '@/components/ThemeProvider';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="anbau" element={<Anbau />} />
             <Route path="ausgabe" element={<StrainLibrary />} />
             <Route path="sortiment" element={<Sortiment />} />
+            <Route path="sortiment/:id" element={<SortimentProfil />} />
             <Route path="standorte" element={<Standorte />} />
             <Route path="mitgliedsbeitraege" element={<Mitgliedsbeitraege />} />
             <Route path="neuigkeiten" element={<Neuigkeiten />} />

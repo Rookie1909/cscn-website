@@ -187,13 +187,22 @@ const StrainCard: React.FC<StrainCardProps> = ({ strain }) => {
                 <X size={20} strokeWidth={2.5} />
               </button>
 
-              {/* Full-width banner image */}
+              {/* Full-width banner: blurred copy of the image fills the
+                  background so the sharp, uncropped image sits on a matching
+                  backdrop instead of flat/empty space. */}
               {strain.image && (
-                <img
-                  src={strain.image}
-                  alt={strain.name}
-                  className="w-full h-64 md:h-80 object-cover rounded-t-2xl"
-                />
+                <div className="relative w-full h-64 md:h-80 overflow-hidden rounded-t-2xl">
+                  <div
+                    className="absolute inset-0 bg-cover bg-center blur-2xl scale-110 opacity-70"
+                    style={{ backgroundImage: `url(${strain.image})` }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
+                  <img
+                    src={strain.image}
+                    alt={strain.name}
+                    className="relative w-full h-full object-contain"
+                  />
+                </div>
               )}
 
               {/* Centered, readable text column */}

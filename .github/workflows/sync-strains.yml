@@ -7,6 +7,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: sync-cannanas
+  cancel-in-progress: false
+
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -38,11 +42,17 @@ jobs:
           git add src/data/strains-sync.json public/images/strains src/data/grow-rooms.json public/images/zones src/data/genetics.json
           if git diff --staged --quiet; then
             echo "No changes in Cannanas data."
-          else
-            git commit -m "chore: sync data from Cannanas"
-            for i in 1 2 3 4 5; do
-              git pull --rebase origin main && git push && break
-              echo "Push rejected (someone else pushed in the meantime), retrying ($i/5)..."
-              sleep 5
-            done
+            exit 0
           fi
+          git commit -m "chore: sync data from Cannanas"
+          for i in 1 2 3 4 5; do
+            if git pull --rebase -X ours origin main && git push; then
+              echo "Push succeeded."
+              exit 0
+            fi
+            echo "Push rejected or conflicted, retrying ($i/5)..."
+            git rebase --abort 2>/dev/null || true
+            sleep 5
+          done
+          echo "::error::Failed to push Cannanas sync after 5 attempts."
+          exit 1

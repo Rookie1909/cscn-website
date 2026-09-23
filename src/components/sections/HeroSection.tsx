@@ -1,7 +1,7 @@
 import { useTranslation, Trans } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Award, Users, Scale, ShieldCheck, Zap } from 'lucide-react';
+import { ArrowRight, Award, Scale, ShieldCheck, Zap } from 'lucide-react';
 import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
@@ -41,7 +41,6 @@ export function HeroSection() {
 
   const stats = [
     { icon: Award, label: t('home.hero.stats.award.label'), sub: t('home.hero.stats.award.sub'), color: "text-primary" },
-    { icon: Users, label: t('home.hero.stats.members.label'), sub: t('home.hero.stats.members.sub'), color: "text-blue-400" },
     { icon: CannabisLeaf, label: t('home.hero.stats.plants.label'), sub: t('home.hero.stats.plants.sub'), color: "text-emerald-400" },
     { icon: Scale, label: t('home.hero.stats.dispense.label'), sub: t('home.hero.stats.dispense.sub'), color: "text-amber-400" },
   ];
@@ -85,7 +84,7 @@ export function HeroSection() {
             {/* Stats Grid */}
             <motion.div 
               variants={itemVariants}
-              className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4"
+              className="grid grid-cols-3 gap-3 sm:gap-4"
             >
               {stats.map((stat, i) => (
                 <div key={i} className="group relative p-3 sm:p-4 rounded-[1.5rem] sm:rounded-3xl bg-secondary/5 border border-border/50 backdrop-blur-sm transition-all hover:bg-secondary/10 hover:border-primary/30 flex flex-col items-center text-center">

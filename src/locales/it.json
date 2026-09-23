@@ -5,6 +5,7 @@
     "about": "Chi siamo",
     "protection": "Tutela della salute e dei minori",
     "sortiment": "Varietà",
+    "sortiment_overview": "Genetiche",
     "standorte": "Sedi",
     "membership": "Domande di iscrizione",
     "news": "Novità",
@@ -89,15 +90,11 @@
   "home": {
     "banner": "Abbiamo ancora posti disponibili – scopri qui i nostri modelli di iscrizione",
     "hero": {
-      "subtitle": "Il primo CSC della Bassa Sassonia con oltre 170 soci impegnati – una qualità che convince.",
+      "subtitle": "Il primo CSC della Bassa Sassonia – una qualità che convince.",
       "stats": {
         "award": {
           "label": "1° CSC",
           "sub": "In Bassa Sassonia"
-        },
-        "members": {
-          "label": "170+",
-          "sub": "Soci"
         },
         "plants": {
           "label": "500+",

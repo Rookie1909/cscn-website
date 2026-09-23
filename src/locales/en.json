@@ -5,6 +5,7 @@
     "about": "About Us",
     "protection": "Health & Youth Protection",
     "sortiment": "Strains",
+    "sortiment_overview": "Genetics",
     "standorte": "Locations",
     "membership": "Membership",
     "news": "News",
@@ -89,15 +90,11 @@
   "home": {
     "banner": "We still have spots available – Click here for our membership models",
     "hero": {
-      "subtitle": "The first CSC in Lower Saxony with over 170 dedicated members – quality that convinces.",
+      "subtitle": "The first CSC in Lower Saxony – quality that convinces.",
       "stats": {
         "award": {
           "label": "1st CSC",
           "sub": "In Lower Saxony"
-        },
-        "members": {
-          "label": "170+",
-          "sub": "Members"
         },
         "plants": {
           "label": "500+",

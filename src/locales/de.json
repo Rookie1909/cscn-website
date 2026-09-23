@@ -5,6 +5,7 @@
     "about": "Über uns",
     "protection": "Gesundheits- & Jugendschutz",
     "sortiment": "Sortiment",
+    "sortiment_overview": "Genetiken",
     "standorte": "Standorte",
     "membership": "Mitgliedsanträge",
     "news": "Neuigkeiten",
@@ -89,15 +90,11 @@
   "home": {
     "banner": "Wir haben noch Plätze Frei – Hier gehts zu unseren Mitgliedschaftsmodellen",
     "hero": {
-      "subtitle": "Der erste CSC in Niedersachsen mit über 170 engagierten Mitgliedern – Qualität, die überzeugt.",
+      "subtitle": "Der erste CSC in Niedersachsen – Qualität, die überzeugt.",
       "stats": {
         "award": {
           "label": "1. CSC",
           "sub": "In Niedersachsen"
-        },
-        "members": {
-          "label": "170+",
-          "sub": "Mitglieder"
         },
         "plants": {
           "label": "500+",

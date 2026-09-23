@@ -14,7 +14,7 @@ export function Header() {
   const { theme, setTheme } = useTheme();
   const { t, i18n } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [langMenuOpen, setLangMenuOpen] = useState(false);
   const [mobileLangMenuOpen, setMobileLangMenuOpen] = useState(false);
   const [isLogoFullscreen, setIsLogoFullscreen] = useState(false);
@@ -46,8 +46,14 @@ export function Header() {
         { label: t('grow_rooms.nav'), href: '/anbau' },
       ],
     },
-    { label: t('nav.ausgabe'), href: '/ausgabe' },
-    { label: t('nav.sortiment'), href: '/sortiment' },
+    {
+      label: t('nav.sortiment'),
+      href: '/sortiment',
+      children: [
+        { label: t('nav.sortiment_overview'), href: '/sortiment' },
+        { label: t('nav.ausgabe'), href: '/ausgabe' },
+      ],
+    },
     { label: t('nav.standorte'), href: '/standorte' },
     { label: t('nav.membership'), href: '/mitgliedsbeitraege' },
     { label: t('nav.news'), href: '/neuigkeiten' },
@@ -94,8 +100,8 @@ export function Header() {
                 {item.children ? (
                   <div
                     className="relative"
-                    onMouseEnter={() => setDropdownOpen(true)}
-                    onMouseLeave={() => setDropdownOpen(false)}
+                    onMouseEnter={() => setOpenDropdown(item.label)}
+                    onMouseLeave={() => setOpenDropdown(null)}
                   >
                     <button
                       className={`flex items-center gap-1.5 text-sm font-headline font-black uppercase tracking-widest transition-all hover:text-primary ${
@@ -103,10 +109,10 @@ export function Header() {
                       }`}
                     >
                       {item.label}
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${dropdownOpen ? 'rotate-180' : ''}`} />
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${openDropdown === item.label ? 'rotate-180' : ''}`} />
                     </button>
                     <AnimatePresence>
-                      {dropdownOpen && (
+                      {openDropdown === item.label && (
                         <motion.div
                           initial={{ opacity: 0, y: 10, scale: 0.95 }}
                           animate={{ opacity: 1, y: 0, scale: 1 }}

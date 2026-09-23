@@ -5,6 +5,7 @@
     "about": "Meistä",
     "protection": "Terveyden- ja nuorisonsuojelu",
     "sortiment": "Lajikkeet",
+    "sortiment_overview": "Genetiikat",
     "standorte": "Toimipisteet",
     "membership": "Jäsenhakemukset",
     "news": "Uutiset",
@@ -89,15 +90,11 @@
   "home": {
     "banner": "Meillä on vielä vapaita paikkoja – tutustu jäsenyysmalleihimme täältä",
     "hero": {
-      "subtitle": "Ala-Saksin ensimmäinen CSC, jossa on yli 170 sitoutunutta jäsentä – laatua, joka vakuuttaa.",
+      "subtitle": "Ala-Saksin ensimmäinen CSC – laatua, joka vakuuttaa.",
       "stats": {
         "award": {
           "label": "1. CSC",
           "sub": "Ala-Saksissa"
-        },
-        "members": {
-          "label": "170+",
-          "sub": "Jäsentä"
         },
         "plants": {
           "label": "500+",

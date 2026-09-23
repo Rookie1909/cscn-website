@@ -46,6 +46,7 @@ export function Header() {
         { label: t('grow_rooms.nav'), href: '/anbau' },
       ],
     },
+    { label: t('nav.ausgabe'), href: '/ausgabe' },
     { label: t('nav.sortiment'), href: '/sortiment' },
     { label: t('nav.standorte'), href: '/standorte' },
     { label: t('nav.membership'), href: '/mitgliedsbeitraege' },

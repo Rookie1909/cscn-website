@@ -7,7 +7,8 @@
     "sortiment": "Lajikkeet",
     "standorte": "Toimipisteet",
     "membership": "Jäsenhakemukset",
-    "news": "Uutiset"
+    "news": "Uutiset",
+    "ausgabe": "Jakelu"
   },
   "header": {
     "logo_subtitle": "CSC Nordheide e.V.:n virallinen verkkosivusto",
@@ -47,7 +48,7 @@
     "cbd": "CBD",
     "library_tag": "Raised on Living Soil",
     "library_title_1": "AJANKOHTAINEN CSCN",
-    "library_title_2": "VALIKOIMA",
+    "library_title_2": "JAKELU",
     "library_desc": "Tutustu premium-lajikkeidemme geneettiseen monimuotoisuuteen ja monimutkaiseen terpeeniprofiiliin. Tieteellisesti perusteltua ja läpinäkyvää.",
     "stats_available": "Saatavilla olevat lajikkeet",
     "stats_avg_thc": "Keskimääräinen THC",
@@ -57,7 +58,7 @@
     "footer_local": "100% paikallista Ala-Saksista",
     "footer_growth": "Valvottu kasvatus",
     "footer_breeding": "Läpinäkyvä kasvatus",
-    "footer_copyright": "© 2026 CSC Nordheide E.V. Valikoima"
+    "footer_copyright": "© 2026 CSC Nordheide E.V. Jakelu"
   },
   "features": {
     "perm": {
@@ -327,5 +328,10 @@
       "description": "Skemaattinen yleiskatsaus kasvatushuoneisiimme. Turvallisuussyistä emme näytä täällä tarkoituksella tietoja lajikkeista, kasvuvaiheista tai kasvimääristä.",
       "empty": "Tällä hetkellä ei ole aktiivisia huoneita saatavilla."
     }
+  },
+  "sortiment_page": {
+    "title": "Valikoima",
+    "description": "Koko lajikekirjastomme - tämä sivu on parhaillaan rakenteilla.",
+    "placeholder": "Yleiskatsaus koko lajikevalikoimaamme on tulossa pian."
   }
 }

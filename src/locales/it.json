@@ -7,7 +7,8 @@
     "sortiment": "Varietà",
     "standorte": "Sedi",
     "membership": "Domande di iscrizione",
-    "news": "Novità"
+    "news": "Novità",
+    "ausgabe": "Distribuzione"
   },
   "header": {
     "logo_subtitle": "Sito ufficiale del CSC Nordheide e.V.",
@@ -46,7 +47,7 @@
     "thc": "THC",
     "cbd": "CBD",
     "library_tag": "Raised on Living Soil",
-    "library_title_1": "ASSORTIMENTO",
+    "library_title_1": "DISTRIBUZIONE",
     "library_title_2": "ATTUALE CSCN",
     "library_desc": "Scopri la diversità genetica e il complesso profilo terpenico della nostra selezione esclusiva di varietà premium. Basato su criteri scientifici e trasparenti.",
     "stats_available": "Varietà disponibili",
@@ -57,7 +58,7 @@
     "footer_local": "100% locale dalla Bassa Sassonia",
     "footer_growth": "Coltivazione controllata",
     "footer_breeding": "Coltivazione trasparente",
-    "footer_copyright": "© 2026 CSC Nordheide E.V. Assortimento"
+    "footer_copyright": "© 2026 CSC Nordheide E.V. Distribuzione"
   },
   "features": {
     "perm": {
@@ -327,5 +328,10 @@
       "description": "Una panoramica schematica delle nostre sale di coltivazione. Per motivi di sicurezza qui non mostriamo deliberatamente informazioni su varietà, fasi di crescita o numero di piante.",
       "empty": "Al momento nessuna sala attiva disponibile."
     }
+  },
+  "sortiment_page": {
+    "title": "Assortimento",
+    "description": "La nostra libreria completa delle varietà - questa pagina è attualmente in costruzione.",
+    "placeholder": "Una panoramica dell'intera gamma di varietà è in arrivo a breve."
   }
 }

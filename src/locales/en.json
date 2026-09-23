@@ -7,7 +7,8 @@
     "sortiment": "Strains",
     "standorte": "Locations",
     "membership": "Membership",
-    "news": "News"
+    "news": "News",
+    "ausgabe": "Dispensary"
   },
   "header": {
     "logo_subtitle": "Official Website of CSC Nordheide e.V.",
@@ -47,7 +48,7 @@
     "cbd": "CBD",
     "library_tag": "Raised on Living Soil",
     "library_title_1": "CURRENT CSCN",
-    "library_title_2": "ASSORTMENT",
+    "library_title_2": "DISPENSARY",
     "library_desc": "Discover the genetic diversity and complex terpene profile of our exclusive selection of premium strains. Scientifically based & transparent.",
     "stats_available": "Available Strains",
     "stats_avg_thc": "Average THC",
@@ -57,7 +58,7 @@
     "footer_local": "100% Local from Lower Saxony",
     "footer_growth": "Controlled Cultivation",
     "footer_breeding": "Transparent Breeding",
-    "footer_copyright": "© 2026 CSC Nordheide E.V. Assortment"
+    "footer_copyright": "© 2026 CSC Nordheide E.V. Dispensary"
   },
   "features": {
     "perm": {
@@ -327,5 +328,10 @@
       "description": "A schematic overview of our grow rooms. For security reasons we deliberately don't show any information about strains, growth stages, or plant counts here.",
       "empty": "No active rooms available at the moment."
     }
+  },
+  "sortiment_page": {
+    "title": "Assortment",
+    "description": "Our full strain library - this page is currently under construction.",
+    "placeholder": "An overview of our entire strain range is coming soon."
   }
 }

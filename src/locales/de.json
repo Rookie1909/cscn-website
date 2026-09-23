@@ -7,7 +7,8 @@
     "sortiment": "Sortiment",
     "standorte": "Standorte",
     "membership": "Mitgliedsanträge",
-    "news": "Neuigkeiten"
+    "news": "Neuigkeiten",
+    "ausgabe": "Ausgabe"
   },
   "header": {
     "logo_subtitle": "Vereinswebsite des CSC Nordheide e.V.",
@@ -47,7 +48,7 @@
     "cbd": "CBD",
     "library_tag": "Raised on Living Soil",
     "library_title_1": "AKTUELLES CSCN",
-    "library_title_2": "SORTIMENT",
+    "library_title_2": "AUSGABE",
     "library_desc": "Entdecke die genetische Vielfalt und das komplexe Terpenprofil unserer exklusiven Auswahl an Premium-Sorten. Wissenschaftlich basiert & transparent.",
     "stats_available": "Verfügbare Sorten",
     "stats_avg_thc": "Durchschnitt THC",
@@ -57,7 +58,7 @@
     "footer_local": "100% Lokal aus Niedersachsen",
     "footer_growth": "Kontrollierter Anbau",
     "footer_breeding": "Transparente Aufzucht",
-    "footer_copyright": "© 2026 CSC Nordheide E.V. Sortiment"
+    "footer_copyright": "© 2026 CSC Nordheide E.V. Ausgabe"
   },
   "features": {
     "perm": {
@@ -462,5 +463,10 @@
       "description": "Ein schematischer Überblick über unsere Anbauräume. Aus Sicherheitsgründen zeigen wir hier bewusst keine Informationen zu Sorten, Wachstumsphasen oder Pflanzenzahlen.",
       "empty": "Aktuell keine aktiven Räume verfügbar."
     }
+  },
+  "sortiment_page": {
+    "title": "Sortiment",
+    "description": "Unsere vollständige Sortenbibliothek – diese Seite befindet sich im Aufbau.",
+    "placeholder": "Hier entsteht bald eine Übersicht über unser gesamtes Sortenangebot."
   }
 }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import {
@@ -125,38 +126,42 @@ const StrainCard: React.FC<StrainCardProps> = ({ strain }) => {
         {t('strains.show_more')} <ChevronDown size={14} strokeWidth={3} />
       </button>
 
-      <AnimatePresence>
-        {isImageOpen && strain.image && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/90 backdrop-blur-sm"
-            onClick={() => setIsImageOpen(false)}
-          >
-            <motion.img
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              src={strain.image}
-              alt={strain.name}
-              className="max-w-full max-h-full rounded-2xl object-contain shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
-            />
-            <button
-              type="button"
+      {createPortal(
+        <AnimatePresence>
+          {isImageOpen && strain.image && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/90 backdrop-blur-sm"
               onClick={() => setIsImageOpen(false)}
-              aria-label={t('strains.close')}
-              className="absolute top-6 right-6 p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors duration-300"
             >
-              <X size={20} strokeWidth={2.5} />
-            </button>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              <motion.img
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                src={strain.image}
+                alt={strain.name}
+                className="max-w-full max-h-full rounded-2xl object-contain shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
+              />
+              <button
+                type="button"
+                onClick={() => setIsImageOpen(false)}
+                aria-label={t('strains.close')}
+                className="absolute top-6 right-6 p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors duration-300"
+              >
+                <X size={20} strokeWidth={2.5} />
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
 
-      <AnimatePresence>
+      {createPortal(
+        <AnimatePresence>
         {isDetailsOpen && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -276,7 +281,9 @@ const StrainCard: React.FC<StrainCardProps> = ({ strain }) => {
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
+        </AnimatePresence>,
+        document.body
+      )}
     </motion.div>
   );
 };

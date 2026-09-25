@@ -153,7 +153,7 @@ export function Gesundheitsschutz() {
                 {t('gesundheitsschutz.contact.title')}
               </h3>
               <div className="space-y-4 text-muted-foreground font-sans relative">
-                <p className="font-bold text-foreground text-lg">Rike Koop</p>
+                <p className="font-bold text-foreground text-lg">Volker Dierken</p>
                 <div className="space-y-1">
                   <p className="text-sm uppercase tracking-wider text-primary font-bold">{t('gesundheitsschutz.contact.role')}</p>
                   <p>c/o Bahnhofsstraße 1</p>

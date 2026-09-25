@@ -10,7 +10,7 @@ import { ContactSection } from '@/components/sections/ContactSection';
 export function Home() {
   const { t } = useTranslation();
   return (
-    <div className="bg-background">
+    <div>
       <AnnouncementBanner
         text={t('home.banner')}
         link="/mitgliedsbeitraege"

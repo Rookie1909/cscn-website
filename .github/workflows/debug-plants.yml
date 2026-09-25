@@ -1,0 +1,16 @@
+name: Debug - Pflanzen/Mutterpflanzen prüfen
+on:
+  workflow_dispatch:
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Pflanzen-Endpunkt und Mutterpflanzen-Feld ermitteln
+        env:
+          CANNANAS_API_KEY: ${{ secrets.CANNANAS_API_KEY }}
+          CANNANAS_CLUB_ID: ${{ secrets.CANNANAS_CLUB_ID }}
+        run: node .github/scripts/debug-plants.cjs

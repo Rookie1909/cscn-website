@@ -19,37 +19,33 @@ async function main() {
 
   // The API docs (https://api.cannanas.club/docs) confirm /plants supports
   // an is_mother query filter directly - no need to guess/heuristically scan fields.
-  const [allResponse, motherResponse] = await Promise.all([
-    fetchJson(`/v1/clubs/${CLUB_ID}/plants?archived=false`),
+  const [motherPlants, strains, zonesResponse] = await Promise.all([
     fetchJson(`/v1/clubs/${CLUB_ID}/plants?archived=false&is_mother=true`),
+    fetchJson(`/v1/clubs/${CLUB_ID}/strains`),
+    fetchJson(`/v1/clubs/${CLUB_ID}/zones`),
   ]);
-  const allPlants = allResponse.items || allResponse;
-  const motherPlants = motherResponse.items || motherResponse;
+  const zones = zonesResponse.items || zonesResponse;
 
-  console.log(`Gesamt (nicht archiviert): ${allPlants.length} Pflanzen`);
-  console.log(`Davon Mutterpflanzen (is_mother=true): ${motherPlants.length}\n`);
+  const strainNameById = new Map(strains.map((s) => [s.id, s.name]));
+  const zoneNameById = new Map(zones.map((z) => [z.id, z.name]));
 
-  if (allPlants.length > 0) {
-    console.log('--- Alle Felder einer einzelnen Beispiel-Pflanze (roh) ---');
-    console.log(JSON.stringify(allPlants[0], null, 2));
-    console.log('');
-  }
+  console.log(`Mutterpflanzen (is_mother=true, nicht archiviert): ${motherPlants.length}\n`);
 
-  console.log('--- Verteilung nach cultivation status ---');
-  const byStatus = new Map();
-  for (const p of allPlants) {
-    const key = String(p.status);
-    byStatus.set(key, (byStatus.get(key) || 0) + 1);
-  }
-  for (const [status, count] of byStatus) {
-    console.log(`  ${status}: ${count}`);
-  }
-
-  console.log(`\n--- Mutterpflanzen im Detail (${motherPlants.length}) ---`);
+  console.log('--- Mutterpflanzen mit Sorten- und Raumname ---');
   for (const p of motherPlants) {
-    console.log(
-      `  id: ${p.id ?? '?'} | name: ${p.name ?? '?'} | strain_id: ${p.strain_id ?? '?'} | room_id: ${p.room_id ?? p.zone_id ?? '?'} | status: ${p.status ?? '?'}`
-    );
+    const strainName = strainNameById.get(p.strain_id) || `unbekannt (${p.strain_id})`;
+    const zoneName = p.zone_id ? zoneNameById.get(p.zone_id) || `unbekannt (${p.zone_id})` : '- kein Raum zugewiesen -';
+    console.log(`  Sorte: ${strainName.padEnd(30)} | Raum: ${zoneName.padEnd(20)} | Status: ${p.status ?? '-'} | erstellt: ${p.created_at?.slice(0, 10) ?? '-'}`);
+  }
+
+  console.log('\n--- Anzahl Mutterpflanzen pro Sorte ---');
+  const byStrain = new Map();
+  for (const p of motherPlants) {
+    const name = strainNameById.get(p.strain_id) || `unbekannt (${p.strain_id})`;
+    byStrain.set(name, (byStrain.get(name) || 0) + 1);
+  }
+  for (const [name, count] of [...byStrain.entries()].sort((a, b) => b[1] - a[1])) {
+    console.log(`  ${name}: ${count}`);
   }
 }
 

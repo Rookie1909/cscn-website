@@ -47,7 +47,14 @@ export function SortimentProfil() {
           className="glass-card-premium overflow-hidden"
         >
           {g.image && (
-            <img src={g.image} alt={g.name} className="w-full h-72 md:h-96 object-cover rounded-xl mb-6" />
+            <div className="relative w-full h-72 md:h-96 overflow-hidden rounded-xl mb-6">
+              <div
+                className="absolute inset-0 bg-cover bg-center blur-2xl scale-110 opacity-70"
+                style={{ backgroundImage: `url(${g.image})` }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
+              <img src={g.image} alt={g.name} className="relative w-full h-full object-contain" />
+            </div>
           )}
 
           <div className="flex items-center gap-3 mb-3">

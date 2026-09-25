@@ -141,13 +141,17 @@ async function main() {
     throw new Error('CANNANAS_CLUB_ID oder CANNANAS_API_KEY ist nicht gesetzt');
   }
 
-  const [strains, productsResponse, batchesResponse] = await Promise.all([
+  const [strains, productsResponse, batchesResponse, plantsResponse, zonesResponse] = await Promise.all([
     fetchJson(`/v1/clubs/${CLUB_ID}/strains`),
     fetchJson(`/v1/clubs/${CLUB_ID}/products`),
     fetchJson(`/v1/clubs/${CLUB_ID}/batches`),
+    fetchJson(`/v1/clubs/${CLUB_ID}/plants?archived=false&is_mother=true`),
+    fetchJson(`/v1/clubs/${CLUB_ID}/zones`),
   ]);
   const products = productsResponse.products || [];
   const batches = batchesResponse.items || [];
+  const motherPlants = plantsResponse.items || plantsResponse;
+  const zones = zonesResponse.items || zonesResponse;
 
   // Availability status is informational only, computed from live stock/grow
   // data - never exposed as exact numbers, just "available" / "next harvest".
@@ -165,10 +169,17 @@ async function main() {
     ? JSON.parse(fs.readFileSync(OVERRIDES_PATH, 'utf8'))
     : {};
 
-  // "Our genetics" is the club's own curated portfolio, not tied to what
-  // happens to be in stock right now - that's exactly what the "public" flag
-  // on the strain library already represents.
-  const publicStrains = strains.filter((s) => s.visibility === 'public' && !s.archived);
+  // "Our genetics" is the club's own curated mother-plant portfolio, not tied
+  // to what happens to be in stock right now: a strain belongs here exactly
+  // when it has a mother plant in the dedicated "Reproduktion" zone.
+  const reproductionZone = zones.find((z) => /reproduktion/i.test(z.name));
+  if (!reproductionZone) {
+    throw new Error('Zone "Reproduktion" wurde in Cannanas nicht gefunden');
+  }
+  const motherStrainIds = new Set(
+    motherPlants.filter((p) => p.zone_id === reproductionZone.id).map((p) => p.strain_id)
+  );
+  const publicStrains = strains.filter((s) => motherStrainIds.has(s.id) && !s.archived);
 
   const entries = [];
   for (const s of publicStrains) {

@@ -1,136 +1,52 @@
 [
   {
-    "id": "bizcocho",
-    "name": "Bizcocho",
+    "id": "all-the-sauces",
+    "name": "All the Sauces",
     "type": "indica",
     "indica": 60,
     "sativa": 40,
-    "thc": "19-21%",
-    "cbd": "<2%",
-    "genetics": "Biscotti x Bacio #4 × Zkittlez x (Road Dawg x Face Off OG Bx2)",
-    "breeder": "Grounded Genetics",
-    "description": "Der keksdominante Phänotyp von Bizcocho bietet ein außergewöhnlich komplexes und tiefes Geschmacksprofil, das besonders für Liebhaber von süßen, gasigen Sorten interessant ist.\n\nDie Effekte von Bizcocho ist langanhaltend und kombiniert mentale Klarheit mit körperlicher Entspannung, ideal für verschiedene Aktivitäten oder zur Entspannung.",
-    "effects": [
-      "Mentale Klarheit",
-      "Körperliche Entspannung"
-    ],
+    "thc": "-",
+    "cbd": "-",
+    "genetics": "Original Z (Zkittlez) × Wrank",
+    "breeder": "Ethos Genetics",
+    "description": "All the Sauces R1 ist eine moderne Hybridgenetik von ETHOS Genetics, entstanden aus der Kreuzung von Original Zkittlez und Wrank. Die Sorte verbindet die intensive Frucht- und Candy-Aromatik der Original-Z-Linie mit der kräftigen Struktur, Vitalität und gasigen Tiefe von Wrank.\n\nIn unserer Selektion wird All the Sauces ausschließlich zur Herstellung von Rosin verwendet. Ausschlaggebend dafür sind die ausgeprägte Harzproduktion, die großen Trichomköpfe und das komplexe Terpenprofil, das sich im Konzentrat besonders intensiv und vielschichtig präsentiert.\n\nAls Rosin entwickelt die Sorte eine sehr konzentrierte Aromatik aus süßen Z-Terpenen, frischer Zitrusfrucht, floralen und erdigen Nuancen sowie einer markanten Gas- und Benzinkomponente. Gerade diese Kombination macht All the Sauces für uns zu einem besonders interessanten Extraktionskultivar.\n\nAll the Sauces entwickelt eine kräftige und ausgewogene Hybridwirkung. Zu Beginn stehen häufig Euphorie, gute Stimmung und eine deutlich wahrnehmbare mentale Präsenz im Vordergrund.\n\nMit zunehmender Dauer setzt eine angenehm körperliche Entspannung ein, ohne die geistige Wirkung vollständig zu verdrängen. Im konzentrierten Rosin kann die Wirkung entsprechend intensiv ausfallen und sollte hinsichtlich der Dosierung nicht unterschätzt werden.",
+    "effects": [],
     "terpenes": [
-      "Süß",
-      "Frisch gebackene Kekse",
-      "Cookie-Gassigkeit",
-      "Diesel",
-      "Zkittlez"
+      "Z-Candy",
+      "Zitrus",
+      "tropische Früchte",
+      "florale Erde",
+      "Gas",
+      "Benzin"
     ],
-    "image": "/images/strains/bizcocho.webp",
-    "status": "none",
-    "description_en": "The cookie-dominant phenotype of Bizcocho offers an exceptionally complex and deep flavor profile, particularly interesting for lovers of sweet, gassy strains. The effects of Bizcocho are long-lasting and combine mental clarity with physical relaxation, ideal for various activities or unwinding.",
-    "effects_en": [
-      "Mental Clarity",
-      "Physical Relaxation"
-    ],
+    "image": "/images/strains/all-the-sauces.webp",
+    "status": "available",
+    "description_en": "All the Sauces R1 is a modern hybrid strain from ETHOS Genetics, created by crossing Original Zkittlez and Wrank. This strain combines the intense fruity and candy-like aromas of the Original Z line with the robust structure, vitality, and gassy depth of Wrank.\n\nIn our selection, All the Sauces is used exclusively for rosin production. The key factors for this are its pronounced resin production, large trichome heads, and complex terpene profile, which comes through particularly intensely and with great depth in the concentrate.\n\nAs rosin, the strain develops a highly concentrated aroma of sweet Z terpenes, fresh citrus, floral and earthy nuances, as well as a distinctive gas and gasoline component. It is precisely this combination that makes All the Sauces a particularly interesting extraction cultivar for us.\n\nAll the Sauces produces a powerful and balanced hybrid effect. Initially, euphoria, a positive mood, and a distinctly noticeable mental clarity often take center stage.\n\nAs the high progresses, a pleasant physical relaxation sets in without completely overshadowing the mental effects. In concentrated rosin, the effects can be correspondingly intense and should not be underestimated when it comes to dosing.",
     "terpenes_en": [
-      "Sweet",
-      "Freshly baked cookies",
-      "Cookie gassiness",
-      "Diesel",
-      "Zkittlez"
+      "Z-Candy",
+      "Citrus",
+      "tropical fruits",
+      "potting soil",
+      "Gas",
+      "Gasoline"
     ],
-    "description_fi": "Bizcochon keksimäinen fenotyyppi tarjoaa poikkeuksellisen monipuolisen ja syvän makuprofiilin, joka kiinnostaa erityisesti makeiden ja kaasumaisten lajikkeiden ystäviä.\n\nBizcochon vaikutukset ovat pitkäkestoisia ja yhdistävät mielen selkeyden ja kehon rentoutumisen, mikä sopii erinomaisesti erilaisiin aktiviteetteihin tai rentoutumiseen.",
-    "effects_fi": [
-      "Henkinen selkeys",
-      "Fyysinen rentoutuminen"
-    ],
+    "description_fi": "All the Sauces R1 on ETHOS Geneticsin kehittämä moderni hybridilajike, joka on syntynyt Original Zkittlezin ja Wrankin risteytyksestä. Lajike yhdistää Original Z -linjan voimakkaan hedelmäisen ja karkkimaisen aromin Wrankin vahvaan rakenteeseen, elinvoimaisuuteen ja kaasumaiseen syvyyteen.\n\nValikoimassamme All the Sauces -lajiketta käytetään yksinomaan rosinin valmistukseen. Ratkaisevia tekijöitä tässä ovat voimakas hartsituotanto, suuret trikomipäät sekä monipuolinen terpeeniprofiili, joka ilmenee tiivisteessä erityisen voimakkaana ja monikerroksisena.\n\nRosinina lajikkeella on erittäin tiivis aromi, jossa yhdistyvät makeat Z-terpeenit, tuoreet sitrushedelmät, kukkaiset ja maanläheiset vivahteet sekä selvä kaasumainen ja bensiinimäinen komponentti. Juuri tämä yhdistelmä tekee All the Saucesista meille erityisen mielenkiintoisen uuttolajikkeen.\n\nAll the Sauces tuottaa voimakkaan ja tasapainoisen hybridivaikutuksen. Alkuvaiheessa etualalla ovat usein euforia, hyvä mieliala ja selvästi havaittava henkinen läsnäolo.\n\nVaikutuksen kestäessä alkaa miellyttävä fyysinen rentoutuminen, joka ei kuitenkaan syrjäytä henkistä vaikutusta kokonaan. Tiivistetyssä rosinissa vaikutus voi olla vastaavasti voimakas, eikä sitä pidä aliarvioida annostelun suhteen.",
     "terpenes_fi": [
-      "Söpö",
-      "Tuoreet keksit",
-      "Evästeiden tiheys",
-      "Diesel",
-      "Zkittlez"
+      "Z-Candy",
+      "Sitrushedelmät",
+      "trooppiset hedelmät",
+      "kukkamulta",
+      "Kaasu",
+      "Bensiini"
     ],
-    "description_it": "Il fenotipo di Bizcocho, caratterizzato da note di biscotto, offre un profilo gustativo straordinariamente complesso e intenso, particolarmente interessante per gli amanti delle varietà dolci e frizzanti.\n\nGli effetti di Bizcocho sono di lunga durata e combinano lucidità mentale e rilassamento fisico, rendendola ideale per diverse attività o semplicemente per rilassarsi.",
-    "effects_it": [
-      "Lucidità mentale",
-      "Rilassamento fisico"
-    ],
+    "description_it": "All the Sauces R1 è una moderna genetica ibrida di ETHOS Genetics, nata dall’incrocio tra Original Zkittlez e Wrank. Questa varietà unisce gli intensi aromi fruttati e di caramella della linea Original Z alla struttura robusta, alla vitalità e alla profondità gassosa di Wrank.\n\nNella nostra selezione, All the Sauces viene utilizzata esclusivamente per la produzione di rosin. A renderla ideale per questo scopo sono la produzione di resina molto elevata, le grandi teste di tricomi e il profilo terpenico complesso, che nel concentrato si presenta particolarmente intenso e sfaccettato.\n\nUna volta trasformata in rosin, questa varietà sviluppa un aroma molto concentrato caratterizzato da terpeni Z dolci, agrumi freschi, sfumature floreali e terrose, oltre a una marcata nota gassosa e di benzina. È proprio questa combinazione a rendere All the Sauces una cultivar da estrazione particolarmente interessante per noi.\n\nAll the Sauces produce un effetto ibrido potente ed equilibrato. All’inizio prevalgono spesso euforia, buon umore e una presenza mentale chiaramente percepibile.\n\nCon il passare del tempo subentra un piacevole rilassamento fisico, senza che l’effetto mentale venga completamente soppiantato. Nel rosin concentrato l’effetto può risultare di conseguenza intenso e non va sottovalutato in termini di dosaggio.",
     "terpenes_it": [
-      "Dolce",
-      "Biscotti appena sfornati",
-      "Contenuto di cookie",
-      "Diesel",
-      "Zkittlez"
-    ]
-  },
-  {
-    "id": "blue-gelato-41",
-    "name": "Blue Gelato 41",
-    "type": "hybrid",
-    "indica": 50,
-    "sativa": 50,
-    "thc": "20-22%",
-    "cbd": "<2%",
-    "genetics": "Sunset Sherbet × Thin Mint Girl Scout Cookies",
-    "breeder": "Seedstockers",
-    "description": "Blue Gelato 41 ist unsere sensationelle Blueberry Superkreuzung von der Westküste. Sie entstand durch das Kreuzen der berühmten Blueberry-Genetik mit Thin Mint Girl Scout Cookies und dem frisch-fruchtigem Indica Sunset Sherbet. Blue Gelato 41 reißt dich schnellstens in einen See tiefster psychedelischer Entspannung.\n\nDie Buds dieser Sorte sind harzig und versprühen ein süß-erdigen Zitronengeruch, wobei bei vielen Phänotypen die Färbung der Blüten blau bis lila wirkt.   Lass dich von einem Geschmackserlebnis begeistern, während dieses Indica deine Schmerzen „wegmassiert“.\n\nDie Wirkung ist ausgewogen und vielschichtig: Sie setzt mit einer sanften Euphorie im Kopf ein, hebt die Stimmung und fördert kreative Gedanken. Gleichzeitig entfaltet sich eine wohltuende körperliche Entspannung, ohne träge zu machen.",
-    "effects": [
-      "Sanfte Euphorie",
-      "Stimmungsaufhellend",
-      "Kreativ",
-      "Körperliche Entspannung"
-    ],
-    "terpenes": [
-      "Cremig-süß",
-      "Fruchtig",
-      "Erde",
-      "Kush",
-      "Vanillecreme",
-      "Beeren"
-    ],
-    "image": "/images/strains/blue-gelato-41.webp",
-    "status": "none",
-    "description_en": "Blue Gelato 41 is our sensational Blueberry supercross from the West Coast. It was created by crossing the famous Blueberry genetics with Thin Mint Girl Scout Cookies and the fresh-fruity Indica Sunset Sherbet. Blue Gelato 41 quickly pulls you into a sea of deep psychedelic relaxation. The buds of this strain are resinous and exude a sweet-earthy lemon scent, with many phenotypes appearing blue to purple in color.",
-    "effects_en": [
-      "Gentle Euphoria",
-      "Mood-enhancing",
-      "Creative",
-      "Physical Relaxation"
-    ],
-    "terpenes_en": [
-      "Creamy-sweet",
-      "Fruity",
-      "Earthy",
-      "Kush",
-      "Vanilla Cream",
-      "Berries"
-    ],
-    "description_fi": "Blue Gelato 41 on sensaatiomainen Blueberry-superristeytys länsirannikolta. Se syntyi risteyttämällä kuuluisaa Blueberry-genetiikkaa Thin Mint Girl Scout Cookiesin ja raikkaan hedelmäisen Indica Sunset Sherbetin kanssa. Blue Gelato 41 vie sinut hetkessä syvimpään psykedeeliseen rentoutumiseen.\n\nTämän lajikkeen kukinnot ovat hartsisia ja tuoksuvat makealta, maanläheiseltä sitruunalta, ja monissa fenotyypeissä kukkien väri vaihtelee sinisestä purppuraan.   Anna makuelämyksen innostaa sinua, kun tämä Indica ”hieroo” kivut pois.\n\nVaikutus on tasapainoinen ja moniulotteinen: se alkaa lempeällä euforialla päässä, kohottaa mielialaa ja edistää luovia ajatuksia. Samalla kehossa leviää miellyttävä rentoutuminen ilman, että se tekee sinusta uneliaaksi.",
-    "effects_fi": [
-      "Lempeä euforia",
-      "Mielialaa kohottava",
-      "Luova",
-      "Fyysinen rentoutuminen"
-    ],
-    "terpenes_fi": [
-      "Kermainen ja makea",
-      "Hedelmäinen",
-      "Maa",
-      "Kush",
-      "Vaniljakastike",
-      "Marjat"
-    ],
-    "description_it": "Blue Gelato 41 è il nostro sensazionale superincrocio Blueberry proveniente dalla costa occidentale. È nato dall’incrocio tra la famosa genetica Blueberry, la Thin Mint Girl Scout Cookies e l’Indica Sunset Sherbet, dal sapore fresco e fruttato. Blue Gelato 41 ti trascina in un attimo in un mare di profondo relax psichedelico.\n\nLe cime di questa varietà sono resinose ed emanano un profumo dolce, terroso e agrumato, mentre in molti fenotipi la colorazione dei fiori varia dal blu al viola.   Lasciati conquistare da un'esperienza gustativa straordinaria, mentre questa Indica \"allevia\" i tuoi dolori.\n\nL’effetto è equilibrato e sfaccettato: inizia con una delicata euforia mentale, migliora l’umore e stimola la creatività. Allo stesso tempo, si sviluppa un rilassamento fisico benefico, senza provocare sonnolenza.",
-    "effects_it": [
-      "Delicata euforia",
-      "Migliora l'umore",
-      "Creativo",
-      "Rilassamento fisico"
-    ],
-    "terpenes_it": [
-      "Cremoso e dolce",
-      "Fruttato",
-      "Terra",
-      "Kush",
-      "Crema alla vaniglia",
-      "Frutti di bosco"
+      "Z-Candy",
+      "Agrumi",
+      "frutta tropicale",
+      "terriccio floreale",
+      "Gas",
+      "Benzina"
     ]
   },
   {
@@ -175,7 +91,7 @@
       "OG notes",
       "Sweets"
     ],
-    "description_fi": "Bubble OG on LIT Farmsin moderni, pääosin indica-dominoiva hybridilajike, joka on syntynyt Bubble Bathin ja LIT OG:n risteytyksestä. Risteytyksen tavoitteena oli yhdistää palkitun Bubble Bathin ainutlaatuiset ”saippuamaiset” terpeenit LIT OG -linjan voimakkaaseen rakenteeseen ja hartsituotantoon. Tuloksena on lajike, jolla on erottuva tuoksu, runsas trikomituotanto ja voimakas kasvu. Kasvit kehittävät kompakteja, tiheitä kukintoja, jotka näyttävät erinomaisilta, ja ne sopivat sekä kukintojen suoraan käyttöön että korkealaatuisten uutteiden valmistukseen.\n\nBubble OG:n vaikutus on voimakas ja pitkäkestoinen. Vaikutus alkaa usein miellyttävällä euforialla ja henkisellä rauhallisuudella, ennen kuin voimakas fyysinen rentoutuminen leviää. Huolimatta selvästä indica-dominanssista vaikutus pysyy aluksi miellyttävän selkeänä ja mielialaa kohottavana. Annoksen kasvaessa kehittyy voimakas kehon rentoutuminen, joka sopii erityisen hyvin rauhallisiin iltahetkiin",
+    "description_fi": "Bubble OG on LIT Farmsin kehittämä moderni, pääosin indica-dominoiva hybridilajike, joka on syntynyt Bubble Bathin ja LIT OG:n risteytyksestä. Risteytyksen tavoitteena oli yhdistää palkitun Bubble Bathin ainutlaatuiset ”saippuamaiset” terpeenit LIT OG -linjan voimakkaaseen rakenteeseen ja hartsituotantoon. Tuloksena on lajike, jolla on erottuva tuoksu, runsas trikomituotanto ja voimakas kasvu. Kasvit kehittävät kompakteja, tiheitä kukintoja, jotka näyttävät erinomaisilta, ja ne soveltuvat sekä kukkien suoraan käyttöön että korkealaatuisten uutteiden valmistukseen.\n\nBubble OG:lla on voimakas ja pitkäkestoinen hybridivaikutus. Vaikutus alkaa usein miellyttävällä euforialla ja henkisellä rauhallisuudella, ennen kuin voimakas fyysinen rentoutuminen leviää. Huolimatta selvästä Indica-dominanssista vaikutus pysyy aluksi miellyttävän selkeänä ja mielialaa kohottavana. Annostuksen kasvaessa kehittyy voimakas kehon rentoutuminen, joka sopii erityisen hyvin rauhallisiin iltahetkiin",
     "effects_fi": [
       "Rentouttava",
       "Rauhoittava"
@@ -190,7 +106,7 @@
       "OG-arvosanat",
       "Makeiset"
     ],
-    "description_it": "La Bubble OG è una varietà ibrida moderna a predominanza Indica di LIT Farms, ottenuta dall’incrocio tra la Bubble Bath e la LIT OG. L'obiettivo di questo incrocio era quello di combinare gli straordinari terpeni \"soapy\" della pluripremiata Bubble Bath con la potente struttura OG e la produzione di resina della linea LIT OG. Il risultato è una varietà dal profumo caratteristico, con un'elevata produzione di tricomi e una crescita vigorosa. Le piante sviluppano infiorescenze compatte e dense con un eccellente «bag appeal» e sono adatte sia al consumo delle infiorescenze che alla produzione di estratti di alta qualità.\n\nLa Bubble OG produce un effetto ibrido potente e di lunga durata. L’effetto inizia spesso con una piacevole euforia e serenità mentale, prima che si manifesti un intenso rilassamento fisico. Nonostante la netta predominanza Indica, l’effetto rimane inizialmente piacevolmente lucido e migliora l’umore. Con l’aumentare del dosaggio si sviluppa un marcato «body stone», particolarmente adatto per tranquille serate",
+    "description_it": "La Bubble OG è una varietà ibrida moderna a predominanza Indica prodotta da LIT Farms, ottenuta dall’incrocio tra la Bubble Bath e la LIT OG. L'obiettivo di questo incrocio era quello di combinare gli straordinari terpeni \"soapy\" della pluripremiata Bubble Bath con la potente struttura OG e la produzione di resina della linea LIT OG. Il risultato è una varietà dal profumo caratteristico, con un'elevata produzione di tricomi e una crescita vigorosa. Le piante sviluppano infiorescenze compatte e dense con un eccellente \"bag appeal\" e sono adatte sia al consumo diretto delle infiorescenze che alla produzione di estratti di alta qualità.\n\nLa Bubble OG produce un effetto ibrido potente e di lunga durata. L’effetto inizia spesso con una piacevole euforia e serenità mentale, prima che si manifesti un intenso rilassamento fisico. Nonostante la netta predominanza Indica, l’effetto rimane inizialmente piacevolmente lucido e migliora l’umore. Con l’aumentare del dosaggio si sviluppa un marcato “body stone”, particolarmente adatto per tranquille serate.",
     "effects_it": [
       "Rilassante",
       "Rassicurante"
@@ -207,378 +123,511 @@
     ]
   },
   {
-    "id": "double-rainbow-sherb",
-    "name": "Double Rainbow Sherb",
-    "type": "hybrid",
-    "indica": 50,
-    "sativa": 50,
-    "thc": "20-24%",
-    "cbd": "<2%",
-    "genetics": "RS11 x (RS11 x Lemon Cherry Gelato)",
-    "breeder": "LIT Farms Genetics",
-    "description": "RS-11 ist eine Indica-dominante Hybride, die durch Kreuzung von Pink Guava x OZK entstanden ist.\n\nDiese Blüte hat dichte und flauschige, traubenförmige, blaugrüne Nuggets mit vielen dünnen, hellorangefarbenen Härchen und einer Schicht aus frostigen, blau getönten, weißen Kristalltrichomen.\n\n Lemon Cherry Gelato ist eine Indica-dominante Hybridsorte, die durch Kreuzung der berüchtigten Sunset Sherbet x Girl Scout Cookies x einer weiteren unbekannten Sorte entstanden ist. Lemon Cherry Gelato bietet einen erstaunlichen Geschmack und eine Wirkung, die Sie in pure Glückseligkeit versetzen wird. Diese Knospe hat einen Geschmack, der genau dem entspricht, was ihr Name vermuten lässt – saure Zitronen gepaart mit reichhaltigen Kirschen und Beeren. Das Aroma ist ebenso köstlich, mit einer säuerlichen Zitrusnote, akzentuiert durch frische Beeren und Himbeeren und einem Hauch von erdiger Kiefer.\n\nDiese Knospe hat flache, superdichte, übergroße, waldgrüne Nuggets mit vielen dünnen bernsteinfarbenen Härchen und einer Schicht milchig-bernsteinfarbener Kristalltrichome.\n\nBeruhigender Touch, mit einer angenehmen, hybriden Wirkung:\n\nSowohl Kopf als auch Körper werden von der Wirkung dieses Kultivars bedient. \n\nEine Blüte, welche in verregneten Tagen etwas Gemütlichkeit bringt.",
-    "effects": [
-      "Beruhigend",
-      "Gemütlichkeit",
-      "Glückseligkeit"
-    ],
-    "terpenes": [
-      "Süß",
-      "Fruchtig",
-      "Kirsch-Beeren",
-      "Zuckerbonbons",
-      "Kiefer"
-    ],
-    "image": "/images/strains/double-rainbow-sherb.webp",
-    "status": "none",
-    "description_en": "RS-11 is an Indica-dominant hybrid created by crossing Pink Guava x OZK. Lemon Cherry Gelato offers an amazing taste and an effect that will put you in pure bliss. This bud has a flavor that matches exactly what its name suggests – sour lemons paired with rich cherries and berries.",
-    "effects_en": [
-      "Calming",
-      "Comfort",
-      "Bliss"
-    ],
-    "terpenes_en": [
-      "Sweet",
-      "Fruity",
-      "Cherry-Berry",
-      "Sugar Candy",
-      "Pine"
-    ],
-    "description_fi": "RS-11 on indica-dominoiva hybridi, joka on syntynyt risteyttämällä Pink Guava ja OZK.\n\nTämän lajikkeen kukinnot ovat tiheitä ja pörröisiä, rypälemäisiä, sinivihreitä nugetteja, joissa on runsaasti ohuita, vaaleanoransseja karvoja sekä kerros huurteisia, sinisävyisiä, valkoisia kristallitrikomeja.\n\n Lemon Cherry Gelato on indica-dominoiva hybridilajike, joka on syntynyt risteyttämällä kuuluisaa Sunset Sherbetia, Girl Scout Cookiesia ja yhtä tuntematonta lajiketta. Lemon Cherry Gelato tarjoaa hämmästyttävän maun ja vaikutuksen, joka vie sinut puhtaaseen autuuteen. Tämän kukinnan maku on juuri sitä, mitä sen nimi antaa ymmärtää – hapahkoja sitruunoita yhdistettynä täyteläisiin kirsikoihin ja marjoihin. Aromi on yhtä herkullinen: siinä on kirpeä sitrushedelmän vivahde, jota korostavat tuoreet marjat ja vadelmat sekä ripaus maanläheistä mäntyä.\n\nTällä kukinnolla on litteitä, erittäin tiheitä, ylikokoisia, metsänvihreitä nugetteja, joissa on runsaasti ohuita, meripihkaisia karvoja ja kerros maitomais-meripihkaisia kristallitrichomeja.\n\nRauhoittava vaikutus, miellyttävä, hybridi-tyyppinen vaikutus:\n\nTämän lajikkeen vaikutus kohdistuu sekä päähän että kehoon. \n\nKukka, joka tuo hieman kodikkuutta sateisiin päiviin.",
-    "effects_fi": [
-      "Rauhoittava",
-      "kodikkuus",
-      "autuus"
-    ],
-    "terpenes_fi": [
-      "Söpö",
-      "Hedelmäinen",
-      "kirsikka-marjat",
-      "sokerikarkit",
-      "mänty"
-    ],
-    "description_it": "L'RS-11 è un ibrido a predominanza Indica, ottenuto dall'incrocio tra Pink Guava e OZK.\n\nQuesta varietà presenta cime dense e soffici, a grappolo, di colore blu-verde, con numerosi peli sottili di colore arancione chiaro e uno strato di tricomi cristallini bianchi, ricoperti da una patina blu.\n\n La Lemon Cherry Gelato è una varietà ibrida a predominanza Indica, ottenuta dall’incrocio tra la famigerata Sunset Sherbet, la Girl Scout Cookies e un’altra varietà sconosciuta. La Lemon Cherry Gelato offre un gusto straordinario e un effetto che vi trasporterà in uno stato di pura beatitudine. Questa infiorescenza ha un sapore che rispecchia esattamente ciò che il suo nome suggerisce: limoni aciduli abbinati a ciliegie e frutti di bosco dal gusto ricco. Anche l’aroma è delizioso, con una nota agrumata acidula, accentuata da frutti di bosco freschi e lamponi, e un tocco di pino terroso.\n\nQuesta varietà presenta cime piatte, super compatte, di dimensioni eccezionali, di colore verde bosco, con numerosi sottili peli color ambra e uno strato di tricomi cristallini dal colore ambra-latteo.\n\nEffetto rilassante, con un piacevole effetto ibrido:\n\nSia la mente che il corpo traggono beneficio dagli effetti di questa varietà. \n\nUna fioritura che porta un po’ di intimità nelle giornate piovose.",
-    "effects_it": [
-      "Rassicurante",
-      "Accoglienza",
-      "Beatitudine"
-    ],
-    "terpenes_it": [
-      "Dolce",
-      "Fruttato",
-      "Ciliegie e frutti di bosco",
-      "caramelle allo zucchero",
-      "Pino"
-    ]
-  },
-  {
-    "id": "gorilla-x-blueberry",
-    "name": "Gorilla x Blueberry",
+    "id": "cherrizozki",
+    "name": "Cherrizozki",
     "type": "hybrid",
     "indica": 50,
     "sativa": 50,
     "thc": "-",
     "cbd": "-",
-    "genetics": "",
-    "breeder": "",
-    "description": "Eine kraftvolle Kreuzung zwischen der legendären Gorilla Glue und der fruchtigen Blueberry.",
-    "effects": [
-      "Ausgewogen"
-    ],
+    "genetics": "Cherry On Top × Izozki",
+    "breeder": "Bask Triangle farms",
+    "description": "Cherryzozki ist eine moderne Harz- und Terpensorte von Bask Triangle Farms, die speziell für Liebhaber intensiver Kirsch- und Gas-Aromen entwickelt wurde. Die Sorte kombiniert die ausgeprägte Fruchtigkeit der Cherry-Linie mit den harzstarken und terpenschweren Eigenschaften der baskischen Izozki-Selektion. Die Pflanzen zeigen einen kräftigen Hybridwuchs mit guter Verzweigung, starkem Stretch zu Beginn der Blüte und einer ausgeprägten Trichomentwicklung.\n\nCherryzozki liefert eine ausgewogene Hybridwirkung. Die Wirkung beginnt meist mit einer angenehmen Euphorie und geistigen Aufhellung, bevor sich eine entspannte körperliche Komponente entwickelt. Die Sorte wird häufig als stimmungsaufhellend, gesellig und gleichzeitig körperlich angenehm entspannend beschrieben.",
+    "effects": [],
     "terpenes": [
-      "Beeren",
+      "Kirsche",
+      "Creme",
+      "Gas",
+      "Candy",
+      "Dunkle Früchte"
+    ],
+    "image": "/images/strains/cherrizozki.webp",
+    "status": "none",
+    "description_en": "Cherryzozki is a modern resin- and terpene-rich strain from Bask Triangle Farms, developed specifically for enthusiasts of intense cherry and gas aromas. This strain combines the pronounced fruitiness of the Cherry line with the high-resin and terpene-rich characteristics of the Basque Izozki selection. The plants exhibit vigorous hybrid growth with good branching, strong stretching at the start of flowering, and pronounced trichome development.\n\nCherryzozki delivers a balanced hybrid high. The effect typically begins with a pleasant euphoria and mental clarity before a relaxed physical sensation sets in. The strain is often described as mood-lifting, sociable, and physically soothing all at once.",
+    "terpenes_en": [
+      "Cherry",
+      "Cream",
+      "Gas",
+      "Candy",
+      "Dark Fruits"
+    ],
+    "description_fi": "Cherryzozki on Bask Triangle Farmsin moderni, runsaasti hartsia ja terpeenejä sisältävä lajike, joka on kehitetty erityisesti voimakkaiden kirsikka- ja kaasuaromien ystäville. Lajike yhdistää Cherry-linjan voimakkaan hedelmäisyyden baskilaisen Izozki-valikoiman runsaspiihaisiin ja terpeenipitoisiin ominaisuuksiin. Kasvit kasvavat voimakkaasti hybridinä, haarautuvat hyvin, venyvät voimakkaasti kukinnan alussa ja tuottavat runsaasti trikomeja.\n\nCherryzozki tarjoaa tasapainoisen hybridivaikutuksen. Vaikutus alkaa yleensä miellyttävällä euforialla ja mielen kirkastumisella, ennen kuin rentouttava fyysinen komponentti kehittyy. Lajiketta kuvataan usein mielialaa kohottavaksi, seuralliseksi ja samalla fyysisesti miellyttävästi rentouttavaksi.",
+    "terpenes_fi": [
+      "kirsikka",
+      "Kerma",
+      "Kaasu",
+      "Candy",
+      "Tummat hedelmät"
+    ],
+    "description_it": "Cherryzozki è una moderna varietà ricca di resina e terpeni prodotta da Bask Triangle Farms, sviluppata appositamente per gli amanti degli aromi intensi di ciliegia e gas. Questa varietà combina il marcato carattere fruttato della linea Cherry con le caratteristiche di elevata resinosità e alto contenuto di terpeni della selezione basca Izozki. Le piante presentano una crescita ibrida vigorosa con una buona ramificazione, un forte allungamento all’inizio della fioritura e uno sviluppo marcato dei tricomi.\n\nLa Cherryzozki offre un effetto ibrido equilibrato. L’effetto inizia solitamente con una piacevole euforia e una lucidità mentale, prima che si sviluppi una componente fisica rilassante. La varietà viene spesso descritta come in grado di migliorare l’umore, favorire la socialità e, allo stesso tempo, offrire un piacevole rilassamento fisico.",
+    "terpenes_it": [
+      "Ciliegia",
+      "Crema",
+      "Gas",
+      "Candy",
+      "Frutta scura"
+    ]
+  },
+  {
+    "id": "falcon-heavy",
+    "name": "Falcon Heavy",
+    "type": "indica",
+    "indica": 70,
+    "sativa": 30,
+    "thc": "-",
+    "cbd": "-",
+    "genetics": "Scotty 2 Hotty × Falcon 9",
+    "breeder": "Exotic Genetix",
+    "description": "Unser selektierter Falcon Heavy-Phänotyp lässt sich mit zwei Worten beschreiben: Full Gas.\n\nWenn es einen Treibstoff gäbe, der einen tonnenschweren Falken in die Luft katapultiert, dann würde er genau so riechen. Bereits beim ersten Kontakt entfaltet sich ein kompromissloses Kraftstoffprofil aus scharfem Kerosin, süßlichem Benzin und sattem Diesel. Das Aroma wirkt laut, aggressiv und außergewöhnlich intensiv – genau das, wonach Liebhaber klassischer Fuel-Terpene suchen.\n\nIm Hintergrund sorgen dezente cremige und erdige Nuancen für zusätzliche Tiefe, ohne den dominierenden Kraftstoffcharakter zu überdecken. Das Ergebnis ist ein unverwechselbares Terpenprofil, das an eine Mischung aus Flugfeld, Tankstelle und Rennsport erinnert und selbst erfahrene Cannabis-Connaisseure beeindruckt.\n\nFür Freunde kompromissloser Gas-Genetiken ist dieser Phänotyp ein absolutes Highlight – Full Gas ist hier keine Übertreibung, sondern Programm.\n\nFalcon Heavy entwickelt eine ausgesprochen intensive und langanhaltende Wirkung. Der Wirkungseintritt beginnt mit einer angenehmen Euphorie und geistigen Aufhellung, bevor sich rasch eine tiefgehende körperliche Entspannung ausbreitet. Aufgrund ihres hohen THC-Gehalts und ihrer enormen Potenz richtet sich die Sorte vor allem an erfahrene Konsumenten. Bei höheren Dosierungen kann sie deutlich sedierend wirken und eignet sich besonders für den Abend oder ruhige Stunden.",
+    "effects": [],
+    "terpenes": [
+      "Gas",
+      "Diesel",
+      "Chem",
+      "Creme",
       "Erde",
-      "Diesel"
+      "Gewürze",
+      "Süße"
     ],
+    "image": "/images/strains/falcon-heavy.webp",
     "status": "none",
-    "description_en": "A powerful cross between the legendary Gorilla Glue and the fruity Blueberry.",
-    "effects_en": [
-      "Balanced"
-    ],
+    "description_en": "Our select Falcon Heavy phenotype can be described in two words: Full Gas.\n\nIf there were a fuel capable of catapulting a Falcon weighing several metric tons into the air, this is exactly what it would smell like. From the very first whiff, an uncompromising fuel profile unfolds—sharp kerosene, sweet gasoline, and rich diesel. The aroma is bold, aggressive, and exceptionally intense—exactly what enthusiasts of classic fuel terpenes are looking for.\n\nIn the background, subtle creamy and earthy nuances add depth without overshadowing the dominant fuel character. The result is a distinctive terpene profile reminiscent of a mix between an airfield, a gas station, and a racetrack—one that impresses even seasoned cannabis connoisseurs.\n\nFor fans of uncompromising “gas” genetics, this phenotype is an absolute highlight—“Full Gas” is no exaggeration here, but rather the name of the game.\n\nFalcon Heavy produces a distinctly intense and long-lasting effect. The high begins with a pleasant euphoria and mental clarity before a deep physical relaxation quickly takes hold. Due to its high THC content and immense potency, this strain is primarily intended for experienced users. At higher doses, it can have a distinctly sedative effect and is particularly well-suited for the evening or quiet moments.",
     "terpenes_en": [
-      "Berries",
+      "Gas",
+      "Diesel",
+      "Chem",
+      "Cream",
       "Earth",
-      "Diesel"
+      "Spices",
+      "Sweet"
     ],
-    "description_fi": "Voimakas risteytys legendaarisen Gorilla Glue -lajikkeen ja hedelmäisen Blueberry-lajikkeen välillä.",
-    "effects_fi": [
-      "Tasapainoinen"
-    ],
+    "description_fi": "Valikoitua Falcon Heavy -fenotyyppiämme voi kuvata kahdella sanalla: Full Gas.\n\nJos olisi olemassa polttoaine, joka singottaisi tonnin painoisen haukan ilmaan, se tuoksisi juuri tältä. Jo ensikosketuksesta lähtien avautuu tinkimätön polttoaineprofiili, jossa yhdistyvät terävä kerosiini, makeahko bensiini ja täyteläinen diesel. Aromi on voimakas, aggressiivinen ja poikkeuksellisen intensiivinen – juuri sitä, mitä klassisten polttoaineterpeenien ystävät etsivät.\n\nTaustalla hienovaraiset kermaiset ja maanläheiset vivahteet tuovat lisäsyvyyttä peittämättä hallitsevaa polttoaineen luonnetta. Tuloksena on ainutlaatuinen terpeeniprofiili, joka muistuttaa lentokentän, huoltoaseman ja kilpa-ajon sekoitusta ja tekee vaikutuksen jopa kokeneisiin kannabiksen tuntijoihin.\n\nTämä fenotyyppi on ehdoton kohokohta niille, jotka arvostavat tinkimättömiä ”Gas”-geenistöjä – ”Full Gas” ei ole tässä liioittelua, vaan todellisuutta.\n\nFalcon Heavy tuottaa erittäin voimakkaan ja pitkäkestoisen vaikutuksen. Vaikutus alkaa miellyttävällä euforialla ja mielen kirkastumisella, ennen kuin syvällinen fyysinen rentoutuminen leviää nopeasti. Korkean THC-pitoisuutensa ja valtavan voimakkuutensa vuoksi lajike on tarkoitettu ennen kaikkea kokeneille käyttäjille. Suuremmilla annoksilla se voi vaikuttaa selvästi rauhoittavasti ja sopii erityisen hyvin iltaan tai rauhallisiin hetkiin.",
     "terpenes_fi": [
-      "Marjat",
+      "Kaasu",
+      "Diesel",
+      "Chem",
+      "Kerma",
       "Maa",
-      "Diesel"
+      "Mausteet",
+      "Makea"
     ],
-    "description_it": "Un potente incrocio tra la leggendaria Gorilla Glue e la fruttata Blueberry.",
-    "effects_it": [
-      "Equilibrato"
-    ],
+    "description_it": "Il nostro fenotipo selezionato del Falcon Heavy si può descrivere con due parole: a tutto gas.\n\nSe esistesse un carburante in grado di catapultare in aria un falco del peso di diverse tonnellate, avrebbe proprio questo odore. Già al primo contatto si sprigiona un profilo di carburante senza compromessi, composto da cherosene pungente, benzina dal sentore dolce e diesel corposo. L’aroma risulta forte, aggressivo e straordinariamente intenso – esattamente ciò che cercano gli amanti dei classici terpeni “fuel”.\n\nIn sottofondo, sottili sfumature cremose e terrose conferiscono ulteriore profondità, senza sovrastare il carattere dominante del carburante. Il risultato è un profilo terpenico inconfondibile, che ricorda una miscela tra un aeroporto, una stazione di servizio e le corse automobilistiche, e che impressiona persino i più esperti intenditori di cannabis.\n\nPer gli amanti delle genetiche “gas” senza compromessi, questo fenotipo è un vero e proprio gioiello: “Full Gas” qui non è un’esagerazione, ma una realtà.\n\nLa Falcon Heavy sviluppa un effetto decisamente intenso e di lunga durata. L’effetto inizia con una piacevole euforia e una lucidità mentale, prima che si diffonda rapidamente un profondo rilassamento fisico. A causa del suo elevato contenuto di THC e della sua enorme potenza, questa varietà è destinata principalmente a consumatori esperti. A dosaggi più elevati può avere un effetto decisamente sedativo ed è particolarmente indicata per la sera o per i momenti di tranquillità.",
     "terpenes_it": [
-      "Frutti di bosco",
+      "Gas",
+      "Diesel",
+      "Chimica",
+      "Crema",
       "Terra",
-      "Diesel"
+      "Spezie",
+      "Dolce"
     ]
   },
   {
-    "id": "jelly-donutz",
-    "name": "Jelly Donutz",
-    "type": "hybrid",
-    "indica": 50,
-    "sativa": 50,
-    "thc": "19-21%",
-    "cbd": "<2%",
-    "genetics": "Jelly Donutz (#160x#17) x Hella Jelly x White Runtz",
-    "breeder": "Humboldt Seed Company (Twentyk Cut)",
-    "description": "Die Wirkung ist zunächst klar, kreativ und aktivierend, bevor sie in eine angenehme körperliche Entspannung übergeht.\nMit sehr hohen THC-Werten zählt Jelly Donutz zu den potenteren Sorten im CSCN-Portfolio, bleibt dabei aber angenehm ausbalanciert.\nDie Sorte eignet sich hervorragend für Tagesgebrauch, kreative Tätigkeiten oder gesellige Momente, ohne übermäßig sedierend zu wirken.",
-    "effects": [
-      "Klar",
-      "Kreativ",
-      "Aktivierend",
-      "Körperliche Entspannung"
-    ],
+    "id": "kacklesnatch",
+    "name": "Kacklesnatch",
+    "type": "indica",
+    "indica": 60,
+    "sativa": 40,
+    "thc": "-",
+    "cbd": "-",
+    "genetics": "Chimera#3 × Grape Jubilee",
+    "breeder": "Exotic Genetics",
+    "description": "Kacklesnatch ist eine moderne, ganz besondere Hybridgenetik von Exotic Genetix, entstanden aus der Kreuzung der legendären Chimera#3 und der herausstechenden Grape Jubilee. Die Sorte wurde als Teil der Grape Jubilee Collection veröffentlicht und vereint spektakuläre Bag-Appeal-Eigenschaften mit einer außergewöhnlichen Harzproduktion und einem markanten Terpenprofil. Eine echte Rariatät, da sie inzwischen nicht mehr produziert wird (\"Retired\"). Kacklesnatch war wohl die interessantesten Veröffentlichungen dieser Serie und von Exotic Genetics in den letzten Jahren.\n\nKacklesnatch entwickelt eine kräftige, ausgewogene Hybridwirkung. Der Wirkungseintritt beginnt meist mit einer euphorischen, kreativen und kommunikativen Kopfwirkung. Anschließend breitet sich eine angenehme körperliche Entspannung aus, ohne unmittelbar in einen starken Couch-Lock überzugehen. Dank ihrer hohen Potenz eignet sich die Sorte besonders für erfahrene Konsumenten, die eine intensive, aber vielseitige Wirkung schätzen.",
+    "effects": [],
     "terpenes": [
-      "Süß",
-      "Gummibärchen",
-      "Gasig",
-      "Tropisch",
-      "Sahnig",
-      "Gebratener Donut"
+      "Trauben",
+      "Kirsche",
+      "Tropische Früchte",
+      "Creme",
+      "Gas",
+      "Erde"
     ],
-    "image": "/images/strains/jelly-donutz.webp",
+    "image": "/images/strains/kacklesnatch.webp",
     "status": "none",
-    "description_en": "The effect is initially clear, creative, and activating before transitioning into a pleasant physical relaxation. With very high THC levels, Jelly Donutz is one of the more potent strains in the CSCN portfolio, while remaining pleasantly balanced.",
-    "effects_en": [
-      "Clear",
-      "Creative",
-      "Activating",
-      "Physical Relaxation"
-    ],
+    "description_en": "Kacklesnatch is a modern, truly unique hybrid strain from Exotic Genetix, created by crossing the legendary Chimera#3 with the standout Grape Jubilee. The strain was released as part of the Grape Jubilee Collection and combines spectacular visual appeal with exceptional resin production and a distinctive terpene profile. A true rarity, as it is no longer in production (“Retired”). Kacklesnatch was arguably one of the most interesting releases in this series and from Exotic Genetics in recent years.\n\nKacklesnatch produces a powerful, balanced hybrid high. The high usually begins with a euphoric, creative, and sociable head high. This is followed by a pleasant physical relaxation that doesn’t immediately lead to a strong couch lock. Thanks to its high potency, this strain is particularly well-suited for experienced users who appreciate an intense yet versatile high.",
     "terpenes_en": [
-      "Sweet",
-      "Gummy bears",
-      "Gassy",
-      "Tropical",
-      "Creamy",
-      "Fried Donut"
+      "Grapes",
+      "Cherry",
+      "Tropical Fruits",
+      "Cream",
+      "Gas",
+      "Earth"
     ],
-    "description_fi": "Vaikutus on aluksi selkeä, luova ja virkistävä, ennen kuin se muuttuu miellyttäväksi fyysiseksi rentoutumiseksi.\nErittäin korkeiden THC-pitoisuuksiensa ansiosta Jelly Donutz kuuluu CSCN:n valikoiman voimakkaimpiin lajikkeisiin, mutta pysyy silti miellyttävän tasapainoisena.\nLajike sopii erinomaisesti päivittäiseen käyttöön, luoviin harrastuksiin tai seurallisiin hetkiin ilman, että se aiheuttaisi liiallista uneliaisuutta.",
-    "effects_fi": [
-      "Selvä",
-      "Luova",
-      "Virkistävä",
-      "Fyysinen rentoutuminen"
-    ],
+    "description_fi": "Kacklesnatch on Exotic Genetixin kehittämä moderni ja aivan erityinen hybridilajike, joka on syntynyt legendaarisen Chimera#3:n ja erottuvan Grape Jubileen risteytyksestä. Lajike julkaistiin osana Grape Jubilee Collection -kokoelmaa, ja siinä yhdistyvät upeat ulkonäölliset ominaisuudet, poikkeuksellinen hartsituotanto ja erottuva terpeeniprofiili. Todellinen harvinaisuus, sillä sitä ei enää tuoteta (\"Retired\"). Kacklesnatch oli luultavasti tämän sarjan ja Exotic Geneticsin mielenkiintoisin julkaisu viime vuosina.\n\nKacklesnatch tuottaa voimakkaan, tasapainoisen hybridivaikutuksen. Vaikutus alkaa yleensä euforisella, luovalla ja kommunikoivaa mielialaa edistävällä päävaikutuksella. Sen jälkeen leviää miellyttävä fyysinen rentoutuminen ilman, että se johtaa välittömästi voimakkaaseen ”couch lock” -tilaan. Suuren voimakkuutensa ansiosta lajike sopii erityisesti kokeneille käyttäjille, jotka arvostavat intensiivistä mutta monipuolista vaikutusta.",
     "terpenes_fi": [
-      "Söpö",
-      "kumikarhut",
-      "Kaasumainen",
-      "Trooppinen",
-      "Kermainen",
-      "Paistettu donitsi"
+      "rypäleet",
+      "kirsikka",
+      "Trooppiset hedelmät",
+      "Kerma",
+      "Kaasu",
+      "Maa"
     ],
-    "description_it": "L'effetto è inizialmente chiaro, creativo e stimolante, prima di trasformarsi in un piacevole rilassamento fisico.\nCon livelli di THC molto elevati, la Jelly Donutz è una delle varietà più potenti del portafoglio CSCN, pur rimanendo piacevolmente equilibrata.\nQuesta varietà è ideale per l’uso diurno, per attività creative o momenti in compagnia, senza esercitare un effetto eccessivamente sedativo.",
-    "effects_it": [
-      "Certo",
-      "Creativo",
-      "Energizzante",
-      "Rilassamento fisico"
-    ],
+    "description_it": "Kacklesnatch è una varietà ibrida moderna e davvero speciale creata da Exotic Genetix, nata dall’incrocio tra la leggendaria Chimera#3 e l’eccezionale Grape Jubilee. La varietà è stata lanciata come parte della Grape Jubilee Collection e unisce caratteristiche estetiche spettacolari a una produzione di resina eccezionale e a un profilo terpenico distintivo. Una vera rarità, poiché ormai non viene più prodotta (\"Retired\"). Kacklesnatch è stata probabilmente una delle novità più interessanti di questa serie e di Exotic Genetics negli ultimi anni.\n\nKacklesnatch produce un effetto ibrido potente ed equilibrato. L’effetto inizia solitamente con una sensazione cerebrale euforica, creativa e comunicativa. Successivamente si diffonde un piacevole rilassamento fisico, senza sfociare immediatamente in un forte “couch-lock”. Grazie alla sua elevata potenza, questa varietà è particolarmente adatta a consumatori esperti che apprezzano un effetto intenso ma versatile.",
     "terpenes_it": [
-      "Dolce",
-      "Orsetti di gomma",
-      "Gassoso",
-      "Tropicale",
-      "Cremoso",
-      "Ciambella fritta"
+      "Uva",
+      "Ciliegia",
+      "Frutta tropicale",
+      "Crema",
+      "Gas",
+      "Terra"
     ]
   },
   {
-    "id": "platinum-kush",
-    "name": "Platinum Kush",
+    "id": "lemon-game",
+    "name": "Lemon Game",
+    "type": "indica",
+    "indica": 60,
+    "sativa": 40,
+    "thc": "-",
+    "cbd": "-",
+    "genetics": "Lemon Cherry Gelato x Mac's Cap 3n-R1",
+    "breeder": "Copycat Genetix",
+    "description": "Lemon Game ist eine extrem seltene Hybridgenetik von Copycat Genetix. Entstanden aus der Kreuzung von Lemon Cherry Gelato und Mac's Cap 3N R1 (Triploid), war nur eine Handvoll Samen auf dem europäischen Markt verfügbar. Die Sorte verbindet die intensive Fruchtigkeit und Farbvielfalt der Lemon-Cherry-Gelato-Linie mit der enormen Harzproduktion, Wuchskraft und Potenz von Mac's Cap. Das Ergebnis ist eine leistungsstarke Exotic-Genetik mit kräftigem Wachstum, ausgeprägter Seitenverzweigung und außergewöhnlicher Trichombildung.\n\nLemon Game zählt zu den ausgesprochen potenten modernen Hybridgenetiken. Aufgrund ihres sehr hohen THC-Gehalts und der leistungsstarken Genetik entwickelt die Sorte eine intensive und langanhaltende Wirkung. Der Wirkungseintritt wird häufig als schnell einsetzend beschrieben und beginnt mit einer ausgeprägten Euphorie sowie einem klaren, geistig stimulierenden Effekt. Im weiteren Verlauf entwickelt sich eine tiefgehende körperliche Entspannung, ohne die anfängliche mentale Intensität vollständig zu verdrängen.\n\nDurch ihre hohe Potenz richtet sich Lemon Game vor allem an erfahrene Konsumenten. Bereits geringe Mengen können eine sehr intensive Wirkung entfalten. Je nach Dosierung kann die Sorte sowohl kreativitätsfördernd und stimmungsaufhellend als auch stark entspannend und überwältigend wirken.",
+    "effects": [],
+    "terpenes": [
+      "Zitrone",
+      "Kirsche",
+      "Candy",
+      "Creme",
+      "Gas",
+      "Gewürze"
+    ],
+    "image": "/images/strains/lemon-game.webp",
+    "status": "none",
+    "description_en": "Lemon Game is an extremely rare hybrid strain from Copycat Genetix. Created by crossing Lemon Cherry Gelato and Mac's Cap 3N R1 (triploid), only a handful of seeds were available on the European market. This strain combines the intense fruitiness and color variety of the Lemon Cherry Gelato line with the enormous resin production, vigor, and potency of Mac’s Cap. The result is a high-performing exotic strain with vigorous growth, pronounced lateral branching, and exceptional trichome production.\n\nLemon Game ranks among the most potent modern hybrid genetics. Due to its very high THC content and high-performance genetics, the strain produces an intense and long-lasting effect. The onset of effects is often described as rapid, beginning with pronounced euphoria and a clear, mentally stimulating effect. As the experience progresses, a deep physical relaxation sets in without completely overshadowing the initial mental intensity.\n\nDue to its high potency, Lemon Game is primarily intended for experienced users. Even small amounts can produce a very intense effect. Depending on the dosage, the strain can have effects that range from promoting creativity and lifting the mood to being deeply relaxing and overwhelming.",
+    "terpenes_en": [
+      "Lemon",
+      "Cherry",
+      "Candy",
+      "Cream",
+      "Gas",
+      "Spices"
+    ],
+    "description_fi": "Lemon Game on Copycat Genetixin erittäin harvinainen hybridilajike. Se on syntynyt Lemon Cherry Gelaton ja Mac’s Cap 3N R1:n (triploidi) risteytyksestä, ja eurooppalaisilla markkinoilla oli saatavilla vain kourallinen siemeniä. Lajike yhdistää Lemon Cherry Gelato -linjan voimakkaan hedelmäisyyden ja värikkyyden Mac's Capin valtavaan hartsituotantoon, kasvuvoimaan ja tehoon. Tuloksena on tehokas eksoottinen lajike, jolla on voimakas kasvu, selvä sivuhaaraus ja poikkeuksellinen trikomien muodostuminen.\n\nLemon Game kuuluu erittäin voimakkaisiin nykyaikaisiin hybridigenetiikoihin. Erittäin korkean THC-pitoisuutensa ja tehokkaan genetiikkansa ansiosta lajikkeella on voimakas ja pitkäkestoinen vaikutus. Vaikutuksen alkaminen kuvataan usein nopeaksi, ja se alkaa voimakkaalla euforialla sekä selkeällä, mieltä stimuloivalla vaikutuksella. Myöhemmin kehittyy syvällinen fyysinen rentoutuminen, joka ei kuitenkaan täysin syrjäytä alkuperäistä henkistä intensiteettiä.\n\nVoimakkuutensa vuoksi Lemon Game on tarkoitettu ennen kaikkea kokeneille käyttäjille. Jo pienet määrät voivat tuottaa erittäin voimakkaan vaikutuksen. Annostuksesta riippuen lajike voi sekä edistää luovuutta ja kohottaa mielialaa että vaikuttaa voimakkaasti rentouttavasti ja ylivoimaisesti.",
+    "terpenes_fi": [
+      "Sitruuna",
+      "kirsikka",
+      "Candy",
+      "Kerma",
+      "Kaasu",
+      "Mausteet"
+    ],
+    "description_it": "Lemon Game è una varietà ibrida estremamente rara prodotta da Copycat Genetix. Nata dall’incrocio tra Lemon Cherry Gelato e Mac’s Cap 3N R1 (triploide), sul mercato europeo era disponibile solo una manciata di semi. Questa varietà unisce l'intensa fruttuosità e la varietà cromatica della linea Lemon Cherry Gelato all'enorme produzione di resina, alla vigorosità e alla potenza di Mac's Cap. Il risultato è una potente genetica esotica caratterizzata da una crescita vigorosa, una ramificazione laterale marcata e una straordinaria produzione di tricomi.\n\nLa Lemon Game è una delle genetiche ibride moderne decisamente potenti. Grazie al suo altissimo contenuto di THC e alla genetica ad alte prestazioni, questa varietà sviluppa un effetto intenso e di lunga durata. L’inizio dell’effetto è spesso descritto come rapido e si manifesta con una marcata euforia e un effetto lucido e stimolante a livello mentale. Successivamente si sviluppa un profondo rilassamento fisico, senza che l’intensità mentale iniziale venga completamente soppressa.\n\nData la sua elevata potenza, Lemon Game è indicata soprattutto per consumatori esperti. Già piccole quantità possono produrre un effetto molto intenso. A seconda del dosaggio, questa varietà può avere un effetto sia stimolante per la creatività e migliorante dell’umore, sia fortemente rilassante e travolgente.",
+    "terpenes_it": [
+      "Limone",
+      "Ciliegia",
+      "Candy",
+      "Crema",
+      "Gas",
+      "Spezie"
+    ]
+  },
+  {
+    "id": "london-lobster",
+    "name": "London Lobster",
+    "type": "indica",
+    "indica": 65,
+    "sativa": 35,
+    "thc": "-",
+    "cbd": "-",
+    "genetics": "Brightside Cheese × Blue Lobster",
+    "breeder": "Cipher Genetics",
+    "description": "London Lobster ist eine außergewöhnliche Hybridkreuzung von Cipher Genetics, die als Teil der berühmten Blue-Lobster-Familie veröffentlicht wurde. Die Sorte kombiniert die legendäre Brightside Cheese – einen der authentischsten und intensivsten UK-Cheese-Klone – mit der modernen Elitegenetik Blue Lobster. Das Ergebnis ist eine Sorte, die Oldschool-Funk mit modernen Candy-Terpenen verbindet. London Lobster entwickelt kräftige Pflanzen mit stabilen Seitentrieben und produziert dichte, extrem harzige Blüten mit hohem Bag-Appeal. Sie richtet sich besonders an Liebhaber charakterstarker, ungewöhnlicher Aromaprofile.\n\nDie Wirkung beginnt meist mit einer deutlichen geistigen Aufhellung. Viele Nutzer beschreiben ein euphorisches, geselliges und leicht albernes Kopfgefühl, das die Stimmung hebt und Gespräche fördert. Im weiteren Verlauf setzt eine angenehme körperliche Entspannung ein, die beruhigend wirkt, ohne unmittelbar in starke Müdigkeit überzugehen. Dadurch verbindet London Lobster die aktivierende Seite klassischer Cheese-Genetiken mit der komfortablen Gelassenheit moderner Indicas.",
+    "effects": [],
+    "terpenes": [
+      "Cheese",
+      "Trauben",
+      "Gas",
+      "Candy",
+      "Creme",
+      "Blaubeere"
+    ],
+    "image": "/images/strains/london-lobster.webp",
+    "status": "none",
+    "description_en": "London Lobster is an exceptional hybrid strain from Cipher Genetics, released as part of the famous Blue Lobster family. The strain combines the legendary Brightside Cheese—one of the most authentic and intense UK Cheese clones—with the modern, elite Blue Lobster genetics. The result is a strain that blends old-school funk with modern candy terpenes. London Lobster produces robust plants with sturdy side shoots and yields dense, extremely resinous buds with high bag appeal. It is particularly suited for enthusiasts of distinctive, unusual flavor profiles.\n\nThe effect usually begins with a noticeable mental clarity. Many users describe a euphoric, sociable, and slightly silly high that lifts the mood and encourages conversation. As the experience progresses, a pleasant physical relaxation sets in, which has a calming effect without immediately leading to strong drowsiness. As a result, London Lobster combines the energizing qualities of classic Cheese genetics with the comfortable calm of modern Indicas.",
+    "terpenes_en": [
+      "Cheese",
+      "Grapes",
+      "Gas",
+      "Candy",
+      "Cream",
+      "Blueberry"
+    ],
+    "description_fi": "London Lobster on Cipher Geneticsin kehittämä poikkeuksellinen hybridiristeytys, joka on julkaistu osana kuuluisaa Blue Lobster -perhettä. Lajike yhdistää legendaarisen Brightside Cheesen – yhden aidoimmista ja voimakkaimmista UK Cheese -klooneista – moderniin Blue Lobster -eliittigenetiikkaan. Tuloksena on lajike, joka yhdistää vanhan koulukunnan fiiliksen moderneihin Candy-terpeeneihin. London Lobster kasvattaa voimakkaita kasveja, joilla on vankat sivuvarret, ja tuottaa tiheitä, erittäin hartsisia kukintoja, jotka ovat silmäänpistäviä. Se on suunnattu erityisesti voimakkaiden ja epätavallisten aromiprofiilien ystäville.\n\nVaikutus alkaa yleensä selvällä mielen kirkastumisella. Monet käyttäjät kuvailevat euforista, seurallista ja hieman hassua pään tunnetta, joka kohottaa mielialaa ja edistää keskustelua. Myöhemmin seuraa miellyttävä fyysinen rentoutuminen, joka rauhoittaa ilman, että se johtaa välittömästi voimakkaaseen väsymykseen. Näin London Lobster yhdistää klassisten Cheese-lajikkeiden aktivoivan puolen nykyaikaisten indica-lajikkeiden mukavaan rauhallisuuteen.",
+    "terpenes_fi": [
+      "Juusto",
+      "rypäleet",
+      "Kaasu",
+      "Candy",
+      "Kerma",
+      "mustikka"
+    ],
+    "description_it": "La London Lobster è uno straordinario incrocio ibrido realizzato da Cipher Genetics, lanciato come parte della famosa famiglia Blue Lobster. Questa varietà combina la leggendaria Brightside Cheese – uno dei cloni UK Cheese più autentici e intensi – con la moderna genetica d’élite Blue Lobster. Il risultato è una varietà che unisce il fascino old school ai moderni terpeni \"candy\". London Lobster sviluppa piante robuste con germogli laterali stabili e produce cime dense, estremamente resinose e dall’elevato \"bag appeal\". È particolarmente indicata per gli amanti dei profili aromatici insoliti e dal carattere deciso.\n\nL’effetto inizia solitamente con un netto chiarimento mentale. Molti consumatori descrivono una sensazione euforica, socievole e leggermente giocosa, che migliora l’umore e favorisce la conversazione. Successivamente subentra un piacevole rilassamento fisico che ha un effetto calmante senza sfociare immediatamente in una forte sonnolenza. In questo modo, la London Lobster unisce il lato stimolante delle classiche genetiche Cheese alla confortevole serenità delle moderne Indica.",
+    "terpenes_it": [
+      "Formaggio",
+      "Uva",
+      "Gas",
+      "Candy",
+      "Crema",
+      "Mirtillo"
+    ]
+  },
+  {
+    "id": "midnight-sunset",
+    "name": "Midnight Sunset",
     "type": "indica",
     "indica": 80,
     "sativa": 20,
-    "thc": "22%",
-    "cbd": "<2%",
-    "genetics": "Platinum x OGKB",
-    "breeder": "In House Genetics",
-    "description": "Der Züchter In-House Genetics arbeitet an der OG Kush Breath-Linie mit der Cannabissorte Platinum Kush Breath. Platinum Kush Breath von In-House ist Platinum x OGKB V2.1, es sieht also so aus, als würde In-House dem struppigen, scharfen OGKB Glanz und Stabilität verleihen – keine schlechte Idee. Platinum ist angeblich eine Old-School-Kreuzung aus UW Hashplant und Permafrost. Sie sieht fantastisch aus, duftet nach einem gedämpften Haschisch-Gas-Aroma und wirkt erdend.\n\nBeruhigend, Körperbetonte Wirkung",
-    "effects": [
-      "Beruhigend",
-      "Körperbetonte Wirkung"
-    ],
+    "thc": "-",
+    "cbd": "-",
+    "genetics": "Sunset Sherbert Bx1 x Jet A",
+    "breeder": "Perfect Tree Seeds",
+    "description": "Midnight Sunset ist eine moderne, überwiegend Indica-dominierte Hybridgenetik von Perfect Tree, entstanden aus der Kreuzung von Sunset Sherbert Bx1 und Jet A. Ziel der Züchtung war es, das legendäre Sherbert-Terpenprofil mit den intensiven Gas- und Harzeigenschaften von Jet A zu kombinieren. Das Ergebnis ist eine außergewöhnlich harzreiche Sorte mit spektakulären violetten Farbausprägungen\n\nMidnight Sunset entwickelt eine sehr kräftige und langanhaltende Wirkung. Bereits kurz nach dem Konsum setzt eine angenehme Euphorie ein, die von einer tiefen körperlichen Entspannung begleitet wird. Mit zunehmender Intensität entwickelt sich ein stark beruhigender Effekt, der sie besonders für den Abend oder die Nacht geeignet macht. Der Züchter beschreibt sie ausdrücklich als die perfekte Sorte zum Abschalten nach einem langen Tag.",
+    "effects": [],
     "terpenes": [
-      "Erdig",
-      "Würzig",
-      "Kush",
-      "Hash-lastig"
+      "Gas",
+      "Kraftstoff",
+      "Creme",
+      "Süße",
+      "Zitrus",
+      "Sherbet"
     ],
-    "image": "/images/strains/platinum-kush.webp",
+    "image": "/images/strains/midnight-sunset.webp",
     "status": "none",
-    "description_en": "Platinum Kush Breath from In-House is Platinum x OGKB V2.1. It looks fantastic, smells like a muted hash-gas aroma, and has a grounding effect. Platinum is reportedly an old-school cross of UW Hashplant and Permafrost.",
-    "effects_en": [
-      "Calming",
-      "Body-focused effect"
-    ],
+    "description_en": "Midnight Sunset is a modern, predominantly Indica-dominant hybrid strain from Perfect Tree, created by crossing Sunset Sherbert Bx1 and Jet A. The goal of the breeding program was to combine the legendary Sherbert terpene profile with the intense gas and resin characteristics of Jet A. The result is an exceptionally resinous strain with spectacular purple hues.\n\nMidnight Sunset produces a very potent and long-lasting effect. Shortly after consumption, a pleasant euphoria sets in, accompanied by deep physical relaxation. As the intensity increases, a strongly calming effect develops, making it particularly suitable for the evening or night. The breeder explicitly describes it as the perfect strain for unwinding after a long day.",
     "terpenes_en": [
-      "Earthy",
-      "Spicy",
-      "Kush",
-      "Hashy"
-    ],
-    "description_fi": "Kasvattaja In-House Genetics kehittää OG Kush Breath -linjaa Platinum Kush Breath -kannabislajikkeella. In-Housen Platinum Kush Breath on Platinum x OGKB V2.1, joten näyttää siltä, että In-House lisää karheaan ja terävään OGKB:hen loistoa ja vakautta – ei lainkaan huono idea. Platinum on kuulemma vanhan koulukunnan risteytys, joka on syntynyt UW Hashplantin ja Permafrostin risteytyksestä. Se näyttää upealta, tuoksuu hillityltä hasis-kaasu-aromilta ja vaikuttaa maadoittavalta.\n\nRauhoittava, kehoon vaikuttava vaikutus",
-    "effects_fi": [
-      "Rauhoittava",
-      "Kehon muotoja korostava vaikutus"
-    ],
-    "terpenes_fi": [
-      "Maanläheinen",
-      "Mausteinen",
-      "Kush",
-      "Hash-painotteinen"
-    ],
-    "description_it": "Il coltivatore In-House Genetics sta lavorando alla linea OG Kush Breath con la varietà di cannabis Platinum Kush Breath. La Platinum Kush Breath di In-House è un incrocio tra Platinum e OGKB V2.1, quindi sembra che In-House stia conferendo lucentezza e stabilità alla ruvida e pungente OGKB: non è affatto una cattiva idea. Si dice che la Platinum sia un incrocio old school tra UW Hashplant e Permafrost. Ha un aspetto fantastico, profuma di un aroma tenue di hashish e gas e ha un effetto che fa sentire con i piedi per terra.\n\nEffetto calmante e che agisce sul corpo",
-    "effects_it": [
-      "Rassicurante",
-      "Effetto che esalta le forme del corpo"
-    ],
-    "terpenes_it": [
-      "Terroso",
-      "Piccante",
-      "Kush",
-      "Con un uso intensivo di hash"
-    ]
-  },
-  {
-    "id": "pnw-cherries",
-    "name": "PNW Cherries",
-    "type": "hybrid",
-    "indica": 50,
-    "sativa": 50,
-    "thc": "20-22%",
-    "cbd": "0-8%",
-    "genetics": "PNW Dogshit × Black Cherry Honey",
-    "breeder": "Inhouse Genetics",
-    "description": "",
-    "effects": [
-      "Zerebral",
-      "Kreativ",
-      "Stimmungsaufhellend",
-      "Körpergefühl"
-    ],
-    "terpenes": [
-      "Süßlich",
-      "Erdig",
-      "Kirschduft"
-    ],
-    "image": "/images/strains/pnw-cherries.webp",
-    "status": "none",
-    "description_en": "PNW Cherries produces a balanced, rather clear, head-heavy effect. It starts with a cerebral high that is creativity-enhancing and mood-boosting. In the further course, a pleasant body feeling can set in.",
-    "effects_en": [
-      "Cerebral",
-      "Creative",
-      "Mood-enhancing",
-      "Body sensation"
-    ],
-    "terpenes_en": [
-      "Sweetish",
-      "Earthy",
-      "Cherry scent"
-    ],
-    "effects_fi": [
-      "Aivoihin liittyvä",
-      "Luova",
-      "Mielialaa kohottava",
-      "Kehon tuntemus"
-    ],
-    "terpenes_fi": [
-      "Hieman makea",
-      "Maanläheinen",
-      "kirsikan tuoksu"
-    ],
-    "effects_it": [
-      "Cerebrale",
-      "Creativo",
-      "Migliora l'umore",
-      "Consapevolezza del proprio corpo"
-    ],
-    "terpenes_it": [
-      "Dolciastro",
-      "Terroso",
-      "Profumo di ciliegia"
-    ]
-  },
-  {
-    "id": "sugar-cane",
-    "name": "Sugar Cane",
-    "type": "hybrid",
-    "indica": 50,
-    "sativa": 50,
-    "thc": "20%",
-    "cbd": "<2%",
-    "genetics": "Platinum x Slurricane",
-    "breeder": "Inhouse Genetics",
-    "description": "Die Wirkung setzt mit einem erhebenden zerebralen High ein, das den Geist klärt und die Kreativität anregt. Während das High fortschreitet, tritt eine wohltuende körperliche Entspannung ein, die jedoch nicht dazu führt an die Couch gebunden zu sein (Couch-Lock). Diese ausgewogene Wirkung macht sie sowohl für kreative Aktivitäten als auch für entspannte Abende geeignet.",
-    "effects": [
-      "Erhebend",
-      "Geist klärend",
-      "Kreativität",
-      "Körperliche Entspannung"
-    ],
-    "terpenes": [
-      "Süß",
-      "Karamellisierter Zucker",
-      "Sirup",
-      "Trauben",
-      "Blumig",
-      "Zuckerwatte"
-    ],
-    "image": "/images/strains/sugar-cane.webp",
-    "status": "none",
-    "description_en": "The effect sets in with an uplifting cerebral high that clears the mind and stimulates creativity. As the high progresses, a soothing physical relaxation occurs that does not lead to being couch-locked.",
-    "effects_en": [
-      "Uplifting",
-      "Mind-clearing",
-      "Creativity",
-      "Physical Relaxation"
-    ],
-    "terpenes_en": [
+      "Gas",
+      "Fuel",
+      "Cream",
       "Sweet",
-      "Caramelized sugar",
-      "Syrup",
-      "Grapes",
-      "Floral",
-      "Cotton candy"
+      "Citrus",
+      "Sherbet"
     ],
-    "description_fi": "Vaikutus alkaa piristävällä, aivoihin kohdistuvalla pilvellä, joka kirkastaa mieltä ja herättää luovuutta. Päihtymyksen edetessä kehoon asettuu miellyttävä rentoutuminen, joka ei kuitenkaan johda sohvalle juuttumiseen (couch-lock). Tämän tasapainoisen vaikutuksen ansiosta lajike sopii sekä luoviin harrastuksiin että rentouttaviin iltoihin.",
-    "effects_fi": [
-      "Piristävä",
-      "Mielen selkeyttävä",
-      "Luovuus",
-      "Fyysinen rentoutuminen"
-    ],
+    "description_fi": "Midnight Sunset on Perfect Treen kehittämä moderni, pääosin indica-dominoitu hybridilajike, joka on syntynyt Sunset Sherbert Bx1:n ja Jet A:n risteytyksestä. Jalostuksen tavoitteena oli yhdistää legendaarinen Sherbert-terpeeniprofiili Jet A:n voimakkaisiin kaasumaisiin ja hartsimaisiin ominaisuuksiin. Tuloksena on poikkeuksellisen hartsipitoinen lajike, jolla on upeat violetit värisävyt.\n\nMidnight Sunsetilla on erittäin voimakas ja pitkäkestoinen vaikutus. Jo pian nauttimisen jälkeen alkaa miellyttävä euforia, johon liittyy syvä kehon rentoutuminen. Vaikutuksen voimistuessa kehittyy voimakkaasti rauhoittava vaikutus, joka tekee lajikkeesta erityisen sopivan iltaan tai yöhön. Kasvattaja kuvailee sitä nimenomaan täydelliseksi lajikkeeksi rentoutumiseen pitkän päivän jälkeen.",
     "terpenes_fi": [
-      "Söpö",
-      "Karamellisoitu sokeri",
-      "siirappi",
-      "rypäleet",
-      "Kukkainen",
-      "sokerivilla"
+      "Kaasu",
+      "Polttoaine",
+      "Kerma",
+      "Makea",
+      "Sitrushedelmät",
+      "Sherbet"
     ],
-    "description_it": "L'effetto inizia con uno sballo cerebrale edificante, che schiarisce la mente e stimola la creatività. Man mano che l’effetto progredisce, subentra un piacevole rilassamento fisico che, tuttavia, non porta a rimanere incollati al divano (couch-lock). Questo effetto equilibrato la rende adatta sia alle attività creative che alle serate all’insegna del relax.",
-    "effects_it": [
-      "Edificante",
-      "Che schiarisce la mente",
-      "Creatività",
-      "Rilassamento fisico"
-    ],
+    "description_it": "Midnight Sunset è una varietà ibrida moderna a predominanza Indica di Perfect Tree, ottenuta dall’incrocio tra Sunset Sherbert Bx1 e Jet A. L’obiettivo della selezione era quello di combinare il leggendario profilo terpenico della Sherbert con le intense caratteristiche di gas e resina della Jet A. Il risultato è una varietà straordinariamente ricca di resina con spettacolari sfumature violacee.\n\nMidnight Sunset produce un effetto molto potente e di lunga durata. Già poco dopo il consumo si avverte una piacevole euforia, accompagnata da un profondo rilassamento fisico. Con l’aumentare dell’intensità si sviluppa un effetto fortemente calmante, che la rende particolarmente adatta alla sera o alla notte. Il coltivatore la descrive espressamente come la varietà perfetta per staccare la spina dopo una lunga giornata.",
     "terpenes_it": [
+      "Gas",
+      "Carburante",
+      "Crema",
       "Dolce",
-      "Zucchero caramellato",
-      "Sciroppo",
+      "Agrumi",
+      "Sorbetto"
+    ]
+  },
+  {
+    "id": "moon-glow",
+    "name": "Moon Glow",
+    "type": "hybrid",
+    "indica": 50,
+    "sativa": 50,
+    "thc": "-",
+    "cbd": "-",
+    "genetics": "Moonbow #112 × Planet Purple F2 #144",
+    "breeder": "Archive Seed Bank",
+    "description": "Moon Glow ist eine reguläre Hybridsorte von Archive Seed Bank, entstanden aus Moonbow #112 × Planet Purple F2 #144. Die Sorte kombiniert das berühmte Moonbow-Profil mit zusätzlicher Farbausprägung, höherer Harzproduktion und stärkerem Bag-Appeal durch die Planet-Purple-Linie\n\nDie Wirkung lässt sich als ausgewogen einschätzen: anfänglich eher euphorisch, kreativ und stimmungsaufhellend, später mit spürbarer körperlicher Entspannung. Durch die Moonbow-, Zkittlez-, Dosidos- und Sherbet-Linien dürfte Moon Glow eher potent, rund und langanhaltend wirken, ohne klar als reine Tages- oder Abend-Sorte festgelegt zu sein.",
+    "effects": [],
+    "terpenes": [
+      "Brombeermarmelade",
+      "Zkittlez",
+      "Candy",
+      "Diesel",
+      "Kush",
+      "Erde",
+      "Gelato",
+      "Runtz"
+    ],
+    "image": "/images/strains/moon-glow.webp",
+    "status": "none",
+    "description_en": "Moon Glow is a regular hybrid strain from Archive Seed Bank, created from Moonbow #112 × Planet Purple F2 #144. This strain combines the famous Moonbow profile with enhanced color, higher resin production, and greater visual appeal thanks to the Planet Purple lineage\n\nThe effect can be described as balanced: initially more euphoric, creative, and mood-lifting, followed by noticeable physical relaxation. Thanks to the Moonbow, Zkittlez, Dosidos, and Sherbet lines, Moon Glow is likely to have a potent, well-rounded, and long-lasting effect, without being clearly defined as a pure daytime or evening strain.",
+    "terpenes_en": [
+      "Blackberry Jam",
+      "Zkittlez",
+      "Candy",
+      "Diesel",
+      "Kush",
+      "Earth",
+      "Gelato",
+      "Runtz"
+    ],
+    "description_fi": "Moon Glow on Archive Seed Bankin tavallinen hybridilajike, joka on kehitetty risteyttämällä Moonbow #112 ja Planet Purple F2 #144. Lajike yhdistää kuuluisan Moonbow-profiilin Planet Purple -linjan tuomaan lisävärikkyyteen, suurempaan hartsituotantoon ja vahvempaan ulkonäköön\n\nVaikutus voidaan luonnehtia tasapainoiseksi: aluksi pikemminkin euforinen, luovuutta herättävä ja mielialaa kohottava, myöhemmin tuntuvalla fyysisellä rentoutumisella. Moonbow-, Zkittlez-, Dosidos- ja Sherbet-linjojen ansiosta Moon Glow vaikuttaa todennäköisesti melko voimakkaalta, tasapainoiselta ja pitkäkestoiselta, ilman että sitä voitaisiin selkeästi määritellä puhtaasti päivä- tai iltalajikkeeksi.",
+    "terpenes_fi": [
+      "karhunvatukkahillo",
+      "Zkittlez",
+      "Candy",
+      "Diesel",
+      "Kush",
+      "Maa",
+      "Gelato",
+      "Runtz"
+    ],
+    "description_it": "Moon Glow è una varietà ibrida regolare della Archive Seed Bank, ottenuta dall’incrocio tra Moonbow #112 e Planet Purple F2 #144. Questa varietà combina il famoso profilo della Moonbow con una maggiore intensità cromatica, una produzione di resina più elevata e un maggiore \"bag appeal\" grazie alla linea Planet Purple\n\nL’effetto può essere definito equilibrato: inizialmente piuttosto euforico, creativo e che migliora l’umore, per poi lasciare spazio a un tangibile rilassamento fisico. Grazie alle linee Moonbow, Zkittlez, Dosidos e Sherbet, Moon Glow dovrebbe avere un effetto piuttosto potente, rotondo e di lunga durata, senza essere chiaramente definita come una varietà da giorno o da sera.",
+    "terpenes_it": [
+      "Marmellata di more",
+      "Zkittlez",
+      "Candy",
+      "Diesel",
+      "Kush",
+      "Terra",
+      "Gelato",
+      "Runtz"
+    ]
+  },
+  {
+    "id": "romscotti",
+    "name": "Romscotti",
+    "type": "indica",
+    "indica": 90,
+    "sativa": 10,
+    "thc": "-",
+    "cbd": "-",
+    "genetics": "Romulan x Biscotti",
+    "breeder": "Romulan Genetics",
+    "description": "Romscotti ist eine exklusive Black Label Certified-Hybridsorte von Romulan Genetics und gilt als eines der Flaggschiffe des Züchters. Die Sorte entstand aus der Kreuzung von Biscotti und Romulan und vereint die süß-cremigen Dessertnoten der Biscotti mit der legendären Potenz, Robustheit und Harzproduktion der Romulan-Linie. Laut Romulan Genetics gehört Romscotti zu den besten Kultivaren, die sie jemals entwickelt haben, und trägt deshalb das Black-Label-Siegel.\n\nRomscotti gehört zu den stärksten Indica-Sorten von Romulan Genetics. Die Wirkung setzt schnell ein und beginnt mit einer angenehmen Euphorie, die in einen verträumten, ruhigen Geisteszustand übergeht. Kurz darauf entwickelt sich eine intensive körperliche Entspannung, die häufig in einen tiefen Body-Stone mündet. Die Sorte eignet sich besonders für ruhige Abendstunden und wird von vielen Konsumenten wegen ihrer langanhaltenden, beruhigenden Wirkung geschätzt",
+    "effects": [],
+    "terpenes": [
+      "Kaffee",
+      "Schokolade",
+      "Erde",
+      "Gewürze",
+      "Süßer Teig",
+      "Früchte",
+      "Gas"
+    ],
+    "image": "/images/strains/romscotti.webp",
+    "status": "none",
+    "description_en": "Romscotti is an exclusive Black Label Certified hybrid strain from Romulan Genetics and is considered one of the breeder’s flagship strains. The strain was created by crossing Biscotti and Romulan and combines the sweet, creamy dessert notes of Biscotti with the legendary potency, hardiness, and resin production of the Romulan line. According to Romulan Genetics, Romscotti is among the best cultivars they have ever developed and therefore bears the Black Label seal.\n\nRomscotti is one of Romulan Genetics’ strongest Indica strains. The effects kick in quickly, starting with a pleasant euphoria that transitions into a dreamy, calm state of mind. Shortly thereafter, an intense physical relaxation sets in, often culminating in a deep body stone. The strain is particularly well-suited for quiet evenings and is appreciated by many users for its long-lasting, calming effects.",
+    "terpenes_en": [
+      "Coffee",
+      "Chocolate",
+      "Earth",
+      "Spices",
+      "Sweet Dough",
+      "Fruits",
+      "Gas"
+    ],
+    "description_fi": "Romscotti on Romulan Geneticsin eksklusiivinen Black Label Certified -hybridilajike, jota pidetään yhtenä jalostajan lippulaivoista. Lajike on syntynyt Biscottin ja Romulanin risteytyksestä, ja siinä yhdistyvät Biscottin makeat ja kermaiset jälkiruokamaut sekä Romulan-linjan legendaarinen teho, kestävyys ja hartsituotanto. Romulan Geneticsin mukaan Romscotti kuuluu parhaimpiin lajikkeisiin, joita he ovat koskaan kehittäneet, ja siksi se kantaa Black Label -sertifikaattia.\n\nRomscotti on yksi Romulan Geneticsin voimakkaimmista Indica-lajikkeista. Vaikutus alkaa nopeasti ja avautuu miellyttävällä euforialla, joka muuttuu unenomaiseksi, rauhalliseksi mielentilaksi. Pian sen jälkeen kehittyy voimakas fyysinen rentoutuminen, joka johtaa usein syvään kehon rentoutumiseen. Lajike sopii erityisen hyvin rauhallisiin iltahetkiin, ja monet käyttäjät arvostavat sitä sen pitkäkestoisen, rauhoittavan vaikutuksen vuoksi.",
+    "terpenes_fi": [
+      "Kahvi",
+      "Suklaa",
+      "Maa",
+      "Mausteet",
+      "Makea taikina",
+      "Hedelmät",
+      "Kaasu"
+    ],
+    "description_it": "Romscotti è una varietà ibrida esclusiva certificata Black Label di Romulan Genetics ed è considerata uno dei prodotti di punta del coltivatore. La varietà è nata dall’incrocio tra Biscotti e Romulan e unisce le note dolci e cremose da dessert della Biscotti alla leggendaria potenza, robustezza e produzione di resina della linea Romulan. Secondo Romulan Genetics, la Romscotti è una delle migliori cultivar che abbiano mai sviluppato e per questo motivo reca il marchio Black Label.\n\nLa Romscotti è una delle varietà Indica più potenti di Romulan Genetics. L’effetto si manifesta rapidamente e inizia con una piacevole euforia che sfocia in uno stato mentale sognante e tranquillo. Poco dopo si sviluppa un intenso rilassamento fisico, che spesso sfocia in un profondo «body stone». La varietà è particolarmente adatta per tranquille serate ed è apprezzata da molti consumatori per il suo effetto calmante e di lunga durata.",
+    "terpenes_it": [
+      "Caffè",
+      "Cioccolato",
+      "Terra",
+      "Spezie",
+      "Pasta dolce",
+      "Frutta",
+      "Gas"
+    ]
+  },
+  {
+    "id": "romulan",
+    "name": "Romulan",
+    "type": "sativa",
+    "indica": 30,
+    "sativa": 70,
+    "thc": "-",
+    "cbd": "-",
+    "genetics": "(Thai × Mexican × Colombian × Afghani) × Colombian",
+    "breeder": "Romulan Genetics",
+    "description": "Romulan ist eine legendäre kanadische Kultsorte, deren Ursprünge bis in die 1960er Jahre zurückreichen. Bekannt wurde sie durch ihre außergewöhnliche Potenz, ihre robuste Natur und ihr unverwechselbares Aroma. Die heutige Version von Romulan Genetics basiert auf der Erhaltung und Weiterentwicklung dieser historischen Genetik durch Romulan Jake. Trotz ihrer langen Geschichte hat sich Romulan ihren Ruf als eine der charakterstärksten und zuverlässigsten Sorten Nordamerikas bewahrt.\n\nRomulan ist berühmt für ihre intensive, aber klare Wirkung. Die Effekte werden als kraftvoll, langanhaltend und gleichzeitig erstaunlich angstfrei beschrieben. Die Sorte erzeugt häufig ein glückliches, zufriedenes Kopfgefühl, begleitet von einer tiefen körperlichen Entspannung. Viele Konsumenten berichten von einem \"ceiling-less high\" – einer Wirkung, die zwar sehr potent ist, aber nicht abrupt in Überforderung oder Paranoia umschlägt.\n\nDie Kombination aus geistiger Klarheit und körperlicher Gelassenheit macht Romulan zu einer der wenigen klassischen Sorten, die sowohl als entspannend als auch als funktional wahrgenommen werden.",
+    "effects": [],
+    "terpenes": [
+      "Kiefer",
+      "Pfeffer",
+      "Skunk",
+      "Erde",
+      "Funk"
+    ],
+    "image": "/images/strains/romulan.webp",
+    "status": "none",
+    "description_en": "Romulan is a legendary Canadian cult strain whose origins date back to the 1960s. It became famous for its exceptional potency, robust nature, and distinctive aroma. Today’s version from Romulan Genetics is based on the preservation and further development of these historic genetics by Romulan Jake. Despite its long history, Romulan has maintained its reputation as one of North America’s most distinctive and reliable strains.\n\nRomulan is famous for its intense yet clear high. The effects are described as powerful, long-lasting, and, at the same time, surprisingly anxiety-free. The strain often produces a happy, contented cerebral high, accompanied by deep physical relaxation. Many users report a “ceiling-less high”—an effect that, while very potent, does not abruptly turn into overwhelming anxiety or paranoia.\n\nThe combination of mental clarity and physical calm makes Romulan one of the few classic strains that is perceived as both relaxing and functional.",
+    "terpenes_en": [
+      "Pine",
+      "Pepper",
+      "Skunk",
+      "Earth",
+      "Radio"
+    ],
+    "description_fi": "Romulan on legendaarinen kanadalainen kulttilajike, jonka juuret ulottuvat 1960-luvulle. Se tuli tunnetuksi poikkeuksellisen voimakkaasta vaikutuksestaan, kestävästä luonteestaan ja ainutlaatuisesta aromistaan. Romulan Geneticsin nykyinen versio perustuu Romulan Jaken tekemään tämän historiallisen genetiikan säilyttämiseen ja kehittämiseen. Pitkästä historiastaan huolimatta Romulan on säilyttänyt maineensa yhtenä Pohjois-Amerikan luonteeltaan vahvimmista ja luotettavimmista lajikkeista.\n\nRomulan on kuuluisa voimakkaasta mutta selkeästä vaikutuksestaan. Vaikutuksia kuvataan voimakkaina, pitkäkestoisina ja samalla hämmästyttävän pelottomina. Lajike tuottaa usein onnellisen ja tyytyväisen mielialan, johon liittyy syvä kehon rentoutuminen. Monet käyttäjät kertovat ”ceiling-less high” -kokemuksesta – vaikutuksesta, joka on kyllä erittäin voimakas, mutta ei muutu äkillisesti ylikuormitukseksi tai paranoiaksi.\n\nHenkisen selkeyden ja fyysisen rauhallisuuden yhdistelmä tekee Romulanista yhden harvoista klassisista lajikkeista, joita pidetään sekä rentouttavina että toiminnallisina.",
+    "terpenes_fi": [
+      "mänty",
+      "Pippuri",
+      "Skunk",
+      "Maa",
+      "Radio"
+    ],
+    "description_it": "La Romulan è una varietà canadese leggendaria e di culto, le cui origini risalgono agli anni ’60. È diventata famosa per la sua straordinaria potenza, la sua natura robusta e il suo aroma inconfondibile. La versione odierna di Romulan Genetics si basa sulla conservazione e sull’ulteriore sviluppo di questa genetica storica ad opera di Romulan Jake. Nonostante la sua lunga storia, la Romulan ha mantenuto la sua reputazione di una delle varietà più caratteristiche e affidabili del Nord America.\n\nLa Romulan è famosa per il suo effetto intenso ma limpido. Gli effetti sono descritti come potenti, di lunga durata e allo stesso tempo sorprendentemente privi di ansia. La varietà produce spesso una sensazione di euforia e appagamento a livello mentale, accompagnata da un profondo rilassamento fisico. Molti consumatori descrivono uno “sballo senza limiti” – un effetto che, pur essendo molto potente, non sfocia bruscamente in un senso di sopraffazione o paranoia.\n\nLa combinazione di lucidità mentale e serenità fisica rende la Romulan una delle poche varietà classiche percepite sia come rilassanti che come funzionali.",
+    "terpenes_it": [
+      "Pino",
+      "Pepe",
+      "Skunk",
+      "Terra",
+      "Radio"
+    ]
+  },
+  {
+    "id": "thornberry-sunshine",
+    "name": "Thornberry Sunshine",
+    "type": "hybrid",
+    "indica": 50,
+    "sativa": 50,
+    "thc": "-",
+    "cbd": "-",
+    "genetics": "Wild Thornberry x Grape Sunshine",
+    "breeder": "Common Wealth Seed Co.",
+    "description": "Wild Thornberry × Grape Sunshine, von Common Wealth Seed Co. unter dem Namen Grape Safari veröffentlicht, vereint zwei der begehrtesten Eliteklone des Züchters. Die Sorte wurde mit besonderem Fokus auf außergewöhnliche Terpenentwicklung, hohe Harzproduktion und exzellente Hash-Eigenschaften entwickelt.\n\nWild Thornberry × Grape Sunshine entwickelt eine kräftige, ausgewogene Hybridwirkung. Der Wirkungseintritt wird voraussichtlich von Euphorie, guter Laune und kreativer geistiger Aktivität geprägt, bevor sich eine angenehme körperliche Entspannung einstellt. Dank der modernen Zkittlez-, Moonbow-, Dosidos- und Papaya-Einflüsse ist von einer langanhaltenden und intensiven Wirkung mit guter Balance zwischen Kopf- und Körperwirkung auszugehen.",
+    "effects": [],
+    "terpenes": [
+      "Trauben",
+      "Tropische Früchte",
+      "Erdbeere",
+      "Candy",
+      "Zitrus",
+      "Creme"
+    ],
+    "image": "/images/strains/thornberry-sunshine.webp",
+    "status": "none",
+    "description_en": "Wild Thornberry × Grape Sunshine, released by Common Wealth Seed Co. under the name Grape Safari, combines two of the breeder’s most sought-after elite clones. The strain was developed with a particular focus on exceptional terpene development, high resin production, and excellent hash qualities.\n\nWild Thornberry × Grape Sunshine produces a powerful, balanced hybrid high. The onset of the high is expected to be characterized by euphoria, a good mood, and creative mental stimulation, before giving way to a pleasant physical relaxation. Thanks to modern Zkittlez, Moonbow, Dosidos, and Papaya influences, a long-lasting and intense high with a good balance between mental and physical effects can be expected.",
+    "terpenes_en": [
+      "Grapes",
+      "Tropical Fruits",
+      "Strawberry",
+      "Candy",
+      "Citrus",
+      "Cream"
+    ],
+    "description_fi": "Wild Thornberry × Grape Sunshine, jonka Common Wealth Seed Co. on tuonut markkinoille nimellä Grape Safari, yhdistää kaksi jalostajan halutuimmista eliittiklooneista. Lajike on kehitetty kiinnittämällä erityistä huomiota poikkeukselliseen terpeenien kehittymiseen, korkeaan hartsituotantoon ja erinomaisiin hasisominaisuuksiin.\n\nWild Thornberry × Grape Sunshine tuottaa voimakkaan ja tasapainoisen hybridivaikutuksen. Vaikutuksen alkuvaiheessa voi odottaa euforiaa, hyvää mielialaa ja luovaa henkistä aktiivisuutta, ennen kuin miellyttävä fyysinen rentoutuminen astuu kuvaan. Nykyaikaisten Zkittlez-, Moonbow-, Dosidos- ja Papaya-vaikutteiden ansiosta vaikutuksen voidaan odottaa olevan pitkäkestoinen ja voimakas, ja siinä on hyvä tasapaino henkisten ja fyysisten vaikutusten välillä.",
+    "terpenes_fi": [
+      "rypäleet",
+      "Trooppiset hedelmät",
+      "Mansikka",
+      "Candy",
+      "Sitrushedelmät",
+      "Kerma"
+    ],
+    "description_it": "La Wild Thornberry × Grape Sunshine, commercializzata dalla Common Wealth Seed Co. con il nome di Grape Safari, unisce due dei cloni d’élite più ricercati del selezionatore. La varietà è stata sviluppata ponendo particolare attenzione allo straordinario sviluppo dei terpeni, all’elevata produzione di resina e alle eccellenti caratteristiche per la produzione di hashish.\n\nWild Thornberry × Grape Sunshine produce un effetto ibrido potente ed equilibrato. L’inizio dell’effetto è caratterizzato da euforia, buon umore e attività mentale creativa, prima che subentri un piacevole rilassamento fisico. Grazie alle moderne influenze di Zkittlez, Moonbow, Dosidos e Papaya, ci si può aspettare un effetto intenso e di lunga durata, con un buon equilibrio tra effetto mentale e fisico.",
+    "terpenes_it": [
       "Uva",
-      "Floreale",
-      "Zucchero filato"
+      "Frutta tropicale",
+      "Fragola",
+      "Candy",
+      "Agrumi",
+      "Crema"
     ]
   }
 ]

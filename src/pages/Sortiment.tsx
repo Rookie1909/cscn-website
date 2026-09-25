@@ -94,8 +94,26 @@ export function Sortiment() {
                 >
                   <Link
                     to={`/sortiment/${g.id}`}
-                    className="block h-full glass-card-premium hover:border-primary/50 transition-all duration-300 hover:-translate-y-1"
+                    className="group block h-full relative overflow-hidden rounded-2xl border border-border/50 shadow-2xl hover:border-primary/50 transition-all duration-300 hover:-translate-y-1"
                   >
+                    {/* Stylized duotone backdrop: grayscale photo tinted with
+                        the primary color, then softened behind frosted glass
+                        so it reads as branding rather than a literal photo. */}
+                    <div className="absolute inset-0">
+                      {g.image && (
+                        <>
+                          <img
+                            src={g.image}
+                            alt=""
+                            className="w-full h-full object-cover grayscale contrast-125 scale-105 transition-transform duration-500 group-hover:scale-110"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/60 to-black mix-blend-color" />
+                        </>
+                      )}
+                      <div className="absolute inset-0 bg-card/75 backdrop-blur-xl" />
+                    </div>
+
+                    <div className="relative p-6 h-full flex flex-col">
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-[10px] font-mono font-bold text-muted-foreground">
                         N&deg; {String(i + 1).padStart(2, '0')}
@@ -155,6 +173,7 @@ export function Sortiment() {
                     <div className="flex items-center justify-end gap-1.5 pt-3 border-t border-border/30 text-primary text-xs font-bold">
                       {t('sortiment_page.view_profile')}
                       <ArrowRight size={12} />
+                    </div>
                     </div>
                   </Link>
                 </motion.div>

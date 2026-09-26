@@ -4,21 +4,12 @@ const path = require('path');
 const CLUB_ID = process.env.CANNANAS_CLUB_ID;
 const API_KEY = process.env.CANNANAS_API_KEY;
 const API_BASE = 'https://api.cannanas.club';
-const DEEPL_API_KEY = process.env.DEEPL_API_KEY;
-const DEEPL_URL = DEEPL_API_KEY && DEEPL_API_KEY.endsWith(':fx')
-  ? 'https://api-free.deepl.com/v2/translate'
-  : 'https://api.deepl.com/v2/translate';
+const { TRANSLATION_TARGETS, translateTo, seedFromFile, saveCache } = require('./translate.cjs');
 
 const OVERRIDES_PATH = path.join(__dirname, '..', '..', 'src', 'data', 'strain-overrides.json');
 const OUTPUT_PATH = path.join(__dirname, '..', '..', 'src', 'data', 'genetics.json');
 const IMAGES_DIR = path.join(__dirname, '..', '..', 'public', 'images', 'strains');
 const IMAGES_PUBLIC_PATH = '/images/strains';
-
-const TRANSLATION_TARGETS = [
-  { suffix: 'en', deepl: 'EN' },
-  { suffix: 'fi', deepl: 'FI' },
-  { suffix: 'it', deepl: 'IT' },
-];
 
 function extFromMime(mimeType) {
   const known = { 'image/webp': 'webp', 'image/png': 'png', 'image/jpeg': 'jpg' };
@@ -70,39 +61,6 @@ async function downloadImage(id, image) {
   return `${IMAGES_PUBLIC_PATH}/${id}.${ext}`;
 }
 
-async function translateTo(texts, targetLang) {
-  if (!DEEPL_API_KEY) return texts.map(() => undefined);
-  const nonEmptyIndexes = texts.map((t, i) => (t ? i : -1)).filter((i) => i !== -1);
-  if (nonEmptyIndexes.length === 0) return texts.map(() => undefined);
-  const params = new URLSearchParams();
-  nonEmptyIndexes.forEach((i) => params.append('text', texts[i]));
-  params.append('source_lang', 'DE');
-  params.append('target_lang', targetLang);
-  try {
-    const res = await fetch(DEEPL_URL, {
-      method: 'POST',
-      headers: {
-        Authorization: `DeepL-Auth-Key ${DEEPL_API_KEY}`,
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: params,
-    });
-    if (!res.ok) {
-      console.error(`DeepL translation (${targetLang}) failed: ${res.status} ${await res.text()}`);
-      return texts.map(() => undefined);
-    }
-    const data = await res.json();
-    const result = new Array(texts.length).fill(undefined);
-    nonEmptyIndexes.forEach((origIndex, j) => {
-      result[origIndex] = data.translations[j].text;
-    });
-    return result;
-  } catch (err) {
-    console.error(`DeepL translation (${targetLang}) error:`, err.message);
-    return texts.map(() => undefined);
-  }
-}
-
 async function autoTranslate({ description, terpenes, effects }, override) {
   const result = {};
   for (const { suffix, deepl } of TRANSLATION_TARGETS) {
@@ -119,9 +77,13 @@ async function autoTranslate({ description, terpenes, effects }, override) {
       if (job === 'description') out.description = translated[i];
       else out[job].push(translated[i]);
     });
+    // A failed DeepL call yields undefined entries (serialized as null), so
+    // only keep a translated list when every item was translated; the site
+    // falls back to German otherwise.
+    const complete = (list) => list.length > 0 && list.every(Boolean);
     if (out.description) result[`description_${suffix}`] = out.description;
-    if (out.terpenes.length > 0) result[`terpenes_${suffix}`] = out.terpenes;
-    if (out.effects.length > 0) result[`effects_${suffix}`] = out.effects;
+    if (complete(out.terpenes)) result[`terpenes_${suffix}`] = out.terpenes;
+    if (complete(out.effects)) result[`effects_${suffix}`] = out.effects;
   }
   return result;
 }
@@ -168,6 +130,7 @@ async function main() {
   const overrides = fs.existsSync(OVERRIDES_PATH)
     ? JSON.parse(fs.readFileSync(OVERRIDES_PATH, 'utf8'))
     : {};
+  seedFromFile(OUTPUT_PATH, ['description', 'terpenes', 'effects']);
 
   // "Our genetics" is the club's own curated mother-plant portfolio, not tied
   // to what happens to be in stock right now: a strain belongs here exactly
@@ -235,6 +198,7 @@ async function main() {
   entries.sort((a, b) => a.name.localeCompare(b.name, 'de'));
 
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(entries, null, 2) + '\n', 'utf8');
+  saveCache();
   console.log(`Synced ${entries.length} genetics -> ${OUTPUT_PATH}`);
 }
 

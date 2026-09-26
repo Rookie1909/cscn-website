@@ -4,11 +4,7 @@ const path = require('path');
 const CLUB_ID = process.env.CANNANAS_CLUB_ID;
 const API_KEY = process.env.CANNANAS_API_KEY;
 const API_BASE = 'https://api.cannanas.club';
-const DEEPL_API_KEY = process.env.DEEPL_API_KEY;
-// DeepL marks free-tier keys with a ":fx" suffix, which also determines the endpoint.
-const DEEPL_URL = DEEPL_API_KEY && DEEPL_API_KEY.endsWith(':fx')
-  ? 'https://api-free.deepl.com/v2/translate'
-  : 'https://api.deepl.com/v2/translate';
+const { TRANSLATION_TARGETS, translateTo, seedFromFile, saveCache } = require('./translate.cjs');
 
 const OVERRIDES_PATH = path.join(__dirname, '..', '..', 'src', 'data', 'strain-overrides.json');
 const OUTPUT_PATH = path.join(__dirname, '..', '..', 'src', 'data', 'strains-sync.json');
@@ -64,52 +60,6 @@ function extractTerpeneTags(profile) {
   return { tags: [], rest: profile.trim() };
 }
 
-// Languages the site is translated into besides German (the source), and the
-// suffix used for each on both locale keys (e.g. description_fi) and DeepL's
-// target_lang codes.
-const TRANSLATION_TARGETS = [
-  { suffix: 'en', deepl: 'EN' },
-  { suffix: 'fi', deepl: 'FI' },
-  { suffix: 'it', deepl: 'IT' },
-];
-
-// Translates a list of German strings to the given DeepL target language in
-// one request, preserving order and skipping empty entries.
-async function translateTo(texts, targetLang) {
-  if (!DEEPL_API_KEY) return texts.map(() => undefined);
-  const nonEmptyIndexes = texts.map((t, i) => (t ? i : -1)).filter((i) => i !== -1);
-  if (nonEmptyIndexes.length === 0) return texts.map(() => undefined);
-
-  const params = new URLSearchParams();
-  nonEmptyIndexes.forEach((i) => params.append('text', texts[i]));
-  params.append('source_lang', 'DE');
-  params.append('target_lang', targetLang);
-
-  try {
-    const res = await fetch(DEEPL_URL, {
-      method: 'POST',
-      headers: {
-        Authorization: `DeepL-Auth-Key ${DEEPL_API_KEY}`,
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: params,
-    });
-    if (!res.ok) {
-      console.error(`DeepL translation (${targetLang}) failed: ${res.status} ${await res.text()}`);
-      return texts.map(() => undefined);
-    }
-    const data = await res.json();
-    const result = new Array(texts.length).fill(undefined);
-    nonEmptyIndexes.forEach((origIndex, j) => {
-      result[origIndex] = data.translations[j].text;
-    });
-    return result;
-  } catch (err) {
-    console.error(`DeepL translation (${targetLang}) error:`, err.message);
-    return texts.map(() => undefined);
-  }
-}
-
 // Builds the missing translated fields for a strain (for every target
 // language) in one DeepL call per language, skipping whatever a manual
 // override already covers.
@@ -133,10 +83,14 @@ async function autoTranslate({ description, terpenes, effects, medicalEffects },
       if (job === 'description') out.description = translated[i];
       else out[job].push(translated[i]);
     });
+    // A failed DeepL call yields undefined entries (serialized as null), so
+    // only keep a translated list when every item was translated; the site
+    // falls back to German otherwise.
+    const complete = (list) => list.length > 0 && list.every(Boolean);
     if (out.description) result[`description_${suffix}`] = out.description;
-    if (out.terpenes.length > 0) result[`terpenes_${suffix}`] = out.terpenes;
-    if (out.effects.length > 0) result[`effects_${suffix}`] = out.effects;
-    if (out.medicalEffects.length > 0) result[`medicalEffects_${suffix}`] = out.medicalEffects;
+    if (complete(out.terpenes)) result[`terpenes_${suffix}`] = out.terpenes;
+    if (complete(out.effects)) result[`effects_${suffix}`] = out.effects;
+    if (complete(out.medicalEffects)) result[`medicalEffects_${suffix}`] = out.medicalEffects;
   }
   return result;
 }
@@ -166,6 +120,7 @@ async function main() {
   const overrides = fs.existsSync(OVERRIDES_PATH)
     ? JSON.parse(fs.readFileSync(OVERRIDES_PATH, 'utf8'))
     : {};
+  seedFromFile(OUTPUT_PATH, ['description', 'terpenes', 'effects', 'medicalEffects']);
 
   // Multiple batches of the same strain can be listed separately (e.g. two
   // Tiramisu harvests) - keep only the one with the most stock per strain.
@@ -245,6 +200,7 @@ async function main() {
   mapped.sort((a, b) => a.name.localeCompare(b.name, 'de'));
 
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(mapped, null, 2) + '\n', 'utf8');
+  saveCache();
   console.log(`Synced ${mapped.length} currently available strains -> ${OUTPUT_PATH}`);
 }
 

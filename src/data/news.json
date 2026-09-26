@@ -1,29 +1,5 @@
 [
   {
-    "id": "cannanas-test-1",
-    "week": "KW 39",
-    "month": "September 2026",
-    "title": "Testbeitrag bitte ignorieren",
-    "description": "Dies ist ein automatischer Test der Website-Anbindung.\n\nDieser Beitrag wird gleich wieder entfernt.",
-    "content": "",
-    "images": [
-      "/images/News_Pics/cannanas-test-1/1.jpg"
-    ],
-    "date": "2026-09-26",
-    "week_en": "Week 39",
-    "month_en": "September 2026",
-    "title_en": "Please ignore the test report.",
-    "description_en": "This is an automated test of the website connection.\n\nThis post will be removed shortly.",
-    "week_fi": "Viikko 39",
-    "month_fi": "Syyskuu 2026",
-    "title_fi": "Älä välitä testiraportista.",
-    "description_fi": "Tämä on verkkosivustoyhteyden automaattinen testi.\n\nTämä viesti poistetaan pian.",
-    "week_it": "Sett. 39",
-    "month_it": "Settembre 2026",
-    "title_it": "Si prega di ignorare il rapporto di prova.",
-    "description_it": "Si tratta di un test automatico della connessione al sito web.\n\nQuesto post verrà rimosso a breve."
-  },
-  {
     "id": "26CW15",
     "week": "KW 15",
     "week_en": "Week 15",

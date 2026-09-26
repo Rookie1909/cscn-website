@@ -30,7 +30,7 @@ jobs:
         id: import
         env:
           NEWS_PAYLOAD: ${{ github.event_name == 'repository_dispatch' && toJSON(github.event.client_payload) || github.event.inputs.payload }}
-          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+          GOOGLE_TRANSLATE_API_KEY: ${{ secrets.GOOGLE_TRANSLATE_API_KEY }}
         run: node .github/scripts/import-news-post.cjs
       - name: Commit and push
         id: push
@@ -39,7 +39,7 @@ jobs:
         run: |
           git config user.name "cannanas-sync-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add src/data/news.json public/images/News_Pics
+          git add src/data/news.json public/images/News_Pics .github/translation-cache.json
           if git diff --staged --quiet; then
             echo "News-Eintrag unverändert."
             echo "changed=false" >> "$GITHUB_OUTPUT"
@@ -47,7 +47,10 @@ jobs:
           fi
           git commit -m "chore(news): Beitrag $NEWS_ID aus Cannanas übernehmen"
           for i in 1 2 3 4 5; do
-            if git pull --rebase origin main && git push; then
+            # The Cannanas sync may have updated translation-cache.json in the
+            # meantime; on conflicting lines the remote version wins (-X ours),
+            # so make sure our news entry survived the rebase.
+            if git pull --rebase -X ours origin main && grep -q "\"id\": \"$NEWS_ID\"" src/data/news.json && git push; then
               echo "Push succeeded."
               echo "changed=true" >> "$GITHUB_OUTPUT"
               exit 0

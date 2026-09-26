@@ -61,11 +61,11 @@ function extractTerpeneTags(profile) {
 }
 
 // Builds the missing translated fields for a strain (for every target
-// language) in one DeepL call per language, skipping whatever a manual
+// language) in one call per language, skipping whatever a manual
 // override already covers.
 async function autoTranslate({ description, terpenes, effects, medicalEffects }, override) {
   const result = {};
-  for (const { suffix, deepl } of TRANSLATION_TARGETS) {
+  for (const { suffix, lang } of TRANSLATION_TARGETS) {
     const jobs = [];
     const texts = [];
     const push = (job, text) => { jobs.push(job); texts.push(text); };
@@ -77,13 +77,13 @@ async function autoTranslate({ description, terpenes, effects, medicalEffects },
 
     if (texts.length === 0) continue;
 
-    const translated = await translateTo(texts, deepl);
+    const translated = await translateTo(texts, lang);
     const out = { terpenes: [], effects: [], medicalEffects: [] };
     jobs.forEach((job, i) => {
       if (job === 'description') out.description = translated[i];
       else out[job].push(translated[i]);
     });
-    // A failed DeepL call yields undefined entries (serialized as null), so
+    // A failed translation yields undefined entries (serialized as null), so
     // only keep a translated list when every item was translated; the site
     // falls back to German otherwise.
     const complete = (list) => list.length > 0 && list.every(Boolean);
@@ -164,7 +164,7 @@ async function main() {
     const germanEffects = override.effects || [];
     const germanMedical = override.medicalEffects || [];
 
-    // Auto-translate via DeepL whatever a manual override doesn't already cover.
+    // Auto-translate whatever a manual override doesn't already cover.
     const auto = await autoTranslate(
       { description, terpenes: finalTerpenes, effects: germanEffects, medicalEffects: germanMedical },
       override

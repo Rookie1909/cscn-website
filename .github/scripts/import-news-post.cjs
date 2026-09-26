@@ -5,11 +5,7 @@ const path = require('path');
 // "Cannanas -> Multi-Channel Sync" as repository_dispatch client_payload
 // (or pasted manually into the workflow_dispatch input for testing).
 const PAYLOAD = process.env.NEWS_PAYLOAD;
-const DEEPL_API_KEY = process.env.DEEPL_API_KEY;
-// DeepL marks free-tier keys with a ":fx" suffix, which also determines the endpoint.
-const DEEPL_URL = DEEPL_API_KEY && DEEPL_API_KEY.endsWith(':fx')
-  ? 'https://api-free.deepl.com/v2/translate'
-  : 'https://api.deepl.com/v2/translate';
+const { translateTo, saveCache } = require('./translate.cjs');
 
 const ROOT = path.join(__dirname, '..', '..');
 const NEWS_PATH = path.join(ROOT, 'src', 'data', 'news.json');
@@ -18,10 +14,10 @@ const IMAGES_PUBLIC_PATH = '/images/News_Pics';
 const MAX_IMAGES = 6;
 const MAX_IMAGE_BYTES = 15 * 1024 * 1024;
 
-const TRANSLATION_TARGETS = [
-  { suffix: 'en', deepl: 'EN', locale: 'en', weekLabel: 'Week' },
-  { suffix: 'fi', deepl: 'FI', locale: 'fi', weekLabel: 'Viikko' },
-  { suffix: 'it', deepl: 'IT', locale: 'it', weekLabel: 'Sett.' },
+const LOCALES = [
+  { suffix: 'en', lang: 'EN', locale: 'en', weekLabel: 'Week' },
+  { suffix: 'fi', lang: 'FI', locale: 'fi', weekLabel: 'Viikko' },
+  { suffix: 'it', lang: 'IT', locale: 'it', weekLabel: 'Sett.' },
 ];
 
 function extFromMime(mimeType) {
@@ -80,41 +76,6 @@ function berlinDate(iso) {
 function monthLabel(date, locale) {
   const label = new Intl.DateTimeFormat(locale, { month: 'long', year: 'numeric' }).format(date);
   return label.charAt(0).toUpperCase() + label.slice(1);
-}
-
-async function translateTo(texts, targetLang) {
-  if (!DEEPL_API_KEY) return texts.map(() => undefined);
-  const nonEmptyIndexes = texts.map((t, i) => (t ? i : -1)).filter((i) => i !== -1);
-  if (nonEmptyIndexes.length === 0) return texts.map(() => undefined);
-
-  const params = new URLSearchParams();
-  nonEmptyIndexes.forEach((i) => params.append('text', texts[i]));
-  params.append('source_lang', 'DE');
-  params.append('target_lang', targetLang);
-
-  try {
-    const res = await fetch(DEEPL_URL, {
-      method: 'POST',
-      headers: {
-        Authorization: `DeepL-Auth-Key ${DEEPL_API_KEY}`,
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: params,
-    });
-    if (!res.ok) {
-      console.error(`DeepL translation (${targetLang}) failed: ${res.status} ${await res.text()}`);
-      return texts.map(() => undefined);
-    }
-    const data = await res.json();
-    const result = new Array(texts.length).fill(undefined);
-    nonEmptyIndexes.forEach((origIndex, j) => {
-      result[origIndex] = data.translations[j].text;
-    });
-    return result;
-  } catch (err) {
-    console.error(`DeepL translation (${targetLang}) error:`, err.message);
-    return texts.map(() => undefined);
-  }
 }
 
 // Cannanas image URLs are short-lived signed links (expire after ~24h), so we
@@ -180,10 +141,10 @@ async function main() {
     date: `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`,
   };
 
-  for (const { suffix, deepl, locale, weekLabel } of TRANSLATION_TARGETS) {
+  for (const { suffix, lang, locale, weekLabel } of LOCALES) {
     entry[`week_${suffix}`] = `${weekLabel} ${week}`;
     entry[`month_${suffix}`] = monthLabel(date, locale);
-    const [titleT, descriptionT, contentT] = await translateTo([entry.title, entry.description, entry.content], deepl);
+    const [titleT, descriptionT, contentT] = await translateTo([entry.title, entry.description, entry.content], lang);
     if (titleT) entry[`title_${suffix}`] = titleT;
     if (descriptionT) entry[`description_${suffix}`] = descriptionT;
     if (contentT) entry[`content_${suffix}`] = contentT;
@@ -200,6 +161,7 @@ async function main() {
   }
   news.sort((a, b) => String(b.date).localeCompare(String(a.date)));
   fs.writeFileSync(NEWS_PATH, JSON.stringify(news, null, 2) + '\n');
+  saveCache();
 
   if (process.env.GITHUB_OUTPUT) {
     fs.appendFileSync(process.env.GITHUB_OUTPUT, `news_id=${id}\n`);

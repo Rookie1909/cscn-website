@@ -63,7 +63,7 @@ async function downloadImage(id, image) {
 
 async function autoTranslate({ description, terpenes, effects }, override) {
   const result = {};
-  for (const { suffix, deepl } of TRANSLATION_TARGETS) {
+  for (const { suffix, lang } of TRANSLATION_TARGETS) {
     const jobs = [];
     const texts = [];
     const push = (job, text) => { jobs.push(job); texts.push(text); };
@@ -71,13 +71,13 @@ async function autoTranslate({ description, terpenes, effects }, override) {
     if (!override[`terpenes_${suffix}`]) terpenes.forEach((t) => push('terpenes', t));
     if (!override[`effects_${suffix}`]) effects.forEach((e) => push('effects', e));
     if (texts.length === 0) continue;
-    const translated = await translateTo(texts, deepl);
+    const translated = await translateTo(texts, lang);
     const out = { terpenes: [], effects: [] };
     jobs.forEach((job, i) => {
       if (job === 'description') out.description = translated[i];
       else out[job].push(translated[i]);
     });
-    // A failed DeepL call yields undefined entries (serialized as null), so
+    // A failed translation yields undefined entries (serialized as null), so
     // only keep a translated list when every item was translated; the site
     // falls back to German otherwise.
     const complete = (list) => list.length > 0 && list.every(Boolean);

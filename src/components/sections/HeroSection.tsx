@@ -60,7 +60,9 @@ export function HeroSection() {
           works because the page's own bg-background lives on <body> (see
           index.css) rather than on an ancestor div here - a div in between
           with its own background would otherwise paint over this too. */}
-      <div className="pointer-events-none fixed inset-0 -z-10">
+      <div
+        className="pointer-events-none fixed inset-0 -z-10 [transform:translateZ(0)] [backface-visibility:hidden] will-change-transform"
+      >
         <div className="h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center lg:justify-start">
           <AnimatedLeafBackground className="w-[420px] h-[420px] sm:w-[560px] sm:h-[560px] lg:h-[640px] lg:w-[640px] lg:-ml-8 text-primary/[0.22] dark:text-primary/45" />
         </div>

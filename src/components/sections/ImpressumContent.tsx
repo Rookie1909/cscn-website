@@ -64,33 +64,17 @@ export function ImpressumContent() {
                     </div>
 
                     <div>
-                      <p className="font-bold text-primary mb-1 text-sm uppercase tracking-wider">{t('impressum.imprint.labels.deputy_board')}</p>
-                      <p className="text-foreground font-medium">Nils M. Matthiesen</p>
-                      <p>c/o Bahnhofstraße 1</p>
-                      <p>21244 Buchholz in der Nordheide</p>
-                      <p>
-                        {t('impressum.imprint.labels.email')}{" "}
-                        <a
-                          href="mailto:nmatthiesen@csc-nordheide.de"
-                          className="text-primary hover:text-primary/80 font-bold"
-                        >
-                          nmatthiesen@csc-nordheide.de
-                        </a>
-                      </p>
-                    </div>
-
-                    <div>
                       <p className="font-bold text-primary mb-1 text-sm uppercase tracking-wider">{t('impressum.imprint.labels.treasurer')}</p>
-                      <p className="text-foreground font-medium">Konstantin Seitz</p>
+                      <p className="text-foreground font-medium">Sandro</p>
                       <p>c/o Bahnhofstraße 1</p>
                       <p>21244 Buchholz in der Nordheide</p>
                       <p>
                         {t('impressum.imprint.labels.email')}{" "}
                         <a
-                          href="mailto:kseitz@csc-nordheide.de"
+                          href="mailto:kassenwart@csc-nordheide.de"
                           className="text-primary hover:text-primary/80 font-bold"
                         >
-                          kseitz@csc-nordheide.de
+                          kassenwart@csc-nordheide.de
                         </a>
                       </p>
                     </div>

@@ -23,6 +23,7 @@ export function Header() {
 
   const languages = [
     { code: 'de', flag: '🇩🇪', label: 'Deutsch' },
+    { code: 'nds', flag: '🇩🇪', label: 'Plattdüütsch' },
     { code: 'en', flag: '🇬🇧', label: 'English' },
     { code: 'fi', flag: '🇫🇮', label: 'Suomi' },
     { code: 'it', flag: '🇮🇹', label: 'Italiano' },

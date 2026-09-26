@@ -1,0 +1,361 @@
+{
+  "nav": {
+    "home": "Startsiet",
+    "verein": "Verein",
+    "about": "Över uns",
+    "protection": "Gesundheit- & Jöögdschutz",
+    "sortiment": "Sorten",
+    "sortiment_overview": "Genetiken",
+    "standorte": "Standoorten",
+    "membership": "Mitgliedsanträg",
+    "news": "Nejichkeiten",
+    "ausgabe": "Utgaav"
+  },
+  "header": {
+    "logo_subtitle": "Vereinswebsite vun'n CSC Nordheide e.V.",
+    "menu": "Menü",
+    "switch_light": "Na Lichtmodus wesseln",
+    "switch_dark": "Na Dunkelmodus wesseln"
+  },
+  "footer": {
+    "rights": "All Rechten vörbeholen.",
+    "impressum": "Impressum & Datenschutz"
+  },
+  "news": {
+    "tag": "Club-Tagebook",
+    "headline": "Aktuelle Nejichkeiten & Updates",
+    "body": "Kumm mit up uns Weg. Hier posten wi jede Week Updates över Bo-Vöördergang, Töchten un Events in'n CSC Nordheide.",
+    "impressions": "Bilder",
+    "read_more": "Details lesen"
+  },
+  "news_page": {
+    "title": "Nejichkeiten",
+    "description": "Aktuelle Insichten, Bo-Vöördergang un Updates ut'n Club-Tagebook vun'n CSC Nordheide."
+  },
+  "strains": {
+    "tag": "Anbau-Portfolio",
+    "headline": "Uns aktuelle Genetiken",
+    "body": "Kiek di uns sörgfältig utsöchte Sorten an. Vun klassische Favoriten bit hen to modeerne kalifoornsche Kruzens sett wi op de hööchste Qualität un genetische Vielfalt.",
+    "analysis": "Analyse",
+    "effects_aroma": "Wirken & Aroma",
+    "genetics": "Genetik",
+    "breeder": "Töchter",
+    "sold_out": "Utverköfft",
+    "view_image": "Bild grötter maken",
+    "close": "Tomaken",
+    "medical_effects": "Medizinsche Wirken",
+    "terpenes": "Terpene",
+    "thc": "THC",
+    "cbd": "CBD",
+    "library_tag": "Raised on Living Soil",
+    "library_title_1": "AKTUELL CSCN",
+    "library_title_2": "UTGAAV",
+    "library_desc": "Kiek de genetische Vielfalt un dat komplexe Terpenprofil vun uns exklusive Utwahl an Premium-Sorten. Wetenschopplich fundeert & transparent.",
+    "stats_available": "Verfögbore Sorten",
+    "stats_avg_thc": "Dörsnitt THC",
+    "show_more": "Mehr Details",
+    "show_less": "Weniger wiesen",
+    "footer_bio": "100% Bio",
+    "footer_local": "100% Lokaal ut Neddersassen",
+    "footer_growth": "Kontrolleerter Anbau",
+    "footer_breeding": "Transparente Opteelt",
+    "footer_copyright": "© 2026 CSC Nordheide E.V. Utgaav"
+  },
+  "features": {
+    "perm": {
+      "title": "Anbauverlöffnis",
+      "desc": "Wi hebbt uns offizielle Anbauverlöffnis na §11 KCanG kregen un al mit den Anbau anfungen."
+    },
+    "energy": {
+      "title": "Energie",
+      "desc": "Wi bruukt bloots erneuerbare Energie för uns Verein un de Anbauflächen un wüllt to gegebener Tiet ok Cannabis in't Gewächshuus antelen."
+    },
+    "quality": {
+      "title": "Qualitätskontrollen",
+      "desc": "Wi beedt uns Mitglieder een gliekbliebend hoge Qualität an. Dorüm hebbt wi hoge Standards infört un ünnersöökt uns sülvst strenge Kontrollen."
+    },
+    "farming": {
+      "title": "Anbauform",
+      "desc": "Wi hebbt uns bewusst för een so nahaltig un ressourcenschonend as mööglich Anbauform beslaten. Pestizide un chemische Dünger kaamt uns nich in de Tüüt."
+    },
+    "variety": {
+      "title": "Sortenvielfalt",
+      "desc": "Wi beedt över 40+ wesselnde Premiumsorten för uns Mitglieder an. Vun bewährte Oldschool-Genetik bit to de nejsten Cali-Sorten is allns dorbi."
+    },
+    "exclusive": {
+      "title": "Exklusive Produkten",
+      "desc": "Blang Cannabis as Blöten beedt wi ok de Mööglichkeit, exklusive Haschisch-Produkten, as Live-Extrakte, to kopen."
+    }
+  },
+  "home": {
+    "banner": "Wi hebbt noch Plätz free – Hier geiht dat to uns Mitgliedschapsmodellen",
+    "hero": {
+      "subtitle": "De eerste CSC in Neddersassen – Qualität, de övertüügt.",
+      "stats": {
+        "award": {
+          "label": "1. CSC",
+          "sub": "In Neddersassen"
+        },
+        "plants": {
+          "label": "500+",
+          "sub": "Bio-Planten"
+        },
+        "dispense": {
+          "label": "2500g+",
+          "sub": "Utgaav pro Maand"
+        }
+      },
+      "exclusive": {
+        "title": "Exklusive Utwahl",
+        "desc": "Blöten, Hash (Dry Sift), Bubble Hash, Hash Rosin, Piattella, WPFF Rosin.",
+        "badge": "Bloots bi uns kriegbor"
+      },
+      "infographics": {
+        "title": "Botaansche Extraktionskunst",
+        "navigation": "Bruuk de Pielen or wisch, üm de Översicht to verkennen",
+        "missing": "Bilddatei fehlt:",
+        "missing_desc": "Bitte kiek na, dat du de Chat-Anhäng in dissen apen Ordner vun dien Projekt sekert hest."
+      },
+      "highlights": {
+        "support": {
+          "title": "Experten-Support",
+          "text": "Best Practices & Wetenutuusch."
+        },
+        "organic": {
+          "title": "100% Bio-Anbau",
+          "text": "0% Chemie, reen biologisch."
+        },
+        "legal": {
+          "title": "Rechtssicher",
+          "text": "Garanteerte Compliance & Legalität."
+        }
+      },
+      "cta": "Verein bitreden - Elkeen is hartlich willkomen",
+      "image_badge": {
+        "title": "100% Legal",
+        "sub": "Regulierter Anbau"
+      },
+      "image_overlay": {
+        "title": "Biologischer Anbau",
+        "sub": "100% Reinheit ahn Kompromiss"
+      }
+    },
+    "motivation": {
+      "title": "Uns Motivation",
+      "subtitle": "reine Blöten",
+      "description": "Uns Motivation is dat, elkeen Mitglied den freen Togang to kontrolleert antelten, hoochwertigen Cannabis to möögli maken, ahn dorbi op den Swattmarkt un de dormit verbunnen Risiken torüchgriepen to möten.",
+      "features": {
+        "quality": {
+          "title": "Qualitätsansprüch",
+          "subtitle": "ümfaang testet",
+          "text": "wi testen in ümfaangriek Proovnahmen op THC/CBD-Gehalt un Qualität"
+        },
+        "variety": {
+          "title": "Sortenvielfalt",
+          "subtitle": "vielfältige Utwahl",
+          "text": "wi wüllt een ansprekende Sortenutwahl - jümmer dat richtige Kruut"
+        },
+        "organic": {
+          "title": "100% Organisch",
+          "subtitle": "natürlicher Anbau",
+          "text": "wi warrt keen chemische or synthetische Dünger bi de Opteelt bruken"
+        }
+      }
+    },
+    "club_info": {
+      "title": "De Verein",
+      "watermark": "CSCN",
+      "watermark_sub": "Allns för de Planz - Allns för den Club",
+      "image_alt": "Cannabis-Planz",
+      "description": "Wi sünd een nich-kommerzieller Verein, mit Sitt in Buchholz in de Nordheide, de sik dör Mitgliedsbidrääg finanzeert. Nu, na dat wi de Lizenz kregen hebbt, warrt wi uns as Cannabis Social Club Nordheide bloots dorop konzenteren, uns Mitglieder ümfaanglich to informeren un binnen de gesetzlichen Vörgaven een begrenzte Mengde hoochwertige Cannabisprodukten för den Egenverbruuk to stellen. Dorbi leggt wi besünneren Weert op een professionelle un nahaltige Arbeitswies, een besünnere, exklusive Sortenutwahl un hoochwertige Produkten för uns Mitglieder!",
+      "more_link": "Mehr weten",
+      "features": [
+        "100% organischer Anbau",
+        "True Living Organics",
+        "modeernste LED-Systemen",
+        "ümfaangriek Fachweten",
+        "sörgfältig testet",
+        "gemeenschoplich antelt",
+        "Sortenvielfalt",
+        "legal"
+      ]
+    },
+    "safety": {
+      "title": "seker ünnerwegens",
+      "subtitle": "schützt Rüüm",
+      "description": "As Cannabis Social Club Nordheide leggt wi groten Weert op Prävention, Jöögdschutz un Gesundheitsschutz. Uns Präventionsbeuptragte sorgt dorför, dat all Maatnahmen to'n Schutz vun de Mitglieder inhollen warrt, un beedt Ünnerstütten för Mitglieder mit problematischen Konsumverholen an.",
+      "warning": "Bitte beacht, dat de Bezug vun Cannabisprodukten exklusiv uns geachte Mitglieder vörbeholen blifft. Anfragen wat den Kopp vun Cannabisprodukten angeit, ahn de Afsicht, in uns Verein intotrred, blifft vun uns Sied ünbeantwoort. As verantwoortungsbewusster Verein leggt wi grötsten Weert op de Sekerheit un Tofredenheit vun uns Mitglieder. Wi distanzeert uns entscheden vun illegale Aktivitäten un verplichten uns, de strengen Vörgaven vun't Cannabisgesett gewissenhaft intoholen.",
+      "card_title": "Gesundheits- & Jöögdschutz",
+      "more_link": "Mehr weten"
+    },
+    "contact": {
+      "title": "Informeer di!",
+      "description": "Schriev uns eenfach een E-Mail un wi versöökt di mit Raat un Daat to Sied to stahn.",
+      "link": "Nimm Kontakt op!",
+      "location": "21244 Buchholz"
+    }
+  },
+  "verein": {
+    "hero": {
+      "banner": "Wi hebbt noch Plätz free – hier to'n Mitgliedsantrag",
+      "title": "Uns Anspröök an een Cannabis-Anbauverein",
+      "description": "Nahaltiger Bio-Cannabisanbau",
+      "cta": "Mitgliedsantrag"
+    },
+    "intro": "Wi beedt hööchste Qualität un een ansprekende Sortenvielfalt exklusiv för uns Mitglieder an"
+  },
+  "membership": {
+    "hero": {
+      "title": "Mitgliedsanträg",
+      "description": "Stell nu dien Mitgliedsantrag un warr Deel vun'n CSC Nordheide e.V. Söök twüschen de gratis Standard-Mitgliedschap or de Supporter-Mitgliedschap mit exklusive Vördelen."
+    }
+  },
+  "membership_cards": {
+    "badge": "Tosamen na't Teel",
+    "title": "Uns Mitgliedschapen",
+    "standard": {
+      "name": "Standard-Mitgliedschap",
+      "priceNote": "Opnahmgebühr!",
+      "monthly": "Maandlicher Mindestbidrag 50€",
+      "description": "Bi de Standard-Mitgliedschap fallt de Opnahmgebühr heel weg. In de Standard-Mitgliedschap inbegrepen:",
+      "features": [
+        "Togang to't Standardsortiment (Blöten- un Haschischprodukten)",
+        "Bezug vun Steckling för den Egenanbau (bald)",
+        "keen Togang to Testgenetiken (Cannabisblöten)",
+        "keen Reserveermööglichkeit",
+        "Upgrade to de Supporter-Mitgliedschap is jümmer mööglich"
+      ],
+      "cta": "Mitgliedsantrag Standard-Mitgliedschap"
+    },
+    "supporter": {
+      "name": "Supporter-Mitgliedschap",
+      "priceNote": "eenmalige Opnahmgebühr!",
+      "monthly": "Maandlicher Mindestbidrag 50€",
+      "description": "För de Supporter-Mitgliedschap is een eenmalige Opnahmgebühr vun 300,-€ to betahlen. De Supporter-Mitgliedschap ümfaat:",
+      "features": [
+        "25% Vergünsteegung op all Pauschalen/Bidrääg/TopUps",
+        "All 6 Maand een Premium-Steckling för den Homegrow (optional)",
+        "Exklusiven Togang to limiteerte Testgenetiken (Cannabisblöten)",
+        "Reserveermööglichkeit för Leefste-Sorten (bald)",
+        "een offiziell CSC Nordheide e.V. Polo-Shirt/T-Shirt"
+      ],
+      "cta": "Mitgliedsantrag Supporter-Mitgliedschap",
+      "urgency": {
+        "title": "Limiteert Kontingent – Bloots noch weinig Plätz!",
+        "ticker": "🌿 Bloots noch weinig Plätz verfögbor · Seker di nu dien Early-Bird-Vördeel un profiteer as een vun de eersten Mitglieder vun de 25 % Ersparnis · Exklusiven Togang to limiteerte Testgenetiken · Warr nu Mitglied un wees dorbi 🔥    ",
+        "label": "Verfögbore Plätz",
+        "status": "Fix wesen!",
+        "footer": "Plätz warrt jümmer wieder vergeven – warr nu Early Bird!"
+      }
+    }
+  },
+  "amortisation": {
+    "badge": "Supporter-Mitgliedschap",
+    "title": "Amortisationsduur",
+    "description": "Vanaf wenn lohnt sik de <1>Supporter-Opnahmgebühr vun 300,– €</1>? Mit de 25 % Ersparnis op all Produkten is de Break-even, je na Produktkategorie, gau erreicht.",
+    "table": {
+      "category": "Produktkategorie",
+      "market_price": "Pries / g (Markt)",
+      "saving": "Ersparnis / g",
+      "break_even": "Break-even",
+      "popular": "Beleevt",
+      "details": "Details",
+      "amortisation": "Amortisation"
+    },
+    "categories": {
+      "flowers_hash": "Blöten / Hash",
+      "bubble_hash": "Bubble Hash",
+      "hash_rosin": "Hash Rosin",
+      "piattella": "Piattella",
+      "wpff_rosin": "WPFF Rosin"
+    },
+    "footer": "* Bereken baseert op de eenmalige Supporter-Opnahmgebühr vun 300,– € un een pauschalen Marktpries-Afsloog vun 25 %. Individuelle Bezugsmengden köönt afwieken."
+  },
+  "requirements": {
+    "title": "Anforderungen",
+    "list": [
+      "Vollennung vun't 18. Levensjahr",
+      "Tominnst 6 Maand Wohnsitz or gewöhnlichen Openthoolt in Düütschland",
+      "Keen Dubbelmitgliedschapen in annere Anbauvereenigungen",
+      "Maandlicher Mindestbidrag 50€"
+    ]
+  },
+  "documents": {
+    "description": "Över de Reiters kannst du uns <1>Vereinssatzung</1>, uns <2>Bidragsordnung</2> un uns <3>Mitgliedsantrag</3> ankieken.",
+    "footer": "Bi Fragen schriev uns geern een Mail",
+    "labels": {
+      "statutes": "Vereinssatzung",
+      "contribution_rules": "Bidragsordnung",
+      "application": "Mitgliedsantrag"
+    }
+  },
+  "locations": {
+    "badge": "Standoorten & Opentiden",
+    "title": "Bsöök uns vör Oort",
+    "description": "An dissen Oort finnst du uns Utgaavstell un den Vereinssitt. Wi freut uns op den Uttuusch mit uns Mitglieder.",
+    "hours_label": "Opentiden",
+    "closed": "Tomaken",
+    "office_description": "Jo Anlöpstell för all Vereinsangelegenheiten un allgemeene Fragen.",
+    "days": {
+      "Mo": "Mo",
+      "Di": "Di",
+      "Mi": "Mi",
+      "Do": "Do",
+      "Fr": "Fr",
+      "Sa": "Sa",
+      "So": "So"
+    },
+    "titles": {
+      "dispensary": "Utgaavstell",
+      "club": "Cannabis Social Club Nordheide e.V."
+    }
+  },
+  "grow_rooms": {
+    "nav": "Anbaurüüm",
+    "teaser": {
+      "tag": "Live ut'n Anbau",
+      "title": "Uns Anbaurüüm",
+      "description": "Een Blick in uns Anbaurüüm – Utstatten un Atmosphäre, live synchroniseert ut uns Cannanas-System.",
+      "cta": "All Rüüm ankieken"
+    },
+    "page": {
+      "tag": "Live ut'n Anbau",
+      "title_1": "UNS",
+      "title_2": "ANBAURÜÜM",
+      "description": "Een schematischen Överblick över uns Anbaurüüm. Ut Sekerheitsgrünn wiest wi hier bewusst keen Informationen to Sorten, Wassdomsphasen or Plantentahlen.",
+      "empty": "Aktuell keen aktive Rüüm verfögbor."
+    }
+  },
+  "sortiment_page": {
+    "title": "Sortiment",
+    "tag": "Sortiment · Uns Genetiken",
+    "title_1": "Ut egen Anbau.",
+    "title_2": "Sörgfältig kultiveert.",
+    "description": "Een Överblick över de Genetiken in uns Portfolio – ünafhängig vun'n aktuellen Lagerbestand.",
+    "filter_all": "All",
+    "filter_indica": "Indica",
+    "filter_sativa": "Sativa",
+    "filter_hybrid": "Hybrid",
+    "filter_available_only": "Bloots verfögbore",
+    "status_available": "Verfögbor",
+    "status_next_harvest": "Nökste Ernte",
+    "view_profile": "Profil ankieken",
+    "back_to_overview": "Torüch to't Sortiment",
+    "all_genetics": "All Genetiken",
+    "next_in_lineup": "Wieder in't Sortiment",
+    "terpene_profile": "Terpenprofil",
+    "potency_profile": "Wirkstoffprofil",
+    "origin": "Herkunft",
+    "type_label": "Typ",
+    "breeder_label": "Töchter",
+    "typical_range": "Sortentypischen Bereich",
+    "empty": "Aktuell sünd keen Genetiken hinnerleggt.",
+    "no_description": "För disse Genetik liggt noch keen Beschrieven vör.",
+    "placeholder": "Hier entsteiht bald een Översicht över uns heel Sortenangebot."
+  },
+  "not_found": {
+    "title": "Siet nich funnen",
+    "description": "De opropen Siet gifft dat nich or is verschaven worrn.",
+    "back_home": "Torüch to de Startsiet"
+  }
+}

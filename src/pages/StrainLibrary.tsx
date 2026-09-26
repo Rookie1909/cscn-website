@@ -58,7 +58,7 @@ const StrainCard: React.FC<StrainCardProps> = ({ strain }) => {
           </div>
         </div>
       )}
-      <div className="flex justify-between items-start">
+      <div className="flex justify-between items-start md:gap-4">
         <div className="flex items-center gap-3">
           {strain.image && (
             <button
@@ -303,7 +303,8 @@ export function StrainLibrary() {
   return (
     <div className="min-h-screen bg-background pt-32 pb-20 px-4 md:px-8">
       <div className="max-w-7xl mx-auto space-y-16">
-        {/* Header */}
+        {/* Header + stats: stacked on mobile/tablet, side by side on desktop */}
+        <div className="space-y-16 lg:space-y-0 lg:grid lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-12">
         <header className="space-y-8 relative">
           <div className="absolute -top-20 -left-20 w-64 h-64 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
           
@@ -323,8 +324,8 @@ export function StrainLibrary() {
         </header>
 
         {/* Search & Stats */}
-        <div className="flex flex-col md:flex-row gap-8 items-center justify-end glass-card-premium border-primary/20 p-8">
-          <div className="flex gap-12 w-full justify-center md:justify-end">
+        <div className="flex flex-col md:flex-row gap-8 items-center md:justify-center glass-card-premium border-primary/20 p-8">
+          <div className="flex gap-12 w-full justify-center lg:w-auto">
             <div className="text-center md:text-left">
               <p className="text-[10px] uppercase font-black tracking-[0.2em] text-muted-foreground">{t('strains.stats_available')}</p>
               <div className="flex items-baseline gap-1 mt-1">
@@ -338,11 +339,12 @@ export function StrainLibrary() {
             </div>
           </div>
         </div>
+        </div>
 
         {/* Grid */}
         <motion.div 
           layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
         >
           <AnimatePresence mode="popLayout">
             {STRAINS.map((strain) => (

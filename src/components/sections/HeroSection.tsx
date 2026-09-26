@@ -65,8 +65,14 @@ export function HeroSection() {
           horizontal clipping now lives on RootLayout's wrapper div rather
           than on html/body, since overflow-hidden on html/body is a known
           trigger for iOS Safari dragging fixed-position elements during
-          scroll instead of holding them in place. */}
-      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+          scroll instead of holding them in place.
+          h-[100svh] instead of inset-0's bottom/height: on mobile, "inset-0"
+          re-measures against the live viewport, which keeps changing size as
+          the browser's address bar hides/shows while scrolling - that resize
+          is exactly what reads as this element "dragging" until it settles.
+          100svh is the viewport height with the address bar shown, which
+          stays constant through that animation instead of chasing it. */}
+      <div className="pointer-events-none fixed inset-x-0 top-0 h-[100svh] -z-10 overflow-hidden will-change-transform">
         <div className="h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center lg:justify-start">
           <AnimatedLeafBackground className="w-[420px] h-[420px] sm:w-[560px] sm:h-[560px] lg:h-[640px] lg:w-[640px] lg:-ml-8 text-primary/[0.22] dark:text-primary/45" />
         </div>

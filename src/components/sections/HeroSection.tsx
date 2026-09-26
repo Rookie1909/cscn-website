@@ -59,10 +59,14 @@ export function HeroSection() {
           (each with their own bg-background) scroll over it. This only
           works because the page's own bg-background lives on <body> (see
           index.css) rather than on an ancestor div here - a div in between
-          with its own background would otherwise paint over this too. */}
-      <div
-        className="pointer-events-none fixed inset-0 -z-10 [transform:translateZ(0)] [backface-visibility:hidden] will-change-transform"
-      >
+          with its own background would otherwise paint over this too.
+          overflow-hidden is a safety net so the leaf can never poke past the
+          viewport edge and cause horizontal scroll on narrow phones - actual
+          horizontal clipping now lives on RootLayout's wrapper div rather
+          than on html/body, since overflow-hidden on html/body is a known
+          trigger for iOS Safari dragging fixed-position elements during
+          scroll instead of holding them in place. */}
+      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
         <div className="h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center lg:justify-start">
           <AnimatedLeafBackground className="w-[420px] h-[420px] sm:w-[560px] sm:h-[560px] lg:h-[640px] lg:w-[640px] lg:-ml-8 text-primary/[0.22] dark:text-primary/45" />
         </div>

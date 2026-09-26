@@ -162,14 +162,16 @@ export function NewsSection() {
                       <h3 className="text-2xl lg:text-3xl font-headline font-black text-foreground mb-4 group-hover:text-primary transition-colors">
                         {title}
                       </h3>
-                      <p className="text-muted-foreground font-sans leading-relaxed mb-6">
+                      <p className="text-muted-foreground font-sans leading-relaxed mb-6 whitespace-pre-line">
                         {description}
                       </p>
-                      <div className="p-5 rounded-2xl bg-primary/5 border border-primary/10 mb-8">
-                        <p className="text-foreground/80 font-sans italic text-sm leading-loose">
-                          "{content}"
-                        </p>
-                      </div>
+                      {content && (
+                        <div className="p-5 rounded-2xl bg-primary/5 border border-primary/10 mb-8">
+                          <p className="text-foreground/80 font-sans italic text-sm leading-loose whitespace-pre-line">
+                            "{content}"
+                          </p>
+                        </div>
+                      )}
 
                       {/* Image Collage Grid */}
                       <div className={`grid gap-3 ${item.images.length === 1 ? 'grid-cols-1' : item.images.length === 2 ? 'grid-cols-2' : 'grid-cols-2'}`}>
@@ -193,10 +195,12 @@ export function NewsSection() {
                       </div>
 
                       <div className="mt-8 pt-6 border-t border-border flex items-center justify-between">
-                        <div className="flex items-center gap-2 text-muted-foreground/60 text-xs font-bold uppercase tracking-widest">
-                          <ImageIcon size={14} />
-                          <span>{item.images.length} {t('news.impressions')}</span>
-                        </div>
+                        {item.images.length > 0 ? (
+                          <div className="flex items-center gap-2 text-muted-foreground/60 text-xs font-bold uppercase tracking-widest">
+                            <ImageIcon size={14} />
+                            <span>{item.images.length} {t('news.impressions')}</span>
+                          </div>
+                        ) : <span />}
                         <button className="flex items-center gap-2 text-primary font-bold text-sm group/btn">
                           <span>{t('news.read_more')}</span>
                           <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />

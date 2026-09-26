@@ -181,3 +181,38 @@
   @apply h-2 bg-muted/30 rounded-full overflow-hidden flex;
 }
 
+/* Continuous loop animations for AnimatedLeafBackground, kept as plain CSS
+   (rather than JS-driven framer-motion loops) so the compositor can run them
+   independently of the main thread - a JS animation loop that keeps writing
+   styles every frame competes with touch-scroll handling on Android Chrome
+   and makes fixed-position elements visibly lag behind the scroll gesture. */
+@keyframes leaf-ripple {
+  0% { opacity: 0; transform: scale(0.55); }
+  25% { opacity: 0.5; }
+  100% { opacity: 0; transform: scale(1.25); }
+}
+
+@keyframes leaf-sway {
+  0%, 100% { transform: rotate(-1.5deg); }
+  50% { transform: rotate(1.5deg); }
+}
+
+.leaf-ripple {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: leaf-ripple 7s ease-out infinite;
+}
+
+.leaf-sway {
+  transform-origin: 50% 60%;
+  animation: leaf-sway 10s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leaf-ripple, .leaf-sway {
+    animation: none;
+  }
+}
+

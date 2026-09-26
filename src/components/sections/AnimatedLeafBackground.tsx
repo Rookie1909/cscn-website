@@ -16,6 +16,14 @@ const BLADE_PATH = 'M0 0 C 28 -70, 32 -190, 0 -290 C -32 -190, -28 -70, 0 0';
  * A decorative, self-drawing cannabis-leaf illustration meant to sit behind
  * foreground content (low opacity, pointer-events-none). Uses currentColor
  * so it inherits whatever text color class the caller applies.
+ *
+ * The one-time "draw in" of the paths runs through framer-motion (it
+ * finishes in ~2.5s and never runs again). The continuous ripple/sway loops
+ * are plain CSS animations (see index.css) instead of framer-motion loops,
+ * because a JS animation loop that keeps writing styles every frame competes
+ * with touch-scroll handling on Android and makes this element visibly lag
+ * behind the page while a fixed-position wrapper (see HeroSection) tries to
+ * hold it in place.
  */
 export function AnimatedLeafBackground({ className }: { className?: string }) {
   const reduced = Boolean(useReducedMotion());
@@ -31,26 +39,18 @@ export function AnimatedLeafBackground({ className }: { className?: string }) {
       className={className}
     >
       {[0, 2, 4].map((i) => (
-        <motion.circle
+        <circle
           key={i}
+          className="leaf-ripple"
           cx={0}
           cy={-20}
           r={300}
           stroke="currentColor"
           strokeWidth={1}
-          initial={reduced ? { opacity: 0 } : { opacity: 0, scale: 0.55 }}
-          animate={
-            reduced ? { opacity: 0 } : { opacity: [0, 0.5, 0], scale: [0.55, 0.9, 1.25] }
-          }
-          transition={{ duration: 7, repeat: Infinity, delay: 2.4 + i, ease: 'easeOut' }}
-          style={{ transformOrigin: 'center', transformBox: 'fill-box' }}
+          style={{ animationDelay: `${2.4 + i}s` }}
         />
       ))}
-      <motion.g
-        style={{ transformOrigin: '50% 60%' }}
-        animate={reduced ? {} : { rotate: [-1.5, 1.5, -1.5] }}
-        transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
-      >
+      <g className="leaf-sway">
         <g transform="translate(0 60)" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round">
           <motion.path
             d="M0 0 C 4 60, -8 150, 12 250"
@@ -77,7 +77,7 @@ export function AnimatedLeafBackground({ className }: { className?: string }) {
             </g>
           ))}
         </g>
-      </motion.g>
+      </g>
     </svg>
   );
 }

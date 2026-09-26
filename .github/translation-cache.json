@@ -26,6 +26,8 @@
     "Creme": "Cream",
     "Cremig-süß": "Creamy-sweet",
     "Den neuen Pflanzen geht es super!": "The new plants are doing great!",
+    "Den Schützlingen geht es gut und langsam füllt sich die Reproduktion, die 500 P…": "The young are doing well and the breeding stock is slowly increasing to 500…",
+    "Den Schützlingen geht es gut und langsam füllt sich die Reproduktion, die 500 Pflanzen haben wir bereits wieder geknackt und noch dieses Jahr wandern die ersten Pflanzen in das Obergeschoss, zur Neubestückung der Blüteräume :)": "The plants are doing well and the propagation area is slowly filling up; we've already surpassed 500 plants again, and the first plants will be moved to the upper floor this year to restock the flowering rooms :)",
     "Der Blüteraum steht in voller Pracht": "The flowering room is in full splendor.",
     "Der keksdominante Phänotyp von Bizcocho bietet ein außergewöhnlich komplexes und tiefes Geschmacksprofil, das besonders für Liebhaber von süßen, gasigen Sorten interessant ist.\n\nDie Effekte von Bizcocho ist langanhaltend und kombiniert mentale Klarheit mit körperlicher Entspannung, ideal für verschiedene Aktivitäten oder zur Entspannung.": "The cookie-dominant phenotype of Bizcocho offers an exceptionally complex and deep flavor profile, particularly interesting for lovers of sweet, gassy strains. The effects of Bizcocho are long-lasting and combine mental clarity with physical relaxation, ideal for various activities or unwinding.",
     "Der neue Blüteraum gestern": "The new flowering room yesterday",
@@ -182,6 +184,8 @@
     "Creme": "Kerma",
     "Cremig-süß": "Kermainen ja makea",
     "Den neuen Pflanzen geht es super!": "Uudet kasvit voivat hienosti!",
+    "Den Schützlingen geht es gut und langsam füllt sich die Reproduktion, die 500 P…": "Nuoret voivat hyvin ja siitoskanta kasvaa hitaasti 500:aan…",
+    "Den Schützlingen geht es gut und langsam füllt sich die Reproduktion, die 500 Pflanzen haben wir bereits wieder geknackt und noch dieses Jahr wandern die ersten Pflanzen in das Obergeschoss, zur Neubestückung der Blüteräume :)": "Kasvit voivat hyvin ja lisäysalue täyttyy hitaasti; olemme jo ylittäneet 500 kasvin rajan uudelleen, ja ensimmäiset kasvit siirretään tänä vuonna yläkertaan täydentämään kukkivia huoneita :)",
     "Der Blüteraum steht in voller Pracht": "Kukkiva huone on täydessä loistossaan.",
     "Der keksdominante Phänotyp von Bizcocho bietet ein außergewöhnlich komplexes und tiefes Geschmacksprofil, das besonders für Liebhaber von süßen, gasigen Sorten interessant ist.\n\nDie Effekte von Bizcocho ist langanhaltend und kombiniert mentale Klarheit mit körperlicher Entspannung, ideal für verschiedene Aktivitäten oder zur Entspannung.": "Bizcochon keksimäinen fenotyyppi tarjoaa poikkeuksellisen monipuolisen ja syvän makuprofiilin, joka kiinnostaa erityisesti makeiden ja kaasumaisten lajikkeiden ystäviä.\n\nBizcochon vaikutukset ovat pitkäkestoisia ja yhdistävät mielen selkeyden ja kehon rentoutumisen, mikä sopii erinomaisesti erilaisiin aktiviteetteihin tai rentoutumiseen.",
     "Der neue Blüteraum gestern": "Uusi kukkiva huone eilen",
@@ -464,6 +468,6 @@
     "Zuckerwatte": "Zucchero filato"
   },
   "_usage": {
-    "2026-09": 7296
+    "2026-09": 7908
   }
 }

@@ -35,9 +35,12 @@ jobs:
           git config user.name "cannanas-sync-bot"
           git config user.email "actions@users.noreply.github.com"
           NEWS_ID=$(node -p 'JSON.parse(process.env.NEWS_PAYLOAD).post_id' | tr -cd 'A-Za-z0-9_-')
+          CACHE=.github/translation-cache.json
+          echo '{}' > "$RUNNER_TEMP/carried-usage.json"
           for i in 1 2 3 4 5 6; do
             # The import script is idempotent, so when another run pushed first
             # we simply start over from the new main and import again.
+            cp "$CACHE" "$RUNNER_TEMP/cache-start.json"
             node .github/scripts/import-news-post.cjs
             git add src/data/news.json public/images/News_Pics .github/translation-cache.json
             if git diff --staged --quiet; then
@@ -53,8 +56,12 @@ jobs:
             fi
             echo "Push rejected, retrying on the latest main ($i/6)..."
             sleep $((RANDOM % 10 + 5))
+            # Keep this attempt's translations and usage, so the retry doesn't
+            # send the same texts to Google again.
+            cp "$CACHE" "$RUNNER_TEMP/cache-ours.json"
             git fetch -q origin main
             git reset -q --hard origin/main
+            node .github/scripts/merge-translation-cache.cjs "$RUNNER_TEMP/cache-start.json" "$RUNNER_TEMP/cache-ours.json" "$RUNNER_TEMP/carried-usage.json"
           done
           echo "::error::Failed to push news import after 6 attempts."
           exit 1

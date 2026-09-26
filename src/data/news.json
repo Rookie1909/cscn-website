@@ -1,5 +1,32 @@
 [
   {
+    "id": "cannanas-3ad616d4-5fdf-4fde-ad79-7e9f74c5f681",
+    "week": "KW 17",
+    "month": "April 2026",
+    "title": "Der Blüteraum steht in voller Pracht",
+    "description": "Einzelne Pflanzen wurden bereits geerntet, der Großteil folgt aber noch.\n\nKleiner Hinweis:",
+    "content": "Leider haben wir es nicht mehr geschafft die Haschprodukte und die neuen Sorten für die Abgabe fertig zu stellen. Diese werden ihren Weg in die Ausgabe erst im neuen Monat finden.",
+    "images": [
+      "/images/News_Pics/cannanas-3ad616d4-5fdf-4fde-ad79-7e9f74c5f681/1.webp"
+    ],
+    "date": "2026-04-22",
+    "week_en": "Week 17",
+    "month_en": "April 2026",
+    "title_en": "The flowering room is in full splendor.",
+    "description_en": "Some plants have already been harvested, but the majority will follow.\n\nJust a heads-up:",
+    "content_en": "Unfortunately, we didn't manage to prepare the hashish products and new varieties for distribution. These will only be available next month.",
+    "week_fi": "Viikko 17",
+    "month_fi": "Huhtikuu 2026",
+    "title_fi": "Kukkiva huone on täydessä loistossaan.",
+    "description_fi": "Osa kasveista on jo korjattu, mutta suurin osa seuraa perässä.\n\nTiedoksi vain:",
+    "content_fi": "Valitettavasti emme onnistuneet valmistelemaan hasistuotteita ja uusia lajikkeita jakelua varten. Nämä tulevat saataville vasta ensi kuussa.",
+    "week_it": "Sett. 17",
+    "month_it": "Aprile 2026",
+    "title_it": "La stanza dei fiori è in tutto il suo splendore.",
+    "description_it": "Alcune piante sono già state raccolte, ma la maggior parte seguirà a breve.\n\nSolo un avviso:",
+    "content_it": "Purtroppo non siamo riusciti a preparare i prodotti a base di hashish e le nuove varietà per la distribuzione. Saranno disponibili solo il mese prossimo."
+  },
+  {
     "id": "26CW15",
     "week": "KW 15",
     "week_en": "Week 15",

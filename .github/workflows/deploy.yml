@@ -3,6 +3,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+# Several news imports in a row each request a deployment; never upload in
+# parallel, and let a newer pending deployment replace an older pending one.
+concurrency:
+  group: deploy
+  cancel-in-progress: false
 jobs:
   deploy:
     runs-on: ubuntu-latest

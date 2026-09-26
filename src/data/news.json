@@ -27,5 +27,30 @@
       "/images/News_Pics/26CW15/IMG_20260402_232113.jpg"
     ],
     "date": "2026-04-02"
+  },
+  {
+    "id": "cannanas-b2ae7800-f418-4c55-8d41-40858a8a10ab",
+    "week": "KW 49",
+    "month": "Dezember 2025",
+    "title": "Den neuen Pflanzen geht es super!",
+    "description": "Schon Bald werden Stecklinge geschnitten 🤩",
+    "content": "",
+    "images": [
+      "/images/News_Pics/cannanas-b2ae7800-f418-4c55-8d41-40858a8a10ab/1.webp",
+      "/images/News_Pics/cannanas-b2ae7800-f418-4c55-8d41-40858a8a10ab/2.webp"
+    ],
+    "date": "2025-12-07",
+    "week_en": "Week 49",
+    "month_en": "December 2025",
+    "title_en": "The new plants are doing great!",
+    "description_en": "Cuttings will be taken soon 🤩",
+    "week_fi": "Viikko 49",
+    "month_fi": "Joulukuu 2025",
+    "title_fi": "Uudet kasvit voivat hienosti!",
+    "description_fi": "Pistokkaat otetaan pian 🤩",
+    "week_it": "Sett. 49",
+    "month_it": "Dicembre 2025",
+    "title_it": "Le nuove piante stanno crescendo benissimo!",
+    "description_it": "Presto verranno prelevate delle talee 🤩"
   }
 ]

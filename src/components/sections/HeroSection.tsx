@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Award, Scale, ShieldCheck, Zap } from 'lucide-react';
 import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
 import { AnimatedLeafBackground } from '@/components/sections/AnimatedLeafBackground';
+import { ConfettiBurst } from '@/components/ConfettiBurst';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
@@ -46,8 +47,8 @@ export interface CountUpHandle {
   trigger: () => void;
 }
 
-const CountUpStat = forwardRef<CountUpHandle, { value: number; suffix?: string }>(
-  ({ value, suffix = '' }, ref) => {
+const CountUpStat = forwardRef<CountUpHandle, { value: number; suffix?: string; onCountComplete?: () => void }>(
+  ({ value, suffix = '', onCountComplete }, ref) => {
     const [display, setDisplay] = useState(value);
     const animating = useRef(false);
 
@@ -59,7 +60,10 @@ const CountUpStat = forwardRef<CountUpHandle, { value: number; suffix?: string }
           duration: 1.2,
           ease: 'easeOut',
           onUpdate: (v) => setDisplay(Math.round(v)),
-          onComplete: () => { animating.current = false; },
+          onComplete: () => {
+            animating.current = false;
+            onCountComplete?.();
+          },
         });
       },
     }));
@@ -73,6 +77,8 @@ export function HeroSection() {
   const { t } = useTranslation();
   const plantsCountRef = useRef<CountUpHandle>(null);
   const dispenseCountRef = useRef<CountUpHandle>(null);
+  const [confettiActive, setConfettiActive] = useState(false);
+  const fireConfetti = () => setConfettiActive(true);
 
   const stats = [
     { icon: Award, label: t('home.hero.stats.award.label'), sub: t('home.hero.stats.award.sub'), color: "text-primary", countUp: undefined as { value: number; suffix: string; ref: RefObject<CountUpHandle> } | undefined },
@@ -87,6 +93,7 @@ export function HeroSection() {
   ];
   return (
     <section className="relative py-16 lg:py-24 overflow-hidden">
+      <ConfettiBurst active={confettiActive} onDone={() => setConfettiActive(false)} />
       {/* Fixed in the viewport (not the section) so it stays put while the
           page scrolls; -z-10 keeps it below every normal-flow section's own
           background, which is what makes it get covered as later sections
@@ -153,7 +160,16 @@ export function HeroSection() {
                 >
                   <stat.icon className={`w-6 h-6 sm:w-8 sm:h-8 ${stat.color} mb-2 sm:mb-3`} />
                   <div className="text-xl sm:text-2xl font-headline font-extrabold text-foreground">
-                    {stat.countUp ? <CountUpStat ref={stat.countUp.ref} value={stat.countUp.value} suffix={stat.countUp.suffix} /> : stat.label}
+                    {stat.countUp ? (
+                      <CountUpStat
+                        ref={stat.countUp.ref}
+                        value={stat.countUp.value}
+                        suffix={stat.countUp.suffix}
+                        onCountComplete={fireConfetti}
+                      />
+                    ) : (
+                      stat.label
+                    )}
                   </div>
                   <div className="text-[9px] sm:text-[10px] uppercase tracking-wider text-muted-foreground font-bold mt-0.5 sm:mt-1 w-full whitespace-normal leading-tight">{stat.sub}</div>
                 </div>

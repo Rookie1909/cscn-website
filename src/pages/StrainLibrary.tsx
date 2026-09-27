@@ -307,8 +307,32 @@ const StrainCard: React.FC<StrainCardProps> = ({ strain }) => {
   );
 };
 
+// Parses THC strings like "88.13%", "19.5%", "11-13%" or "<2%" into a single
+// number (ranges are averaged) so we can compute per-type stats dynamically.
+function parseThc(thc?: string): number | null {
+  if (!thc) return null;
+  const matches = thc.match(/\d+(?:\.\d+)?/g);
+  if (!matches || matches.length === 0) return null;
+  const nums = matches.map(Number);
+  return nums.reduce((a, b) => a + b, 0) / nums.length;
+}
+
 export function StrainLibrary() {
   const { t } = useTranslation();
+
+  const avgThcByType = Object.entries(
+    STRAINS.reduce<Record<string, number[]>>((acc, s) => {
+      const type = s.type ?? t('strains.type_flower');
+      const value = parseThc(s.thc);
+      if (value !== null) {
+        (acc[type] ??= []).push(value);
+      }
+      return acc;
+    }, {})
+  ).map(([type, values]) => ({
+    type,
+    avg: values.reduce((a, b) => a + b, 0) / values.length,
+  }));
 
   return (
     <div className="min-h-screen bg-background pt-32 pb-20 px-4 md:px-8">
@@ -335,7 +359,7 @@ export function StrainLibrary() {
 
         {/* Search & Stats */}
         <div className="flex flex-col md:flex-row gap-8 items-center md:justify-center glass-card-premium border-primary/20 p-8">
-          <div className="flex gap-12 w-full justify-center lg:w-auto">
+          <div className="flex flex-wrap gap-x-12 gap-y-6 w-full justify-center lg:w-auto">
             <div className="text-center md:text-left">
               <p className="text-[10px] uppercase font-black tracking-[0.2em] text-muted-foreground">{t('strains.stats_available')}</p>
               <div className="flex items-baseline gap-1 mt-1">
@@ -343,10 +367,14 @@ export function StrainLibrary() {
                 <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               </div>
             </div>
-            <div className="text-center md:text-left border-l border-border pl-12">
-              <p className="text-[10px] uppercase font-black tracking-[0.2em] text-muted-foreground">{t('strains.stats_avg_thc')}</p>
-              <p className="text-4xl font-black text-primary mt-1">~20%</p>
-            </div>
+            {avgThcByType.map(({ type, avg }) => (
+              <div key={type} className="text-center md:text-left border-l border-border pl-12">
+                <p className="text-[10px] uppercase font-black tracking-[0.2em] text-muted-foreground">
+                  {t('strains.stats_avg_thc')} · {type}
+                </p>
+                <p className="text-4xl font-black text-primary mt-1">{avg.toFixed(1)}%</p>
+              </div>
+            ))}
           </div>
         </div>
         </div>

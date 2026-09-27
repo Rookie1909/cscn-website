@@ -155,25 +155,6 @@ async function main() {
     }
   }
 
-  // TEMP DEBUG - remove after we've confirmed the real field name for product type.
-  const debugProduct = products.find((p) => p.strain && /all the sauces/i.test(p.strain.name || ''));
-  if (debugProduct) {
-    console.log('DEBUG product keys:', Object.keys(debugProduct));
-    console.log('DEBUG strain keys:', Object.keys(debugProduct.strain || {}));
-    console.log('DEBUG candidate type fields:', {
-      type: debugProduct.type,
-      product_type: debugProduct.product_type,
-      item_type: debugProduct.item_type,
-      category: debugProduct.category,
-      kind: debugProduct.kind,
-      form: debugProduct.form,
-      inventory_type: debugProduct.inventory_type,
-      strain_type: debugProduct.strain && debugProduct.strain.type,
-    });
-  } else {
-    console.log('DEBUG: no product found matching "All the Sauces"');
-  }
-
   const mapped = [];
   for (const { product: p } of bestProductByStrain.values()) {
     const s = p.strain;

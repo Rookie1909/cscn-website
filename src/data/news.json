@@ -210,7 +210,9 @@
     "title_fi": "Nuoret voivat hyvin ja siitoskanta kasvaa hitaasti 500:aan…",
     "description_fi": "Kasvit voivat hyvin ja lisäysalue täyttyy hitaasti; olemme jo ylittäneet 500 kasvin rajan uudelleen, ja ensimmäiset kasvit siirretään tänä vuonna yläkertaan täydentämään kukkivia huoneita :)",
     "week_it": "Sett. 51",
-    "month_it": "Dicembre 2025"
+    "month_it": "Dicembre 2025",
+    "title_it": "I giovani stanno bene e il numero di riproduttori sta lentamente aumentando fino a raggiungere le 500 unità…",
+    "description_it": "Le piante stanno bene e l'area di propagazione si sta riempiendo lentamente; abbiamo già superato di nuovo le 500 piante e le prime piante verranno spostate al piano superiore quest'anno per rifornire le stanze di fioritura :)"
   },
   {
     "id": "cannanas-b2ae7800-f418-4c55-8d41-40858a8a10ab",
@@ -253,7 +255,13 @@
     "week_fi": "Viikko 43",
     "month_fi": "Lokakuu 2025",
     "week_it": "Sett. 43",
-    "month_it": "Ottobre 2025"
+    "month_it": "Ottobre 2025",
+    "title_en": "New genetics are arriving at the end of the year!",
+    "description_en": "The first of 3 seed drops has already germinated and we are delighted with our many new seedlings :)",
+    "title_fi": "Uusia genetiikkoja saapuu vuoden lopussa!",
+    "description_fi": "Ensimmäinen kolmesta siemenpisarasta on jo itänyt ja olemme iloisia monista uusista taimistamme :)",
+    "title_it": "Nuovi esemplari genetici arriveranno alla fine dell'anno!",
+    "description_it": "Il primo dei 3 semi seminati è già germogliato e siamo felicissimi delle nostre nuove piantine :)"
   },
   {
     "id": "cannanas-b30bfcd5-70c1-48e5-8ad8-131e958181e6",
@@ -271,6 +279,12 @@
     "week_fi": "Viikko 42",
     "month_fi": "Lokakuu 2025",
     "week_it": "Sett. 42",
-    "month_it": "Ottobre 2025"
+    "month_it": "Ottobre 2025",
+    "title_en": "A small glimpse into our flowering room:",
+    "description_en": "A beautiful Bubble OG (LIT Farms) :)",
+    "title_fi": "Pieni kurkistus kukkivaan huoneeseemme:",
+    "description_fi": "Kaunis Bubble OG (LIT Farms) :)",
+    "title_it": "Un piccolo scorcio della nostra serra dei fiori:",
+    "description_it": "Una bellissima Bubble OG (LIT Farms) :)"
   }
 ]

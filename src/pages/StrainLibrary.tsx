@@ -76,7 +76,12 @@ const StrainCard: React.FC<StrainCardProps> = ({ strain }) => {
             </button>
           )}
           <div>
-            <h3 className="text-2xl font-black text-primary tracking-tighter group-hover:scale-[1.02] transition-transform duration-500">{strain.name}</h3>
+            <div className="flex items-center gap-2 flex-wrap">
+              <h3 className="text-2xl font-black text-primary tracking-tighter group-hover:scale-[1.02] transition-transform duration-500">{strain.name}</h3>
+              <span className="px-2 py-0.5 bg-emerald-500/10 text-emerald-500 text-[9px] rounded-md border border-emerald-500/20 font-black uppercase tracking-wider">
+                {strain.type ?? t('strains.type_flower')}
+              </span>
+            </div>
             <p className="text-[10px] text-muted-foreground uppercase tracking-[0.2em] font-bold mt-1">{strain.breeder}</p>
           </div>
         </div>
@@ -208,7 +213,12 @@ const StrainCard: React.FC<StrainCardProps> = ({ strain }) => {
               {/* Centered, readable text column */}
               <div className="max-w-2xl mx-auto px-6 md:px-8 py-10 md:py-12 space-y-8">
                   <div>
-                    <h3 className="text-3xl md:text-5xl font-black text-primary tracking-tighter">{strain.name}</h3>
+                    <div className="flex items-center gap-3 flex-wrap">
+                      <h3 className="text-3xl md:text-5xl font-black text-primary tracking-tighter">{strain.name}</h3>
+                      <span className="px-2.5 py-1 bg-emerald-500/10 text-emerald-500 text-xs rounded-lg border border-emerald-500/20 font-black uppercase tracking-wider">
+                        {strain.type ?? t('strains.type_flower')}
+                      </span>
+                    </div>
                     <p className="text-xs text-muted-foreground uppercase tracking-[0.2em] font-bold mt-2">{strain.breeder}</p>
                   </div>
 

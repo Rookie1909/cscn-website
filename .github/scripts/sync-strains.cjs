@@ -29,6 +29,22 @@ async function downloadStrainImage(id, image) {
   return `${IMAGES_PUBLIC_PATH}/${id}.${ext}`;
 }
 
+// Cannanas' inventory "type" enum (CreateHarvestProductRequest schema) covers
+// far more than cannabis (equipment, supplies, etc.) - we only map the
+// cannabis product forms that actually show up in the dispensing catalog.
+const PRODUCT_TYPE_LABELS = {
+  CANNABIS_FLOWER: 'Blüten',
+  CANNABIS_HASH: 'Hash',
+  CANNABIS_ROSIN: 'Rosin',
+  CANNABIS_CUTLING: 'Stecklinge',
+  CANNABIS_SEED: 'Samen',
+  CANNABIS_CLIPPINGS: 'Schnittgut',
+  CANNABIS_OIL: 'Öl',
+  CANNABIS_EXTRACT: 'Extrakt',
+  CANNABIS_POLLEN: 'Pollen',
+  CANNABIS_POLLUM: 'Pollen',
+};
+
 function slugify(name) {
   return name
     .toLowerCase()
@@ -173,6 +189,7 @@ async function main() {
     const entry = {
       id,
       name: s.name,
+      type: override.type || PRODUCT_TYPE_LABELS[p.type],
       // The product-level thc/cbd reflect the actual tested batch; fall back
       // to the strain library's figures if a batch value is missing.
       thc: p.thc != null ? `${p.thc}%` : s.thc || '-',

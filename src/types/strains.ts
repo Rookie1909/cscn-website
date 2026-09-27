@@ -1,6 +1,8 @@
 export interface Strain {
   id: string;
   name: string;
+  /** Product type, e.g. "Blüten", "Hash", "Bubble Hash", "Rosin", "Piattella", "WPFF Rosin" */
+  type?: string;
   thc: string;
   cbd: string;
   indica: number;

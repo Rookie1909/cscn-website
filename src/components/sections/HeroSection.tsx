@@ -1,5 +1,6 @@
+import { forwardRef, useImperativeHandle, useRef, useState, type RefObject } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
-import { motion } from 'framer-motion';
+import { motion, animate } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Award, Scale, ShieldCheck, Zap } from 'lucide-react';
 import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
@@ -37,13 +38,46 @@ const itemVariants = {
   },
 };
 
+// Shows the final value by default (so it's correct without hover, e.g. on
+// touch devices) and replays a count-up from 0 when the parent card is
+// hovered - triggered imperatively via `ref` so the whole card (not just
+// this text) can start the animation.
+export interface CountUpHandle {
+  trigger: () => void;
+}
+
+const CountUpStat = forwardRef<CountUpHandle, { value: number; suffix?: string }>(
+  ({ value, suffix = '' }, ref) => {
+    const [display, setDisplay] = useState(value);
+    const animating = useRef(false);
+
+    useImperativeHandle(ref, () => ({
+      trigger: () => {
+        if (animating.current) return;
+        animating.current = true;
+        animate(0, value, {
+          duration: 1.2,
+          ease: 'easeOut',
+          onUpdate: (v) => setDisplay(Math.round(v)),
+          onComplete: () => { animating.current = false; },
+        });
+      },
+    }));
+
+    return <>{display}{suffix}</>;
+  }
+);
+CountUpStat.displayName = 'CountUpStat';
+
 export function HeroSection() {
   const { t } = useTranslation();
+  const plantsCountRef = useRef<CountUpHandle>(null);
+  const dispenseCountRef = useRef<CountUpHandle>(null);
 
   const stats = [
-    { icon: Award, label: t('home.hero.stats.award.label'), sub: t('home.hero.stats.award.sub'), color: "text-primary" },
-    { icon: CannabisLeaf, label: t('home.hero.stats.plants.label'), sub: t('home.hero.stats.plants.sub'), color: "text-emerald-400" },
-    { icon: Scale, label: t('home.hero.stats.dispense.label'), sub: t('home.hero.stats.dispense.sub'), color: "text-amber-400" },
+    { icon: Award, label: t('home.hero.stats.award.label'), sub: t('home.hero.stats.award.sub'), color: "text-primary", countUp: undefined as { value: number; suffix: string; ref: RefObject<CountUpHandle> } | undefined },
+    { icon: CannabisLeaf, label: t('home.hero.stats.plants.label'), sub: t('home.hero.stats.plants.sub'), color: "text-emerald-400", countUp: { value: 500, suffix: '+', ref: plantsCountRef } },
+    { icon: Scale, label: t('home.hero.stats.dispense.label'), sub: t('home.hero.stats.dispense.sub'), color: "text-amber-400", countUp: { value: 2500, suffix: 'g+', ref: dispenseCountRef } },
   ];
 
   const highlights = [
@@ -112,9 +146,15 @@ export function HeroSection() {
               className="grid grid-cols-3 gap-3 sm:gap-4"
             >
               {stats.map((stat, i) => (
-                <div key={i} className="group relative p-3 sm:p-4 rounded-[1.5rem] sm:rounded-3xl bg-secondary/5 border border-border/50 backdrop-blur-sm transition-all hover:bg-secondary/10 hover:border-primary/30 flex flex-col items-center text-center">
+                <div
+                  key={i}
+                  onMouseEnter={() => stat.countUp?.ref.current?.trigger()}
+                  className="group relative p-3 sm:p-4 rounded-[1.5rem] sm:rounded-3xl bg-secondary/5 border border-border/50 backdrop-blur-sm transition-all hover:bg-secondary/10 hover:border-primary/30 flex flex-col items-center text-center"
+                >
                   <stat.icon className={`w-6 h-6 sm:w-8 sm:h-8 ${stat.color} mb-2 sm:mb-3`} />
-                  <div className="text-xl sm:text-2xl font-headline font-extrabold text-foreground">{stat.label}</div>
+                  <div className="text-xl sm:text-2xl font-headline font-extrabold text-foreground">
+                    {stat.countUp ? <CountUpStat ref={stat.countUp.ref} value={stat.countUp.value} suffix={stat.countUp.suffix} /> : stat.label}
+                  </div>
                   <div className="text-[9px] sm:text-[10px] uppercase tracking-wider text-muted-foreground font-bold mt-0.5 sm:mt-1 w-full whitespace-normal leading-tight">{stat.sub}</div>
                 </div>
               ))}

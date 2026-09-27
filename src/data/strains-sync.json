@@ -2,6 +2,7 @@
   {
     "id": "all-the-sauces",
     "name": "All the Sauces",
+    "type": "Rosin",
     "thc": "88.13%",
     "cbd": "0%",
     "indica": 60,
@@ -50,6 +51,7 @@
   {
     "id": "dosimosa",
     "name": "Dosimosa",
+    "type": "Blüten",
     "thc": "19.5%",
     "cbd": "2%",
     "indica": 60,
@@ -98,6 +100,7 @@
   {
     "id": "gorilla-zkittles",
     "name": "Gorilla Zkittles",
+    "type": "Blüten",
     "thc": "22.5%",
     "cbd": "2%",
     "indica": 60,
@@ -146,6 +149,7 @@
   {
     "id": "liquid-hydrogen-peach",
     "name": "Liquid Hydrogen Peach",
+    "type": "Blüten",
     "thc": "20%",
     "cbd": "2%",
     "indica": 60,
@@ -194,6 +198,7 @@
   {
     "id": "pillows",
     "name": "Pillows",
+    "type": "Blüten",
     "thc": "19%",
     "cbd": "2%",
     "indica": 50,
@@ -234,6 +239,7 @@
   {
     "id": "tiramisu",
     "name": "Tiramisu",
+    "type": "Blüten",
     "thc": "19%",
     "cbd": "2%",
     "indica": 70,

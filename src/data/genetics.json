@@ -223,6 +223,56 @@
     ]
   },
   {
+    "id": "grape-venom",
+    "name": "Grape Venom",
+    "type": "hybrid",
+    "indica": 55,
+    "sativa": 45,
+    "thc": "-",
+    "cbd": "-",
+    "genetics": "Scorpion Venom × Tropicanna Punch #61",
+    "breeder": "Black Tuna Seeds",
+    "description": "Grape Venom ist eine moderne Hybridgenetik von Black Tuna Seeds, die gemeinsam mit dem Kollektiv Always Be Flowering entwickelt wurde. Die Sorte entstand aus der Kreuzung einer selektierten Scorpion Venom mit dem legendären Tropicanna Punch #61-Klon. Ziel war die Kombination intensiver Fruchtterpene, spektakulärer Farbausprägungen und außergewöhnlicher Harzproduktion.\n\nGrape Venom liefert eine ausgewogene Hybridwirkung. Der Wirkungseintritt wird häufig als kreativ, euphorisch und stimmungsaufhellend beschrieben. Anschließend entwickelt sich eine angenehme körperliche Entspannung, ohne stark sedierend zu wirken. Dadurch eignet sich die Sorte sowohl für den Tag als auch für entspannte Abendstunden.",
+    "effects": [],
+    "terpenes": [
+      "Trauben",
+      "Beeren",
+      "Candy",
+      "Tropische Früchte",
+      "Gas",
+      "Süß-Sauer"
+    ],
+    "image": "/images/strains/grape-venom.webp",
+    "status": "none",
+    "description_en": "Grape Venom is a modern hybrid strain from Black Tuna Seeds, developed in collaboration with the Always Be Flowering collective. This variety was created by crossing a selected Scorpion Venom with the legendary Tropicanna Punch #61 clone. The goal was to combine intense fruity terpenes, spectacular color variations, and exceptional resin production.\n\nGrape Venom delivers a well-balanced hybrid effect. The onset is often described as creative, euphoric, and mood-enhancing. This is followed by pleasant physical relaxation without being overly sedating. This makes the strain suitable for both daytime and relaxed evening use.",
+    "terpenes_en": [
+      "Grapes",
+      "Berries",
+      "Candy",
+      "Tropical Fruits",
+      "Gas",
+      "Sweet and sour"
+    ],
+    "description_fi": "Grape Venom on Black Tuna Seedsin moderni hybridilajike, joka on kehitetty yhteistyössä Always Be Flowering -kollektiivin kanssa. Tämä lajike luotiin risteyttämällä valittu Scorpion Venom ja legendaarinen Tropicanna Punch #61 -klooni. Tavoitteena oli yhdistää intensiiviset hedelmäiset terpeenit, upeat värivaihtelut ja poikkeuksellinen hartsituotanto.\n\nGrape Venom tarjoaa tasapainoisen hybridivaikutuksen. Vaikutuksen alkua kuvataan usein luovaksi, euforiseksi ja mielialaa kohottavaksi. Tätä seuraa miellyttävä fyysinen rentoutuminen ilman liiallista rauhoittamista. Tämä tekee lajikkeesta sopivan sekä päiväkäyttöön että rentoon iltakäyttöön.",
+    "terpenes_fi": [
+      "rypäleet",
+      "Marjat",
+      "Candy",
+      "Trooppiset hedelmät",
+      "Kaasu",
+      "Makea ja hapan"
+    ],
+    "description_it": "Grape Venom è una moderna varietà ibrida di Black Tuna Seeds, sviluppata in collaborazione con il collettivo Always Be Flowering. Questa varietà è stata creata incrociando una Scorpion Venom selezionata con il leggendario clone Tropicanna Punch #61. L'obiettivo era quello di combinare terpeni fruttati intensi, spettacolari variazioni di colore e un'eccezionale produzione di resina.\n\nGrape Venom offre un effetto ibrido ben bilanciato. L'inizio è spesso descritto come creativo, euforico e in grado di migliorare l'umore. A questo segue un piacevole rilassamento fisico senza essere eccessivamente sedativo. Ciò rende la varietà adatta sia all'uso diurno che a rilassanti sessioni serali.",
+    "terpenes_it": [
+      "Uva",
+      "Frutti di bosco",
+      "Candy",
+      "Frutta tropicale",
+      "Gas",
+      "Agrodolce"
+    ]
+  },
+  {
     "id": "kacklesnatch",
     "name": "Kacklesnatch",
     "type": "indica",

@@ -248,15 +248,46 @@
     "cbd": "2%",
     "indica": 45,
     "sativa": 55,
-    "description": "SweetSeeds erste lichtabhängige Sorte mit roten Blüten. Hybrid aus der Kreuzung zwischen unserer Red Poison Auto® und einem lichtabhängigen Elite-Klon von Tangie (California Orange x Hybrid Skunk), von einem ungewöhnlichen und seltenen Phänotyp mit roten Blüten, herrlichem Aroma und intensivem Mandarinengeschmack.\n\nDiese Pflanze produziert sehr harzige und fruchtbare Buds mit schönen roten Blüten, die in nur 7-8 Wochen geerntet werden können.\n\nDas Aroma dieser Sorte ist möglicherweise das köstlichste aller rotblühenden Sorten auf dem Markt. Sie hat ein kräftiges süßes und zitrisches Aroma nach Mandarinen mit frischen Tönen von blauer Zypresse. Ideal für die Extraktion von Konzentraten von enormer aromatischer Qualität; prachtvolles Erscheinen durch die rötlichen und rosafarbenen Töne des Harzes.\n\nZitrus, Mandarine, Frisch, Zypresse, Süß",
+    "description": "SweetSeeds erste lichtabhängige Sorte mit roten Blüten. Hybrid aus der Kreuzung zwischen unserer Red Poison Auto® und einem lichtabhängigen Elite-Klon von Tangie (California Orange x Hybrid Skunk), von einem ungewöhnlichen und seltenen Phänotyp mit roten Blüten, herrlichem Aroma und intensivem Mandarinengeschmack.\n\nDiese Pflanze produziert sehr harzige und fruchtbare Buds mit schönen roten Blüten, die in nur 7-8 Wochen geerntet werden können.\n\nDas Aroma dieser Sorte ist möglicherweise das köstlichste aller rotblühenden Sorten auf dem Markt. Sie hat ein kräftiges süßes und zitrisches Aroma nach Mandarinen mit frischen Tönen von blauer Zypresse. Ideal für die Extraktion von Konzentraten von enormer aromatischer Qualität; prachtvolles Erscheinen durch die rötlichen und rosafarbenen Töne des Harzes.\n\nRed Mandarine entwickelt eine ausgewogene körperliche und geistige Wirkung. Zu Beginn steht häufig eine euphorische, fröhliche und geistig anregende Phase im Vordergrund. Die Wirkung bleibt dabei vergleichsweise klar und kann Kreativität sowie Geselligkeit unterstützen.\n\nIm weiteren Verlauf tritt zunehmend eine angenehme körperliche Entspannung hinzu. Dadurch entsteht eine harmonische Mischung aus mentaler Aktivierung und körperlicher Ruhe, ohne unmittelbar schwer oder stark sedierend zu wirken.",
     "effects": [],
-    "terpenes": [],
-    "genetics": "Red Posion Auto x Tangie",
+    "terpenes": [
+      "Mandarine",
+      "süße Zitrusfrüchte",
+      "Orange",
+      "Zypresse",
+      "frische Kräuter",
+      "leichte Würze"
+    ],
+    "genetics": "Tangie × Red Poison",
     "breeder": "Sweet Seeds",
     "image": "/images/strains/red-mandarine.webp",
-    "description_en": "SweetSeeds' first light-dependent strain with red flowers. A hybrid resulting from the cross between our Red Poison Auto® and an elite light-dependent clone of Tangie (California Orange x Hybrid Skunk), this strain boasts an unusual and rare phenotype with red flowers, a magnificent aroma, and an intense tangerine flavor.\n\nThis plant produces highly resinous and productive buds with beautiful red flowers, ready for harvest in just 7-8 weeks.\n\nThe aroma of this strain is arguably the most delicious of any red-flowering variety on the market. It has a strong, sweet, and citrusy tangerine aroma with fresh notes of blue cypress. Ideal for extracting concentrates of exceptional aromatic quality; a magnificent appearance thanks to the reddish and pinkish hues of the resin.\n\nCitrus, Tangerine, Fresh, Cypress, Sweet",
-    "description_fi": "SweetSeedsin ensimmäinen valosta riippuvainen lajike, jossa on punaiset kukat. Hybridi, joka on syntynyt Red Poison Auto® -lajikkeemme ja Tangie-lajikkeen eliitin valosta riippuvaisen kloonin (California Orange x Hybrid Skunk) risteytyksestä. Tällä lajikkeella on epätavallinen ja harvinainen fenotyyppi, punaiset kukat, upea tuoksu ja intensiivinen mandariinin maku.\n\nTämä kasvi tuottaa erittäin hartsimaisia ja tuottoisia nuppuja kauniilla punaisilla kukilla, jotka ovat valmiita sadonkorjuuseen vain 7–8 viikossa.\n\nTämän lajikkeen tuoksu on kiistatta herkullisin kaikista markkinoilla olevista punakukkaisista lajikkeista. Siinä on voimakas, makea ja sitruksinen mandariinin tuoksu, jossa on raikkaita sinisen sypressin vivahteita. Ihanteellinen poikkeuksellisen aromaattisten tiivisteiden uuttamiseen; upea ulkonäkö hartsin punertavien ja vaaleanpunaisten sävyjen ansiosta.\n\nSitrus, Mandariini, Raikas, Sypressi, Makea",
-    "description_it": "La prima varietà di SweetSeeds a fioritura rossa e dipendente dalla luce. Ibrido risultato dell'incrocio tra la nostra Red Poison Auto® e un clone d'élite di Tangie (California Orange x Hybrid Skunk), questa varietà vanta un fenotipo insolito e raro con fiori rossi, un aroma magnifico e un intenso sapore di mandarino.\n\nQuesta pianta produce cime altamente resinose e produttive con splendidi fiori rossi, pronte per il raccolto in sole 7-8 settimane.\n\nL'aroma di questa varietà è probabilmente il più delizioso tra tutte le varietà a fioritura rossa sul mercato. Ha un aroma forte, dolce e agrumato di mandarino con fresche note di cipresso blu. Ideale per l'estrazione di concentrati di eccezionale qualità aromatica; un aspetto magnifico grazie alle sfumature rossastre e rosate della resina.\n\nAgrumi, Mandarino, Fresco, Cipresso, Dolce"
+    "description_en": "SweetSeeds' first light-dependent strain with red flowers. A hybrid resulting from the cross between our Red Poison Auto® and a light-dependent elite clone of Tangie (California Orange x Hybrid Skunk), this strain boasts an unusual and rare phenotype with red flowers, a magnificent aroma, and an intense tangerine flavor.\n\nThis plant produces highly resinous and prolific buds with beautiful red flowers, ready for harvest in just 7-8 weeks.\n\nThe aroma of this strain is arguably the most delicious of any red-flowering variety on the market. It has a strong, sweet, and citrusy tangerine aroma with fresh notes of blue cypress. Ideal for extracting concentrates of exceptional aromatic quality, it is magnificent thanks to the reddish and pinkish hues of its resin.\n\nRed Mandarine produces a balanced physical and mental effect. Initially, a euphoric, joyful, and mentally stimulating phase is often the dominant feeling. The effects remain relatively clear and can enhance creativity and sociability.\n\nAs the process progresses, a pleasant physical relaxation gradually sets in. This creates a harmonious blend of mental activation and physical rest, without being immediately heavy or strongly sedating.",
+    "terpenes_en": [
+      "mandarin",
+      "sweet citrus fruits",
+      "Orange",
+      "cypress",
+      "fresh herbs",
+      "light seasoning"
+    ],
+    "description_fi": "SweetSeedsin ensimmäinen valosta riippuvainen lajike, jossa on punaiset kukat. Hybridi, joka on syntynyt Red Poison Auto® -lajikkeemme ja valosta riippuvaisen Tangie-lajikkeen eliittikloonin (California Orange x Hybrid Skunk) risteytyksestä, ylpeilee epätavallisella ja harvinaisella fenotyypillä, jolla on punaiset kukat, upea tuoksu ja intensiivinen mandariinin maku.\n\nTämä kasvi tuottaa erittäin hartsimaisia ja tuottoisia nuppuja kauniilla punaisilla kukilla, jotka ovat valmiita sadonkorjuuseen vain 7–8 viikossa.\n\nTämän lajikkeen tuoksu on kiistatta herkullisin kaikista markkinoilla olevista punakukkaisista lajikkeista. Siinä on voimakas, makea ja sitrushedelmäinen mandariinin tuoksu, jossa on raikkaita sinisen sypressin vivahteita. Se on ihanteellinen poikkeuksellisen aromaattisten tiivisteiden uuttamiseen, ja sen ulkonäkö on upea hartsin punertavien ja vaaleanpunaisten sävyjen ansiosta.\n\nPunainen mandariini tuottaa tasapainoisen fyysisen ja henkisen vaikutuksen. Aluksi euforinen, iloinen ja henkisesti stimuloiva vaihe on usein hallitseva piirre. Vaikutus pysyy suhteellisen selkeänä ja voi parantaa luovuutta ja sosiaalisuutta.\n\nProsessin edetessä miellyttävä fyysinen rentoutuminen alkaa vähitellen. Tämä luo harmonisen sekoituksen henkistä aktivaatiota ja fyysistä lepoa ilman, että se olisi heti raskasta tai voimakkaasti rauhoittavaa.",
+    "terpenes_fi": [
+      "mandariini",
+      "makeat sitrushedelmät",
+      "Oranssi",
+      "sypressi",
+      "tuoreet yrtit",
+      "kevyt mauste"
+    ],
+    "description_it": "La prima varietà di SweetSeeds a fioritura rossa e dipendente dalla luce. Ibrido risultato dell'incrocio tra la nostra Red Poison Auto® e un clone d'élite di Tangie (California Orange x Hybrid Skunk) a fioritura dipendente dalla luce, questa varietà vanta un fenotipo insolito e raro con fiori rossi, un aroma magnifico e un intenso sapore di mandarino.\n\nQuesta pianta produce cime molto resinose e abbondanti con splendidi fiori rossi, pronti per il raccolto in sole 7-8 settimane.\n\nL'aroma di questa varietà è probabilmente il più delizioso tra tutte le varietà a fioritura rossa sul mercato. Ha un aroma forte, dolce e agrumato di mandarino con fresche note di cipresso blu. Ideale per l'estrazione di concentrati di eccezionale qualità aromatica, è magnifica nell'aspetto grazie alle sfumature rossastre e rosate della resina.\n\nRed Mandarine produce un effetto equilibrato sia fisico che mentale. Inizialmente, una fase euforica, gioiosa e mentalmente stimolante è spesso la caratteristica dominante. L'effetto rimane relativamente lucido e può migliorare la creatività e la socievolezza.\n\nMan mano che il processo procede, si instaura gradualmente un piacevole rilassamento fisico. Questo crea una miscela armoniosa di attivazione mentale e riposo fisico, senza risultare immediatamente pesante o fortemente sedativo.",
+    "terpenes_it": [
+      "mandarino",
+      "agrumi dolci",
+      "Arancia",
+      "cipresso",
+      "erbe fresche",
+      "condimento leggero"
+    ]
   },
   {
     "id": "zushers",

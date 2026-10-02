@@ -1,5 +1,13 @@
 [
   {
+    "id": "ausgabestelle-eg",
+    "name": "Ausgabestelle EG",
+    "description": "Ausgabestelle, inkl. Vorraum/Wartezimmer",
+    "image": "/images/zones/ausgabestelle-eg.webp",
+    "lighting": "LSR-6500°K und CMH",
+    "ventilation": "Hauptlüftungsanlage"
+  },
+  {
     "id": "bluteraum-1-og",
     "name": "Blüteraum #1 OG",
     "description": "Der Erste Blüteraum und auch der Größte",

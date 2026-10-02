@@ -200,6 +200,24 @@
     ]
   },
   {
+    "id": "lemon-og-candy",
+    "name": "Lemon OG Candy",
+    "type": "Blüten",
+    "thc": "21%",
+    "cbd": "2%",
+    "indica": 50,
+    "sativa": 50,
+    "description": "Lemon OG Candy geht hervor von einer Kreuzung zwischen einer klone der Super Lemon OG und einer Selektionierte Amnesia Haze. Das Resultat ist einer Pflanze mit größer Kraft, sie steckt hervor für ihre hohe Konzentration an Terpenen die einer penetrante Zitrus Aroma löscht.\n\nIntensiver Zitronen-Geschmack, und -Geruch mit Nuancen von Haze, die langanhaltend am Gaumen verweilen, um sich dann zu erdig-würzigen Noten zu verwandeln.\n\nHauptsächlich kopflastiger, euphorischer Effekt. Gut zum Steigern der Kreativität und um Spaß mit Freunden zu haben.",
+    "effects": [],
+    "terpenes": [],
+    "genetics": "Amnesia Haze x Super Lemon OG",
+    "breeder": "Philosopher Seeds",
+    "image": "/images/strains/lemon-og-candy.webp",
+    "description_en": "Lemon OG Candy is the offshoot of a cross between a Super Lemon OG clone and a selected Amnesia Haze. The result is a more potent plant, distinguished by its high terpene concentration and intense citrus aroma.\n\nIt boasts an intense lemon flavor and aroma with hints of Haze that linger on the palate before evolving into earthy and spicy notes.\n\nThe effect is primarily cerebral and euphoric. It's great for boosting creativity and having fun with friends.",
+    "description_fi": "Lemon OG Candy on Super Lemon OG -kloonin ja valitun Amnesia Hazen risteytyksen sivuhaara. Tuloksena on voimakkaampi kasvi, jolle on ominaista korkea terpeenipitoisuus ja intensiivinen sitrushedelmien tuoksu.\n\nSillä on intensiivinen sitruunan maku ja tuoksu, jossa on vihjeitä sameudesta, jotka viipyvät kitalaessa ennen kuin kehittyvät maanläheisiksi ja mausteisiksi vivahteiksi.\n\nVaikutus on ensisijaisesti aivoja virkistävä ja euforinen. Se sopii erinomaisesti luovuuden lisäämiseen ja hauskanpitoon ystävien kanssa.",
+    "description_it": "Lemon OG Candy è il risultato dell'incrocio tra un clone di Super Lemon OG e una varietà selezionata di Amnesia Haze. Il risultato è una pianta più potente, caratterizzata da un'elevata concentrazione di terpeni e un intenso aroma di agrumi.\n\nVanta un sapore e un aroma di limone intensi, con sentori di Haze che persistono al palato prima di evolvere in note terrose e speziate.\n\nL'effetto è principalmente cerebrale ed euforico. È ideale per stimolare la creatività e divertirsi con gli amici."
+  },
+  {
     "id": "pillows",
     "name": "Pillows",
     "type": "Blüten",

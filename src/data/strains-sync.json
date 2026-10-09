@@ -49,6 +49,55 @@
     ]
   },
   {
+    "id": "atomic-blue-dream",
+    "name": "Atomic Blue Dream",
+    "type": "Blüten",
+    "thc": "22%",
+    "cbd": "2%",
+    "indica": 50,
+    "sativa": 50,
+    "description": "Atomic Blue Dream ist eine von Sensi Seeds entwickelte Hybridsorte, die aus der Kreuzung von Chernobyl und Blue Dream hervorgegangen ist. Die Sorte vereint einige der bekanntesten US-Genetiken in einer leistungsstarken Kombination und zeichnet sich durch außergewöhnliche Wuchskraft, hohe Erträge und eine ausgeprägte Terpenentwicklung aus. Obwohl sie genetisch ausgewogen ist, zeigt sie im Wuchs deutliche Sativa-Eigenschaften mit langen Internodien, kräftigem Stretch und einer ausgeprägten Hauptcola. Unter optimalen Bedingungen können die Pflanzen enorme Ausmaße erreichen und sehr hohe Erträge liefern.\n\nDie Wirkung beginnt typischerweise mit einer euphorischen, kreativen und fokussierenden geistigen Komponente. Viele Nutzer beschreiben ein klares, motivierendes Kopfgefühl, das produktiv und alltagstauglich bleibt. Im weiteren Verlauf entwickelt sich eine angenehme körperliche Entspannung, ohne dabei stark sedierend zu wirken. Dadurch eignet sich Atomic Blue Dream besonders für kreative Tätigkeiten, soziale Aktivitäten oder entspannte Tages- und Abendstunden.",
+    "effects": [],
+    "terpenes": [
+      "Blaubeere",
+      "Limette",
+      "Zitrus",
+      "Kiefer",
+      "Süß",
+      "Fruchtig"
+    ],
+    "genetics": "Chernobyl#261 × Blue Dream",
+    "breeder": "Sensi Seeds",
+    "image": "/images/strains/atomic-blue-dream.webp",
+    "description_en": "Atomic Blue Dream is a hybrid strain developed by Sensi Seeds, resulting from the cross of Chernobyl and Blue Dream. This strain combines some of the most renowned US genetics in a potent combination, characterized by exceptional vigor, high yields, and pronounced terpene development. Although genetically balanced, it exhibits distinct Sativa characteristics in its growth, with long internodes, vigorous stretch, and a prominent main cola. Under optimal conditions, the plants can reach enormous sizes and produce very high yields.\n\nThe effects typically begin with a euphoric, creative, and focused mental component. Many users describe a clear, motivating head feeling that remains productive and manageable in everyday life. This is followed by a pleasant physical relaxation without being overly sedating. As a result, Atomic Blue Dream is particularly well-suited for creative activities, social events, or relaxing daytime and evening sessions.",
+    "terpenes_en": [
+      "Blueberry",
+      "lime",
+      "Citrus",
+      "Pine",
+      "Sweet",
+      "Fruity"
+    ],
+    "description_fi": "Atomic Blue Dream on Sensi Seedsin kehittämä hybridilajike, joka on seurausta Chernobylin ja Blue Dreamin risteytyksestä. Tämä lajike yhdistää joitakin tunnetuimmista yhdysvaltalaisista genetiikoista tehokkaaksi yhdistelmäksi, jolle on ominaista poikkeuksellinen elinvoima, korkea sato ja voimakas terpeenien kehitys. Vaikka se on geneettisesti tasapainoinen, sillä on kasvussaan selkeitä Sativa-ominaisuuksia, pitkiä nivelväliä, voimakasta venymistä ja näkyvää pääkolaa. Optimaalisissa olosuhteissa kasvit voivat saavuttaa valtavia kokoja ja tuottaa erittäin suuria satoja.\n\nVaikutukset alkavat tyypillisesti euforisena, luovana ja keskittyneenä henkisenä komponenttina. Monet käyttäjät kuvailevat selkeää, motivoivaa pään tunnetta, joka pysyy tuottavana ja hallittavana jokapäiväisessä elämässä. Tätä seuraa miellyttävä fyysinen rentoutuminen ilman liiallista rauhoittamista. Tämän seurauksena Atomic Blue Dream sopii erityisen hyvin luoviin aktiviteetteihin, sosiaalisiin tapahtumiin tai rentouttaviin päivä- ja iltaistuntoihin.",
+    "terpenes_fi": [
+      "mustikka",
+      "lime",
+      "Sitrushedelmät",
+      "mänty",
+      "Söpö",
+      "Hedelmäinen"
+    ],
+    "description_it": "Atomic Blue Dream è una varietà ibrida sviluppata da Sensi Seeds, risultato dell'incrocio tra Chernobyl e Blue Dream. Questa varietà combina alcune delle genetiche statunitensi più rinomate in una potente combinazione, caratterizzata da un vigore eccezionale, rese elevate e un pronunciato sviluppo terpenico. Pur essendo geneticamente bilanciata, presenta distinte caratteristiche Sativa nella sua crescita, con internodi lunghi, un allungamento vigoroso e una cima principale prominente. In condizioni ottimali, le piante possono raggiungere dimensioni enormi e produrre rese molto elevate.\n\nGli effetti iniziano tipicamente con una componente mentale euforica, creativa e di concentrazione. Molti consumatori descrivono una sensazione di lucidità e motivazione che rimane produttiva e gestibile nella vita di tutti i giorni. A questa segue un piacevole rilassamento fisico senza essere eccessivamente sedativo. Di conseguenza, Atomic Blue Dream è particolarmente adatta per attività creative, eventi sociali o sessioni rilassanti diurne e serali.",
+    "terpenes_it": [
+      "Mirtillo",
+      "lime",
+      "Agrumi",
+      "Pino",
+      "Dolce",
+      "Fruttato"
+    ]
+  },
+  {
     "id": "dosimosa",
     "name": "Dosimosa",
     "type": "Blüten",

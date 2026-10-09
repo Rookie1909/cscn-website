@@ -196,59 +196,6 @@
     ]
   },
   {
-    "id": "gruntz",
-    "name": "Gruntz",
-    "type": "Blüten",
-    "thc": "20%",
-    "cbd": "2%",
-    "indica": 60,
-    "sativa": 40,
-    "description": "Gruntz ist eine moderne Hybridgenetik von Nasha Genetics, entstanden aus der Kreuzung von Gushers und Runtz. Die Sorte vereint die cremige Fruchtigkeit der Gushers-Linie mit der intensiven Candy-Aromatik von Runtz und verbindet damit zwei charakteristische Vertreter moderner US-Exotic-Genetiken.\n\nDie Pflanzen entwickeln kompakte, dicht mit Trichomen besetzte Blüten mit einer ausgeprägten Harzproduktion. Charakteristisch sind die süßen, fruchtigen Aromen, die von einer cremigen und leicht gasigen Basis begleitet werden.\n\nGruntz wird eine ausgewogene, überwiegend euphorische und stimmungsaufhellende Hybridwirkung zugeschrieben. Zu Beginn können geistige Leichtigkeit, Kreativität und ein angenehm anregendes Kopfgefühl auftreten.",
-    "effects": [],
-    "terpenes": [
-      "Candy",
-      "Tropische Früchte",
-      "Beeren",
-      "Fruchtgummi",
-      "Creme",
-      "Eiscreme",
-      "Gas"
-    ],
-    "genetics": "Gushers × Runtz",
-    "breeder": "Nasha Genetics",
-    "image": "/images/strains/gruntz.webp",
-    "description_en": "Gruntz is a modern hybrid strain from Nasha Genetics, created by crossing Gushers and Runtz. This variety combines the creamy fruitiness of the Gushers line with the intense candy aroma of Runtz, uniting two characteristic representatives of modern US exotic genetics.\n\nThe plants develop compact, densely trichomed buds with pronounced resin production. Sweet, fruity aromas are characteristic, accompanied by a creamy and slightly gassy base.\n\nGruntz is said to have a balanced, predominantly euphoric, and mood-enhancing hybrid effect. Initially, it can cause mental clarity, creativity, and a pleasantly stimulating head feeling.",
-    "terpenes_en": [
-      "Candy",
-      "Tropical Fruits",
-      "Berries",
-      "Fruit Gummy Candies",
-      "Cream",
-      "ice cream",
-      "Gas"
-    ],
-    "description_fi": "Gruntz on Nasha Geneticsin moderni hybridilajike, joka on luotu risteyttämällä Gushers- ja Runtz-lajikkeita. Tämä lajike yhdistää Gushers-linjan kermaisen hedelmäisyyden Runtzin intensiiviseen karkkiaromiin, yhdistäen kaksi nykyaikaisen yhdysvaltalaisen eksoottisen genetiikan tyypillistä edustajaa.\n\nKasvit kehittävät kompakteja, tiheästi trikomaisia silmuja, joilla on voimakas hartsituotanto. Makeat, hedelmäiset aromit ovat tyypillisiä, ja niitä täydentää kermainen ja hieman kaasumainen pohja.\n\nGruntzilla sanotaan olevan tasapainoinen, pääasiassa euforinen ja mielialaa kohottava hybridivaikutus. Aluksi se voi aiheuttaa henkistä selkeyttä, luovuutta ja miellyttävän stimuloivan pään tunteen.",
-    "terpenes_fi": [
-      "Candy",
-      "Trooppiset hedelmät",
-      "Marjat",
-      "hedelmäkarkit",
-      "Kerma",
-      "jäätelö",
-      "Kaasu"
-    ],
-    "description_it": "Gruntz è una moderna varietà ibrida di Nasha Genetics, creata incrociando Gushers e Runtz. Questa varietà combina la cremosa fruttuosità della linea Gushers con l'intenso aroma di caramella di Runtz, unendo due rappresentanti caratteristici della moderna genetica esotica statunitense.\n\nLe piante sviluppano cime compatte e densamente tricomate con una pronunciata produzione di resina. Gli aromi dolci e fruttati sono caratteristici, accompagnati da una base cremosa e leggermente gassata.\n\nSi dice che Gruntz abbia un effetto ibrido equilibrato, prevalentemente euforico e che migliori l'umore. Inizialmente, può causare lucidità mentale, creatività e una piacevole sensazione di stimolazione cerebrale.",
-    "terpenes_it": [
-      "Candy",
-      "Frutta tropicale",
-      "Frutti di bosco",
-      "Caramelle gommose alla frutta",
-      "Crema",
-      "gelato",
-      "Gas"
-    ]
-  },
-  {
     "id": "lemon-og-candy",
     "name": "Lemon OG Candy",
     "type": "Blüten",

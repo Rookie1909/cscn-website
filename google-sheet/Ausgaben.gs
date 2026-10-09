@@ -277,6 +277,39 @@ function aggregate_(rows) {
 function round1_(n) { return Math.round(n * 10) / 10; }
 function sum_(list, key) { return list.reduce(function (a, x) { return a + x[key]; }, 0); }
 
+// ───────────────────────────── Formeln (Sprache des Sheets) ─────────────────────────────
+
+/**
+ * Formeln müssen in der Sprache des Sheets geschrieben werden: Bei deutscher Einstellung trennt ";"
+ * die Argumente und "," ist das Dezimalzeichen. Das Script testet einmal, was das Sheet versteht.
+ */
+var FORMULA_SEP_ = null;
+
+function formulaSep_() {
+  if (FORMULA_SEP_) return FORMULA_SEP_;
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var tmp = ss.insertSheet('_formeltest');
+  try {
+    tmp.getRange('A1').setFormula('=SUM(1,2)');
+    SpreadsheetApp.flush();
+    FORMULA_SEP_ = tmp.getRange('A1').getValue() === 3 ? ',' : ';';
+  } finally {
+    ss.deleteSheet(tmp);
+  }
+  return FORMULA_SEP_;
+}
+
+/** Passt die Argumenttrenner aller Formeln (Zellen, die mit "=" beginnen) an das Sheet an. */
+function loc_(values) {
+  var sep = formulaSep_();
+  if (sep === ',') return values;
+  return values.map(function (row) {
+    return row.map(function (v) {
+      return (typeof v === 'string' && v.charAt(0) === '=') ? v.replace(/,/g, sep) : v;
+    });
+  });
+}
+
 // ───────────────────────────── Sheet-Ausgabe ─────────────────────────────
 
 function sheet_(name) {
@@ -336,7 +369,7 @@ function writeDays_(res) {
   // Summenzeile (ganz unten, farbig, rechnet mit Filter)
   var sumRow = last + 1;
   var rng = function (c) { return c + first + ':' + c + last; };
-  sh.getRange(sumRow, 1, 1, header.length).setValues([[
+  sh.getRange(sumRow, 1, 1, header.length).setValues(loc_([[
     'SUMME', '', '', '', '',
     n ? '=SUBTOTAL(109,' + rng('F') + ')' : 0,
     '',
@@ -344,7 +377,7 @@ function writeDays_(res) {
     n ? '=IFERROR(H' + sumRow + '/F' + sumRow + ',0)' : 0,
     n ? '=SUBTOTAL(109,' + rng('J') + ')' : 0,
     n ? '=SUBTOTAL(109,' + rng('K') + ')' : 0
-  ]]);
+  ]]));
   sh.getRange(sumRow, 1, 1, header.length).setBackground(CONFIG.COLOR_SUM).setFontWeight('bold')
     .setBorder(true, null, null, null, null, null, '#2f6b3a', SpreadsheetApp.BorderStyle.SOLID_MEDIUM);
   sh.getRange(sumRow, 8, 1, 1).setNumberFormat('#,##0.0');
@@ -378,7 +411,7 @@ function writeStrains_(res) {
     sh.getRange(first, 4, n, 1).setNumberFormat('#,##0.0');
     sh.getRange(first, 5, n, 1).setNumberFormat('0.0%');
     sh.getRange(3, 1, n + 1, header.length).createFilter();
-    sh.getRange(sumRow, 1, 1, header.length).setValues([['SUMME', '', '=SUBTOTAL(109,C' + first + ':C' + last + ')', '=SUBTOTAL(109,D' + first + ':D' + last + ')', '']]);
+    sh.getRange(sumRow, 1, 1, header.length).setValues(loc_([['SUMME', '', '=SUBTOTAL(109,C' + first + ':C' + last + ')', '=SUBTOTAL(109,D' + first + ':D' + last + ')', '']]));
     sh.getRange(sumRow, 1, 1, header.length).setBackground(CONFIG.COLOR_SUM).setFontWeight('bold');
     sh.getRange(sumRow, 4).setNumberFormat('#,##0.0');
     sh.getRange(sumRow + 1, 1).setValue('Abgaben = Anzahl Ausgaben (Warenkörbe), in denen die Sorte enthalten war; Summe kann höher sein als die Gesamtzahl der Abgaben.')
@@ -424,7 +457,7 @@ function writeOverview_(res) {
   var wd = res.byWeekday.map(function (w) { return [w.label, w.days, w.carts, w.grams, w.avgDay, w.avgCart]; });
   var wdFirst = r;
   sh.getRange(r, 1, wd.length, h1.length).setValues(wd); r += wd.length;
-  sh.getRange(r, 1, 1, h1.length).setValues([['SUMME', '=SUM(B' + wdFirst + ':B' + (r - 1) + ')', '=SUM(C' + wdFirst + ':C' + (r - 1) + ')', '=SUM(D' + wdFirst + ':D' + (r - 1) + ')', '=IFERROR(D' + r + '/B' + r + ',0)', '=IFERROR(D' + r + '/C' + r + ',0)']]);
+  sh.getRange(r, 1, 1, h1.length).setValues(loc_([['SUMME', '=SUM(B' + wdFirst + ':B' + (r - 1) + ')', '=SUM(C' + wdFirst + ':C' + (r - 1) + ')', '=SUM(D' + wdFirst + ':D' + (r - 1) + ')', '=IFERROR(D' + r + '/B' + r + ',0)', '=IFERROR(D' + r + '/C' + r + ',0)']]));
   sh.getRange(r, 1, 1, h1.length).setBackground(CONFIG.COLOR_SUM).setFontWeight('bold');
   sh.getRange(wdFirst, 4, wd.length + 1, 3).setNumberFormat('#,##0.0');
   r += 3;
@@ -437,7 +470,7 @@ function writeOverview_(res) {
   if (res.byMonth.length) {
     sh.getRange(r, 1, res.byMonth.length, h2.length).setValues(res.byMonth.map(function (m) { return [m.label, m.days, m.carts, m.grams, m.avgDay]; }));
     r += res.byMonth.length;
-    sh.getRange(r, 1, 1, h2.length).setValues([['SUMME', '=SUM(B' + mFirst + ':B' + (r - 1) + ')', '=SUM(C' + mFirst + ':C' + (r - 1) + ')', '=SUM(D' + mFirst + ':D' + (r - 1) + ')', '=IFERROR(D' + r + '/B' + r + ',0)']]);
+    sh.getRange(r, 1, 1, h2.length).setValues(loc_([['SUMME', '=SUM(B' + mFirst + ':B' + (r - 1) + ')', '=SUM(C' + mFirst + ':C' + (r - 1) + ')', '=SUM(D' + mFirst + ':D' + (r - 1) + ')', '=IFERROR(D' + r + '/B' + r + ',0)']]));
     sh.getRange(r, 1, 1, h2.length).setBackground(CONFIG.COLOR_SUM).setFontWeight('bold');
     sh.getRange(mFirst, 4, res.byMonth.length + 1, 2).setNumberFormat('#,##0.0');
   }

@@ -26,6 +26,8 @@ export function RoomCard({ room, compact = false }: RoomCardProps) {
           <img
             src={room.image}
             alt={room.name}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover grayscale contrast-125"
           />
           {/* Duotone tint: mix-blend-color takes this gradient's hue while

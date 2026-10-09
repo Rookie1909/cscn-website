@@ -5,6 +5,7 @@ const CLUB_ID = process.env.CANNANAS_CLUB_ID;
 const API_KEY = process.env.CANNANAS_API_KEY;
 const API_BASE = 'https://api.cannanas.club';
 const { TRANSLATION_TARGETS, translateTo, seedFromFile, saveCache } = require('./translate.cjs');
+const { toWebp, PRESETS } = require('./image-utils.cjs');
 
 const OVERRIDES_PATH = path.join(__dirname, '..', '..', 'src', 'data', 'strain-overrides.json');
 const OUTPUT_PATH = path.join(__dirname, '..', '..', 'src', 'data', 'genetics.json');
@@ -54,8 +55,10 @@ async function downloadImage(id, image) {
   if (!image || !image.url) return undefined;
   const res = await fetch(image.url);
   if (!res.ok) return undefined;
-  const buffer = Buffer.from(await res.arrayBuffer());
-  const ext = extFromMime(image.mimeType);
+  const original = Buffer.from(await res.arrayBuffer());
+  const optimized = await toWebp(original, PRESETS.strain);
+  const buffer = optimized || original;
+  const ext = optimized ? 'webp' : extFromMime(image.mimeType);
   fs.mkdirSync(IMAGES_DIR, { recursive: true });
   fs.writeFileSync(path.join(IMAGES_DIR, `${id}.${ext}`), buffer);
   return `${IMAGES_PUBLIC_PATH}/${id}.${ext}`;

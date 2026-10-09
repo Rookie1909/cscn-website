@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { toWebp, PRESETS } = require('./image-utils.cjs');
 
 const CLUB_ID = process.env.CANNANAS_CLUB_ID;
 const API_KEY = process.env.CANNANAS_API_KEY;
@@ -29,8 +30,10 @@ async function downloadImage(id, image, dir, publicPath) {
   if (!image || !image.url) return undefined;
   const res = await fetch(image.url);
   if (!res.ok) return undefined;
-  const buffer = Buffer.from(await res.arrayBuffer());
-  const ext = extFromMime(image.mimeType);
+  const original = Buffer.from(await res.arrayBuffer());
+  const optimized = await toWebp(original, PRESETS.zone);
+  const buffer = optimized || original;
+  const ext = optimized ? 'webp' : extFromMime(image.mimeType);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, `${id}.${ext}`), buffer);
   return `${publicPath}/${id}.${ext}`;

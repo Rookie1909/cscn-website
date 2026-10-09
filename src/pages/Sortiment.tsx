@@ -105,6 +105,8 @@ export function Sortiment() {
                           <img
                             src={g.image}
                             alt=""
+                            loading="lazy"
+                            decoding="async"
                             className="w-full h-full object-cover grayscale contrast-125 scale-105 transition-transform duration-500 group-hover:scale-110"
                           />
                           <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/60 to-black mix-blend-color" />

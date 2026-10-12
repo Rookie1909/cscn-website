@@ -61,6 +61,7 @@
     "florale Erde": "potting soil",
     "Florale Noten": "Floral notes",
     "Frisch gebackene Kekse": "Freshly baked cookies",
+    "Frische Genetik von US und EU-Premium-Züchtern. Neueste Sorten und Oldschool-Kultivare. (Eine Liste aller Sorten, ca. 80+ folgt in einem separaten Post).": "Fresh genetics from premium US and EU breeders. Latest varieties and old-school cultivars. (A list of all varieties, approximately 80+, will follow in a separate post).",
     "Frische Genetik von US und EU-Premium-Züchtern. Neueste Sorten und Oldschool-Kultivare. (Eine Liste aller Sorten, ca. 80+ folgt in einem separaten Post).\n\nHabt ein schönes Bergfest und bis die Tage! ✌️": "Fresh genetics from premium US and EU breeders. Newest strains and old-school cultivars. (A complete list of all strains, approximately 80+, will follow in a separate post).\n\nHave a great hump day and see you soon! ✌️",
     "frische Kräuter": "fresh herbs",
     "Früchte": "Fruits",
@@ -248,6 +249,7 @@
     "florale Erde": "kukkamulta",
     "Florale Noten": "Kukkaiset tuoksunotit",
     "Frisch gebackene Kekse": "Tuoreet keksit",
+    "Frische Genetik von US und EU-Premium-Züchtern. Neueste Sorten und Oldschool-Kultivare. (Eine Liste aller Sorten, ca. 80+ folgt in einem separaten Post).": "Tuoretta genetiikkaa ensiluokkaisilta yhdysvaltalaisilta ja EU:n jalostajilta. Uusimmat lajikkeet ja vanhan koulukunnan lajikkeet. (Kaikkien lajikkeiden luettelo, noin yli 80, on erillisessä viestissä.)",
     "Frische Genetik von US und EU-Premium-Züchtern. Neueste Sorten und Oldschool-Kultivare. (Eine Liste aller Sorten, ca. 80+ folgt in einem separaten Post).\n\nHabt ein schönes Bergfest und bis die Tage! ✌️": "Tuoreita genetiikkaa ensiluokkaisilta yhdysvaltalaisilta ja EU:n jalostajilta. Uusimpia ja vanhan koulukunnan lajikkeita. (Täydellinen luettelo kaikista kannoista, noin yli 80, tulee erilliseen postaukseen).\n\nHyvää vauhtipäivää ja nähdään pian! ✌️",
     "frische Kräuter": "tuoreet yrtit",
     "Früchte": "Hedelmät",
@@ -433,6 +435,7 @@
     "florale Erde": "terriccio per piante",
     "Florale Noten": "Note floreali",
     "Frisch gebackene Kekse": "Biscotti appena sfornati",
+    "Frische Genetik von US und EU-Premium-Züchtern. Neueste Sorten und Oldschool-Kultivare. (Eine Liste aller Sorten, ca. 80+ folgt in einem separaten Post).": "Genetica fresca proveniente da coltivatori di alto livello statunitensi ed europei. Le varietà più recenti e i cultivar classici. (Un elenco di tutte le varietà, circa 80+, seguirà in un post separato).",
     "Frische Genetik von US und EU-Premium-Züchtern. Neueste Sorten und Oldschool-Kultivare. (Eine Liste aller Sorten, ca. 80+ folgt in einem separaten Post).\n\nHabt ein schönes Bergfest und bis die Tage! ✌️": "Genetica fresca proveniente da breeder di alta qualità statunitensi ed europei. Le varietà più recenti e cultivar old-school. (Un elenco completo di tutte le varietà, circa 80+, seguirà in un post separato).\n\nBuon mercoledì e a presto! ✌️",
     "frische Kräuter": "erbe fresche",
     "Früchte": "Frutta",
@@ -558,6 +561,6 @@
   },
   "_usage": {
     "2026-09": 19602,
-    "2026-10": 10890
+    "2026-10": 11349
   }
 }

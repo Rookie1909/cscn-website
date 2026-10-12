@@ -66,9 +66,14 @@ export function ClubInfoSection() {
               ))}
             </div>
 
-            <p className="text-muted-foreground font-sans leading-relaxed text-justify">
-              {t('home.club_info.description')}
-            </p>
+            {/* Text besteht aus mehreren Absätzen (im Sprachtext durch Zeilenumbruch getrennt). */}
+            <div className="space-y-4">
+              {(t('home.club_info.description') as string).split('\n').map((paragraph) => (
+                <p key={paragraph} className="text-muted-foreground font-sans leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
 
             <Link
               to="/verein"

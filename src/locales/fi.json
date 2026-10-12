@@ -10,7 +10,8 @@
     "membership": "Jäsenhakemukset",
     "news": "Uutiset",
     "ausgabe": "Jakelu",
-    "ausgabe_current": "Tällä hetkellä jakelussa"
+    "ausgabe_current": "Tällä hetkellä jakelussa",
+    "more": "Lisää"
   },
   "header": {
     "logo_subtitle": "CSC Nordheide e.V.:n virallinen verkkosivusto",

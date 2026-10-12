@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, ChevronDown, Cannabis, X } from 'lucide-react';
+import { Menu, Cannabis, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
 import { useTheme } from 'next-themes';
 import { useTranslation } from 'react-i18next';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
+import { PriorityNav, type PriorityNavItem } from './PriorityNav';
 
 export function Header() {
   const { isScrolled } = useScrollPosition();
@@ -14,7 +15,6 @@ export function Header() {
   const { theme, setTheme } = useTheme();
   const { t, i18n } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [langMenuOpen, setLangMenuOpen] = useState(false);
   const [mobileLangMenuOpen, setMobileLangMenuOpen] = useState(false);
   const [isLogoFullscreen, setIsLogoFullscreen] = useState(false);
@@ -59,6 +59,31 @@ export function Header() {
     { label: t('nav.news'), href: '/neuigkeiten' },
   ];
 
+  // Desktop-Leiste: Ausgabe und Genetiken sind eigene Punkte und immer sichtbar
+  // (pinned). Bei Platzmangel wandert zuerst weg, was die größte priority hat,
+  // in das „Mehr“-Menü; bei mehr Platz erscheinen die Punkte wieder in der Leiste.
+  const desktopItems: PriorityNavItem[] = [
+    { id: 'home', label: t('nav.home'), href: '/', priority: 6 },
+    {
+      id: 'verein',
+      label: t('nav.verein'),
+      href: '/verein',
+      priority: 4,
+      children: [
+        { label: t('nav.about'), href: '/verein' },
+        { label: t('nav.protection'), href: '/gesundheitsschutz' },
+      ],
+    },
+    { id: 'ausgabe', label: t('nav.ausgabe_current'), href: '/ausgabe', priority: 0, pinned: true },
+    { id: 'genetiken', label: t('nav.sortiment_overview'), href: '/sortiment', priority: 1, pinned: true },
+    { id: 'standorte', label: t('nav.standorte'), href: '/standorte', priority: 5 },
+    { id: 'mitglied', label: t('nav.membership'), href: '/mitgliedsbeitraege', priority: 2 },
+    { id: 'news', label: t('nav.news'), href: '/neuigkeiten', priority: 3 },
+  ];
+  // Genetiken bleiben auch auf den Detailseiten (/sortiment/…) markiert.
+  const isDesktopActive = (href: string) =>
+    href === '/' ? location.pathname === '/' : location.pathname === href || location.pathname.startsWith(`${href}/`);
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -67,10 +92,12 @@ export function Header() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-28">
+      {/* Etwas breiter als der Seiteninhalt (max-w-7xl), damit auf großen Bildschirmen
+          mehr Menüpunkte direkt in der Leiste Platz haben. */}
+      <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between gap-6 h-28">
           {/* Logo */}
-          <div className="flex min-w-0 items-center gap-2 sm:gap-4">
+          <div className="flex shrink-0 items-center gap-2 sm:gap-4">
             <button
               onClick={() => setIsLogoFullscreen(true)}
               className="w-12 h-12 sm:w-16 sm:h-16 xl:w-[4.5rem] xl:h-[4.5rem] shrink-0 rounded-2xl overflow-hidden flex items-center justify-center transition-all duration-500 hover:rotate-6 hover:scale-105 p-0.5 group"
@@ -85,7 +112,7 @@ export function Header() {
               {/* Name bricht nie um (nur die feste Zeilenschaltung); der Untertitel
                   richtet sich mit w-0/min-w-full nach der Breite des Namens und
                   umbricht in zwei Zeilen darunter. */}
-              <h1 className="whitespace-nowrap text-foreground font-headline font-black text-[13px] sm:text-xl xl:text-2xl leading-[1.15] sm:leading-[1.05] tracking-tight group-hover:text-primary transition-colors duration-300">
+              <h1 className="whitespace-nowrap text-foreground font-headline font-black text-[13px] sm:text-xl lg:text-lg xl:text-2xl leading-[1.15] sm:leading-[1.05] tracking-tight group-hover:text-primary transition-colors duration-300">
                 Cannabis Social Club
                 <br />
                 Nordheide E.V.
@@ -96,68 +123,11 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-6">
-            {navItems.map((item) => (
-              <div key={item.label} className="relative">
-                {item.children ? (
-                  <div
-                    className="relative"
-                    onMouseEnter={() => setOpenDropdown(item.label)}
-                    onMouseLeave={() => setOpenDropdown(null)}
-                  >
-                    <button
-                      className={`flex items-center gap-1.5 text-sm font-headline font-black uppercase tracking-wider transition-all hover:text-primary ${
-                        isActive(item.href) ? 'text-primary' : 'text-foreground/70'
-                      }`}
-                    >
-                      {item.label}
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${openDropdown === item.label ? 'rotate-180' : ''}`} />
-                    </button>
-                    <AnimatePresence>
-                      {openDropdown === item.label && (
-                        // pt-4 (statt Abstand) hält die Lücke zwischen Menüpunkt und Liste
-                        // im Hover-Bereich, sonst schließt sich das Menü auf dem Weg nach unten.
-                        <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-72">
-                          <motion.div
-                            initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                            className="bg-card/95 backdrop-blur-xl border border-border rounded-2xl shadow-2xl overflow-hidden py-2"
-                          >
-                            {item.children.map((child) => (
-                              <Link
-                                key={child.label}
-                                to={child.href}
-                                className="block px-5 py-3 text-xs font-headline font-bold uppercase tracking-wider text-muted-foreground hover:bg-primary/5 hover:text-primary transition-all"
-                              >
-                                {child.label}
-                              </Link>
-                            ))}
-                          </motion.div>
-                        </div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                ) : (
-                  <Link
-                    to={item.href}
-                    className={`relative text-sm font-headline font-black uppercase tracking-wider transition-all hover:text-primary hover:tracking-[0.1em] ${
-                      isActive(item.href) ? 'text-primary' : 'text-foreground/70'
-                    }`}
-                  >
-                    {item.label}
-                    <span
-                      className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-500 rounded-full ${
-                        isActive(item.href) ? 'w-full' : 'w-0'
-                      }`}
-                    />
-                  </Link>
-                )}
-              </div>
-            ))}
+          {/* Desktop: Prioritäts-Menü (passt sich der Breite an) + Schalter */}
+          <div className="hidden min-w-0 flex-1 items-center justify-end gap-4 lg:flex">
+            <PriorityNav items={desktopItems} isActive={isDesktopActive} />
 
-            <div className="flex items-center gap-3 ml-4">
+            <div className="flex shrink-0 items-center gap-3">
               {/* Language Switcher */}
               <div
                 className="relative"
@@ -213,10 +183,10 @@ export function Header() {
                 <Cannabis className={`w-6 h-6 transition-all duration-700 ${theme === 'dark' ? 'fill-primary scale-110' : 'scale-90'}`} />
               </Button>
             </div>
-          </nav>
+          </div>
 
           {/* Mobile Menu */}
-          <div className="flex shrink-0 items-center gap-1 sm:gap-4 xl:hidden">
+          <div className="flex shrink-0 items-center gap-1 sm:gap-4 lg:hidden">
             <div className="relative">
               <Button
                 variant="ghost"

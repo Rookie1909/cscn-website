@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ScrollToTop } from '@/components/ScrollToTop';
 import { PageTitle } from '@/components/PageTitle';
 import { AgeVerificationProvider } from '@/contexts/AgeVerificationContext';
@@ -12,7 +12,6 @@ import { StrainLibrary } from '@/pages/StrainLibrary';
 import { Standorte } from '@/pages/Standorte';
 import { Impressum } from '@/pages/Impressum';
 import { Gesundheitsschutz } from '@/pages/Gesundheitsschutz';
-import { Anbau } from '@/pages/Anbau';
 import { Sortiment } from '@/pages/Sortiment';
 import { SortimentProfil } from '@/pages/SortimentProfil';
 import { NotFound } from '@/pages/NotFound';
@@ -30,7 +29,11 @@ function App() {
           <Route path="/" element={<RootLayout />}>
             <Route index element={<Home />} />
             <Route path="verein" element={<Verein />} />
-            <Route path="anbau" element={<Anbau />} />
+            {/* Anbauräume-Seite ist vorübergehend deaktiviert (Seite, Teaser und
+                Menüeintrag sind entfernt, Dateien und Daten bleiben erhalten).
+                Zum Reaktivieren: Route auf <Anbau /> setzen, Menüeintrag in
+                Header.tsx und <GrowRoomsTeaser /> in Home.tsx wieder einfügen. */}
+            <Route path="anbau" element={<Navigate to="/" replace />} />
             <Route path="ausgabe" element={<StrainLibrary />} />
             <Route path="sortiment" element={<Sortiment />} />
             <Route path="sortiment/:id" element={<SortimentProfil />} />

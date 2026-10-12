@@ -20,7 +20,11 @@
   },
   "footer": {
     "rights": "All Rechten vörbeholen.",
-    "impressum": "Impressum & Datenschutz"
+    "impressum": "Impressum & Datenschutz",
+    "nav_title": "Sieden",
+    "follow_title": "Hier vertellt wi, wat los is",
+    "follow_text": "Niggkeiten un Insichten ut dat Vereinsleven.",
+    "open_new_tab": "{{name}} – geiht in een nieg Finster op"
   },
   "news": {
     "tag": "Club-Tagebook",

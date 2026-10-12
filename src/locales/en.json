@@ -20,7 +20,11 @@
   },
   "footer": {
     "rights": "All rights reserved.",
-    "impressum": "Imprint & Privacy"
+    "impressum": "Imprint & Privacy",
+    "nav_title": "Pages",
+    "follow_title": "Where we share updates",
+    "follow_text": "News and glimpses of club life.",
+    "open_new_tab": "{{name}} – opens in a new window"
   },
   "news": {
     "tag": "Club Diary",

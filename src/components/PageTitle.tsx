@@ -8,7 +8,6 @@ const PATH_TITLE_KEYS: Record<string, string> = {
   '/': 'nav.home',
   '/verein': 'nav.verein',
   '/gesundheitsschutz': 'nav.protection',
-  '/anbau': 'grow_rooms.nav',
   '/ausgabe': 'nav.ausgabe',
   '/sortiment': 'nav.sortiment_overview',
   '/standorte': 'nav.standorte',

@@ -20,7 +20,11 @@
   },
   "footer": {
     "rights": "Kaikki oikeudet pidätetään.",
-    "impressum": "Yhteystiedot ja tietosuoja"
+    "impressum": "Yhteystiedot ja tietosuoja",
+    "nav_title": "Sivut",
+    "follow_title": "Täällä kerromme ajankohtaisista asioista",
+    "follow_text": "Uutisia ja katsauksia yhdistyksen elämään.",
+    "open_new_tab": "{{name}} – avautuu uuteen ikkunaan"
   },
   "news": {
     "tag": "Klubin päiväkirja",

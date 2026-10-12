@@ -20,7 +20,11 @@
   },
   "footer": {
     "rights": "Alle Rechte vorbehalten.",
-    "impressum": "Impressum & Datenschutz"
+    "impressum": "Impressum & Datenschutz",
+    "nav_title": "Seiten",
+    "follow_title": "Hier informieren wir",
+    "follow_text": "Neuigkeiten und Einblicke aus dem Vereinsleben.",
+    "open_new_tab": "{{name}} – öffnet in neuem Fenster"
   },
   "news": {
     "tag": "Club Tagebuch",

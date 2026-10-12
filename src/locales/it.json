@@ -20,7 +20,11 @@
   },
   "footer": {
     "rights": "Tutti i diritti riservati.",
-    "impressum": "Note legali e privacy"
+    "impressum": "Note legali e privacy",
+    "nav_title": "Pagine",
+    "follow_title": "Qui ti informiamo",
+    "follow_text": "Novità e sguardi sulla vita del club.",
+    "open_new_tab": "{{name}} – si apre in una nuova finestra"
   },
   "news": {
     "tag": "Diario del club",

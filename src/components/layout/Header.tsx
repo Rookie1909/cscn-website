@@ -70,10 +70,10 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-28">
           {/* Logo */}
-          <div className="flex items-center gap-6">
-            <button 
+          <div className="flex min-w-0 items-center gap-2 sm:gap-4">
+            <button
               onClick={() => setIsLogoFullscreen(true)}
-              className="w-20 h-20 rounded-2xl overflow-hidden flex items-center justify-center transition-all duration-500 hover:rotate-6 hover:scale-105 p-0.5 group"
+              className="w-12 h-12 sm:w-16 sm:h-16 xl:w-[4.5rem] xl:h-[4.5rem] shrink-0 rounded-2xl overflow-hidden flex items-center justify-center transition-all duration-500 hover:rotate-6 hover:scale-105 p-0.5 group"
             >
               <img 
                 src="/images/logo.webp" 
@@ -82,19 +82,22 @@ export function Header() {
               />
             </button>
             <Link to="/" className="block group">
-              <h1 className="text-foreground font-headline font-black text-[13px] sm:text-xl lg:text-2xl leading-[1.1] sm:leading-[0.9] tracking-tight group-hover:text-primary transition-colors duration-300">
+              {/* Name bricht nie um (nur die feste Zeilenschaltung); der Untertitel
+                  richtet sich mit w-0/min-w-full nach der Breite des Namens und
+                  umbricht in zwei Zeilen darunter. */}
+              <h1 className="whitespace-nowrap text-foreground font-headline font-black text-[13px] sm:text-xl xl:text-2xl leading-[1.15] sm:leading-[1.05] tracking-tight group-hover:text-primary transition-colors duration-300">
                 Cannabis Social Club
                 <br />
                 Nordheide E.V.
               </h1>
-              <p className="text-muted-foreground text-[8px] sm:text-[11px] font-sans uppercase tracking-[0.1em] sm:tracking-[0.2em] mt-1 sm:mt-1.5 font-bold">
+              <p className="w-0 min-w-full text-muted-foreground text-[8px] sm:text-[11px] font-sans uppercase tracking-[0.1em] sm:tracking-[0.2em] leading-snug mt-1.5 sm:mt-2 font-bold">
                 {t('header.logo_subtitle')}
               </p>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden xl:flex items-center gap-6">
             {navItems.map((item) => (
               <div key={item.label} className="relative">
                 {item.children ? (
@@ -104,7 +107,7 @@ export function Header() {
                     onMouseLeave={() => setOpenDropdown(null)}
                   >
                     <button
-                      className={`flex items-center gap-1.5 text-sm font-headline font-black uppercase tracking-widest transition-all hover:text-primary ${
+                      className={`flex items-center gap-1.5 text-sm font-headline font-black uppercase tracking-wider transition-all hover:text-primary ${
                         isActive(item.href) ? 'text-primary' : 'text-foreground/70'
                       }`}
                     >
@@ -139,7 +142,7 @@ export function Header() {
                 ) : (
                   <Link
                     to={item.href}
-                    className={`relative text-sm font-headline font-black uppercase tracking-widest transition-all hover:text-primary hover:tracking-[0.15em] ${
+                    className={`relative text-sm font-headline font-black uppercase tracking-wider transition-all hover:text-primary hover:tracking-[0.1em] ${
                       isActive(item.href) ? 'text-primary' : 'text-foreground/70'
                     }`}
                   >
@@ -154,7 +157,7 @@ export function Header() {
               </div>
             ))}
 
-            <div className="flex items-center gap-3 ml-6">
+            <div className="flex items-center gap-3 ml-4">
               {/* Language Switcher */}
               <div
                 className="relative"
@@ -213,7 +216,7 @@ export function Header() {
           </nav>
 
           {/* Mobile Menu */}
-          <div className="flex items-center gap-4 lg:hidden">
+          <div className="flex shrink-0 items-center gap-1 sm:gap-4 xl:hidden">
             <div className="relative">
               <Button
                 variant="ghost"

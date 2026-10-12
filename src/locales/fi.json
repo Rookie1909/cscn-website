@@ -250,13 +250,7 @@
         "Virallinen CSC Nordheide e.V. -pikeepaita/t-paita"
       ],
       "cta": "Tukijäsenyyden hakemus",
-      "urgency": {
-        "title": "Rajoitettu kiintiö – vain muutama paikka jäljellä!",
-        "ticker": "🌿 Vain muutama paikka jäljellä · Varmista nyt early bird -etusi ja hyödy yhtenä ensimmäisistä jäsenistä 25 % säästöstä · Eksklusiivinen pääsy rajoitettuihin testigenetiikkoihin · Liity jäseneksi nyt ja ole mukana 🔥    ",
-        "label": "Vapaita paikkoja",
-        "status": "Ole nopea!",
-        "footer": "Paikkoja myönnetään jatkuvasti – ole early bird nyt!"
-      }
+      "badge": "Suositeltu"
     }
   },
   "amortisation": {

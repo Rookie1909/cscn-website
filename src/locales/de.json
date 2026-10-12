@@ -250,13 +250,7 @@
         "ein offizielles CSC Nordheide e.V. Polo-Shirt/T-Shirt"
       ],
       "cta": "Mitgliedsantrag Supporter-Mitgliedschaft",
-      "urgency": {
-        "title": "Limitiertes Kontingent – Nur noch wenige Plätze!",
-        "ticker": "🌿 Nur noch wenige Plätze verfügbar · Sichere dir jetzt deinen Early-Bird-Vorteil und profitiere als eines der ersten Mitglieder von der 25 % Ersparnis · Exklusiver Zugriff auf limitierte Testgenetiken · Jetzt Mitglied werden und dabei sein 🔥    ",
-        "label": "Verfügbare Plätze",
-        "status": "Schnell sein!",
-        "footer": "Plätze werden laufend vergeben – jetzt Early Bird sein!"
-      }
+      "badge": "Empfohlen"
     }
   },
   "amortisation": {

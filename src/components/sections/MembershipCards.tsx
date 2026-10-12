@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Check, ArrowRight, Flame, Timer } from 'lucide-react';
+import { Check, ArrowRight, Sparkles } from 'lucide-react';
 import { CannabisLeaf } from '@/components/icons/CannabisLeaf';
 import { Button } from '@/components/ui/button';
 
@@ -49,8 +49,6 @@ export function MembershipCards() {
     },
   ];
 
-  const TICKER_TEXT = t('membership_cards.supporter.urgency.ticker');
-
   return (
     <section className="py-16 lg:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,165 +79,128 @@ export function MembershipCards() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid lg:grid-cols-2 gap-8"
+          className="grid lg:grid-cols-2 gap-8 pt-4"
         >
-          {memberships.map((membership) => (
-            <motion.div
-              key={membership.id}
-              variants={itemVariants}
-              className={`relative p-5 sm:p-8 rounded-[2rem] border transition-all duration-500 shadow-xl ${
-                membership.highlighted
-                  ? 'border-primary/50 bg-primary/5 ring-4 ring-primary/5'
-                  : 'border-border bg-card'
-              } hover:border-primary/40 group`}
-            >
-              {/* Cannabis leaf decoration */}
-              <div className="absolute top-6 right-6">
-                <CannabisLeaf size={32} className={`transition-transform duration-700 group-hover:rotate-12 ${
-                  membership.highlighted ? 'text-primary/20' : 'text-muted-foreground/10'
-                }`} />
-              </div>
-
-              <h3 className="text-2xl font-headline font-black text-foreground mb-4 break-words hyphens-auto">
-                {membership.name}
-              </h3>
-
-              <p className="text-muted-foreground font-sans text-sm mb-6 leading-relaxed">
-                {membership.description}
-              </p>
-
-              <div className="mb-6">
-                <p className="text-primary font-bold font-sans">{membership.monthly}</p>
-              </div>
-
-              {/* ── Early-Bird urgency banner (Supporter only) ── */}
-              {membership.highlighted && (
-                <motion.div
-                  initial={{ opacity: 0, y: -8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3, duration: 0.5 }}
-                  className="mb-8 rounded-xl border border-amber-600 w-full overflow-hidden dark:border-amber-500/40 bg-amber-50 dark:bg-amber-500/10"
-                  style={{ overflow: 'hidden' }}
-                >
-                  {/* Top flash bar */}
-                  <div className="flex items-center justify-center text-center gap-2 px-3 sm:px-4 py-2 bg-amber-500 dark:bg-amber-500/20 border-b border-amber-600 dark:border-amber-500/30">
-                    <motion.div
-                      animate={{ scale: [1, 1.25, 1] }}
-                      transition={{ repeat: Infinity, duration: 1.4, ease: 'easeInOut' }}
-                    >
-                      <Flame className="w-4 h-4 text-white dark:text-amber-400" />
-                    </motion.div>
-                    <span className="text-white dark:text-amber-400 font-black text-xs uppercase tracking-widest font-sans text-center leading-tight">
-                      {t('membership_cards.supporter.urgency.title')}
-                    </span>
-                    <motion.div
-                      animate={{ scale: [1, 1.25, 1] }}
-                      transition={{ repeat: Infinity, duration: 1.4, ease: 'easeInOut', delay: 0.7 }}
-                    >
-                      <Flame className="w-4 h-4 text-white dark:text-amber-400" />
-                    </motion.div>
-                  </div>
-
-                  <style>{`
-                    @keyframes cscn-marquee {
-                      0%   { transform: translateX(0); }
-                      100% { transform: translateX(-50%); }
-                    }
-                    .cscn-ticker {
-                      position: absolute;
-                      top: 0; left: 0;
-                      display: inline-flex;
-                      white-space: nowrap;
-                      animation: cscn-marquee 22s linear infinite;
-                      will-change: transform;
-                    }
-                  `}</style>
-                  <div
-                    className="relative w-full"
-                    style={{ height: '32px', overflow: 'hidden' }}
-                  >
-                    <div className="absolute inset-y-0 left-0 w-8 z-10 bg-gradient-to-r from-amber-50 dark:from-[#1c1200] to-transparent pointer-events-none" style={{ zIndex: 2 }} />
-                    <div className="absolute inset-y-0 right-0 w-8 z-10 bg-gradient-to-l from-amber-50 dark:from-[#1c1200] to-transparent pointer-events-none" style={{ zIndex: 2 }} />
-                    <div
-                      className="cscn-ticker text-amber-800 dark:text-amber-300/90 font-sans text-xs items-center"
-                      style={{ paddingTop: '7px' }}
-                    >
-                      <span aria-hidden="true">{TICKER_TEXT}</span>
-                      <span>{TICKER_TEXT}</span>
-                    </div>
-                  </div>
-
-                  <div className="px-4 pb-3 space-y-1">
-                    <div className="flex justify-between items-center">
-                      <span className="text-[10px] uppercase font-black tracking-widest text-amber-700 dark:text-amber-400/80 font-sans">
-                        {t('membership_cards.supporter.urgency.label')}
-                      </span>
-                      <span className="text-[10px] font-black text-amber-700 dark:text-amber-400 font-mono">
-                        {t('membership_cards.supporter.urgency.status')}
-                      </span>
-                    </div>
-                    <div className="h-2 w-full bg-amber-200 dark:bg-amber-950/50 rounded-full overflow-hidden">
-                      <motion.div
-                        className="h-full rounded-full bg-gradient-to-r from-amber-600 to-amber-400 dark:from-amber-500 dark:to-amber-300"
-                        initial={{ width: '95%' }}
-                        animate={{ width: ['72%', '68%', '72%'] }}
-                        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                      />
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <Timer className="w-3 h-3 text-amber-600 dark:text-amber-400/70 flex-shrink-0" />
-                      <span className="text-[10px] text-amber-700 dark:text-amber-400/70 font-sans">
-                        {t('membership_cards.supporter.urgency.footer')}
-                      </span>
-                    </div>
-                  </div>
-                </motion.div>
-              )}
-
-              <ul className="space-y-3 mb-8">
-                {membership.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground font-sans text-sm font-medium">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="pt-6 border-t border-border">
-                <div className="text-center mb-6">
-                  <span
-                    className={`text-4xl font-headline font-black ${
-                      membership.highlighted ? 'text-primary' : 'text-muted-foreground'
+          {memberships.map((membership) => {
+            const body = (
+              <>
+                {/* Cannabis leaf decoration */}
+                <div className="absolute top-6 right-6">
+                  <CannabisLeaf
+                    size={32}
+                    className={`transition-transform duration-700 group-hover:rotate-12 ${
+                      membership.highlighted ? 'text-primary/30' : 'text-muted-foreground/10'
                     }`}
-                  >
-                    {membership.price}
-                  </span>
-                  <p className="text-muted-foreground/60 font-sans text-xs mt-1 uppercase tracking-widest">
-                    {membership.priceNote}
-                  </p>
+                  />
                 </div>
 
-                <Button
-                  asChild
-                  variant={membership.highlighted ? 'default' : 'outline'}
-                  size="lg"
-                  className={`w-full rounded-xl font-bold font-sans h-auto min-h-[3rem] py-3 whitespace-normal text-center shadow-lg transition-all active:scale-[0.98] ${
-                    membership.highlighted ? 'shadow-primary/20' : 'border-border'
-                  }`}
-                >
-                  <a
-                    href="https://account.cannanas.club/register-frame/E_2wFxpO8552VfJEpC3Kt_nVI8u-5Pie"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 text-center"
+                <h3 className="text-2xl font-headline font-black text-foreground mb-4 break-words hyphens-auto">
+                  {membership.name}
+                </h3>
+
+                <p className="text-muted-foreground font-sans text-sm mb-6 leading-relaxed">
+                  {membership.description}
+                </p>
+
+                <div className="mb-6">
+                  <p className="text-primary font-bold font-sans">{membership.monthly}</p>
+                </div>
+
+                <ul className="space-y-3 mb-8">
+                  {membership.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-3">
+                      {membership.highlighted ? (
+                        <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary/15">
+                          <Check className="h-3.5 w-3.5 text-primary" strokeWidth={3} />
+                        </span>
+                      ) : (
+                        <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      )}
+                      <span
+                        className={`font-sans text-sm font-medium ${
+                          membership.highlighted ? 'text-foreground/90' : 'text-muted-foreground'
+                        }`}
+                      >
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="pt-6 border-t border-border">
+                  <div className="text-center mb-6">
+                    <span
+                      className={`font-headline font-black ${
+                        membership.highlighted ? 'text-5xl text-primary' : 'text-4xl text-muted-foreground'
+                      }`}
+                    >
+                      {membership.price}
+                    </span>
+                    <p className="text-muted-foreground/60 font-sans text-xs mt-1 uppercase tracking-widest">
+                      {membership.priceNote}
+                    </p>
+                  </div>
+
+                  <Button
+                    asChild
+                    variant={membership.highlighted ? 'default' : 'outline'}
+                    size="lg"
+                    className={`w-full rounded-xl font-bold font-sans h-auto min-h-[3rem] py-3 whitespace-normal text-center shadow-lg transition-all active:scale-[0.98] ${
+                      membership.highlighted ? 'cta-shimmer relative overflow-hidden shadow-primary/30' : 'border-border'
+                    }`}
                   >
-                    {membership.cta}
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </a>
-                </Button>
-              </div>
-            </motion.div>
-          ))}
+                    <a
+                      href="https://account.cannanas.club/register-frame/E_2wFxpO8552VfJEpC3Kt_nVI8u-5Pie"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 text-center"
+                    >
+                      {membership.cta}
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </a>
+                  </Button>
+                </div>
+              </>
+            );
+
+            // Supporter: Verlaufsrahmen, Leuchten, leicht angehoben, Abzeichen „Empfohlen“.
+            if (membership.highlighted) {
+              return (
+                <motion.div key={membership.id} variants={itemVariants} className="group relative lg:-translate-y-3">
+                  {/* weiches Leuchten hinter der Karte */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute -inset-2 rounded-[2.5rem] bg-primary/25 blur-2xl opacity-60 transition-opacity duration-500 group-hover:opacity-100"
+                  />
+                  <div className="relative h-full rounded-[2rem] bg-gradient-to-br from-primary via-primary/40 to-primary p-[2px] shadow-2xl shadow-primary/20">
+                    <div className="relative h-full overflow-hidden rounded-[calc(2rem-2px)] bg-card p-5 pt-9 sm:p-8 sm:pt-10">
+                      <div
+                        aria-hidden="true"
+                        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/15 via-primary/5 to-transparent"
+                      />
+                      <div className="relative">{body}</div>
+                    </div>
+                  </div>
+                  <div className="absolute -top-4 left-1/2 z-10 -translate-x-1/2">
+                    <span className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-primary px-4 py-1.5 font-sans text-[11px] font-black uppercase tracking-widest text-primary-foreground shadow-lg shadow-primary/30">
+                      <Sparkles className="h-3.5 w-3.5" />
+                      {t('membership_cards.supporter.badge')}
+                    </span>
+                  </div>
+                </motion.div>
+              );
+            }
+
+            return (
+              <motion.div
+                key={membership.id}
+                variants={itemVariants}
+                className="relative p-5 sm:p-8 rounded-[2rem] border border-border bg-card shadow-xl transition-all duration-500 hover:border-primary/40 group"
+              >
+                {body}
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>

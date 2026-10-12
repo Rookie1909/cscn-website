@@ -216,6 +216,32 @@
   }
 }
 
+/* Heller Glanz, der in Abständen über den Button der Supporter-Mitgliedschaft läuft.
+   Reine CSS-Animation, ohne Einfluss auf Layout und Klicks. */
+@keyframes cta-shimmer {
+  0%   { transform: translateX(-150%) skewX(-20deg); }
+  55%, 100% { transform: translateX(450%) skewX(-20deg); }
+}
+
+.cta-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: translateX(-150%) skewX(-20deg);
+  animation: cta-shimmer 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-shimmer::after {
+    display: none;
+  }
+}
+
 @keyframes confetti-fall {
   0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
   100% { transform: translateY(110vh) rotate(600deg); opacity: 0; }

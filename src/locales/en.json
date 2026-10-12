@@ -250,13 +250,7 @@
         "An official CSC Nordheide e.V. polo shirt/T-shirt"
       ],
       "cta": "Supporter Membership Application",
-      "urgency": {
-        "title": "Limited Contingent – Only a few spots left!",
-        "ticker": "🌿 Only a few spots available · Secure your early bird advantage now and benefit as one of the first members from the 25% savings · Exclusive access to limited test genetics · Become a member now and be there 🔥    ",
-        "label": "Available spots",
-        "status": "Be fast!",
-        "footer": "Spots are constantly assigned – be an early bird now!"
-      }
+      "badge": "Recommended"
     }
   },
   "amortisation": {

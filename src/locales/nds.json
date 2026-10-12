@@ -9,7 +9,8 @@
     "standorte": "Standoorten",
     "membership": "Mitgliedsanträg",
     "news": "Nejichkeiten",
-    "ausgabe": "Utgaav"
+    "ausgabe": "Utgaav",
+    "ausgabe_current": "Aktuell bi uns in de Utgaav"
   },
   "header": {
     "logo_subtitle": "Vereinswebsite vun'n CSC Nordheide e.V.",
@@ -110,7 +111,7 @@
       "exclusive": {
         "title": "Exklusive Utwahl",
         "desc": "Blöten, Hash (Dry Sift), Bubble Hash, Hash Rosin, Piattella, WPFF Rosin.",
-        "badge": "Bloots bi uns kriegbor"
+        "badge": "Bi uns kriegbor"
       },
       "infographics": {
         "title": "Botaansche Extraktionskunst",

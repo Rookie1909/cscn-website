@@ -51,8 +51,8 @@ export function Header() {
       label: t('nav.sortiment'),
       href: '/sortiment',
       children: [
+        { label: t('nav.ausgabe_current'), href: '/ausgabe' },
         { label: t('nav.sortiment_overview'), href: '/sortiment' },
-        { label: t('nav.ausgabe'), href: '/ausgabe' },
       ],
     },
     { label: t('nav.standorte'), href: '/standorte' },
@@ -116,7 +116,7 @@ export function Header() {
                       {openDropdown === item.label && (
                         // pt-4 (statt Abstand) hält die Lücke zwischen Menüpunkt und Liste
                         // im Hover-Bereich, sonst schließt sich das Menü auf dem Weg nach unten.
-                        <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-56">
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-72">
                           <motion.div
                             initial={{ opacity: 0, y: 10, scale: 0.95 }}
                             animate={{ opacity: 1, y: 0, scale: 1 }}

@@ -9,7 +9,8 @@
     "standorte": "Toimipisteet",
     "membership": "Jäsenhakemukset",
     "news": "Uutiset",
-    "ausgabe": "Jakelu"
+    "ausgabe": "Jakelu",
+    "ausgabe_current": "Tällä hetkellä jakelussa"
   },
   "header": {
     "logo_subtitle": "CSC Nordheide e.V.:n virallinen verkkosivusto",
@@ -110,7 +111,7 @@
       "exclusive": {
         "title": "Eksklusiivinen valikoima",
         "desc": "Kukat, Hash (Dry Sift), Bubble Hash, Hash Rosin, Piattella, WPFF Rosin.",
-        "badge": "Saatavilla vain meiltä"
+        "badge": "Saatavilla meiltä"
       },
       "infographics": {
         "title": "Kasviuuttamisen taidetta",

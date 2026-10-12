@@ -9,7 +9,8 @@
     "standorte": "Standorte",
     "membership": "Mitgliedsanträge",
     "news": "Neuigkeiten",
-    "ausgabe": "Ausgabe"
+    "ausgabe": "Ausgabe",
+    "ausgabe_current": "Aktuell bei uns in der Ausgabe"
   },
   "header": {
     "logo_subtitle": "Vereinswebsite des CSC Nordheide e.V.",
@@ -110,7 +111,7 @@
       "exclusive": {
         "title": "Exklusive Auswahl",
         "desc": "Blüten, Hash (Dry Sift), Bubble Hash, Hash Rosin, Piattella, WPFF Rosin.",
-        "badge": "Nur bei uns erhältlich"
+        "badge": "Bei uns erhältlich"
       },
       "infographics": {
         "title": "Botanische Extraktionskunst",

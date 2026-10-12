@@ -35,6 +35,11 @@ jobs:
           git config user.name "cannanas-sync-bot"
           git config user.email "actions@users.noreply.github.com"
           NEWS_ID=$(node -p 'JSON.parse(process.env.NEWS_PAYLOAD).post_id' | tr -cd 'A-Za-z0-9_-')
+          if [ "$(node -p 'JSON.parse(process.env.NEWS_PAYLOAD).action || ""')" = "delete" ]; then
+            COMMIT_MSG="chore(news): Beitrag cannanas-$NEWS_ID entfernen (#intern)"
+          else
+            COMMIT_MSG="chore(news): Beitrag cannanas-$NEWS_ID aus Cannanas übernehmen"
+          fi
           CACHE=.github/translation-cache.json
           echo '{}' > "$RUNNER_TEMP/carried-usage.json"
           for i in 1 2 3 4 5 6; do
@@ -48,7 +53,7 @@ jobs:
               echo "changed=false" >> "$GITHUB_OUTPUT"
               exit 0
             fi
-            git commit -q -m "chore(news): Beitrag cannanas-$NEWS_ID aus Cannanas übernehmen"
+            git commit -q -m "$COMMIT_MSG"
             if git push origin HEAD:main; then
               echo "Push succeeded."
               echo "changed=true" >> "$GITHUB_OUTPUT"

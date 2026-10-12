@@ -82,6 +82,9 @@ function monthLabel(date, locale) {
 // download them right away and commit them as normal static assets.
 async function downloadImages(id, urls) {
   const dir = path.join(IMAGES_DIR, id);
+  // An update re-downloads every image, so drop the old ones first; otherwise
+  // a post that lost an image would leave an orphaned file behind.
+  fs.rmSync(dir, { recursive: true, force: true });
   const saved = [];
   for (const [index, url] of urls.slice(0, MAX_IMAGES).entries()) {
     if (!/^https:\/\//i.test(url)) {
@@ -121,6 +124,22 @@ async function main() {
   if (!post || typeof post !== 'object') throw new Error('NEWS_PAYLOAD ist kein JSON-Objekt');
 
   const id = safeId(post.post_id);
+
+  // n8n sends { post_id, action: 'delete' } when a published post was marked
+  // #intern in Cannanas: remove the entry and its images from the website.
+  if (post.action === 'delete') {
+    const news = JSON.parse(fs.readFileSync(NEWS_PATH, 'utf8'));
+    const remaining = news.filter((item) => item.id !== id);
+    fs.rmSync(path.join(IMAGES_DIR, id), { recursive: true, force: true });
+    if (remaining.length === news.length) {
+      console.log(`News-Eintrag ${id} existiert nicht, nichts zu löschen.`);
+    } else {
+      fs.writeFileSync(NEWS_PATH, JSON.stringify(remaining, null, 2) + '\n');
+      console.log(`News-Eintrag ${id} gelöscht.`);
+    }
+    return;
+  }
+
   const title = String(post.title || '').trim();
   const text = markdownToPlain(String(post.body_markdown || post.body_raw || ''));
   if (!title && !text) throw new Error(`Beitrag ${id} hat weder Titel noch Text`);

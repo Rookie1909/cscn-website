@@ -24,7 +24,9 @@
     "nav_title": "Seiten",
     "follow_title": "Hier informieren wir",
     "follow_text": "Neuigkeiten und Einblicke aus dem Vereinsleben.",
-    "open_new_tab": "{{name}} – öffnet in neuem Fenster"
+    "open_new_tab": "{{name}} – öffnet in neuem Fenster",
+    "coming_soon": "Demnächst",
+    "coming_soon_aria": "{{name}} – demnächst verfügbar"
   },
   "news": {
     "tag": "Club Tagebuch",

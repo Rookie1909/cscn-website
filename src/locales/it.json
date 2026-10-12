@@ -24,7 +24,9 @@
     "nav_title": "Pagine",
     "follow_title": "Qui ti informiamo",
     "follow_text": "Novità e sguardi sulla vita del club.",
-    "open_new_tab": "{{name}} – si apre in una nuova finestra"
+    "open_new_tab": "{{name}} – si apre in una nuova finestra",
+    "coming_soon": "Prossimamente",
+    "coming_soon_aria": "{{name}} – prossimamente disponibile"
   },
   "news": {
     "tag": "Diario del club",

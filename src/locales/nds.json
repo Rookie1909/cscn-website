@@ -24,7 +24,9 @@
     "nav_title": "Sieden",
     "follow_title": "Hier vertellt wi, wat los is",
     "follow_text": "Niggkeiten un Insichten ut dat Vereinsleven.",
-    "open_new_tab": "{{name}} – geiht in een nieg Finster op"
+    "open_new_tab": "{{name}} – geiht in een nieg Finster op",
+    "coming_soon": "Kummt bald",
+    "coming_soon_aria": "{{name}} – kummt bald"
   },
   "news": {
     "tag": "Club-Tagebook",

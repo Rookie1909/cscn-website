@@ -1,15 +1,42 @@
 import { useTranslation } from 'react-i18next';
 import { motion, useReducedMotion } from 'framer-motion';
 import { SOCIAL_ICONS } from '@/components/icons/SocialIcons';
-import { activeSocialLinks, type SocialLink } from '@/data/social-links';
+import { visibleSocialLinks, type SocialLink } from '@/data/social-links';
 
 // Höhe der Leiste. RootLayout reserviert unten genau diesen Platz, damit der
 // Footer nicht verdeckt wird.
 export const SOCIAL_BAR_HEIGHT = '3.5rem';
 
+const TOOLTIP_CLASS =
+  'pointer-events-none absolute -top-9 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-foreground px-2 py-1 font-headline text-[10px] font-bold uppercase tracking-widest text-background opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100';
+
 function SocialButton({ link, index, reduceMotion }: { link: SocialLink; index: number; reduceMotion: boolean }) {
   const { t } = useTranslation();
   const Icon = SOCIAL_ICONS[link.id];
+  const delay = 0.5 + index * 0.08;
+  const enter = {
+    initial: reduceMotion ? (false as const) : { opacity: 0, y: 12 },
+    animate: { opacity: 1, y: 0 },
+    transition: { delay, type: 'spring' as const, stiffness: 260, damping: 20 },
+  };
+
+  // Kanal ist noch nicht live: ausgegraut, kein Link, Hinweis „Demnächst“.
+  if (!link.url.startsWith('https://')) {
+    return (
+      <motion.span
+        role="img"
+        tabIndex={0}
+        aria-label={t('footer.coming_soon_aria', { name: link.label })}
+        {...enter}
+        className="group relative flex h-10 w-10 cursor-default items-center justify-center rounded-xl border border-dashed border-border bg-transparent text-foreground/35 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+      >
+        <Icon className="h-[18px] w-[18px]" />
+        <span aria-hidden="true" className={TOOLTIP_CLASS}>
+          {link.label} · {t('footer.coming_soon')}
+        </span>
+      </motion.span>
+    );
+  }
 
   return (
     <motion.a
@@ -17,9 +44,7 @@ function SocialButton({ link, index, reduceMotion }: { link: SocialLink; index: 
       target="_blank"
       rel="noopener noreferrer"
       aria-label={t('footer.open_new_tab', { name: link.label })}
-      initial={reduceMotion ? false : { opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.5 + index * 0.08, type: 'spring', stiffness: 260, damping: 20 }}
+      {...enter}
       whileHover={reduceMotion ? undefined : { y: -4, scale: 1.1, rotate: -4 }}
       whileTap={{ scale: 0.92 }}
       className="group relative flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-background/60 text-foreground/70 transition-colors duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground hover:shadow-lg hover:shadow-primary/30 focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
@@ -31,10 +56,7 @@ function SocialButton({ link, index, reduceMotion }: { link: SocialLink; index: 
       />
       <Icon className="relative h-[18px] w-[18px]" />
       {/* Name als kleine Sprechblase über dem Icon */}
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute -top-9 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-foreground px-2 py-1 font-headline text-[10px] font-bold uppercase tracking-widest text-background opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100"
-      >
+      <span aria-hidden="true" className={TOOLTIP_CLASS}>
         {link.label}
       </span>
     </motion.a>
@@ -45,7 +67,7 @@ export function SocialBar() {
   const { t } = useTranslation();
   const reduceMotion = useReducedMotion() ?? false;
 
-  if (activeSocialLinks.length === 0) return null;
+  if (visibleSocialLinks.length === 0) return null;
 
   return (
     <aside
@@ -64,8 +86,8 @@ export function SocialBar() {
           <span className="mx-2 text-muted-foreground/50">·</span>
           {t('footer.follow_text')}
         </p>
-        <div className="flex items-center gap-3">
-          {activeSocialLinks.map((link, i) => (
+        <div className="flex items-center gap-2.5 sm:gap-3">
+          {visibleSocialLinks.map((link, i) => (
             <SocialButton key={link.id} link={link} index={i} reduceMotion={reduceMotion} />
           ))}
         </div>

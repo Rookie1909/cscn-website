@@ -24,7 +24,9 @@
     "nav_title": "Sivut",
     "follow_title": "Täällä kerromme ajankohtaisista asioista",
     "follow_text": "Uutisia ja katsauksia yhdistyksen elämään.",
-    "open_new_tab": "{{name}} – avautuu uuteen ikkunaan"
+    "open_new_tab": "{{name}} – avautuu uuteen ikkunaan",
+    "coming_soon": "Tulossa pian",
+    "coming_soon_aria": "{{name}} – tulossa pian"
   },
   "news": {
     "tag": "Klubin päiväkirja",

@@ -159,7 +159,7 @@ export function HeroSection() {
                   className="group relative p-3 sm:p-4 rounded-[1.5rem] sm:rounded-3xl bg-secondary/5 border border-border/50 backdrop-blur-sm transition-all hover:bg-secondary/10 hover:border-primary/30 flex flex-col items-center text-center"
                 >
                   <stat.icon className={`w-6 h-6 sm:w-8 sm:h-8 ${stat.color} mb-2 sm:mb-3`} />
-                  <div className="text-xl sm:text-2xl font-headline font-extrabold text-foreground">
+                  <div className="text-lg sm:text-2xl font-headline font-extrabold text-foreground whitespace-nowrap">
                     {stat.countUp ? (
                       <CountUpStat
                         ref={stat.countUp.ref}

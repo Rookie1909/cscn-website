@@ -114,22 +114,26 @@ export function Header() {
                     </button>
                     <AnimatePresence>
                       {openDropdown === item.label && (
-                        <motion.div
-                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                          className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-56 bg-card/95 backdrop-blur-xl border border-border rounded-2xl shadow-2xl overflow-hidden py-2"
-                        >
-                          {item.children.map((child) => (
-                            <Link
-                              key={child.label}
-                              to={child.href}
-                              className="block px-5 py-3 text-xs font-headline font-bold uppercase tracking-wider text-muted-foreground hover:bg-primary/5 hover:text-primary transition-all"
-                            >
-                              {child.label}
-                            </Link>
-                          ))}
-                        </motion.div>
+                        // pt-4 (statt Abstand) hält die Lücke zwischen Menüpunkt und Liste
+                        // im Hover-Bereich, sonst schließt sich das Menü auf dem Weg nach unten.
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-56">
+                          <motion.div
+                            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                            className="bg-card/95 backdrop-blur-xl border border-border rounded-2xl shadow-2xl overflow-hidden py-2"
+                          >
+                            {item.children.map((child) => (
+                              <Link
+                                key={child.label}
+                                to={child.href}
+                                className="block px-5 py-3 text-xs font-headline font-bold uppercase tracking-wider text-muted-foreground hover:bg-primary/5 hover:text-primary transition-all"
+                              >
+                                {child.label}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        </div>
                       )}
                     </AnimatePresence>
                   </div>
@@ -169,27 +173,29 @@ export function Header() {
                 </Button>
                 <AnimatePresence>
                   {langMenuOpen && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                      className="absolute top-full right-0 mt-3 w-44 bg-card/95 backdrop-blur-xl border border-border rounded-2xl shadow-2xl overflow-hidden py-2"
-                    >
-                      {languages.map((lang) => (
-                        <button
-                          key={lang.code}
-                          onClick={() => selectLanguage(lang.code)}
-                          className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm font-headline font-bold transition-all ${
-                            lang.code === i18n.language
-                              ? 'text-primary bg-primary/5'
-                              : 'text-foreground/70 hover:bg-primary/5 hover:text-primary'
-                          }`}
-                        >
-                          <span className="text-lg">{lang.flag}</span>
-                          {lang.label}
-                        </button>
-                      ))}
-                    </motion.div>
+                    <div className="absolute top-full right-0 pt-3 w-44">
+                      <motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        className="bg-card/95 backdrop-blur-xl border border-border rounded-2xl shadow-2xl overflow-hidden py-2"
+                      >
+                        {languages.map((lang) => (
+                          <button
+                            key={lang.code}
+                            onClick={() => selectLanguage(lang.code)}
+                            className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm font-headline font-bold transition-all ${
+                              lang.code === i18n.language
+                                ? 'text-primary bg-primary/5'
+                                : 'text-foreground/70 hover:bg-primary/5 hover:text-primary'
+                            }`}
+                          >
+                            <span className="text-lg">{lang.flag}</span>
+                            {lang.label}
+                          </button>
+                        ))}
+                      </motion.div>
+                    </div>
                   )}
                 </AnimatePresence>
               </div>

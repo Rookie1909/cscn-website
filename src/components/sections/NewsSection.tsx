@@ -123,6 +123,9 @@ export function NewsSection() {
             const title = localized(item, 'title', currentLang);
             const description = localized(item, 'description', currentLang);
             const content = localized(item, 'content', currentLang);
+            // Cannanas photos come in any aspect ratio (often portrait), so they are
+            // shown uncropped on a blurred copy instead of being cut to 16:9.
+            const isImported = item.id.startsWith('cannanas-');
 
             return (
               <motion.div
@@ -183,10 +186,19 @@ export function NewsSection() {
                             }`}
                             onClick={() => setSelectedImage(img)}
                           >
-                            <img 
-                              src={img} 
+                            {isImported && (
+                              <img
+                                src={img}
+                                alt=""
+                                aria-hidden="true"
+                                className="absolute inset-0 w-full h-full object-cover scale-110 blur-xl brightness-75"
+                                loading="lazy"
+                              />
+                            )}
+                            <img
+                              src={img}
                               alt={`${title} view ${imgIndex + 1}`}
-                              className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105"
+                              className={`relative w-full h-full ${isImported ? 'object-contain' : 'object-cover'} transition-transform duration-700 group-hover/img:scale-105`}
                               loading="lazy"
                             />
                             <div className="absolute inset-0 bg-primary/0 group-hover/img:bg-primary/5 transition-colors duration-300" />

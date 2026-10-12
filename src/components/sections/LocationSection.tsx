@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, ExternalLink } from 'lucide-react';
+import { AnimatedLeafBackground } from '@/components/sections/AnimatedLeafBackground';
 
 export function LocationSection() {
   const { t } = useTranslation();
@@ -30,12 +31,21 @@ export function LocationSection() {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden bg-background">
+    <section className="pt-16 pb-24 sm:pt-24 relative overflow-hidden bg-background">
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-primary/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-primary/5 blur-[120px] rounded-full translate-y-1/2 -translate-x-1/2" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        {/* isolate: eigener Stapel, damit das Blatt (-z-10) hinter den Texten liegt,
+            aber nicht hinter dem Seitenhintergrund verschwindet. */}
+        <div className="relative isolate text-center max-w-3xl mx-auto mb-16">
+          {/* Das animierte Blatt der Startseite als Hintergrund hinter der Überschrift */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute left-1/2 top-1/2 mt-8 -z-10 -translate-x-1/2 -translate-y-1/2"
+          >
+            <AnimatedLeafBackground className="h-[360px] w-[360px] sm:h-[520px] sm:w-[520px] lg:h-[600px] lg:w-[600px] text-primary/[0.22] dark:text-primary/45" />
+          </div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

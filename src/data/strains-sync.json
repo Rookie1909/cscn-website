@@ -49,6 +49,24 @@
     ]
   },
   {
+    "id": "crystal-candy",
+    "name": "Crystal Candy",
+    "type": "Blüten",
+    "thc": "21%",
+    "cbd": "2%",
+    "indica": 50,
+    "sativa": 50,
+    "description": "Diese Genetik wurde in einem Programm der F & E-Abteilung von Sweet Seeds® entwickelt, auf der Suche nach interessanten, exquisiten und feinen süßen Aromen, die an die Düfte eines Süßwarengeschäfts erinnern.\n\nDas Aroma ist süß und fruchtig mit aromatischen Tönen von Kaugummi und Gummibonbons, mit einem Hauch von sauren Erdbeeren und reifer Melone. Die Sorte produziert eine große Menge süßen Harzes, das die Blüten und Blätter bedeckt. Die Harzdrüsen sind langstielig und bilden große Harztropfen aus. Das Wachstum und die Struktur entspricht dem Gleichgewicht der indica und sativa Genetik. Die Sorte erzeugt große, kompakte Buds mit langen Seitenzweigen.\n\nErdbeere, Kaugummi, Fruchtig, Süß",
+    "effects": [],
+    "terpenes": [],
+    "genetics": "",
+    "breeder": "Sweet Seeds",
+    "image": "/images/strains/crystal-candy.webp",
+    "description_en": "This strain was developed in a program by Sweet Seeds®'s R&D department, in search of interesting, exquisite, and delicate sweet aromas reminiscent of a candy store.\n\nThe aroma is sweet and fruity with aromatic notes of bubblegum and gummy candy, with hints of tart strawberries and ripe melon. The strain produces a large amount of sweet resin that coats the flowers and leaves. The resin glands are long-stemmed and produce large resin droplets. The growth and structure reflect the balance of indica and sativa genetics. The strain produces large, compact buds with long side branches.\n\nStrawberry, Bubblegum, Fruity, Sweet",
+    "description_fi": "Tämä lajike kehitettiin Sweet Seeds®:n tutkimus- ja kehitysosaston ohjelmassa etsien mielenkiintoisia, hienostuneita ja herkkiä makeita aromeja, jotka muistuttavat karkkikauppaa.\n\nTuoksu on makea ja hedelmäinen, ja siinä on purukumin ja nallekarkin aromeja sekä vihjeitä kirpeistä mansikoista ja kypsästä melonista. Lajike tuottaa runsaasti makeaa hartsia, joka peittää kukat ja lehdet. Hartsirauhaset ovat pitkävartisia ja tuottavat suuria hartsipisaroita. Kasvu ja rakenne heijastavat indica- ja sativa-genetiikan tasapainoa. Lajike tuottaa suuria, kompakteja nuppuja, joilla on pitkät sivuhaarat.\n\nMansikka, Purukumi, Hedelmäinen, Makea",
+    "description_it": "Questa varietà è stata sviluppata nell'ambito di un programma del dipartimento di Ricerca e Sviluppo di Sweet Seeds®, alla ricerca di aromi dolci, squisiti e delicati che ricordassero un negozio di caramelle.\n\nL'aroma è dolce e fruttato, con note aromatiche di gomma da masticare e caramelle gommose, con sentori di fragole aspre e melone maturo. La varietà produce una grande quantità di resina dolce che ricopre fiori e foglie. Le ghiandole resinose sono a peduncolo lungo e producono grandi gocce di resina. La crescita e la struttura riflettono l'equilibrio tra genetica indica e sativa. La varietà produce cime grandi e compatte con lunghi rami laterali.\n\nFragola, Gomma da masticare, Fruttato, Dolce"
+  },
+  {
     "id": "dosimosa",
     "name": "Dosimosa",
     "type": "Blüten",
@@ -252,6 +270,59 @@
       "cipresso",
       "erbe fresche",
       "condimento leggero"
+    ]
+  },
+  {
+    "id": "romscotti",
+    "name": "Romscotti",
+    "type": "Blüten",
+    "thc": "21.5%",
+    "cbd": "2%",
+    "indica": 90,
+    "sativa": 10,
+    "description": "Romscotti ist eine exklusive Black Label Certified-Hybridsorte von Romulan Genetics und gilt als eines der Flaggschiffe des Züchters. Die Sorte entstand aus der Kreuzung von Biscotti und Romulan und vereint die süß-cremigen Dessertnoten der Biscotti mit der legendären Potenz, Robustheit und Harzproduktion der Romulan-Linie. Laut Romulan Genetics gehört Romscotti zu den besten Kultivaren, die sie jemals entwickelt haben, und trägt deshalb das Black-Label-Siegel.\n\nRomscotti gehört zu den stärksten Indica-Sorten von Romulan Genetics. Die Wirkung setzt schnell ein und beginnt mit einer angenehmen Euphorie, die in einen verträumten, ruhigen Geisteszustand übergeht. Kurz darauf entwickelt sich eine intensive körperliche Entspannung, die häufig in einen tiefen Body-Stone mündet. Die Sorte eignet sich besonders für ruhige Abendstunden und wird von vielen Konsumenten wegen ihrer langanhaltenden, beruhigenden Wirkung geschätzt",
+    "effects": [],
+    "terpenes": [
+      "Kaffee",
+      "Schokolade",
+      "Erde",
+      "Gewürze",
+      "Süßer Teig",
+      "Früchte",
+      "Gas"
+    ],
+    "genetics": "Romulan x Biscotti",
+    "breeder": "Romulan Genetics",
+    "image": "/images/strains/romscotti.webp",
+    "description_en": "Romscotti is an exclusive Black Label Certified hybrid strain from Romulan Genetics and is considered one of the breeder’s flagship strains. The strain was created by crossing Biscotti and Romulan and combines the sweet, creamy dessert notes of Biscotti with the legendary potency, hardiness, and resin production of the Romulan line. According to Romulan Genetics, Romscotti is among the best cultivars they have ever developed and therefore bears the Black Label seal.\n\nRomscotti is one of Romulan Genetics’ strongest Indica strains. The effects kick in quickly, starting with a pleasant euphoria that transitions into a dreamy, calm state of mind. Shortly thereafter, an intense physical relaxation sets in, often culminating in a deep body stone. The strain is particularly well-suited for quiet evenings and is prized by many users for its long-lasting, calming effects.",
+    "terpenes_en": [
+      "Coffee",
+      "Chocolate",
+      "Earth",
+      "Spices",
+      "Sweet Dough",
+      "Fruits",
+      "Gas"
+    ],
+    "description_fi": "Romscotti on Romulan Geneticsin eksklusiivinen Black Label Certified -hybridilajike, jota pidetään yhtenä jalostajan lippulaivoista. Lajike on syntynyt Biscottin ja Romulanin risteytyksestä, ja siinä yhdistyvät Biscottin makeat ja kermaiset jälkiruokamaut Romulan-linjan legendaariseen voimakkuuteen, kestävyyteen ja hartsituotantoon. Romulan Geneticsin mukaan Romscotti kuuluu parhaimpiin lajikkeisiin, joita he ovat koskaan kehittäneet, ja siksi se on saanut Black Label -sertifikaatin.\n\nRomscotti on yksi Romulan Geneticsin voimakkaimmista Indica-lajikkeista. Vaikutus alkaa nopeasti ja avautuu miellyttävällä euforialla, joka muuttuu unenomaiseksi, rauhalliseksi mielentilaksi. Pian tämän jälkeen kehittyy voimakas fyysinen rentoutuminen, joka johtaa usein syvään kehon rentoutumiseen. Lajike sopii erityisen hyvin rauhallisiin iltahetkiin, ja monet käyttäjät arvostavat sitä sen pitkäkestoisen, rauhoittavan vaikutuksen vuoksi.",
+    "terpenes_fi": [
+      "Kahvi",
+      "Suklaa",
+      "Maa",
+      "Mausteet",
+      "Makea taikina",
+      "Hedelmät",
+      "Kaasu"
+    ],
+    "description_it": "Romscotti è una varietà ibrida esclusiva certificata Black Label di Romulan Genetics ed è considerata uno dei prodotti di punta del coltivatore. La varietà è nata dall’incrocio tra Biscotti e Romulan e unisce le note dolci e cremose da dessert della Biscotti alla leggendaria potenza, robustezza e produzione di resina della linea Romulan. Secondo Romulan Genetics, Romscotti è una delle migliori cultivar che abbiano mai sviluppato e per questo porta il marchio Black Label.\n\nLa Romscotti è una delle varietà Indica più potenti di Romulan Genetics. L’effetto si manifesta rapidamente e inizia con una piacevole euforia che sfocia in uno stato d’animo sognante e tranquillo. Poco dopo si sviluppa un intenso rilassamento fisico, che spesso sfocia in un profondo «body stone». La varietà è particolarmente adatta alle serate tranquille ed è apprezzata da molti consumatori per il suo effetto calmante e di lunga durata.",
+    "terpenes_it": [
+      "Caffè",
+      "Cioccolato",
+      "Terra",
+      "Spezie",
+      "Pasta dolce",
+      "Frutta",
+      "Gas"
     ]
   },
   {
